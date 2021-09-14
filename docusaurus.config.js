@@ -60,32 +60,32 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           },
         ],
       },
+      // algolia: {
+      //   apiKey: 'YOUR_API_KEY',
+      //   indexName: 'YOUR_INDEX_NAME',
+      //   contextualSearch: true,
+      //   appId: 'YOUR_APP_ID',
+  
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
+      // },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Forums',
+                href: 'https://forums.rancher.com/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Slack',
+                href: 'https://slack.rancher.io/',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/Rancher_Labs',
               },
             ],
           },
@@ -93,12 +93,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Rancher Website',
+                to: 'https://rancher.com/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Rancher on GitHub',
+                href: 'https://github.com/rancher/rancher',
+              },
+              {
+                label: 'Rancher Docs on GitHub',
+                href: 'https://github.com/rancher/docs',
               },
             ],
           },
