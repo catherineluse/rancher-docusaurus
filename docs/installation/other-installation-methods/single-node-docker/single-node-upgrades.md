@@ -31,10 +31,10 @@ docker ps
 ```
 
 Write down or copy this information before starting the upgrade.
-
+```img
 <sup>Terminal `docker ps` Command, Displaying Where to Find `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>`</sup>
 ![Placeholder Reference](./assets/img/rancher/placeholder-ref.png)
-
+```
 | Placeholder                | Example                    | Description                                               |
 | -------------------------- | -------------------------- | --------------------------------------------------------- |
 | `<RANCHER_CONTAINER_TAG>`  | `v2.1.3`                   | The rancher/rancher image you pulled for initial install. |

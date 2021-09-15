@@ -14,9 +14,9 @@ You will also need to set up a Kubernetes gateway for your services. This Kubern
 You can route traffic into the service mesh with a load balancer or use Istio's NodePort gateway. This section describes how to set up the NodePort gateway.
 
 For more information on the Istio gateway, refer to the [Istio documentation.](https://istio.io/docs/reference/config/networking/v1alpha3/gateway/) 
-
+```img
 ![In an Istio-enabled cluster, you can have two Ingresses: the default Nginx Ingress, and the default Istio controller.](./assets/img/rancher/istio-ingress.svg)
-
+```
 # Enable an Istio Gateway
 
 The ingress gateway is a Kubernetes service that will be deployed in your cluster. The Istio Gateway allows for more extensive customization and flexibility.  

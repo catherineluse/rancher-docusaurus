@@ -19,9 +19,9 @@ HPA improves your services by:
 - Increase/decrease performance as needed to accomplish service level agreements.
 
 ## How HPA Works
-
+```img
 ![HPA Schema](./assets/img/rancher/horizontal-pod-autoscaler.jpg)
-
+```
 HPA is implemented as a control loop, with a period controlled by the `kube-controller-manager` flags below:
 
 Flag | Default | Description |

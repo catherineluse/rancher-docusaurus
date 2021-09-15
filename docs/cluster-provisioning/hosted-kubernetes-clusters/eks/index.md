@@ -74,9 +74,11 @@ For the full list of EKS cluster configuration options, see [this page.]({{<base
 
 The figure below illustrates the high-level architecture of Rancher 2.x. The figure depicts a Rancher Server installation that manages two Kubernetes clusters: one created by RKE and another created by EKS.
 
+```img
 <figcaption>Managing Kubernetes Clusters through Rancher's Authentication Proxy</figcaption>
 
 ![Architecture](./assets/img/rancher/rancher-architecture-rancher-api-server.svg)
+```
 
 # AWS Service Events
 

@@ -98,9 +98,9 @@ Once this ConfigMap is created, the dashboard will automatically be added to Gra
 It is only possible to directly migrate expression-based alerts to Monitoring V2. Fortunately, the event-based alerts that could be set up to alert on system component, node or workload events, are already covered out-of-the-box by the alerts that are part of Monitoring V2. So it is not necessary to migrate them.
 
 To migrate the following expression alert
-
+```img
 {{< img "/img/rancher/monitoring/migration/alert_2.4_to_2.5_source.png" "">}}
-
+```
 you have to either create a PrometheusRule configuration like this in any namespace
 
 ```yaml
@@ -123,9 +123,9 @@ spec:
 ```
 
 or add the Prometheus Rule through the Cluster Explorer
-
+```img
 {{< img "/img/rancher/monitoring/migration/alert_2.4_to_2.5_target.png" "">}}
-
+```
 For more details on how to configure PrometheusRules in Monitoring V2 see [Monitoring Configuration]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/configuration/).
 
 ### Migrating Notifiers

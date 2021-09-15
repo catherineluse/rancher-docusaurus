@@ -19,10 +19,10 @@ tar pzxvf /backup/rancher-data-backup-<RANCHER_VERSION>-<DATE>"
 In this command, `<RANCHER_CONTAINER_NAME>` and `<RANCHER_VERSION>-<DATE>` are environment variables for your Rancher deployment.
 
 Cross reference the image and reference table below to learn how to obtain this placeholder data. Write down or copy this information before starting the procedure below.
-
+```img
 <sup>Terminal `docker ps` Command, Displaying Where to Find `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>`</sup>
 ![Placeholder Reference](./assets/img/rancher/placeholder-ref.png)
-
+```
 | Placeholder                | Example                    | Description                                               |
 | -------------------------- | -------------------------- | --------------------------------------------------------- |
 | `<RANCHER_CONTAINER_TAG>`  | `v2.0.5`                   | The rancher/rancher image you pulled for initial install. |

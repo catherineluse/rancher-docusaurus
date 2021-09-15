@@ -9,9 +9,9 @@ weight: 2300
 CNI (Container Network Interface), a [Cloud Native Computing Foundation project](https://cncf.io/), consists of a specification and libraries for writing plugins to configure network interfaces in Linux containers, along with a number of  plugins. CNI concerns itself only with network connectivity of containers and removing allocated resources when the container is deleted.
 
 Kubernetes uses CNI as an interface between network providers and Kubernetes pod networking.
-
+```img
 ![CNI Logo](./assets/img/rancher/cni-logo.png)
-
+```
 For more information visit [CNI GitHub project](https://github.com/containernetworking/cni).
 
 ### What Network Models are Used in CNI?
@@ -27,9 +27,9 @@ In simple terms, this network model generates a kind of network bridge extended 
 This network model is used when an extended L2 bridge is preferred. This network model is sensitive to L3 network latencies of the Kubernetes workers. If datacenters are in distinct geolocations, be sure to have low latencies between them to avoid eventual network segmentation.
 
 CNI network providers using this network model include Flannel, Canal, and Weave.
-
+```img
 ![Encapsulated Network](./assets/img/rancher/encapsulated-network.png)
-
+```
 #### What is an Unencapsulated Network?
 
 This network model provides an L3 network to route packets between containers. This model doesn't generate an isolated l2 network, nor generates overhead. These benefits come at the cost of Kubernetes workers having to manage any route distribution that's needed. Instead of using IP headers for encapsulation, this network model uses a network protocol between Kubernetes workers to distribute routing information to reach pods, such as [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol).
@@ -39,53 +39,53 @@ In simple terms, this network model generates a kind of network router extended 
 This network model is used when a routed L3 network is preferred. This mode dynamically updates routes at the OS level for Kubernetes workers. It's less sensitive to latency.
 
 CNI network providers using this network model include Calico and Romana.
-
+```img
 ![Unencapsulated Network](./assets/img/rancher/unencapsulated-network.png)
-
+```
 ### What CNI Providers are Provided by Rancher?
 
 Out-of-the-box, Rancher provides the following CNI network providers for Kubernetes clusters: Canal, Flannel, Calico and Weave. You can choose your CNI network provider when you create new Kubernetes clusters from Rancher.
 
 #### Canal
-
+```img
 ![Canal Logo](./assets/img/rancher/canal-logo.png)
-
+```
 Canal is a CNI network provider that gives you the best of Flannel and Calico. It allows users to easily deploy Calico and Flannel networking together as a unified networking solution, combining Calico’s network policy enforcement with the rich superset of Calico (unencapsulated) and/or Flannel (encapsulated) network connectivity options.
 
 In Rancher, Canal is the default CNI network provider combined with Flannel and VXLAN encapsulation.
 
 Kubernetes workers should open UDP port `8472` (VXLAN) and TCP port `9099` (healthcheck). For details, refer to [the port requirements for user clusters.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/node-requirements/)
-
+```img
 {{< img "/img/rancher/canal-diagram.png" "Canal Diagram">}}
-
+```
 For more information, see the [Canal GitHub Page.](https://github.com/projectcalico/canal)
 
 #### Flannel
-
+```img
 ![Flannel Logo](./assets/img/rancher/flannel-logo.png)
-
+```
 Flannel is a simple and easy way to configure L3 network fabric designed for Kubernetes. Flannel runs a single binary agent named flanneld on each host, which is responsible for allocating a subnet lease to each host out of a larger, preconfigured address space. Flannel uses either the Kubernetes API or etcd directly to store the network configuration, the allocated subnets, and any auxiliary data (such as the host's public IP). Packets are forwarded using one of several backend mechanisms, with the default encapsulation being [VXLAN](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan).
 
 Encapsulated traffic is unencrypted by default. Therefore, flannel provides an experimental backend for encryption, [IPSec](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#ipsec), which makes use of [strongSwan](https://www.strongswan.org/) to establish encrypted IPSec tunnels between Kubernetes workers.
 
 Kubernetes workers should open UDP port `8472` (VXLAN) and TCP port `9099` (healthcheck). See [the port requirements for user clusters]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/node-requirements/#networking-requirements) for more details.
-
+```img
 ![Flannel Diagram](./assets/img/rancher/flannel-diagram.png)
-
+```
 For more information, see the [Flannel GitHub Page](https://github.com/coreos/flannel).
 
 #### Calico
-
+```img
 ![Calico Logo](./assets/img/rancher/calico-logo.png)
-
+```
 Calico enables networking and network policy in Kubernetes clusters across the cloud. Calico uses a pure, unencapsulated IP network fabric and policy engine to provide networking for your Kubernetes workloads. Workloads are able to communicate over both cloud infrastructure and on-prem using BGP.
 
 Calico also provides a stateless IP-in-IP encapsulation mode that can be used, if necessary. Calico also offers policy isolation, allowing you to secure and govern your Kubernetes workloads using advanced ingress and egress policies.
 
 Kubernetes workers should open TCP port `179` (BGP). See [the port requirements for user clusters]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/node-requirements/#networking-requirements) for more details.
-
+```img
 ![Calico Diagram](./assets/img/rancher/calico-diagram.svg)
-
+```
 For more information, see the following pages:
 
 - [Project Calico Official Site](https://www.projectcalico.org/)
@@ -93,9 +93,9 @@ For more information, see the following pages:
 
 
 #### Weave
-
+```img
 ![Weave Logo](./assets/img/rancher/weave-logo.png)
-
+```
 Weave enables networking and network policy in Kubernetes clusters across the cloud. Additionally, it support encrypting traffic between the peers.
 
 Kubernetes workers should open TCP port `6783` (control port), UDP port `6783` and UDP port `6784` (data ports). See the [port requirements for user clusters]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/node-requirements/#networking-requirements) for more details.

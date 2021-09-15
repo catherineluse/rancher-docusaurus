@@ -23,7 +23,8 @@ The following custom resources are used to define how logs are filtered and sent
 Each `Flow` must reference an `Output`, and each `ClusterFlow` must reference a `ClusterOutput`.
 
 The following figure from the [Banzai documentation](https://banzaicloud.com/docs/one-eye/logging-operator/#architecture) shows the new logging architecture:
-
+```img
 <figcaption>How the Banzai Cloud Logging Operator Works with Fluentd and Fluent Bit</figcaption>
 
 ![How the Banzai Cloud Logging Operator Works with Fluentd](./assets/img/rancher/banzai-cloud-logging-operator.png)
+```

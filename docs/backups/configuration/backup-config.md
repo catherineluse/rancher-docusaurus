@@ -56,9 +56,9 @@ kubectl create secret generic encryptionconfig \
 This will ensure that the secret contains a key named `encryption-provider-config.yaml`, and the operator will use this key to get the encryption configuration.
 
 The `Encryption Config Secret` dropdown will filter out and list only those Secrets that have this exact key
-
+```img
 {{< img "/img/rancher/backup_restore/backup/encryption.png" "">}}
-
+```
 In the example command above, the name `encryptionconfig` can be changed to anything.
 
 

@@ -13,9 +13,9 @@ There are two ways to use persistent storage in Kubernetes:
 To use an existing PV, your application will need to use a PVC that is bound to a PV, and the PV should include the minimum resources that the PVC requires.
 
 For dynamic storage provisioning, your application will need to use a PVC that is bound to a storage class. The storage class contains the authorization to provision new persistent volumes.
-
+```img
 ![Setting Up New and Existing Persistent Storage](./assets/img/rancher/rancher-storage.svg)
-
+```
 For more information, refer to the [official Kubernetes documentation on storage](https://kubernetes.io/docs/concepts/storage/volumes/)
 
 This section covers the following topics:

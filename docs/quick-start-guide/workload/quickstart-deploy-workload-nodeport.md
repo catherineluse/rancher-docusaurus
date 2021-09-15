@@ -21,13 +21,13 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 1.  From the **Container Image** field, enter `rancher/hello-world`. This field is case-sensitive.
 1.  Click **Add Port**.
 1.  From the **Service Type** drop-down, make sure that **NodePort** is selected.
-
+```img
 	![As a dropdown, NodePort (On every node selected)](./assets/img/rancher/nodeport-dropdown.png)
-
+```
 1. From the **Publish the container port** field, enter port `80`.
-
+```img
 	![Publish the container port, 80 entered](./assets/img/rancher/container-port-field.png)
-
+```
 1. Click **Create**.
 
 **Result:**

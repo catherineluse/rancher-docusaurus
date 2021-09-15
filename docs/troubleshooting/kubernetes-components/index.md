@@ -13,6 +13,7 @@ This section includes troubleshooting tips in the following categories:
 - [Troubleshooting Worker Nodes and Generic Components]({{<baseurl>}}/rancher/v2.6/en/troubleshooting/kubernetes-components/worker-and-generic)
 
 # Kubernetes Component Diagram
-
+```img
 ![Cluster diagram](./assets/img/rancher/clusterdiagram.svg)<br/>
 <sup>Lines show the traffic flow between components. Colors are used purely for visual aid</sup>
+```

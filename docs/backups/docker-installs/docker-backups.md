@@ -17,10 +17,10 @@ docker run  --volumes-from rancher-data-<DATE> -v $PWD:/backup busybox tar pzcvf
 In this command, `<DATE>` is a placeholder for the date that the data container and backup were created. `9-27-18` for example.
 
 Cross reference the image and reference table below to learn how to obtain this placeholder data. Write down or copy this information before starting the [procedure below](#creating-a-backup).
-
+```img
 <sup>Terminal `docker ps` Command, Displaying Where to Find `<RANCHER_CONTAINER_TAG>` and `<RANCHER_CONTAINER_NAME>`</sup>
 ![Placeholder Reference](./assets/img/rancher/placeholder-ref.png)
-
+```
 | Placeholder                | Example                    | Description                                               |
 | -------------------------- | -------------------------- | --------------------------------------------------------- |
 | `<RANCHER_CONTAINER_TAG>`  | `v2.0.5`                   | The rancher/rancher image you pulled for initial install. |

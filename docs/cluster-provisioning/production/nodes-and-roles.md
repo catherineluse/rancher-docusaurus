@@ -7,8 +7,10 @@ This section describes the roles for etcd nodes, controlplane nodes, and worker 
 
 This diagram is applicable to Kubernetes clusters [launched with Rancher using RKE.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/).
 
+```img
 ![Cluster diagram](./assets/img/rancher/clusterdiagram.svg)<br/>
 <sup>Lines show the traffic flow between components. Colors are used purely for visual aid</sup>
+```
 
 # etcd
 

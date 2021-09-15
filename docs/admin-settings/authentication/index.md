@@ -71,23 +71,23 @@ Configuration of external authentication requires:
 Configuration of external authentication affects how principal users are managed within Rancher. Follow the list below to better understand these effects.
 
 1. Sign into Rancher as the local principal and complete configuration of external authentication.
-
+```img
 	![Sign In](./assets/img/rancher/sign-in.png)
-
+```
 2. Rancher associates the external principal with the local principal. These two users share the local principal's user ID.
-
+```img
 	![Principal ID Sharing](./assets/img/rancher/principal-ID.png)
-
+```
 3. After you complete configuration, Rancher automatically signs out the local principal.
-
+```img
 	![Sign Out Local Principal](./assets/img/rancher/sign-out-local.png)
-
+```
 4. Then, Rancher automatically signs you back in as the external principal.
-
+```img
 	![Sign In External Principal](./assets/img/rancher/sign-in-external.png)
-
+```
 5. Because the external principal and the local principal share an ID, no unique object for the external principal displays on the Users page.
-
+```img
 	![Sign In External Principal](./assets/img/rancher/users-page.png)
-
+```
 6. The external principal and the local principal share the same access rights.

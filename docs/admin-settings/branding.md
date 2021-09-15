@@ -85,9 +85,9 @@ Name of a group of links that expands when clicked.
 Optional. If not provided, the link appears standalone.
 
 Groups are displayed separately from standalone links, as shown below:
-
+```img
 ![Screenshot of group and standalone link](./assets/img/rancher/grouped-vs-standalone-links.png)
-
+```
 ### `iconSrc`
 
 Icon source in in base64 format.
@@ -155,9 +155,9 @@ spec:
 ```
 
 Adding the above YAML results in a link to Grafana being created, as shown in the following screenshot:
-
+```img
 ![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-grafana-link.png)
-
+```
 ### Example of Link with `toService`
 
 This example YAML shows an example of `toService` used for the link target:
@@ -187,6 +187,6 @@ spec:
 ```
 
 Adding the `toService` parameters above results in a link to Grafana being created, as shown in the following screenshot:
-
+```img
 ![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-service-link.png)
-
+```

@@ -176,11 +176,11 @@ Downstream Kubernetes clusters run your apps and services. This section describe
 The port requirements differ depending on how the downstream cluster was launched. Each of the tabs below list the ports that need to be opened for different [cluster types]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/).
 
 The following diagram depicts the ports that are opened for each [cluster type]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning).
-
+```img
 <figcaption>Port Requirements for the Rancher Management Plane</figcaption>
 
 ![Basic Port Requirements](./assets/img/rancher/port-communications.svg)
-
+```
 >**Tip:**
 >
 >If security isn't a large concern and you're okay with opening a few additional ports, you can use the table in [Commonly Used Ports](#commonly-used-ports) as your port reference instead of the comprehensive tables below.

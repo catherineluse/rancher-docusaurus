@@ -16,9 +16,9 @@ This diagram shows how data flows through the Monitoring V2 application:
 
 {{% row %}}
 {{% column %}}
-
+```img
 ![How data flows through the monitoring application](./assets/img/rancher/monitoring-v2-architecture-overview.svg)
-
+```
 {{% /column %}}
 {{% column %}}
 
@@ -172,15 +172,15 @@ The scrape configuration can be viewed as part of the Prometheus custom resource
 ### 5.2. How the Prometheus Operator Sets up Metrics Scraping
 
 The Prometheus Deployment or StatefulSet scrapes metrics, and the configuration of Prometheus is controlled by the Prometheus custom resources. The Prometheus Operator watches for Prometheus and Alertmanager resources, and when they are created, the Prometheus Operator creates a Deployment or StatefulSet for Prometheus or Alertmanager with the user-defined configuration.
-
+```img
 <figcaption>How the Prometheus Operator Sets up Metrics Scraping</figcaption>
 
 ![How the Prometheus Operator sets up metrics scraping](./assets/img/rancher/set-up-scraping.svg)
-
+```
 When the Prometheus Operator observes ServiceMonitors, PodMonitors and PrometheusRules being created, it knows that the scrape configuration needs to be updated in Prometheus. It updates Prometheus by first updating the configuration and rules files in the volumes of Prometheus's Deployment or StatefulSet. Then it calls the Prometheus API to sync the new configuration, resulting in the Prometheus Deployment or StatefulSet to be modified in place.
-
+```img
 ![How the Prometheus Operator Updates Scrape Configuration](./assets/img/rancher/update-scrape-config.svg)
-
+```
 ### 5.3. How Kubernetes Component Metrics are Exposed
 
 Prometheus scrapes metrics from deployments known as [exporters,](https://prometheus.io/docs/instrumenting/exporters/) which export the time series data in a format that Prometheus can ingest. In Prometheus, time series consist of streams of timestamped values belonging to the same metric and the same set of labeled dimensions.
@@ -218,11 +218,11 @@ The process for exporting metrics is as follows:
 3. When the proxy receives a scrape request from Prometheus, the client sees it as a result of the poll.
 4. The client scrapes the internal component.
 5. The internal component responds by pushing metrics back to the proxy.
-
+```img
 <figcaption>Process for Exporting Metrics with PushProx</figcaption>
 
 ![Process for Exporting Metrics with PushProx](./assets/img/rancher/pushprox-process.svg)
-
+```
 Metrics are scraped differently based on the Kubernetes distribution. For help with terminology, see Terminology(#terminology). For details, see the table below:
 
 <figcaption>How Metrics are Exposed to Prometheus</figcaption>

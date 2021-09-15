@@ -34,11 +34,11 @@ The figure below illustrates the high-level architecture of Rancher 2.x. The fig
 For the best performance and security, we recommend a dedicated Kubernetes cluster for the Rancher management server. Running user workloads on this cluster is not advised. After deploying Rancher, you can [create or import clusters]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/) for running your workloads.
 
 The diagram below shows how users can manipulate both [Rancher-launched Kubernetes]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/) clusters and [hosted Kubernetes]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/hosted-kubernetes-clusters/) clusters through Rancher's authentication proxy:
-
+```img
 <figcaption>Managing Kubernetes Clusters through Rancher's Authentication Proxy</figcaption>
 
 ![Architecture](./assets/img/rancher/rancher-architecture-rancher-api-server.svg)
-
+```
 You can install Rancher on a single node, or on a high-availability Kubernetes cluster.
 
 A high-availability Kubernetes installation is recommended for production.
@@ -54,11 +54,11 @@ The Rancher server, regardless of the installation method, should always run on 
 This section describes how Rancher provisions and manages the downstream user clusters that run your apps and services.
 
 The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.
-
+```img
 <figcaption>Communicating with Downstream Clusters</figcaption>
 
 ![Rancher Components](./assets/img/rancher/rancher-architecture-cluster-controller.svg)
-
+```
 The following descriptions correspond to the numbers in the diagram above:
 
 1. [The Authentication Proxy](#1-the-authentication-proxy)
@@ -165,9 +165,9 @@ In this type of cluster, Rancher connects to a Kubernetes cluster that has alrea
 # Rancher Server Components and Source Code
 
 This diagram shows each component that the Rancher server is composed of:
-
+```img
 ![Rancher Components](./assets/img/rancher/rancher-architecture-rancher-components.svg)
-
+```
 The GitHub repositories for Rancher can be found at the following links:
 
 - [Main Rancher server repository](https://github.com/rancher/rancher)

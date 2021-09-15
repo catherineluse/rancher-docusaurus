@@ -22,9 +22,9 @@ Rancher supports centralized authentication, access control, and monitoring for 
 Rancher provides an intuitive user interface for DevOps engineers to manage their application workload. The user does not need to have in-depth knowledge of Kubernetes concepts to start using Rancher. Rancher catalog contains a set of useful DevOps tools. Rancher is certified with a wide selection of cloud native ecosystem products, including, for example, security tools, monitoring systems, container registries, and storage and networking drivers.
 
 The following figure illustrates the role Rancher plays in IT and DevOps organizations. Each team deploys their applications on the public or private clouds they choose. IT administrators gain visibility and enforce policies across all users, clusters, and clouds.
-
+```img
 ![Platform](./assets/img/rancher/platform.png)
-
+```
 # Features of the Rancher API Server
 
 The Rancher API server is built on top of an embedded Kubernetes API server and an etcd database. It implements the following functionalities:

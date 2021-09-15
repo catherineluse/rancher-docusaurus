@@ -37,13 +37,13 @@ Before enabling Azure AD within Rancher, you must register Rancher with Azure.
 1. Log in to [Microsoft Azure](https://portal.azure.com/) as an administrative user. Configuration in future steps requires administrative access rights.
 
 1. Use search to open the **App registrations** service.
-
+```img
     ![Open App Registrations](./assets/img/rancher/search-app-registrations.png)
-
+```
 1. Click **New registrations** and complete the **Create** form.
-
+```img
     ![New App Registration](./assets/img/rancher/new-app-registration.png)
-
+```
     1. Enter a **Name** (something like `Rancher`).
 
     1. From **Supported account types**, select "Accounts in this organizational directory only (AzureADTest only - Single tenant)" This corresponds to the legacy app registration options.
@@ -61,15 +61,15 @@ Before enabling Azure AD within Rancher, you must register Rancher with Azure.
 From the Azure portal, create a client secret. Rancher will use this key to authenticate with Azure AD.
 
 1. Use search to open **App registrations** services. Then open the entry for Rancher that you created in the last procedure.
-
+```img
      ![Open Rancher Registration](./assets/img/rancher/open-rancher-app.png)
-
+```
 1. From the navigation pane on left, click **Certificates and Secrets**.
 
 1. Click **New client secret**.
-
+```img
      ![Create new client secret]({{< baseurl >}}/img/rancher/select-client-secret.png)
-
+```
     1. Enter a **Description** (something like `Rancher`).
 
     1. Select duration for the key from the options under **Expires**. This drop-down sets the expiration date for the key. Shorter durations are more secure, but require you to create a new key after expiration.
@@ -88,15 +88,15 @@ From the Azure portal, create a client secret. Rancher will use this key to auth
 Next, set API permissions for Rancher within Azure.
 
 1. From the navigation pane on left, select **API permissions**.
-
+```img
     ![Open Required Permissions](./assets/img/rancher/select-required-permissions.png)
-
+```
 1. Click **Add a permission**.
 
 1. From the **Azure Active Directory Graph**, select the following **Delegated Permissions**:
-
+```img
     ![Select API Permissions]({{< baseurl >}}/img/rancher/select-required-permissions-2.png)
-
+```
     <br/>
     <br/>
     - **Access the directory as the signed-in user**
@@ -119,9 +119,9 @@ To use Azure AD with Rancher you must whitelist Rancher with Azure. You can comp
 
 
 1. From the **Setting** blade, select **Reply URLs**.
-
+```img
     ![Azure: Enter Reply URL](./assets/img/rancher/enter-azure-reply-url.png)
-
+```
 1. From the **Reply URLs** blade, enter the URL of your Rancher Server, appended with the verification path: `<MY_RANCHER_URL>/verify-auth-azure`.
 
        >**Tip:** You can find your personalized Azure reply URL in Rancher on the Azure AD Authentication page (Global View > Security Authentication > Azure AD).
@@ -139,9 +139,9 @@ As your final step in Azure, copy the data that you'll use to configure Rancher 
 1. Obtain your Rancher **Tenant ID**.
 
     1. Use search to open the **Azure Active Directory** service.
-
+```img
          ![Open Azure Active Directory](./assets/img/rancher/search-azure-ad.png)
-
+```
     1. From the left navigation pane, open **Overview**.
 
     2. Copy the **Directory ID** and paste it into your [text file](#tip).
@@ -151,9 +151,9 @@ As your final step in Azure, copy the data that you'll use to configure Rancher 
 1. Obtain your Rancher **Application ID**.
 
     1. Use search to open **App registrations**.
-
+```img
          ![Open App Registrations](./assets/img/rancher/search-app-registrations.png)
-
+```
     1. Find the entry you created for Rancher.
 
     1. Copy the **Application ID** and paste it to your [text file](#tip).
@@ -161,9 +161,9 @@ As your final step in Azure, copy the data that you'll use to configure Rancher 
 1. Obtain your Rancher **Graph Endpoint**, **Token Endpoint**, and **Auth Endpoint**.
 
     1. From **App registrations**, click **Endpoints**.
-
+```img
         ![Click Endpoints](./assets/img/rancher/click-endpoints.png)
-
+```
     2. Copy the following endpoints to your clipboard and paste them into your [text file](#tip) (these values will be your Rancher endpoint values).
     
         - **Microsoft Graph API endpoint** (Graph Endpoint)

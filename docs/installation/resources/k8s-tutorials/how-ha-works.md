@@ -19,7 +19,8 @@ For information on how Rancher works, regardless of the installation method, ref
 - The Load Balancer should forward port TCP/80 and TCP/443 to all 3 nodes in the Kubernetes cluster.
 - The Ingress controller will redirect HTTP to HTTPS and terminate SSL/TLS on port TCP/443.
 - The Ingress controller will forward traffic to port TCP/80 on the pod in the Rancher deployment.
-
+```img
 <figcaption>Kubernetes Rancher install with layer 4 load balancer, depicting SSL termination at ingress controllers</figcaption>
 ![High-availability Kubernetes Installation of Rancher](./assets/img/rancher/ha/rancher2ha.svg)
 <sup>Kubernetes Rancher install with Layer 4 load balancer (TCP), depicting SSL termination at ingress controllers</sup>
+```

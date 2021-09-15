@@ -24,11 +24,11 @@ Mounted secrets will be updated automatically unless they are mounted as subpath
     >**Note:** Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your secret must have a unique name among all secrets within your workspace.
 
 1. From **Data**, click **Add** to add a key-value pair. Add as many values as you need.
-
+```img
     >**Tip:** You can add multiple key value pairs to the secret by copying and pasting.
     >
     > {{< img "/img/rancher/bulk-key-values.gif" "Bulk Key Value Pair Copy/Paste">}}
-
+```
 1. Click **Save**.
 
 **Result:** Your secret is added to the project or namespace, depending on the scope you chose. You can view the secret in the Rancher UI from the **Resources > Secrets** view.

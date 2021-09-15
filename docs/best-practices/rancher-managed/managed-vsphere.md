@@ -9,11 +9,11 @@ This guide outlines a reference architecture for provisioning downstream Rancher
 - [2. Network Considerations](#2-network-considerations)
 - [3. Storage Considerations](#3-storage-considerations)
 - [4. Backups and Disaster Recovery](#4-backups-and-disaster-recovery)
-
+```img
 <figcaption>Solution Overview</figcaption>
 
 ![Solution Overview](./assets/img/rancher/solution_overview.drawio.svg)
-
+```
 # 1. VM Considerations
 
 ### Leverage VM Templates to Construct the Environment

@@ -18,10 +18,10 @@ With Longhorn, you can:
 - Schedule recurring snapshots of a volume, and schedule recurring backups to NFS or S3-compatible secondary storage
 - Restore volumes from backup
 - Upgrade Longhorn without disrupting persistent volumes
-
+```img
 <figcaption>Longhorn Dashboard</figcaption>
 ![Longhorn Dashboard](./assets/img/rancher/longhorn-screenshot.png)
-
+```
 ### Installing Longhorn with Rancher
 
 1. Fulfill all [Installation Requirements.](https://longhorn.io/docs/1.1.0/deploy/install/#installation-requirements)
@@ -65,6 +65,7 @@ Longhorn creates a dedicated storage controller for each volume and synchronousl
 The storage controller and replicas are themselves orchestrated using Kubernetes.
 
 You can learn more about its architecture [here.](https://longhorn.io/docs/1.0.2/concepts/)
-
+```img
 <figcaption>Longhorn Architecture</figcaption>
 ![Longhorn Architecture](./assets/img/rancher/longhorn-architecture.svg)
+```

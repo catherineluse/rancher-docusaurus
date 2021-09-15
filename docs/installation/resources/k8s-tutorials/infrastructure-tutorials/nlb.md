@@ -92,21 +92,21 @@ Health check settings:
 Next, add your Linux nodes to both target groups.
 
 Select the target group named **rancher-tcp-443**, click the tab **Targets** and choose **Edit**.
-
+```img
 {{< img "/img/rancher/ha/nlb/edit-targetgroup-443.png" "Edit target group 443">}}
-
+```
 Select the instances (Linux nodes) you want to add, and click **Add to registered**.
 
 <hr>
 **Screenshot Add targets to target group TCP port 443**<br/>
-
+```img
 {{< img "/img/rancher/ha/nlb/add-targets-targetgroup-443.png" "Add targets to target group 443">}}
-
+```
 <hr>
 **Screenshot Added targets to target group TCP port 443**<br/>
-
+```img
 {{< img "/img/rancher/ha/nlb/added-targets-targetgroup-443.png" "Added targets to target group 443">}}
-
+```
 When the instances are added, click **Save** on the bottom right of the screen.
 
 Repeat those steps, replacing **rancher-tcp-443** with **rancher-tcp-80**. The same instances need to be added as targets to this target group.

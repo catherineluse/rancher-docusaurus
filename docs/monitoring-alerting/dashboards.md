@@ -49,10 +49,10 @@ To see the Alertmanager UI,
 **Result:** The Alertmanager UI opens in a new tab. For help with configuration, refer to the [official Alertmanager documentation.](https://prometheus.io/docs/alerting/latest/alertmanager/)
 
 For more information on configuring Alertmanager in Rancher, see [this page.](../configuration/advanced/alertmanager)
-
+```img
 <figcaption>The Alertmanager UI</figcaption>
 ![Alertmanager UI](./assets/img/rancher/alertmanager-ui.png)
-
+```
 
 ### Viewing Default Alerts
 
@@ -69,10 +69,10 @@ To see the Prometheus UI, install `rancher-monitoring`. Then:
 1. On the **Clusters** page, go to the cluster where you want to see the Prometheus UI and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Prometheus Graph**.
-
+```img
 <figcaption>Prometheus Graph UI</figcaption>
 ![Prometheus Graph UI](./assets/img/rancher/prometheus-graph-ui.png)
-
+```
 ### Viewing the Prometheus Targets
 
 To see what services you are monitoring, you will need to see your targets. Targets are set up by ServiceMonitors and PodMonitors as sources to scrape metrics from. You won't need to directly edit targets, but the Prometheus UI can be useful for giving you an overview of all of the sources of metrics that are being scraped.
@@ -84,10 +84,10 @@ To see the Prometheus Targets, install `rancher-monitoring`. Then:
 1. On the **Clusters** page, go to the cluster where you want to see the Prometheus targets and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Prometheus Targets**.
-
+```img
 <figcaption>Targets in the Prometheus UI</figcaption>
 ![Prometheus Targets UI](./assets/img/rancher/prometheus-targets-ui.png)
-
+```
 ### Viewing the PrometheusRules
 
 When you define a Rule (which is declared within a RuleGroup in a PrometheusRule resource), the [spec of the Rule itself](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#rule) contains labels that are used by Alertmanager to figure out which Route should receive a certain Alert.
@@ -100,8 +100,8 @@ To see the PrometheusRules, install `rancher-monitoring`. Then:
 1. Click **Prometheus Rules**.
 
 You can also see the rules in the Prometheus UI:
-
+```img
 <figcaption>Rules in the Prometheus UI</figcaption>
 ![PrometheusRules UI](./assets/img/rancher/prometheus-rules-ui.png)
-
+```
 For more information on configuring PrometheusRules in Rancher, see [this page.](../configuration/advanced/prometheusrules)
