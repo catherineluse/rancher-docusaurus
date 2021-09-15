@@ -121,7 +121,7 @@ For more information on the Istio sidecar, refer to the [Istio sidecare-injectio
 
 By default, each Rancher-provisioned cluster has one NGINX ingress controller allowing traffic into the cluster. Istio also installs an ingress gateway by default into the `istio-system` namespace.  The result is that your cluster will have two ingresses in your cluster.
 
-![In an Istio-enabled cluster, you can have two ingresses: the default Nginx ingress, and the default Istio controller.](./assets/img/rancher/istio-ingress.svg)
+<!-- ![In an Istio-enabled cluster, you can have two ingresses: the default Nginx ingress, and the default Istio controller.](./assets/img/rancher/istio-ingress.svg) -->
  
  Additional Istio Ingress gateways can be enabled via the [overlay file]({{<baseurl>}}/rancher/v2.6/en/istio/configuration-reference/#overlay-file).
 

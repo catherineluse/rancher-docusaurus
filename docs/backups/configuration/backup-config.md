@@ -57,7 +57,7 @@ This will ensure that the secret contains a key named `encryption-provider-confi
 
 The `Encryption Config Secret` dropdown will filter out and list only those Secrets that have this exact key
 
-{{< img "/img/rancher/backup_restore/backup/encryption.png" "">}}
+<!-- {{< img "/img/rancher/backup_restore/backup/encryption.png" "">}} -->
 
 In the example command above, the name `encryptionconfig` can be changed to anything.
 

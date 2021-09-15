@@ -24,13 +24,13 @@ If your organization uses Keycloak Identity Provider (IdP) for user authenticati
       ><sup>1</sup>: Optionally, you can enable either one or both of these settings.
       ><sup>2</sup>: Rancher SAML metadata won't be generated until a SAML provider is configured and saved.
   
-  {{< img "/img/rancher/keycloak/keycloak-saml-client-configuration.png" "">}}
+  <!-- {{< img "/img/rancher/keycloak/keycloak-saml-client-configuration.png" "">}} -->
       
 - In the new SAML client, create Mappers to expose the users fields
   - Add all "Builtin Protocol Mappers"
-    {{< img "/img/rancher/keycloak/keycloak-saml-client-builtin-mappers.png" "">}}
+    <!-- {{< img "/img/rancher/keycloak/keycloak-saml-client-builtin-mappers.png" "">}} -->
   - Create a new "Group list" mapper to map the member attribute to a user's groups
-    {{< img "/img/rancher/keycloak/keycloak-saml-client-group-mapper.png" "">}}       
+    <!-- {{< img "/img/rancher/keycloak/keycloak-saml-client-group-mapper.png" "">}}        -->
 - Export a `metadata.xml` file from your Keycloak client:
   From the `Installation` tab, choose the `SAML Metadata IDPSSODescriptor` format option and download your file.
   

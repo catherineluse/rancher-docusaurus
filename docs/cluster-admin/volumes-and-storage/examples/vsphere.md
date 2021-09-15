@@ -30,7 +30,7 @@ In order to provision vSphere volumes in a cluster created with the [Rancher Kub
 3. Enter a **Name** for the StorageClass.
 4. Under **Provisioner**, select **VMWare vSphere Volume**.
 
-    {{< img "/img/rancher/vsphere-storage-class.png" "vsphere-storage-class">}}
+    <!-- {{< img "/img/rancher/vsphere-storage-class.png" "vsphere-storage-class">}} -->
 
 5. Optionally, specify additional properties for this storage class under **Parameters**. Refer to the [vSphere storage documentation](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/storageclass.html) for details.
 5. Click **Create**.
@@ -60,7 +60,7 @@ In order to provision vSphere volumes in a cluster created with the [Rancher Kub
 9. Once the replacement pod is running, click **Execute Shell**.
 10. Inspect the contents of the directory where the volume is mounted by entering `ls -l /<volumeMountPoint>`. Note that the file you created earlier is still present.
 
-    ![workload-persistent-data](./assets/img/rancher/workload-persistent-data.png)
+    <!-- ![workload-persistent-data](./assets/img/rancher/workload-persistent-data.png) -->
 
 ### Why to Use StatefulSets Instead of Deployments
 

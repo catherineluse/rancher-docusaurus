@@ -19,8 +19,8 @@ With Longhorn, you can:
 - Restore volumes from backup
 - Upgrade Longhorn without disrupting persistent volumes
 
-<figcaption>Longhorn Dashboard</figcaption>
-![Longhorn Dashboard](./assets/img/rancher/longhorn-screenshot.png)
+<!-- <figcaption>Longhorn Dashboard</figcaption>
+![Longhorn Dashboard](./assets/img/rancher/longhorn-screenshot.png) -->
 
 ### Installing Longhorn with Rancher
 
@@ -66,5 +66,5 @@ The storage controller and replicas are themselves orchestrated using Kubernetes
 
 You can learn more about its architecture [here.](https://longhorn.io/docs/1.0.2/concepts/)
 
-<figcaption>Longhorn Architecture</figcaption>
-![Longhorn Architecture](./assets/img/rancher/longhorn-architecture.svg)
+<!-- <figcaption>Longhorn Architecture</figcaption>
+![Longhorn Architecture](./assets/img/rancher/longhorn-architecture.svg) -->

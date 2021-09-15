@@ -76,7 +76,7 @@ The figure below illustrates the high-level architecture of Rancher 2.x. The fig
 
 <figcaption>Managing Kubernetes Clusters through Rancher's Authentication Proxy</figcaption>
 
-![Architecture](./assets/img/rancher/rancher-architecture-rancher-api-server.svg)
+<!-- ![Architecture](./assets/img/rancher/rancher-architecture-rancher-api-server.svg) -->
 
 # AWS Service Events
 
