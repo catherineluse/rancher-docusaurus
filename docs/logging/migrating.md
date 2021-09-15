@@ -1,6 +1,6 @@
 ---
 title: Migrating to Rancher v2.5 Logging
-weight: 2
+position: 2
 ---
 Starting in v2.5, the logging feature available within Rancher has been completely overhauled. The [logging operator](https://github.com/banzaicloud/logging-operator) from Banzai Cloud has been adopted; Rancher configures this tooling for use when deploying logging.
 

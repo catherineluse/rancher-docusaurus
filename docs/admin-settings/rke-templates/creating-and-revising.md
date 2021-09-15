@@ -1,6 +1,6 @@
 ---
 title: Creating and Revising RKE Templates
-weight: 32
+position: 32
 ---
 
 This section describes how to manage RKE templates and revisions. You an create, share, update, and delete templates from the **Cluster Management** view under **RKE1 Configuration \> RKE Templates**.
@@ -10,21 +10,6 @@ Template updates are handled through a revision system. When template owners wan
 Template revisions can be used in two ways: to create a new cluster, or to upgrade a cluster that was created with an earlier version of the template. The template creator can choose a default revision, but when end users create a cluster, they can choose any template and any template revision that is available to them. After the cluster is created from a specific revision, it cannot change to another template, but the cluster can be upgraded to a newer available revision of the same template.
 
 The template owner has full control over template revisions, and can create new revisions to update the template, delete or disable revisions that should not be used to create clusters, and choose which template revision is the default.
-
-This section covers the following topics:
-
-- [Prerequisites](#prerequisites)
-- [Creating a template](#creating-a-template)
-- [Updating a template](#updating-a-template)
-- [Deleting a template](#deleting-a-template)
-- [Creating a revision based on the default revision](#creating-a-revision-based-on-the-default-revision)
-- [Creating a revision based on a cloned revision](#creating-a-revision-based-on-a-cloned-revision)
-- [Disabling a template revision](#disabling-a-template-revision)
-- [Re-enabling a disabled template revision](#re-enabling-a-disabled-template-revision)
-- [Setting a template revision as default](#setting-a-template-revision-as-default)
-- [Deleting a template revision](#deleting-a-template-revision)
-- [Upgrading a cluster to use a new template revision](#upgrading-a-cluster-to-use-a-new-template-revision)
-- [Exporting a running cluster to a new RKE template and revision](#exporting-a-running-cluster-to-a-new-rke-template-and-revision)
 
 ### Prerequisites
 

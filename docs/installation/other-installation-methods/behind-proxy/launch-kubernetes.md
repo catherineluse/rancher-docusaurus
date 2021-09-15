@@ -1,6 +1,6 @@
 ---
 title: '2. Install Kubernetes'
-weight: 200
+position: 200
 ---
 
 Once the infrastructure is ready, you can continue with setting up an RKE cluster to install Rancher in.

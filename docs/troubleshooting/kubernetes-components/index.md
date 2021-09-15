@@ -1,6 +1,6 @@
 ---
 title: Kubernetes Components
-weight: 100
+position: 100
 ---
 
 The commands and steps listed in this section apply to the core Kubernetes components on [Rancher Launched Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) clusters.

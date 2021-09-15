@@ -1,6 +1,6 @@
 ---
 title: Example Scenarios
-weight: 5
+position: 5
 ---
 
 These example scenarios describe how an organization could use templates to standardize cluster creation.

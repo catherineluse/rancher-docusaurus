@@ -1,7 +1,7 @@
 ---
 title: RKE Cluster Configuration Reference
 shortTitle: RKE Cluster Configuration
-weight: 1
+position: 1
 ---
 
 When Rancher installs Kubernetes, it uses [RKE](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) or [RKE2](https://docs.rke2.io/) as the Kubernetes distribution.

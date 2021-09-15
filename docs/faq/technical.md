@@ -1,6 +1,6 @@
 ---
 title: Technical
-weight: 8006
+position: 8006
 ---
 
 ### How can I reset the administrator password?

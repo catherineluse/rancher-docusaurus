@@ -1,6 +1,6 @@
 ---
-title: Istio
-weight: 14
+title: Intro
+position: 1
 ---
 
 [Istio](https://istio.io/) is an open-source tool that makes it easier for DevOps teams to observe, secure, control, and troubleshoot the traffic within a complex network of microservices.

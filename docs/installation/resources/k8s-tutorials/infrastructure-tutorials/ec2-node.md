@@ -1,6 +1,6 @@
 ---
 title: Setting up Nodes in Amazon EC2
-weight: 3
+position: 3
 ---
 
 In this tutorial, you will learn one way to set up Linux nodes for the Rancher management server. These nodes will fulfill the node requirements for [OS, Docker, hardware, and networking.](https://rancher.com/docs/rancher/v2.6/en/installation/requirements/)

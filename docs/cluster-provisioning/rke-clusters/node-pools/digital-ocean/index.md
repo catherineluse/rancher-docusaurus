@@ -1,7 +1,7 @@
 ---
 title: Creating a DigitalOcean Cluster
 shortTitle: DigitalOcean
-weight: 2215
+position: 2215
 ---
 In this section, you'll learn how to use Rancher to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in DigitalOcean.
 

@@ -1,6 +1,6 @@
 ---
 title: Pipeline Configuration Reference
-weight: 1
+position: 1
 ---
 
 In this section, you'll learn how to configure pipelines.
@@ -370,12 +370,6 @@ If all conditions evaluate to `true`, then the pipeline/stage/step is executed. 
 
 Wildcard character (`*`) expansion is supported in `branch` conditions.
 
-This section covers the following topics:
-
-- [Configuring pipeline triggers](#configuring-pipeline-triggers)
-- [Configuring stage triggers](#configuring-stage-triggers)
-- [Configuring step triggers](#configuring-step-triggers)
-- [Configuring triggers by YAML](#configuring-triggers-by-yaml)
 
 ### Configuring Pipeline Triggers
 

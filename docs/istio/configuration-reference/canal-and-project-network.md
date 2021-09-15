@@ -1,6 +1,6 @@
 ---
 title: Additional Steps for Project Network Isolation
-weight: 4
+position: 4
 ---
 
 In clusters where:

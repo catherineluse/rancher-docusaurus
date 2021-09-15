@@ -1,7 +1,7 @@
 ---
 shortTitle: AKS Cluster Configuration
 title: AKS Cluster Configuration Reference
-weight: 4
+position: 4
 ---
 
 # Changes in Rancher v2.6

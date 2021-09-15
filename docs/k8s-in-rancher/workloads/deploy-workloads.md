@@ -1,7 +1,7 @@
 ---
 title: Deploying Workloads
 description: Read this step by step guide for deploying workloads. Deploy a workload to run an application in one or more containers.
-weight: 3026
+position: 3026
 ---
 
 Deploy a workload to run an application in one or more containers.

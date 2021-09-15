@@ -1,6 +1,6 @@
 ---
 title: Rancher Agents
-weight: 2400
+position: 2400
 ---
 
 There are two different agent resources deployed on Rancher managed clusters:

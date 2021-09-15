@@ -1,6 +1,6 @@
 ---
 title: Outputs and ClusterOutputs
-weight: 2
+position: 2
 ---
 
 For the full details on configuring `Outputs` and `ClusterOutputs`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)

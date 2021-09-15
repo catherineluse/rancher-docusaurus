@@ -1,6 +1,6 @@
 ---
 title: Provisioning Drivers
-weight: 70
+position: 70
 ---
 
 Drivers in Rancher allow you to manage which providers can be used to deploy [hosted Kubernetes clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/hosted-kubernetes-clusters/) or [nodes in an infrastructure provider](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/) to allow Rancher to deploy and manage Kubernetes.

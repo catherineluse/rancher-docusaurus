@@ -1,7 +1,7 @@
 ---
 title: Role-based Access Control
 shortTitle: RBAC
-weight: 2
+position: 2
 ---
 This section describes the expectations for RBAC for Rancher Monitoring.
 

@@ -1,6 +1,6 @@
 ---
 title: How Persistent Storage Works
-weight: 1
+position: 1
 ---
 
 A persistent volume (PV) is a piece of storage in the Kubernetes cluster, while a persistent volume claim (PVC) is a request for storage.
@@ -17,14 +17,6 @@ For dynamic storage provisioning, your application will need to use a PVC that i
 ![Setting Up New and Existing Persistent Storage](./assets/img/rancher/rancher-storage.svg)
 ```
 For more information, refer to the [official Kubernetes documentation on storage](https://kubernetes.io/docs/concepts/storage/volumes/)
-
-This section covers the following topics:
-
-- [About persistent volume claims](#about-persistent-volume-claims)
-  - [PVCs are required for both new and existing persistent storage](#pvcs-are-required-for-both-new-and-existing-persistent-storage)
-- [Setting up existing storage with a PVC and PV](#setting-up-existing-storage-with-a-pvc-and-pv)
- - [Binding PVs to PVCs](#binding-pvs-to-pvcs)
-- [Provisioning new storage with a PVC and storage class](#provisioning-new-storage-with-a-pvc-and-storage-class)
 
 # About Persistent Volume Claims
 

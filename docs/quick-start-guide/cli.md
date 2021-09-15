@@ -1,6 +1,6 @@
 ---
 title: CLI with Rancher
-weight: 100
+position: 100
 ---
 
 Interact with Rancher using command line interface (CLI) tools from your workstation.

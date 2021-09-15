@@ -1,6 +1,6 @@
 ---
 title: '3. Install Kubernetes (Skip for Docker Installs)'
-weight: 300
+position: 300
 ---
 
 \> Skip this section if you are installing Rancher on a single node with Docker.

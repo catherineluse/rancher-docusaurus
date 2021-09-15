@@ -1,6 +1,6 @@
 ---
 title: 4. Set up the Istio Gateway
-weight: 5
+position: 5
 ---
 
 The gateway to each cluster can have its own port or load balancer, which is unrelated to a service mesh. By default, each Rancher-provisioned cluster has one NGINX ingress controller allowing traffic into the cluster. 

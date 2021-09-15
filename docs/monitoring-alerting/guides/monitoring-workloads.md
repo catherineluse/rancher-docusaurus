@@ -1,6 +1,6 @@
 ---
 title: Setting up Monitoring for a Workload
-weight: 4
+position: 4
 ---
 
 - [Display CPU and Memory Metrics for a Workload](#display-cpu-and-memory-metrics-for-a-workload)

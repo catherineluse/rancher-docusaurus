@@ -1,7 +1,7 @@
 ---
 title: rancher-logging Helm Chart Options
 shortTitle: Helm Chart Options
-weight: 4
+position: 4
 ---
 
 - [Enable/Disable Windows Node Logging](#enable-disable-windows-node-logging)

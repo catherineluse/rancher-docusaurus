@@ -1,7 +1,7 @@
 ---
 title: Set Up Load Balancer and Ingress Controller within Rancher
 description: Learn how you can set up load balancers and ingress controllers to redirect service requests within Rancher, and learn about the limitations of load balancers
-weight: 3040
+position: 3040
 ---
 
 Within Rancher, you can set up load balancers and ingress controllers to redirect service requests.

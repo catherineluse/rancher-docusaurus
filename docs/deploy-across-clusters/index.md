@@ -1,6 +1,6 @@
 ---
-title: Deploying Applications across Clusters
-weight: 12
+title: Intro
+position: 1
 ---
 ### Fleet
 

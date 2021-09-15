@@ -1,6 +1,6 @@
 ---
 title: Workload with NodePort Quick Start
-weight: 200
+position: 200
 ---
 
 ### Prerequisite

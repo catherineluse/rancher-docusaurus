@@ -1,7 +1,7 @@
 ---
 title: Roles-based Access Control
 shortTitle: RBAC
-weight: 3
+position: 3
 ---
 
 This section describes the permissions required to use the rancher-cis-benchmark App.

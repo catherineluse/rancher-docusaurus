@@ -1,6 +1,6 @@
 ---
 title: Kubernetes resources
-weight: 101
+position: 101
 ---
 
 The commands/steps listed on this page can be used to check the most important Kubernetes resources and apply to [Rancher Launched Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) clusters.

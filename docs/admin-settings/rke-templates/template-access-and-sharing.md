@@ -1,6 +1,6 @@
 ---
 title: Access and Sharing
-weight: 31
+position: 31
 ---
 
 If you are an RKE template owner, you can share it with users or groups of users, who can then use the template to create clusters.

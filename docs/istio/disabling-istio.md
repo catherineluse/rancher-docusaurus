@@ -1,6 +1,6 @@
 ---
 title: Disabling Istio
-weight: 4
+position: 4
 ---
 
 This section describes how to uninstall Istio in a cluster or disable a namespace, or workload.

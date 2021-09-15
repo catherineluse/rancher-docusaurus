@@ -1,7 +1,7 @@
 ---
 title: Monitoring Guides
 shortTitle: Guides
-weight: 4
+position: 4
 ---
 
 - [Enable monitoring](./enable-monitoring)

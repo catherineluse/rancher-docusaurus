@@ -1,6 +1,6 @@
 ---
 title: Azure Node Template Configuration
-weight: 1
+position: 1
 ---
 
 For more information about Azure, refer to the official [Azure documentation.](https://docs.microsoft.com/en-us/azure/?product=featured)

@@ -1,6 +1,6 @@
 ---
 title: Installing Docker
-weight: 1
+position: 1
 ---
 
 For Helm CLI installs, Docker is required to be installed on any node that runs the Rancher server.

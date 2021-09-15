@@ -1,6 +1,6 @@
 ---
 title: Customizing Grafana Dashboards
-weight: 5
+position: 5
 ---
 
 In this section, you'll learn how to customize the Grafana dashboard to show metrics that apply to a certain container.

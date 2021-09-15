@@ -1,6 +1,6 @@
 ---
 title: Node Requirements for Rancher Managed Clusters
-weight: 1
+position: 1
 ---
 
 This page describes the requirements for the Rancher managed Kubernetes clusters where your apps and services will be installed. These downstream clusters should be separate from the three-node cluster running Rancher.

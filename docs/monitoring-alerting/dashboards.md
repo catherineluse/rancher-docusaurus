@@ -1,6 +1,6 @@
 ---
 title: Built-in Dashboards
-weight: 3
+position: 3
 ---
 
 - [Grafana UI](#grafana-ui)

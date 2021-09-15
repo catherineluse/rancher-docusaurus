@@ -1,6 +1,6 @@
 ---
 title: Tips for Setting Up Containers
-weight: 100
+position: 100
 ---
 
 Running well-built containers can greatly impact the overall performance and security of your environment.

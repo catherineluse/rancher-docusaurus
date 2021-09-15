@@ -1,6 +1,6 @@
 ---
 title: Creating a Custom Benchmark Version for Running a Cluster Scan
-weight: 4
+position: 4
 ---
 
 Each Benchmark Version defines a set of test configuration files that define the CIS tests to be run by the \<a href="https://github.com/aquasecurity/kube-bench" target="_blank"\>kube-bench\</a\> tool.

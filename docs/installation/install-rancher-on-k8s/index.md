@@ -1,7 +1,7 @@
 ---
 title: Install/Upgrade Rancher on a Kubernetes Cluster
 description: Learn how to install Rancher in development and production environments. Read about single node and high availability installation
-weight: 2
+position: 2
 ---
 
 In this section, you'll learn how to deploy Rancher on a Kubernetes cluster using the Helm CLI.

@@ -1,6 +1,6 @@
 ---
 title: Migrating vSphere In-tree Volumes to CSI
-weight: 5
+position: 5
 ---
 Kubernetes is moving away from maintaining cloud providers in-tree. vSphere has an out-of-tree cloud provider that can be used by installing the vSphere cloud provider and cloud storage plugins.
 

@@ -1,6 +1,6 @@
 ---
 title: Rancher CVEs and Resolutions
-weight: 300
+position: 300
 ---
 
 Rancher is committed to informing the community of security issues in our products. Rancher will publish CVEs (Common Vulnerabilities and Exposures) for issues we have resolved.

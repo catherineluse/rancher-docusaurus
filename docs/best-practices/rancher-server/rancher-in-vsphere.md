@@ -1,16 +1,12 @@
 ---
 title: Installing Rancher in a vSphere Environment
 shortTitle: On-Premises Rancher in vSphere
-weight: 3
+position: 3
 ---
 
 This guide outlines a reference architecture for installing Rancher on an RKE Kubernetes cluster in a vSphere environment, in addition to standard vSphere best practices as documented by VMware.
 
-- [1. Load Balancer Considerations](#1-load-balancer-considerations)
-- [2. VM Considerations](#2-vm-considerations)
-- [3. Network Considerations](#3-network-considerations)
-- [4. Storage Considerations](#4-storage-considerations)
-- [5. Backups and Disaster Recovery](#5-backups-and-disaster-recovery)
+
 ```img
 \<figcaption\>Solution Overview\</figcaption\>
 

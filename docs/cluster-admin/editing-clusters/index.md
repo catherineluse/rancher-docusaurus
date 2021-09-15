@@ -1,6 +1,6 @@
 ---
 title: Cluster Configuration
-weight: 2025
+position: 2025
 ---
 
 After you provision a Kubernetes cluster using Rancher, you can still edit options and settings for the cluster.

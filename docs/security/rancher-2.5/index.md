@@ -1,7 +1,7 @@
 ---
 title: Self-Assessment and Hardening Guides for Rancher v2.5
 shortTitle: Rancher v2.5 Guides
-weight: 1
+position: 1
 ---
 
 Rancher v2.5 introduced the capability to deploy Rancher on any Kubernetes cluster. For that reason, we now provide separate security hardening guides for Rancher deployments on each of Rancher's Kubernetes distributions.

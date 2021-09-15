@@ -1,6 +1,6 @@
 ---
 title: Architecture
-weight: 1
+position: 1
 ---
 
 This section summarizes the architecture of the Rancher logging application.

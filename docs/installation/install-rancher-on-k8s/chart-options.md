@@ -1,6 +1,6 @@
 ---
 title: Rancher Helm Chart Options
-weight: 1
+position: 1
 ---
 
 This page is a configuration reference for the Rancher Helm chart.

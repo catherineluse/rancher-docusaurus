@@ -1,6 +1,6 @@
 ---
 title: Configuration
-weight: 5
+position: 5
 ---
 
 This page captures some of the most important options for configuring Monitoring V2 in the Rancher UI.

@@ -1,28 +1,11 @@
 ---
-title: CIS Scans
-weight: 17
+title: Intro
+position: 1
 ---
 
 Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark. The CIS scans can run on any Kubernetes cluster, including hosted Kubernetes providers such as EKS, AKS, and GKE.
 
 The `rancher-cis-benchmark` app leverages \<a href="https://github.com/aquasecurity/kube-bench" target="_blank"\>kube-bench,\</a\> an open-source tool from Aqua Security, to check clusters for CIS Kubernetes Benchmark compliance. Also, to generate a cluster-wide report, the application utilizes \<a href="https://github.com/vmware-tanzu/sonobuoy" target="_blank"\>Sonobuoy\</a\> for report aggregation.
-
-- [About the CIS Benchmark](#about-the-cis-benchmark)
-- [About the Generated Report](#about-the-generated-report)
-- [Test Profiles](#test-profiles)
-- [About Skipped and Not Applicable Tests](#about-skipped-and-not-applicable-tests)
-- [Roles-based Access Control](./rbac)
-- [Configuration](./configuration)
-- [How-to Guides](#how-to-guides)
-  - [Installing CIS Benchmark](#installing-cis-benchmark)
-  - [Uninstalling CIS Benchmark](#uninstalling-cis-benchmark)
-  - [Running a Scan](#running-a-scan)
-  - [Running a Scan Periodically on a Schedule](#running-a-scan-periodically-on-a-schedule)
-  - [Skipping Tests](#skipping-tests)
-  - [Viewing Reports](#viewing-reports)
-  - [Enabling Alerting for rancher-cis-benchmark](#enabling-alerting-for-rancher-cis-benchmark)
-  - [Configuring Alerts for a Periodic Scan on a Schedule](#configuring-alerts-for-a-periodic-scan-on-a-schedule)
-  - [Creating a Custom Benchmark Version for Running a Cluster Scan](#creating-a-custom-benchmark-version-for-running-a-cluster-scan)
 
 
 # About the CIS Benchmark
@@ -120,15 +103,6 @@ For more information about configuring the custom resources for the scans, profi
 
 # How-to Guides
 
-- [Installing rancher-cis-benchmark](#installing-rancher-cis-benchmark)
-- [Uninstalling rancher-cis-benchmark](#uninstalling-rancher-cis-benchmark)
-- [Running a Scan](#running-a-scan)
-- [Running a Scan Periodically on a Schedule](#running-a-scan-periodically-on-a-schedule)
-- [Skipping Tests](#skipping-tests)
-- [Viewing Reports](#viewing-reports)
-- [Enabling Alerting for rancher-cis-benchmark](#enabling-alerting-for-rancher-cis-benchmark)
-- [Configuring Alerts for a Periodic Scan on a Schedule](#configuring-alerts-for-a-periodic-scan-on-a-schedule)
-- [Creating a Custom Benchmark Version for Running a Cluster Scan](#creating-a-custom-benchmark-version-for-running-a-cluster-scan)
 ### Installing CIS Benchmark
 
 1. In the upper left corner, click **☰ \> Cluster Management**.

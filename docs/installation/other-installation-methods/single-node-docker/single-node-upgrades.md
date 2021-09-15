@@ -1,6 +1,6 @@
 ---
 title: Upgrading Rancher Installed with Docker
-weight: 1010
+position: 1010
 ---
 
 The following instructions will guide you through upgrading a Rancher server that was installed with Docker.

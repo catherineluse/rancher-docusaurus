@@ -1,6 +1,6 @@
 ---
 title: SELinux RPM
-weight: 4
+position: 4
 ---
 
 [Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux.

@@ -1,6 +1,6 @@
 ---
 title: Setting up Existing Storage
-weight: 1
+position: 1
 ---
 
 This section describes how to set up existing persistent storage for workloads in Rancher.

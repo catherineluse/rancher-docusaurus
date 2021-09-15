@@ -1,6 +1,6 @@
 ---
 title: Minimum EKS Permissions
-weight: 1
+position: 1
 ---
 
 Documented here is a minimum set of permissions necessary to use all functionality of the EKS driver in Rancher. Additional permissions are required for Rancher to provision the `Service Role` and `VPC` resources. Optionally these resources can be created **before** the cluster creation and will be selectable when defining the cluster configuration.

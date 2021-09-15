@@ -1,20 +1,13 @@
 ---
 title: Restore Configuration
 shortTitle: Restore
-weight: 2
+position: 2
 ---
 
 The Restore Create page lets you provide details of the backup to restore from
 ```img
 {{ img "/img/rancher/backup_restore/restore/restore.png" ""}}
 ```
-- [Backup Source](#backup-source)
-	- [An Existing Backup Config](#an-existing-backup-config)
-	- [The default storage target](#the-default-storage-target)
-	- [An S3-compatible object store](#an-s3-compatible-object-store)
-- [Encryption](#encryption)
-- [Prune during restore](#prune-during-restore)
-- [Getting the Backup Filename from S3](#getting-the-backup-filename-from-s3)
 
 # Backup Source
 Provide details of the backup file and its storage location, which the operator will then use to perform the restore. Select from the following options to provide these details

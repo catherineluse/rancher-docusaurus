@@ -1,20 +1,13 @@
 ---
 title: Backup Storage Location Configuration
 shortTitle: Storage
-weight: 3
+position: 3
 ---
 
 Configure a storage location where all backups are saved by default. You will have the option to override this with each backup, but will be limited to using an S3-compatible object store.
 
 Only one storage location can be configured at the operator level.
 
-- [Storage Location Configuration](#storage-location-configuration)
-  - [No Default Storage Location](#no-default-storage-location)
-  - [S3-compatible Object Store](#s3-compatible-object-store)
-  - [Use an existing StorageClass](#existing-storageclass)
-  - [Use an existing PersistentVolume](#existing-persistent-volume)
-- [Encryption](#encryption)
-- [Example values.yaml for the rancher-backup Helm Chart](#example-values-yaml-for-the-rancher-backup-helm-chart)
 
 # Storage Location Configuration
 

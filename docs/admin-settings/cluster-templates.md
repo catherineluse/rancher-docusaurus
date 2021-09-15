@@ -1,18 +1,9 @@
 ---
 title: Cluster Templates
-weight: 100
+position: 100
 ---
 
 Cluster templates encompass both Kubernetes configuration and node pool configuration, allowing a single template to contain all the information Rancher needs to provision new nodes in a cloud provider and install Kubernetes on those nodes.
-
-- [Overview](#overview)
-- [RKE2 Cluster Template](#rke2-cluster-template)
-- [Adding a Cluster Template to Rancher](#adding-a-cluster-template-to-rancher)
-- [Creating a Cluster from a Cluster Template](#creating-a-cluster-from-a-cluster-template)
-- [Updating a Cluster Created from a Cluster Template](#updating-a-cluster-created-from-a-cluster-template)
-- [Deploying Clusters from a Template with Fleet](#deploying-clusters-from-a-template-with-fleet)
-- [Uninstalling Cluster Templates](#uninstalling-cluster-templates)
-- [Configuration Options](#configuration-options)
 
 # Overview
 

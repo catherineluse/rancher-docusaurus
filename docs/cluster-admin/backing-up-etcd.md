@@ -1,6 +1,6 @@
 ---
 title: Backing up a Cluster
-weight: 2045
+position: 2045
 ---
 
 In the Rancher UI, etcd backup and recovery for [Rancher launched Kubernetes clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) can be easily performed.
@@ -8,20 +8,6 @@ In the Rancher UI, etcd backup and recovery for [Rancher launched Kubernetes clu
 Rancher recommends configuring recurrent `etcd` snapshots for all production clusters. Additionally, one-time snapshots can easily be taken as well.
 
 Snapshots of the etcd database are taken and saved either [locally onto the etcd nodes](#local-backup-target) or to a [S3 compatible target](#s3-backup-target). The advantages of configuring S3 is that if all etcd nodes are lost, your snapshot is saved remotely and can be used to restore the cluster.
-
-This section covers the following topics:
-
-- [How snapshots work](#how-snapshots-work)
-- [Configuring recurring snapshots](#configuring-recurring-snapshots)
-- [One-time snapshots](#one-time-snapshots)
-- [Snapshot backup targets](#snapshot-backup-targets)
-  - [Local backup target](#local-backup-target)
-  - [S3 backup target](#s3-backup-target)
-  - [Using a custom CA certificate for S3](#using-a-custom-ca-certificate-for-s3)
-  - [IAM Support for storing snapshots in S3](#iam-support-for-storing-snapshots-in-s3)
-- [Viewing available snapshots](#viewing-available-snapshots)
-- [Safe timestamps](#safe-timestamps)
-- [Enabling snapshot features for clusters created before Rancher v2.2.0](#enabling-snapshot-features-for-clusters-created-before-rancher-v2-2-0)
 
 # How Snapshots Work
 

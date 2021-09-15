@@ -1,6 +1,6 @@
 ---
 title: Configuring Persistent Data for Pipeline Components
-weight: 600
+position: 600
 ---
 
 The pipelines' internal Docker registry and the Minio workloads use ephemeral volumes by default. This default storage works out-of-the-box and makes testing easy, but you lose the build images and build logs if the node running the Docker Registry or Minio fails. In most cases this is fine. If you want build images and logs to survive node failures, you can configure the Docker Registry and Minio to use persistent volumes.

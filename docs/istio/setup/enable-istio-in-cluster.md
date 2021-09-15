@@ -1,6 +1,6 @@
 ---
 title: 1. Enable Istio in the Cluster
-weight: 1
+position: 1
 ---
 
 \>**Prerequisites:**

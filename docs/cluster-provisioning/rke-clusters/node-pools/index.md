@@ -1,6 +1,6 @@
 ---
 title: Launching Kubernetes on New Nodes in an Infrastructure Provider
-weight: 2205
+position: 2205
 ---
 
 Using Rancher, you can create pools of nodes based on a [node template](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates). This node template defines the parameters you want to use to launch nodes in your infrastructure providers or cloud providers.
@@ -9,21 +9,6 @@ One benefit of installing Kubernetes on node pools hosted by an infrastructure p
 
 The available cloud providers to create a node template are decided based on active [node drivers](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-drivers).
 
-This section covers the following topics:
-
-- [Changes in Rancher v2.6](#changes-in-rancher-v2-6)
-- [Node templates](#node-templates)
-  - [Node labels](#node-labels)
-  - [Node taints](#node-taints)
-  - [Administrator control of node templates](#administrator-control-of-node-templates)
-- [Node pools](#node-pools)
-  - [Node pool taints](#node-pool-taints)
-  - [About node auto-replace](#about-node-auto-replace)
-  - [Enabling node auto-replace](#enabling-node-auto-replace)
-  - [Disabling node auto-replace](#disabling-node-auto-replace)
-- [Cloud credentials](#cloud-credentials)
-- [Node drivers](#node-drivers)
-- [Node roles in RKE2](#node-roles-in-rke2)
 
 # Changes in Rancher v2.6
 

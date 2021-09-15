@@ -1,6 +1,6 @@
 ---
 title: NFS Storage
-weight: 3054
+position: 3054
 ---
 
 Before you can use the NFS storage volume plug-in with Rancher deployments, you need to provision an NFS server.

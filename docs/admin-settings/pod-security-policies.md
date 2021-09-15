@@ -1,20 +1,11 @@
 ---
 title: Pod Security Policies
-weight: 60
+position: 60
 ---
 
 _Pod Security Policies_ (or PSPs) are objects that control security-sensitive aspects of pod specification (like root privileges).
 
 If a pod does not meet the conditions specified in the PSP, Kubernetes will not allow it to start, and Rancher will display an error message of `Pod \<NAME\> is forbidden: unable to validate...`.
-
-- [How PSPs Work](#how-psps-work)
-- [Default PSPs](#default-psps)
-  - [Restricted](#restricted)
-  - [Unrestricted](#unrestricted)
-- [Creating PSPs](#creating-psps)
-  - [Requirements](#requirements)
-  - [Creating PSPs in the Rancher UI](#creating-psps-in-the-rancher-ui)
-- [Configuration](#configuration)
 
 # How PSPs Work
 

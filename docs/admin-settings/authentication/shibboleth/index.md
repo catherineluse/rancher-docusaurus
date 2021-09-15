@@ -1,6 +1,6 @@
 ---
 title: Configuring Shibboleth (SAML)
-weight: 1210
+position: 1210
 ---
 
 If your organization uses Shibboleth Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in to Rancher using their Shibboleth credentials.
@@ -11,16 +11,6 @@ If you also configure OpenLDAP as the back end to Shibboleth, it will return a S
 
 \> The instructions in this section assume that you understand how Rancher, Shibboleth, and OpenLDAP work together. For a more detailed explanation of how it works, refer to [this page.](./about)
 
-This section covers the following topics:
-
-- [Setting up Shibboleth in Rancher](#setting-up-shibboleth-in-rancher)
-  - [Shibboleth Prerequisites](#shibboleth-prerequisites)
-  - [Configure Shibboleth in Rancher](#configure-shibboleth-in-rancher)
-  - [SAML Provider Caveats](#saml-provider-caveats)
-- [Setting up OpenLDAP in Rancher](#setting-up-openldap-in-rancher)
-  - [OpenLDAP Prerequisites](#openldap-prerequisites)
-  - [Configure OpenLDAP in Rancher](#configure-openldap-in-rancher)
-  - [Troubleshooting](#troubleshooting)
 
 # Setting up Shibboleth in Rancher
 

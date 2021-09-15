@@ -1,6 +1,6 @@
 ---
 title: TLS Settings
-weight: 3
+position: 3
 ---
 
 The default TLS configuration only accepts TLS 1.2 and secure TLS cipher suites. TLS 1.3 and TLS 1.3 exclusive cipher suites are not supported.

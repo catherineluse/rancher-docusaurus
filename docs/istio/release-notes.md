@@ -1,6 +1,6 @@
 ---
 title: Release Notes
-weight: 100
+position: 100
 ---
 
 # Istio 1.5.9 release notes

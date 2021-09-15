@@ -1,6 +1,6 @@
 ---
 title: Deprecated Features in Rancher v2.5
-weight: 100
+position: 100
 ---
 
 ### What is Rancher's Deprecation policy?

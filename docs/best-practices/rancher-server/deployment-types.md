@@ -1,6 +1,6 @@
 ---
 title: Tips for Running Rancher
-weight: 100
+position: 100
 ---
 
 This guide is geared toward use cases where Rancher is used to manage downstream Kubernetes clusters. The high-availability setup is intended to prevent losing access to downstream clusters if the Rancher server is not available.

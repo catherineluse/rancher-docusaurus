@@ -1,6 +1,6 @@
 ---
 title: Configuring Okta (SAML)
-weight: 1210
+position: 1210
 ---
 
 If your organization uses Okta Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.

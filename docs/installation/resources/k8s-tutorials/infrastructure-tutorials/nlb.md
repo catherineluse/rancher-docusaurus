@@ -1,6 +1,6 @@
 ---
 title: Setting up Amazon ELB Network Load Balancer
-weight: 5
+position: 5
 ---
 
 This how-to guide describes how to set up a Network Load Balancer (NLB) in Amazon's EC2 service that will direct traffic to multiple instances on EC2.

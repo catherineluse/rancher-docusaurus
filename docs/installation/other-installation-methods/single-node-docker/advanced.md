@@ -1,6 +1,6 @@
 ---
 title: Advanced Options for Docker Installs
-weight: 5
+position: 5
 ---
 
 When installing Rancher, there are several advanced options that can be enabled:

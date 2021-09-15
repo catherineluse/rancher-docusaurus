@@ -1,7 +1,7 @@
 ---
 title: ServiceMonitor and PodMonitor Configuration
 shortTitle: ServiceMonitors and PodMonitors
-weight: 7
+position: 7
 ---
 
 ServiceMonitors and PodMonitors are both pseudo-CRDs that map the scrape configuration of the Prometheus custom resource.

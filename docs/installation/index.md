@@ -1,7 +1,6 @@
 ---
-title: Installing/Upgrading Rancher
-description: Learn how to install Rancher in development and production environments. Read about single node and high availability installation
-weight: 3
+title: Intro
+position: 1
 ---
 
 This section provides an overview of the architecture options of installing Rancher, describing advantages of each option.

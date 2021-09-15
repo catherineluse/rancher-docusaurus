@@ -1,6 +1,6 @@
 ---
 title: Rollbacks
-weight: 3
+position: 3
 ---
 
 - [Rolling Back to Rancher v2.5.0+](#rolling-back-to-rancher-v2-5-0)

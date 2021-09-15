@@ -1,6 +1,6 @@
 ---
 title: Setting up the Amazon Cloud Provider
-weight: 1
+position: 1
 ---
 
 When using the `Amazon` cloud provider, you can leverage the following capabilities:

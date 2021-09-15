@@ -1,6 +1,6 @@
 ---
 title: Flows and ClusterFlows
-weight: 1
+position: 1
 ---
 
 For the full details on configuring `Flows` and `ClusterFlows`, see the [Banzai Cloud Logging operator documentation.](https://banzaicloud.com/docs/one-eye/logging-operator/configuration/output/)

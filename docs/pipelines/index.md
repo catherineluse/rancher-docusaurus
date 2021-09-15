@@ -1,6 +1,6 @@
 ---
-title: Pipelines
-weight: 10
+title: Intro
+position: 1
 ---
 
 \> As of Rancher v2.5, Git-based deployment pipelines are now deprecated. We recommend handling pipelines with Rancher Continuous Delivery powered by [Fleet.](https://fleet.rancher.io/) To get to Fleet in Rancher, click \<b\>☰ \> Continuous Delivery\</b\>. Note that pipelines in Kubernetes 1.21+ are no longer supported.
@@ -19,19 +19,6 @@ After configuring Rancher and GitHub, you can deploy containers running Jenkins 
 
 \>**Note:** Rancher's pipeline provides a simple CI/CD experience, but it does not offer the full power and flexibility of and is not a replacement of enterprise-grade Jenkins or other CI tools your team uses.
 
-This section covers the following topics:
-
-- [Concepts](#concepts)
-- [How Pipelines Work](#how-pipelines-work)
-- [Roles-based Access Control for Pipelines](#roles-based-access-control-for-pipelines)
-- [Setting up Pipelines](#setting-up-pipelines)
-  - [Configure version control providers](#1-configure-version-control-providers)
-  - [Configure repositories](#2-configure-repositories)
-  - [Configure the pipeline](#3-configure-the-pipeline)
-- [Pipeline Configuration Reference](#pipeline-configuration-reference)
-- [Running your Pipelines](#running-your-pipelines)
-- [Triggering a Pipeline](#triggering-a-pipeline)
-  - [Modifying the Event Triggers for the Repository](#modifying-the-event-triggers-for-the-repository)
 
 # Concepts
 

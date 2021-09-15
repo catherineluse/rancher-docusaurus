@@ -1,6 +1,6 @@
 ---
-title: API
-weight: 24
+title: Intro
+position: 1
 ---
 
 ## How to use the API

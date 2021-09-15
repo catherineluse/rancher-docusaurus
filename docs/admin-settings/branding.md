@@ -1,15 +1,9 @@
 ---
 title: Custom Branding
-weight: 90
+position: 90
 ---
 
 Rancher v2.6 introduced the ability to customize Rancher’s branding and navigation links.
-
-- [Changing Brand Settings](#changing-brand-settings)
-- [Brand Configuration](#brand-configuration)
-- [Custom Navigation Links](#custom-navigation-links)
-- [Link Configuration](#link-configuration)
-- [Link Examples](#link-examples)
 
 # Changing Brand Settings
 

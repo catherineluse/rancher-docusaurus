@@ -1,6 +1,6 @@
 ---
 title: Windows and Linux Cluster Feature Parity
-weight: 3
+position: 3
 ---
 
 Windows clusters do not share the same feature support as Linux clusters.

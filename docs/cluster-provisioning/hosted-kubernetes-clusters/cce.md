@@ -1,7 +1,7 @@
 ---
 title: Creating a Huawei CCE Cluster
 shortTitle: Huawei Cloud Kubernetes Service
-weight: 2130
+position: 2130
 ---
 
 You can use Rancher to create a cluster hosted in Huawei Cloud Container Engine (CCE). Rancher has already implemented and packaged the [cluster driver](https://rancher.com/docs/rancher/v2.6/en/admin-settings/drivers/cluster-drivers/) for CCE, but by default, this cluster driver is `inactive`. In order to launch CCE clusters, you will need to [enable the CCE cluster driver](https://rancher.com/docs/rancher/v2.6/en/admin-settings/drivers/cluster-drivers/#activating-deactivating-cluster-drivers). After enabling the cluster driver, you can start provisioning CCE clusters.

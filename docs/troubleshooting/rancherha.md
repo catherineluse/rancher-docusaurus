@@ -1,6 +1,6 @@
 ---
 title: Rancher HA
-weight: 104
+position: 104
 ---
 
 The commands/steps listed on this page can be used to check your Rancher Kubernetes Installation.

@@ -1,6 +1,6 @@
 ---
 title: Logging
-weight: 110
+position: 110
 ---
 
 The following log levels are used in Rancher:

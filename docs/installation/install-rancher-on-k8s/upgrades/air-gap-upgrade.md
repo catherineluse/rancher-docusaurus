@@ -1,7 +1,7 @@
 ---
 title: Rendering the Helm Template in an Air Gapped Environment
 shortTitle: Air Gap Upgrade
-weight: 1
+position: 1
 ---
 
 \> These instructions assume you have already followed the instructions for a Kubernetes upgrade on [this page,](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/upgrades/) including the prerequisites, up until step 3. Upgrade Rancher.

@@ -1,7 +1,7 @@
 ---
 title: Managing GKE Clusters
 shortTitle: Google Kubernetes Engine
-weight: 2105
+position: 2105
 ---
 
 - [Prerequisites](#prerequisites)

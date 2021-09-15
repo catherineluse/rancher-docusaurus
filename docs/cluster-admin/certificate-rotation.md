@@ -1,6 +1,6 @@
 ---
 title: Certificate Rotation
-weight: 2040
+position: 2040
 ---
 
 \> **Warning:** Rotating Kubernetes certificates may result in your cluster being temporarily unavailable as components are restarted. For production environments, it's recommended to perform this action during a maintenance window.

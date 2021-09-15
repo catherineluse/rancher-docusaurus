@@ -1,6 +1,6 @@
 ---
 title: Launching Kubernetes on Windows Clusters
-weight: 2240
+position: 2240
 ---
 
 When provisioning a [custom cluster](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/custom-nodes) using Rancher, Rancher uses RKE (the Rancher Kubernetes Engine) to install Kubernetes on your existing nodes.
@@ -18,15 +18,6 @@ For the full list of requirements, see [this section.](#requirements-for-windows
 
 For a summary of Kubernetes features supported in Windows, see the Kubernetes documentation on [supported functionality and limitations for using Kubernetes with Windows](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations) or the [guide for scheduling Windows containers in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/user-guide-windows-containers/).
 
-This guide covers the following topics:
-
-\<!-- TOC --\>
-
-- [Changes in Rancher v2.6](#changes-in-rancher-v2-6)
-- [Requirements](#requirements-for-windows-clusters)
-- [Tutorial: How to Create a Cluster with Windows Support](#tutorial-how-to-create-a-cluster-with-windows-support)
-- [Configuration for Storage Classes in Azure](#configuration-for-storage-classes-in-azure)
-  \<!-- /TOC --\>
 
   # Changes in Rancher v2.6
 

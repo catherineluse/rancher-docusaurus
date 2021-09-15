@@ -1,6 +1,6 @@
 ---
 title: VSphere Node Template Configuration
-weight: 2
+position: 2
 ---
 
 - [Account Access](#account-access)

@@ -1,6 +1,6 @@
 ---
-title: Backups and Disaster Recovery
-weight: 5
+title: Intro
+position: 1
 ---
 
 In this section, you'll learn how to create backups of Rancher, how to restore Rancher from backup, and how to migrate Rancher to a new Kubernetes cluster. 
@@ -8,18 +8,6 @@ In this section, you'll learn how to create backups of Rancher, how to restore R
 The `rancher-backup` operator is used to backup and restore Rancher on any Kubernetes cluster. This application is a Helm chart, and it can be deployed through the Rancher **Apps & Marketplace** page, or by using the Helm CLI. The `rancher-backup` Helm chart is [here.](https://github.com/rancher/charts/tree/main/charts/rancher-backup)
 
 The backup-restore operator needs to be installed in the local cluster, and only backs up the Rancher app. The backup and restore operations are performed only in the local Kubernetes cluster.
-
-- [Backup and Restore for Rancher installed with Docker](#backup-and-restore-for-rancher-installed-with-docker)
-- [How Backups and Restores Work](#how-backups-and-restores-work)
-- [Installing the rancher-backup Operator](#installing-the-rancher-backup-operator)
-  - [Installing rancher-backup with the Rancher UI](#installing-rancher-backup-with-the-rancher-ui)
-  - [Installing rancher-backup with the Helm CLI](#installing-rancher-backup-with-the-helm-cli)
-  - [RBAC](#rbac)
-- [Backing up Rancher](#backing-up-rancher)
-- [Restoring Rancher](#restoring-rancher)
-- [Migrating Rancher to a New Cluster](#migrating-rancher-to-a-new-cluster)
-- [Default Storage Location Configuration](#default-storage-location-configuration)
-  - [Example values.yaml for the rancher-backup Helm Chart](#example-values-yaml-for-the-rancher-backup-helm-chart)
 
 # Backup and Restore for Rancher installed with Docker
 

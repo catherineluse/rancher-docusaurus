@@ -1,19 +1,9 @@
 ---
 title: Tools for Logging, Monitoring, and Visibility
-weight: 2033
+position: 2033
 ---
 
 Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently. Tools are divided into following categories:
-
-\<!-- TOC --\>
-
-- [Logging](#logging)
-- [Monitoring and Alerts](#monitoring-and-alerts)
-- [Istio](#istio)
-- [OPA Gatekeeper](#opa-gatekeeper)
-- [CIS Scans](#cis-scans)
-
-\<!-- /TOC --\>
 
 
 # Logging

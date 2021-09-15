@@ -1,6 +1,6 @@
 ---
 title: Telemetry
-weight: 8008
+position: 8008
 ---
 
 ### What is Telemetry?

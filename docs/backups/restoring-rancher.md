@@ -1,6 +1,6 @@
 ---
 title: Restoring Rancher
-weight: 2
+position: 2
 ---
 
 A restore is performed by creating a Restore custom resource. 

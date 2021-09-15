@@ -1,6 +1,6 @@
 ---
 title: Configuring Azure AD
-weight: 1115
+position: 1115
 ---
 
 If you have an instance of Active Directory (AD) hosted in Azure, you can configure Rancher to allow your users to log in using their AD accounts. Configuration of Azure AD external authentication requires you to make configurations in both Azure and Rancher.
@@ -18,15 +18,6 @@ Configuring Rancher to allow your users to authenticate with their Azure AD acco
 \<a id="tip"\>\</a\>
 
 \>**Tip:** Before you start, we recommend creating an empty text file. You can use this file to copy values from Azure that you'll paste into Rancher later.
-
-\<!-- TOC --\>
-
-- [1. Register Rancher with Azure](#1-register-rancher-with-azure)
-- [2. Create a new client secret](#2-create-a-new-client-secret)
-- [3. Set Required Permissions for Rancher](#3-set-required-permissions-for-rancher)
-- [4. Add a Reply URL](#4-add-a-reply-url)
-- [5. Copy Azure Application Data](#5-copy-azure-application-data)
-- [6. Configure Azure AD in Rancher](#6-configure-azure-ad-in-rancher)
 
 \<!-- /TOC --\>
 

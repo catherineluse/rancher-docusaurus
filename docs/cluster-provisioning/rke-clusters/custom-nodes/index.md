@@ -2,7 +2,7 @@
 title: Launching Kubernetes on Existing Custom Nodes
 description: To create a cluster with custom nodes, you’ll need to access servers in your cluster and provision them according to Rancher requirements 
 metaDescription: "To create a cluster with custom nodes, you’ll need to access servers in your cluster and provision them according to Rancher requirements"
-weight: 2225
+position: 2225
 ---
 
 When you create a custom cluster, Rancher uses RKE (the Rancher Kubernetes Engine) to create a Kubernetes cluster in on-prem bare-metal servers, on-prem virtual machines, or in any node hosted by an infrastructure provider.

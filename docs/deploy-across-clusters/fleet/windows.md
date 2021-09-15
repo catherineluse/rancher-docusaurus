@@ -1,6 +1,6 @@
 ---
 title: Windows Support
-weight: 2
+position: 2
 ---
 
 

@@ -1,12 +1,9 @@
 ---
 title: Logging Best Practices
-weight: 1
+position: 1
 ---
 In this guide, we recommend best practices for cluster-level logging and application logging.
 
-- [Cluster-level Logging](#cluster-level-logging)
-- [Application Logging](#application-logging)
-- [General Best Practices](#general-best-practices)
 
 Before Rancher v2.5, logging in Rancher has historically been a pretty static integration. There were a fixed list of aggregators to choose from (ElasticSearch, Splunk, Kafka, Fluentd and Syslog), and only two configuration points to choose (Cluster-level and Project-level).
 

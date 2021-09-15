@@ -1,6 +1,6 @@
 ---
 title: Prometheus Configuration
-weight: 1
+position: 1
 ---
 
 It is usually not necessary to directly edit the Prometheus custom resource because the monitoring application automatically updates it based on changes to ServiceMonitors and PodMonitors.

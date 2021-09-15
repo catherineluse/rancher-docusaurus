@@ -1,6 +1,6 @@
 ---
 title: Selectors and Scrape Configs
-weight: 2
+position: 2
 ---
 
 The Monitoring app sets `prometheus.prometheusSpec.ignoreNamespaceSelectors=false`, which enables monitoring across all namespaces by default.

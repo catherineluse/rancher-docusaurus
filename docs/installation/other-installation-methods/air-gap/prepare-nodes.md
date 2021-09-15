@@ -1,6 +1,6 @@
 ---
 title: '1. Set up Infrastructure and Private Registry'
-weight: 100
+position: 100
 ---
 
 In this section, you will provision the underlying infrastructure for your Rancher management server in an air gapped environment. You will also set up the private Docker registry that must be available to your Rancher node(s).

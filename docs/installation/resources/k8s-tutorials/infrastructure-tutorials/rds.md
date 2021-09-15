@@ -1,6 +1,6 @@
 ---
 title: Setting up a MySQL Database in Amazon RDS
-weight: 4
+position: 4
 ---
 This tutorial describes how to set up a MySQL database in Amazon's RDS.
 

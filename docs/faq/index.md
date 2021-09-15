@@ -1,6 +1,6 @@
 ---
-title: FAQ
-weight: 25
+title: Intro
+position: 1
 ---
 
 This FAQ is a work in progress designed to answers the questions our users most frequently ask about Rancher v2.x.

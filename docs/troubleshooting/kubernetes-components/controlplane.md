@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Controlplane Nodes
-weight: 2
+position: 2
 ---
 
 This section applies to nodes with the `controlplane` role.

@@ -1,6 +1,6 @@
 ---
 title: Enable Istio with Pod Security Policies
-weight: 1
+position: 1
 ---
 
 If you have restrictive Pod Security Policies enabled, then Istio may not be able to function correctly, because it needs certain permissions in order to install itself and manage pod infrastructure. In this section, we will configure a cluster with PSPs enabled for an Istio install, and also set up the Istio CNI plugin. 

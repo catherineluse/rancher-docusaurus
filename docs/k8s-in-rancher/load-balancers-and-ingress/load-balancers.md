@@ -1,7 +1,7 @@
 ---
 title: "Layer 4 and Layer 7 Load Balancing"
 description: "Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing. Learn about the support for each way in different deployments"
-weight: 3041
+position: 3041
 ---
 Kubernetes supports load balancing in two ways: Layer-4 Load Balancing and Layer-7 Load Balancing.
 

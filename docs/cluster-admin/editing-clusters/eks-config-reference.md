@@ -1,7 +1,7 @@
 ---
 title: EKS Cluster Configuration Reference
 shortTitle: EKS Cluster Configuration
-weight: 2
+position: 2
 ---
 
 ### Account Access

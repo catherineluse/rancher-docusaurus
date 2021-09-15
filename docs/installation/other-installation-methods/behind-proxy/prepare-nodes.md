@@ -1,6 +1,6 @@
 ---
 title: '1. Set up Infrastructure'
-weight: 100
+position: 100
 ---
 
 In this section, you will provision the underlying infrastructure for your Rancher management server with internete access through a HTTP proxy.

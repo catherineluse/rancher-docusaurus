@@ -1,6 +1,6 @@
 ---
 title: OpenLDAP Configuration Reference
-weight: 2
+position: 2
 ---
 
 This section is intended to be used as a reference when setting up an OpenLDAP authentication provider in Rancher.
@@ -8,12 +8,6 @@ This section is intended to be used as a reference when setting up an OpenLDAP a
 For further details on configuring OpenLDAP, refer to the [official documentation.](https://www.openldap.org/doc/)
 
 \> Before you proceed with the configuration, please familiarize yourself with the concepts of [External Authentication Configuration and Principal Users](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-authentication-configuration-and-principal-users).
-
-- [Background: OpenLDAP Authentication Flow](#background-openldap-authentication-flow)
-- [OpenLDAP server configuration](#openldap-server-configuration)
-- [User/group schema configuration](#user-group-schema-configuration)
-  - [User schema configuration](#user-schema-configuration)
-  - [Group schema configuration](#group-schema-configuration)
 
 ## Background: OpenLDAP Authentication Flow 
  

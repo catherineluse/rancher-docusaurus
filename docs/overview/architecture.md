@@ -1,6 +1,6 @@
 ---
 title: Architecture
-weight: 1
+position: 1
 ---
 
 This section focuses on the Rancher server, its components, and how Rancher communicates with downstream Kubernetes clusters.
@@ -13,17 +13,6 @@ For guidance about setting up the underlying infrastructure for the Rancher serv
 
 \> This section assumes a basic familiarity with Docker and Kubernetes. For a brief explanation of how Kubernetes components work together, refer to the [concepts](https://rancher.com/docs/rancher/v2.6/en/overview/concepts) page.
 
-This section covers the following topics:
-
-- [Rancher server architecture](#rancher-server-architecture)
-- [Communicating with downstream user clusters](#communicating-with-downstream-user-clusters)
-  - [The authentication proxy](#1-the-authentication-proxy)
-  - [Cluster controllers and cluster agents](#2-cluster-controllers-and-cluster-agents)
-  - [Node agents](#3-node-agents)
-  - [Authorized cluster endpoint](#4-authorized-cluster-endpoint)
-- [Important files](#important-files)
-- [Tools for provisioning Kubernetes clusters](#tools-for-provisioning-kubernetes-clusters)
-- [Rancher server components and source code](#rancher-server-components-and-source-code)
 
 # Rancher Server Architecture
 

@@ -1,6 +1,6 @@
 ---
 title: Group Permissions with Shibboleth and OpenLDAP
-weight: 1
+position: 1
 ---
 
 This page provides background information and context for Rancher users who intend to set up the Shibboleth authentication provider in Rancher. 

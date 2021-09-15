@@ -1,7 +1,7 @@
 ---
 title:  Rancher's CI/CD Pipelines
 description: Use Rancher’s CI/CD pipeline to automatically checkout code, run builds or scripts, publish Docker images, and deploy software to users
-weight: 4000
+position: 4000
 ---
 Using Rancher, you can integrate with a GitHub repository to setup a continuous integration (CI) pipeline.
 

@@ -1,6 +1,6 @@
 ---
 title: API Keys
-weight: 7005
+position: 7005
 ---
 
 ## API Keys and User Authentication

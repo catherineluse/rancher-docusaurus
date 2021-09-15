@@ -1,6 +1,6 @@
 ---
 title: Setting up the Azure Cloud Provider
-weight: 2
+position: 2
 ---
 
 When using the `Azure` cloud provider, you can leverage the following capabilities:

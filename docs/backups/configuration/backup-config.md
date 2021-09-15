@@ -1,20 +1,11 @@
 ---
 title: Backup Configuration
 shortTitle: Backup
-weight: 1
+position: 1
 ---
 
 The Backup Create page lets you configure a schedule, enable encryption and specify the storage location for your backups.
 
-- [Schedule](#schedule)
-- [Encryption](#encryption)
-- [Storage Location](#storage-location)
-  - [S3](#s3)
-  - [Example S3 Storage Configuration](#example-s3-storage-configuration)
-  - [Example MinIO Configuration](#example-minio-configuration)
-  - [Example credentialSecret](#example-credentialsecret)
-  - [IAM Permissions for EC2 Nodes to Access S3](#iam-permissions-for-ec2-nodes-to-access-s3)
-- [Examples](#examples)
 
 # Schedule
 

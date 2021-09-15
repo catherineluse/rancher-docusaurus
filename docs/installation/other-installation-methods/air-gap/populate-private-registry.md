@@ -1,6 +1,6 @@
 ---
 title: '2. Collect and Publish Images to your Private Registry'
-weight: 200
+position: 200
 ---
 
 This section describes how to set up your private registry so that when you install Rancher, Rancher will pull all the required images from this registry.

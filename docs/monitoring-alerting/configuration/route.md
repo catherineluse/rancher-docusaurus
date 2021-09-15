@@ -1,7 +1,7 @@
 ---
 title: Route Configuration
 shortTitle: Routes
-weight: 5
+position: 5
 ---
 
 The route configuration is the section of the Alertmanager custom resource that controls how the alerts fired by Prometheus are grouped and filtered before they reach the receiver.

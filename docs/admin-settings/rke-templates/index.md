@@ -1,6 +1,6 @@
 ---
 title: RKE Templates
-weight: 80
+position: 80
 ---
 
 RKE templates are designed to allow DevOps and security teams to standardize and simplify the creation of Kubernetes clusters.
@@ -77,14 +77,7 @@ In an RKE template, settings can be restricted to what the template owner choose
 
 For the settings that cannot be overridden, the end user will not be able to directly edit them. In order for a user to get different options of these settings, an RKE template owner would need to create a new revision of the RKE template, which would allow the user to upgrade and change that option.
 
-The documents in this section explain the details of RKE template management:
-
-- [Getting permission to create templates](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/creator-permissions/)
-- [Creating and revising templates](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/creating-and-revising/)
-- [Enforcing template settings](./enforcement/#requiring-new-clusters-to-use-an-rke-template) 
-- [Overriding template settings](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/overrides/)
-- [Sharing templates with cluster creators](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/template-access-and-sharing/#sharing-templates-with-specific-users-or-groups)
-- [Sharing ownership of a template](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/template-access-and-sharing/#sharing-ownership-of-templates)
+The documents in this section explain the details of RKE template management.
 
 An [example YAML configuration file for a template](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rke-templates/example-yaml) is provided for reference.
 

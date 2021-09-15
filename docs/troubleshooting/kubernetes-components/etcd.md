@@ -1,27 +1,9 @@
 ---
 title: Troubleshooting etcd Nodes
-weight: 1
+position: 1
 ---
 
 This section contains commands and tips for troubleshooting nodes with the `etcd` role.
-
-This page covers the following topics:
-
-- [Checking if the etcd Container is Running](#checking-if-the-etcd-container-is-running)
-- [etcd Container Logging](#etcd-container-logging)
-- [etcd Cluster and Connectivity Checks](#etcd-cluster-and-connectivity-checks)
-  - [Check etcd Members on all Nodes](#check-etcd-members-on-all-nodes)
-  - [Check Endpoint Status](#check-endpoint-status)
-  - [Check Endpoint Health](#check-endpoint-health)
-  - [Check Connectivity on Port TCP/2379](#check-connectivity-on-port-tcp-2379)
-  - [Check Connectivity on Port TCP/2380](#check-connectivity-on-port-tcp-2380)
-- [etcd Alarms](#etcd-alarms)
-- [etcd Space Errors](#etcd-space-errors)
-- [Log Level](#log-level)
-- [etcd Content](#etcd-content)
-  - [Watch Streaming Events](#watch-streaming-events)
-  - [Query etcd Directly](#query-etcd-directly)
-- [Replacing Unhealthy etcd Nodes](#replacing-unhealthy-etcd-nodes)
 
 # Checking if the etcd Container is Running
 

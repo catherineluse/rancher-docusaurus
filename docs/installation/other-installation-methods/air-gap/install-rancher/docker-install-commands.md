@@ -1,6 +1,6 @@
 ---
 title: Docker Install Commands
-weight: 1
+position: 1
 ---
 
 The Docker installation is for Rancher users who want to test out Rancher. 

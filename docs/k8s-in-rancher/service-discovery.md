@@ -1,6 +1,6 @@
 ---
 title: Services
-weight: 3045
+position: 3045
 ---
 
 Pod configuration is managed by Deployments, StatefulSets and Daemonsets, whereas services direct traffic to pods using selectors.

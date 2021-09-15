@@ -1,6 +1,6 @@
 ---
 title: Adding Users to Projects
-weight: 2505
+position: 2505
 ---
 
 If you want to provide a user with access and permissions to _specific_ projects and resources within a cluster, assign the user a project membership.

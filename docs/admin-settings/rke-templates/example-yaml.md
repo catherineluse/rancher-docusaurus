@@ -1,6 +1,6 @@
 ---
 title: Example YAML
-weight: 60
+position: 60
 ---
 
 Below is an example RKE template configuration file for reference.

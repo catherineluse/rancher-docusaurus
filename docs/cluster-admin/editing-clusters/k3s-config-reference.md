@@ -1,7 +1,7 @@
 ---
 title: K3s Cluster Configuration Reference (Tech Preview)
 shortTitle: K3s Cluster Configuration
-weight: 6
+position: 6
 ---
 
 This section covers the configuration options that are available in Rancher for a new or existing K3s Kubernetes cluster.

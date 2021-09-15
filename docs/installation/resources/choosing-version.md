@@ -1,6 +1,6 @@
 ---
 title: Choosing a Rancher Version
-weight: 1
+position: 1
 ---
 
 This section describes how to choose a Rancher version.

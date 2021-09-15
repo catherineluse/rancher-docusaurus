@@ -1,7 +1,7 @@
 ---
 title: Rancher Backup Configuration Reference
 shortTitle: Configuration
-weight: 4
+position: 4
 ---
 
 - [Backup configuration](./backup-config)

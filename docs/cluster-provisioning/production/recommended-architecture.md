@@ -1,6 +1,6 @@
 ---
 title: Recommended Cluster Architecture
-weight: 1
+position: 1
 ---
 
 There are three roles that can be assigned to nodes: `etcd`, `controlplane` and `worker`. 

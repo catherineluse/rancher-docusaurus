@@ -1,6 +1,6 @@
 ---
 title: Custom Roles
-weight: 1128
+position: 1128
 ---
 
 Within Rancher, _roles_ determine what actions a user can make within a cluster or project.
@@ -9,14 +9,6 @@ Note that _roles_ are different from _permissions_, which determine what cluster
 
 \> It is possible for a custom role to enable privilege escalation. For details, see [this section.](#privilege-escalation)
 
-This section covers the following topics:
-
-- [Prerequisites](#prerequisites)
-- [Creating a custom role](#creating-a-custom-role)
-- [Creating a custom role that inherits from another role](#creating-a-custom-role-that-inherits-from-another-role)
-- [Deleting a custom role](#deleting-a-custom-role)
-- [Assigning a custom role to a group](#assigning-a-custom-role-to-a-group)
-- [Privilege escalation](#privilege-escalation)
 
 # Prerequisites
 

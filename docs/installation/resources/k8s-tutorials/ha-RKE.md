@@ -1,7 +1,7 @@
 ---
 title: Setting up a High-availability RKE Kubernetes Cluster
 shortTitle: Set up RKE Kubernetes
-weight: 3
+position: 3
 ---
 
 

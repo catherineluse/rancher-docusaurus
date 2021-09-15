@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Worker Nodes and Generic Components
-weight: 4
+position: 4
 ---
 
 This section applies to every node as it includes components that run on nodes with any role.

@@ -1,6 +1,6 @@
 ---
 title: 'Set up Infrastructure for a High Availability RKE Kubernetes Cluster'
-weight: 2
+position: 2
 ---
 
 This tutorial is intended to help you create a high-availability RKE cluster that can be used to install a Rancher server.

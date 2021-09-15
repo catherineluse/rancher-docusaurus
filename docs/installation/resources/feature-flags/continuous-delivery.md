@@ -1,6 +1,6 @@
 ---
 title: Continuous Delivery
-weight: 3
+position: 3
 ---
 
 As of Rancher v2.5, [Fleet](https://rancher.com/docs/rancher/v2.6/en/deploy-across-clusters/fleet) comes preinstalled in Rancher, and as of Rancher v2.6, Fleet can no longer be fully disabled. However, the Fleet feature for GitOps continuous delivery may be disabled using the `continuous-delivery` feature flag.

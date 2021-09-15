@@ -1,6 +1,6 @@
 ---
 title: Helm Chart Options
-weight: 8
+position: 8
 ---
 
 - [Configuring Resource Limits and Requests](#configuring-resource-limits-and-requests)

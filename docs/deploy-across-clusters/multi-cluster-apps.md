@@ -1,6 +1,6 @@
 ---
 title: Multi-cluster Apps
-weight: 2
+position: 2
 ---
 
 \> As of Rancher v2.5, multi-cluster apps are deprecated. We now recommend using [Fleet](https://rancher.com/docs/rancher/v2.6/en/deploy-across-clusters/fleet) for deploying apps across clusters.

@@ -1,6 +1,6 @@
 ---
 title: Registered clusters
-weight: 105
+position: 105
 ---
 
 The commands/steps listed on this page can be used to check clusters that you are registering or that are registered in Rancher.

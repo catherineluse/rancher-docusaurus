@@ -1,6 +1,6 @@
 ---
 title: Manual Quick Start
-weight: 300
+position: 300
 ---
 Howdy Partner! This tutorial walks you through:
 

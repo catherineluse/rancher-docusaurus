@@ -1,7 +1,7 @@
 ---
 title: Receiver Configuration
 shortTitle: Receivers
-weight: 1
+position: 1
 ---
 
 The [Alertmanager Config](https://prometheus.io/docs/alerting/latest/configuration/#configuration-file) Secret contains the configuration of an Alertmanager instance that sends out notifications based on alerts it receives from Prometheus.

@@ -1,6 +1,6 @@
 ---
 title: GlusterFS Volumes
-weight: 5000
+position: 5000
 ---
 
 \> This section only applies to [RKE clusters.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/)

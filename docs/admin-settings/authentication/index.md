@@ -1,6 +1,6 @@
 ---
 title: Authentication
-weight: 10
+position: 10
 ---
 
 One of the key features that Rancher adds to Kubernetes is centralized user authentication. This feature allows your users to use one set of credentials to authenticate with any of your Kubernetes clusters.

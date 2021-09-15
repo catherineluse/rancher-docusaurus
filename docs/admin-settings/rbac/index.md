@@ -1,6 +1,6 @@
 ---
 title: Role-Based Access Control (RBAC)
-weight: 20
+position: 20
 ---
 
 Within Rancher, each person authenticates as a _user_, which is a login that grants you access to Rancher. As mentioned in [Authentication](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/), users can either be local or external.

@@ -1,6 +1,6 @@
 ---
 title: Upgrades
-weight: 2
+position: 2
 ---
 The following instructions will guide you through upgrading a Rancher server that was installed on a Kubernetes cluster with Helm. These steps also apply to air gap installs with Helm.
 

@@ -1,6 +1,6 @@
 ---
 title: Advanced Configuration
-weight: 500
+position: 500
 ---
 
 ### Alertmanager

@@ -1,20 +1,9 @@
 ---
 title: Kubernetes Concepts
-weight: 4
+position: 4
 ---
 
 This page explains concepts related to Kubernetes that are important for understanding how Rancher works. The descriptions below provide a simplified interview of Kubernetes components. For more details, refer to the [official documentation on Kubernetes components.](https://kubernetes.io/docs/concepts/overview/components/)
-
-This section covers the following topics:
-
-- [About Docker](#about-docker)
-- [About Kubernetes](#about-kubernetes)
-- [What is a Kubernetes Cluster?](#what-is-a-kubernetes-cluster)
-- [Roles for Nodes in Kubernetes Clusters](#roles-for-nodes-in-kubernetes-clusters)
-  - [etcd Nodes](#etcd-nodes)
-  - [Controlplane Nodes](#controlplane-nodes)
-  - [Worker Nodes](#worker-nodes)
-- [About Helm](#about-helm)
 
 # About Docker
 

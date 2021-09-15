@@ -1,6 +1,6 @@
 ---
 title: Working with Taints and Tolerations
-weight: 6
+position: 6
 ---
 
 "Tainting" a Kubernetes node causes pods to repel running on that node.

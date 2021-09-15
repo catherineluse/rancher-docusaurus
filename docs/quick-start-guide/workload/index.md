@@ -1,6 +1,6 @@
 ---
 title: Deploying Workloads
-weight: 200
+position: 200
 ---
 
 These guides walk you through the deployment of an application, including how to expose the application for use outside of the cluster.

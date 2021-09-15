@@ -1,6 +1,6 @@
 ---
 title: Creating Persistent Storage in Amazon's EBS
-weight: 3053
+position: 3053
 ---
 
 This section describes how to set up Amazon's Elastic Block Store in EC2.

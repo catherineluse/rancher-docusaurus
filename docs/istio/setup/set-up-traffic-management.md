@@ -1,6 +1,6 @@
 ---
 title: 5. Set up Istio's Components for Traffic Management
-weight: 6
+position: 6
 ---
 
 A central advantage of traffic management in Istio is that it allows dynamic request routing. Some common applications for dynamic request routing include canary deployments and blue/green deployments. The two key resources in Istio traffic management are *virtual services* and *destination rules*.
@@ -63,11 +63,11 @@ spec:
     - destination:
         host: reviews
         subset: v1
-      weight: 50
+      position: 50
     - destination:
         host: reviews
         subset: v3
-      weight: 50
+      position: 50
 ---
 ```
 

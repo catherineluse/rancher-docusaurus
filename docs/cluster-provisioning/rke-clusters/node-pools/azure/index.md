@@ -1,7 +1,7 @@
 ---
 title: Creating an Azure Cluster
 shortTitle: Azure
-weight: 2220
+position: 2220
 ---
 
 In this section, you'll learn how to install an [RKE](https://rancher.com/docs/rke/latest/en/) Kubernetes cluster in Azure through Rancher.

@@ -1,6 +1,6 @@
 ---
 title: Cluster Access
-weight: 1
+position: 1
 ---
 
 This section is about what tools can be used to access clusters managed by Rancher.

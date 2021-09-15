@@ -1,6 +1,6 @@
 ---
 title: Certificate Troubleshooting
-weight: 4
+position: 4
 ---
 ### How Do I Know if My Certificates are in PEM Format?
 

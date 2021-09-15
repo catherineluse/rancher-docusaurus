@@ -1,6 +1,6 @@
 ---
 title: Configuration Options
-weight: 3
+position: 3
 ---
 
 - [Egress Support](#egress-support)

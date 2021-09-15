@@ -1,6 +1,6 @@
 ---
 title: 3. Add Deployments and Services with the Istio Sidecar
-weight: 4
+position: 4
 ---
 
 \> **Prerequisite:** To enable Istio for a workload, the cluster and namespace must have the Istio app installed.  

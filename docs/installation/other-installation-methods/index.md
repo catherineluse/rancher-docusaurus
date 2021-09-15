@@ -1,6 +1,6 @@
 ---
 title: Other Installation Methods
-weight: 3
+position: 3
 ---
 
 ### Air Gapped Installations

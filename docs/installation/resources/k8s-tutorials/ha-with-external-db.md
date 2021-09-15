@@ -1,7 +1,7 @@
 ---
 title: Setting up a High-availability K3s Kubernetes Cluster for Rancher
 shortTitle: Set up K3s for Rancher
-weight: 2
+position: 2
 ---
 
 This section describes how to install a Kubernetes cluster according to the [best practices for the Rancher server environment.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture-recommendations/#environment-for-kubernetes-installations)

@@ -1,6 +1,6 @@
 ---
 title: How the Authorized Cluster Endpoint Works
-weight: 2015
+position: 2015
 ---
 
 This section describes how the kubectl CLI, the kubeconfig file, and the authorized cluster endpoint work together to allow you to access a downstream Kubernetes cluster directly, without authenticating through the Rancher server. It is intended to provide background information and context to the instructions for [how to set up kubectl to directly access a cluster.](../kubectl/#authenticating-directly-with-a-downstream-cluster)

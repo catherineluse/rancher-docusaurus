@@ -1,7 +1,7 @@
 ---
 title: Ingress Configuration 
 description: Ingress configuration 
-weight: 9999
+position: 9999
 ---
 
 - [NGINX Ingress controller changes in Kubernetes v1.21](#nginx-ingress-controller-changes-in-Kubernetes-v1-21)

@@ -1,6 +1,6 @@
 ---
 title: How Monitoring Works
-weight: 1
+position: 1
 ---
 
 1. [Architecture Overview](#1-architecture-overview)

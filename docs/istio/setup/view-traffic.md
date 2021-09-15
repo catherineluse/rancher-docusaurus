@@ -1,6 +1,6 @@
 ---
 title: 6. Generate and View Traffic
-weight: 7
+position: 7
 ---
 
 This section describes how to view the traffic that is being managed by Istio.

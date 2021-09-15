@@ -1,6 +1,6 @@
 ---
 title: Alertmanager Configuration
-weight: 1
+position: 1
 ---
 
 It is usually not necessary to directly edit the Alertmanager custom resource. For most use cases, you will only need to edit the Receivers and Routes to configure notifications.
