@@ -8,7 +8,7 @@ Although the **Namespace Default Limit** propagates from the project to each nam
 In the diagram below, the Rancher administrator has a resource quota in effect for their project. However, the administrator wants to override the namespace limits for `Namespace 3` so that it has more resources available. Therefore, the administrator [raises the namespace limits]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/projects-and-namespaces/) for `Namespace 3` so that the namespace can access more resources.
 
 <sup>Namespace Default Limit Override</sup>
-![Namespace Default Limit Override]({{<baseurl>}}/img/rancher/rancher-resource-quota-override.svg)
+![Namespace Default Limit Override](./assets/img/rancher/rancher-resource-quota-override.svg)
 
 How to: [Editing Namespace Resource Quotas]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/projects-and-namespaces/)
 

@@ -20,7 +20,7 @@ With Longhorn, you can:
 - Upgrade Longhorn without disrupting persistent volumes
 
 <figcaption>Longhorn Dashboard</figcaption>
-![Longhorn Dashboard]({{<baseurl>}}/img/rancher/longhorn-screenshot.png)
+![Longhorn Dashboard](./assets/img/rancher/longhorn-screenshot.png)
 
 ### Installing Longhorn with Rancher
 
@@ -67,4 +67,4 @@ The storage controller and replicas are themselves orchestrated using Kubernetes
 You can learn more about its architecture [here.](https://longhorn.io/docs/1.0.2/concepts/)
 
 <figcaption>Longhorn Architecture</figcaption>
-![Longhorn Architecture]({{<baseurl>}}/img/rancher/longhorn-architecture.svg)
+![Longhorn Architecture](./assets/img/rancher/longhorn-architecture.svg)

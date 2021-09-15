@@ -60,7 +60,7 @@ In order to provision vSphere volumes in a cluster created with the [Rancher Kub
 9. Once the replacement pod is running, click **Execute Shell**.
 10. Inspect the contents of the directory where the volume is mounted by entering `ls -l /<volumeMountPoint>`. Note that the file you created earlier is still present.
 
-    ![workload-persistent-data]({{<baseurl>}}/img/rancher/workload-persistent-data.png)
+    ![workload-persistent-data](./assets/img/rancher/workload-persistent-data.png)
 
 ### Why to Use StatefulSets Instead of Deployments
 

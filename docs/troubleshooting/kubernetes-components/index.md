@@ -14,5 +14,5 @@ This section includes troubleshooting tips in the following categories:
 
 # Kubernetes Component Diagram
 
-![Cluster diagram]({{<baseurl>}}/img/rancher/clusterdiagram.svg)<br/>
+![Cluster diagram](./assets/img/rancher/clusterdiagram.svg)<br/>
 <sup>Lines show the traffic flow between components. Colors are used purely for visual aid</sup>

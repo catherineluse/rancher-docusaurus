@@ -86,7 +86,7 @@ Optional. If not provided, the link appears standalone.
 
 Groups are displayed separately from standalone links, as shown below:
 
-![Screenshot of group and standalone link]({{<baseurl>}}/img/rancher/grouped-vs-standalone-links.png)
+![Screenshot of group and standalone link](./assets/img/rancher/grouped-vs-standalone-links.png)
 
 ### `iconSrc`
 

@@ -37,7 +37,7 @@ The diagram below shows how users can manipulate both [Rancher-launched Kubernet
 
 <figcaption>Managing Kubernetes Clusters through Rancher's Authentication Proxy</figcaption>
 
-![Architecture]({{<baseurl>}}/img/rancher/rancher-architecture-rancher-api-server.svg)
+![Architecture](./assets/img/rancher/rancher-architecture-rancher-api-server.svg)
 
 You can install Rancher on a single node, or on a high-availability Kubernetes cluster.
 
@@ -57,7 +57,7 @@ The below diagram shows how the cluster controllers, cluster agents, and node ag
 
 <figcaption>Communicating with Downstream Clusters</figcaption>
 
-![Rancher Components]({{<baseurl>}}/img/rancher/rancher-architecture-cluster-controller.svg)
+![Rancher Components](./assets/img/rancher/rancher-architecture-cluster-controller.svg)
 
 The following descriptions correspond to the numbers in the diagram above:
 
@@ -166,7 +166,7 @@ In this type of cluster, Rancher connects to a Kubernetes cluster that has alrea
 
 This diagram shows each component that the Rancher server is composed of:
 
-![Rancher Components]({{<baseurl>}}/img/rancher/rancher-architecture-rancher-components.svg)
+![Rancher Components](./assets/img/rancher/rancher-architecture-rancher-components.svg)
 
 The GitHub repositories for Rancher can be found at the following links:
 

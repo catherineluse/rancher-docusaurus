@@ -23,7 +23,7 @@ Rancher provides an intuitive user interface for DevOps engineers to manage thei
 
 The following figure illustrates the role Rancher plays in IT and DevOps organizations. Each team deploys their applications on the public or private clouds they choose. IT administrators gain visibility and enforce policies across all users, clusters, and clouds.
 
-![Platform]({{<baseurl>}}/img/rancher/platform.png)
+![Platform](./assets/img/rancher/platform.png)
 
 # Features of the Rancher API Server
 
