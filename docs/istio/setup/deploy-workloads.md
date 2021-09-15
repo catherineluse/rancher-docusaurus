@@ -353,4 +353,4 @@ spec:
 ---
 ```
 
-### [Next: Set up the Istio Gateway]({{<baseurl>}}/rancher/v2.6/en/istio/setup/gateway)
+### [Next: Set up the Istio Gateway](https://rancher.com/docs/rancher/v2.6/en/istio/setup/gateway)

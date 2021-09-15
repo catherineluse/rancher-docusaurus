@@ -76,12 +76,12 @@ kubectl rollout status deployment -n cattle-system rancher
 
 You can now navigate to `https://rancher.example.com` and start using Rancher.
 
-> **Note:** If you don't intend to send telemetry data, opt out [telemetry]({{<baseurl>}}/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
+> **Note:** If you don't intend to send telemetry data, opt out [telemetry](https://rancher.com/docs/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
 
 ### Additional Resources
 
 These resources could be helpful when installing Rancher:
 
-- [Rancher Helm chart options]({{<baseurl>}}/rancher/v2.6/en/installation/resources/chart-options/)
-- [Adding TLS secrets]({{<baseurl>}}/rancher/v2.6/en/installation/resources/tls-secrets/)
-- [Troubleshooting Rancher Kubernetes Installations]({{<baseurl>}}/rancher/v2.6/en/installation/resources/troubleshooting/)
+- [Rancher Helm chart options](https://rancher.com/docs/rancher/v2.6/en/installation/resources/chart-options/)
+- [Adding TLS secrets](https://rancher.com/docs/rancher/v2.6/en/installation/resources/tls-secrets/)
+- [Troubleshooting Rancher Kubernetes Installations](https://rancher.com/docs/rancher/v2.6/en/installation/resources/troubleshooting/)

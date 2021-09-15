@@ -16,7 +16,7 @@ API Keys are composed of four components:
 - **Secret Key:** The token's password. For applications that prompt you for two different strings for API authentication, you usually enter the two keys together.
 - **Bearer Token:** The token username and password concatenated together. Use this string for applications that prompt you for one authentication string.
 
->Note: Users may opt to enable [token hashing]({{<baseurl>}}/rancher/v2.6/en/api/api-tokens).
+>Note: Users may opt to enable [token hashing](https://rancher.com/docs/rancher/v2.6/en/api/api-tokens).
 
 ## Creating an API Key
 
@@ -30,7 +30,7 @@ API Keys are composed of four components:
 
     Expiration period will be bound by `v3/settings/auth-token-max-ttl-minutes`. If it exceeds the max-ttl, API key will be created with max-ttl as the expiration period.
     
-    A scope will limit the API key so that it will only work against the Kubernetes API of the specified cluster. If the cluster is configured with an Authorized Cluster Endpoint, you will be able to use a scoped token directly against the cluster's API without proxying through the Rancher server. See [Authorized Cluster Endpoints]({{<baseurl>}}/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint) for more information.
+    A scope will limit the API key so that it will only work against the Kubernetes API of the specified cluster. If the cluster is configured with an Authorized Cluster Endpoint, you will be able to use a scoped token directly against the cluster's API without proxying through the Rancher server. See [Authorized Cluster Endpoints](https://rancher.com/docs/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint) for more information.
 
 4. Click **Create**.
 
@@ -44,7 +44,7 @@ API Keys are composed of four components:
 
 - Enter your API key information into the application that will send requests to the Rancher API.
 - Learn more about the Rancher endpoints and parameters by selecting **View in API** for an object in the Rancher UI.
-- API keys are used for API calls and [Rancher CLI]({{<baseurl>}}/rancher/v2.6/en/cli).
+- API keys are used for API calls and [Rancher CLI](https://rancher.com/docs/rancher/v2.6/en/cli).
 
 ## Deleting API Keys
 

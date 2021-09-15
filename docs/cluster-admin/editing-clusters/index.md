@@ -5,7 +5,7 @@ weight: 2025
 
 After you provision a Kubernetes cluster using Rancher, you can still edit options and settings for the cluster.
 
-For information on editing cluster membership, go to [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/cluster-access/cluster-members)
+For information on editing cluster membership, go to [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/cluster-access/cluster-members)
 
 ### Cluster Configuration References
 

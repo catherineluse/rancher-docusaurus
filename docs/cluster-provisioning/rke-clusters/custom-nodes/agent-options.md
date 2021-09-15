@@ -3,9 +3,9 @@ title: Rancher Agent Options
 weight: 2500
 ---
 
-Rancher deploys an agent on each node to communicate with the node. This pages describes the options that can be passed to the agent. To use these options, you will need to [create a cluster with custom nodes]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/custom-nodes) and add the options to the generated `docker run` command when adding a node.
+Rancher deploys an agent on each node to communicate with the node. This pages describes the options that can be passed to the agent. To use these options, you will need to [create a cluster with custom nodes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/custom-nodes) and add the options to the generated `docker run` command when adding a node.
 
-For an overview of how Rancher communicates with downstream clusters using node agents, refer to the [architecture section.]({{<baseurl>}}/rancher/v2.6/en/overview/architecture/#3-node-agents)
+For an overview of how Rancher communicates with downstream clusters using node agents, refer to the [architecture section.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture/#3-node-agents)
 
 ## General options
 

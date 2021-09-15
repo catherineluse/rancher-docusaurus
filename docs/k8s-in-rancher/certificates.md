@@ -32,4 +32,4 @@ When you create an ingress within Rancher/Kubernetes, you must provide it with a
 
 ## What's Next?
 
-Now you can add the certificate when launching an ingress within the current project or namespace. For more information, see [Adding Ingress]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/ingress/).
+Now you can add the certificate when launching an ingress within the current project or namespace. For more information, see [Adding Ingress](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/ingress/).

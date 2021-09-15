@@ -11,7 +11,7 @@ This section describes how to install a Kubernetes cluster. This cluster should 
 
 The Rancher management server can only be run on Kubernetes cluster in an infrastructure provider where Kubernetes is installed using RKE or K3s. Use of Rancher on hosted Kubernetes providers, such as EKS, is not supported.
 
-For systems without direct internet access, refer to [Air Gap: Kubernetes install.]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/air-gap/)
+For systems without direct internet access, refer to [Air Gap: Kubernetes install.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/air-gap/)
 
 > **Single-node Installation Tip:**
 > In a single-node Kubernetes cluster, the Rancher server does not have high availability, which is important for running Rancher in production. However, installing Rancher on a single-node cluster can be useful if you want to save resources by using a single node in the short term, while preserving a high-availability migration path.
@@ -26,7 +26,7 @@ For systems without direct internet access, refer to [Air Gap: Kubernetes instal
 
 Install [kubectl,](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) a Kubernetes command-line tool.
 
-Also install [RKE,]({{<baseurl>}}/rke/latest/en/installation/) the Rancher Kubernetes Engine, a Kubernetes distribution and command-line tool.
+Also install [RKE,](https://rancher.com/docs/rke/latest/en/installation/) the Rancher Kubernetes Engine, a Kubernetes distribution and command-line tool.
 
 ### 1. Create the cluster configuration file
 
@@ -79,9 +79,9 @@ ingress:
 
 > **Advanced Configurations:** RKE has many configuration options for customizing the install to suit your specific environment.
 >
-> Please see the [RKE Documentation]({{<baseurl>}}/rke/latest/en/config-options/) for the full list of options and capabilities.
+> Please see the [RKE Documentation](https://rancher.com/docs/rke/latest/en/config-options/) for the full list of options and capabilities.
 > 
-> For tuning your etcd cluster for larger Rancher installations, see the [etcd settings guide]({{<baseurl>}}/rancher/v2.6/en/installation/resources/advanced/etcd/).
+> For tuning your etcd cluster for larger Rancher installations, see the [etcd settings guide](https://rancher.com/docs/rancher/v2.6/en/installation/resources/advanced/etcd/).
 
 ### 2. Run RKE
 
@@ -155,15 +155,15 @@ This confirms that you have successfully installed a Kubernetes cluster that the
 Save a copy of the following files in a secure location:
 
 - `rancher-cluster.yml`: The RKE cluster configuration file.
-- `kube_config_rancher-cluster.yml`: The [Kubeconfig file]({{<baseurl>}}/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
-- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file]({{<baseurl>}}/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
+- `kube_config_rancher-cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
+- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
 
 > **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 ### Issues or errors?
 
-See the [Troubleshooting]({{<baseurl>}}/rancher/v2.6/en/installation/resources/troubleshooting/) page.
+See the [Troubleshooting](https://rancher.com/docs/rancher/v2.6/en/installation/resources/troubleshooting/) page.
 
 
-### [Next: Install Rancher]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/)
+### [Next: Install Rancher](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/)
 

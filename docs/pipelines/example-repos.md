@@ -11,7 +11,7 @@ Rancher ships with several example repositories that you can use to familiarize 
 
 > **Prerequisites:**
 > 
-> - The example repositories are only available if you have not [configured a version control provider]({{<baseurl>}}/rancher/v2.6/en/project-admin/pipelines).
+> - The example repositories are only available if you have not [configured a version control provider](https://rancher.com/docs/rancher/v2.6/en/project-admin/pipelines).
 > - Because the pipelines app was deprecated in favor of Fleet, you will need to turn on the feature flag for legacy features before using pipelines.
 > - Note that pipelines in Kubernetes 1.21+ are no longer supported.
 >
@@ -77,4 +77,4 @@ After enabling an example repository, run the pipeline to see how it works.
 
 ### What's Next?
 
-For detailed information about setting up your own pipeline for your repository, [configure a version control provider]({{<baseurl>}}/rancher/v2.6/en/project-admin/pipelines), enable a repository and finally configure your pipeline.
+For detailed information about setting up your own pipeline for your repository, [configure a version control provider](https://rancher.com/docs/rancher/v2.6/en/project-admin/pipelines), enable a repository and finally configure your pipeline.

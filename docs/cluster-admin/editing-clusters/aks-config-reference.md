@@ -15,11 +15,11 @@ weight: 4
 
 When provisioning an AKS cluster in the Rancher UI, RBAC cannot be disabled. If role-based access control is disabled for the cluster in AKS, the cluster cannot be registered or imported into Rancher.
 
-Rancher can configure member roles for AKS clusters in the same way as any other cluster. For more information, see the section on [role-based access control.]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac)
+Rancher can configure member roles for AKS clusters in the same way as any other cluster. For more information, see the section on [role-based access control.](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac)
 
 # Cloud Credentials
 
-> The configuration information in this section assumes you have already set up a service principal for Rancher. For step-by-step instructions for how to set up the service principal, see [this section.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/hosted-kubernetes-clusters/aks/#prerequisites-in-microsoft-azure)
+> The configuration information in this section assumes you have already set up a service principal for Rancher. For step-by-step instructions for how to set up the service principal, see [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/hosted-kubernetes-clusters/aks/#prerequisites-in-microsoft-azure)
 
 ### Tenant ID
 

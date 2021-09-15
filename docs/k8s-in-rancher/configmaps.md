@@ -17,7 +17,7 @@ ConfigMaps accept key value pairs in common string formats, like config files or
 
 1. Select the **Namespace** you want to add Config Map to.
 
-1. On the **Data** tab, add a key-value pair to your ConfigMap. Add as many values as you need.  You can add multiple key value pairs to the ConfigMap by copying and pasting. Alternatively, use **Read from File** to add the data. Note: If you need to store sensitive data, [use a secret]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/secrets/), not a ConfigMap.
+1. On the **Data** tab, add a key-value pair to your ConfigMap. Add as many values as you need.  You can add multiple key value pairs to the ConfigMap by copying and pasting. Alternatively, use **Read from File** to add the data. Note: If you need to store sensitive data, [use a secret](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/secrets/), not a ConfigMap.
 1. Click **Create**.
 
 **Result:** Your ConfigMap is added to the namespace. You can view it in the Rancher UI from the **Resources > Config Maps** view.
@@ -29,4 +29,4 @@ Now that you have a ConfigMap added to a namespace, you can add it to a workload
 - Application environment variables.
 - Specifying parameters for a Volume mounted to the workload.
 
-For more information on adding ConfigMaps to a workload, see [Deploying Workloads]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/deploy-workloads/).
+For more information on adding ConfigMaps to a workload, see [Deploying Workloads](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/deploy-workloads/).

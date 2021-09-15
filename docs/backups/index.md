@@ -82,7 +82,7 @@ A restore is performed by creating a Restore custom resource. For a tutorial, re
 
 # Migrating Rancher to a New Cluster
 
-A migration is performed by following [these steps.]({{<baseurl>}}/rancher/v2.6/en/backups/migrating-rancher)
+A migration is performed by following [these steps.](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher)
 
 # Default Storage Location Configuration
 

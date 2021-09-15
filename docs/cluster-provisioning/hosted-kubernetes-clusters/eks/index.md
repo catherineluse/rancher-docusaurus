@@ -68,7 +68,7 @@ You can access your cluster after its state is updated to **Active**.
 
 # EKS Cluster Configuration Reference
 
-For the full list of EKS cluster configuration options, see [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/eks-config-reference)
+For the full list of EKS cluster configuration options, see [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/eks-config-reference)
 
 # Architecture
 
@@ -100,9 +100,9 @@ See [this page](./permissions) for the minimum set of permissions necessary to u
 
 # Syncing
 
-The EKS provisioner can synchronize the state of an EKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/syncing/)
+The EKS provisioner can synchronize the state of an EKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/syncing/)
 
-For information on configuring the refresh interval, refer to [this section.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/eks-config-reference/#configuring-the-refresh-interval)
+For information on configuring the refresh interval, refer to [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/eks-config-reference/#configuring-the-refresh-interval)
 
 # Troubleshooting
 

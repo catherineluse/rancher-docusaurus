@@ -23,34 +23,34 @@ Rancher can be installed on any Kubernetes cluster. This cluster can use upstrea
 
 For help setting up a Kubernetes cluster, we provide these tutorials:
 
-- **RKE:** For the tutorial to install an RKE Kubernetes cluster, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/k8s-tutorials/ha-rke/) For help setting up the infrastructure for a high-availability RKE cluster, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/infra-for-ha)
-- **K3s:** For the tutorial to install a K3s Kubernetes cluster, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/k8s-tutorials/ha-with-external-db) For help setting up the infrastructure for a high-availability K3s cluster, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/infra-for-ha-with-external-db)
-- **RKE2:** For the tutorial to install an RKE2 Kubernetes cluster, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/k8s-tutorials/ha-rke2) For help setting up the infrastructure for a high-availability RKE2 cluster, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/infra-for-rke2-ha)
-- **Amazon EKS:** For details on how to install Rancher on Amazon EKS, including how to install an ingress so that the Rancher server can be accessed, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/amazon-eks)
-- **GKE:** For details on how to install Rancher with Google Kubernetes Engine, including how to install an ingress so that the Rancher server can be accessed, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/gke)
+- **RKE:** For the tutorial to install an RKE Kubernetes cluster, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/ha-rke/) For help setting up the infrastructure for a high-availability RKE cluster, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/infra-for-ha)
+- **K3s:** For the tutorial to install a K3s Kubernetes cluster, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/ha-with-external-db) For help setting up the infrastructure for a high-availability K3s cluster, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/infra-for-ha-with-external-db)
+- **RKE2:** For the tutorial to install an RKE2 Kubernetes cluster, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/ha-rke2) For help setting up the infrastructure for a high-availability RKE2 cluster, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/infra-for-rke2-ha)
+- **Amazon EKS:** For details on how to install Rancher on Amazon EKS, including how to install an ingress so that the Rancher server can be accessed, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/amazon-eks)
+- **GKE:** For details on how to install Rancher with Google Kubernetes Engine, including how to install an ingress so that the Rancher server can be accessed, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/gke)
 
 ### CLI Tools
 
 The following CLI tools are required for setting up the Kubernetes cluster. Please make sure these tools are installed and available in your `$PATH`.
 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) - Kubernetes command-line tool.
-- [helm](https://docs.helm.sh/using_helm/#installing-helm) - Package management for Kubernetes. Refer to the [Helm version requirements]({{<baseurl>}}/rancher/v2.6/en/installation/resources/helm-version) to choose a version of Helm to install Rancher. Refer to the [instructions provided by the Helm project](https://helm.sh/docs/intro/install/) for your specific platform.
+- [helm](https://docs.helm.sh/using_helm/#installing-helm) - Package management for Kubernetes. Refer to the [Helm version requirements](https://rancher.com/docs/rancher/v2.6/en/installation/resources/helm-version) to choose a version of Helm to install Rancher. Refer to the [instructions provided by the Helm project](https://helm.sh/docs/intro/install/) for your specific platform.
 
 ### Ingress Controller (For Hosted Kubernetes)
 
 To deploy Rancher on a hosted Kubernetes cluster such as EKS, GKE, or AKS, you should deploy a compatible Ingress controller first to configure [SSL termination on Rancher.](#3-choose-your-ssl-configuration)
 
-For an example of how to deploy an ingress on EKS, refer to [this section.]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/amazon-eks/#5-install-an-ingress)
+For an example of how to deploy an ingress on EKS, refer to [this section.](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/amazon-eks/#5-install-an-ingress)
 
 # Install the Rancher Helm Chart
 
 Rancher is installed using the [Helm](https://helm.sh/) package manager for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents. With Helm, we can create configurable deployments instead of just using static files.
 
-For systems without direct internet access, see [Air Gap: Kubernetes install]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/air-gap/install-rancher/).
+For systems without direct internet access, see [Air Gap: Kubernetes install](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/air-gap/install-rancher/).
 
-To choose a Rancher version to install, refer to [Choosing a Rancher Version.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/choosing-version)
+To choose a Rancher version to install, refer to [Choosing a Rancher Version.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/choosing-version)
 
-To choose a version of Helm to install Rancher with, refer to the [Helm version requirements]({{<baseurl>}}/rancher/v2.6/en/installation/resources/helm-version)
+To choose a version of Helm to install Rancher with, refer to the [Helm version requirements](https://rancher.com/docs/rancher/v2.6/en/installation/resources/helm-version)
 
 > **Note:** The installation instructions assume you are using Helm 3.
 
@@ -66,7 +66,7 @@ To set up Rancher,
 
 ### 1. Add the Helm Chart Repository
 
-Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#helm-chart-repositories).
+Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#helm-chart-repositories).
 
 {{< release-channel >}}
 
@@ -86,7 +86,7 @@ kubectl create namespace cattle-system
 
 The Rancher management server is designed to be secure by default and requires SSL/TLS configuration.
 
-> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
+> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
 
 There are three recommended options for the source of the certificate used for TLS termination at the Rancher server:
 
@@ -103,13 +103,13 @@ There are three recommended options for the source of the certificate used for T
 
 ### 4. Install cert-manager
 
-> You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination). 
+> You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination). 
 
 This step is only required to use certificates issued by Rancher's generated CA (`ingress.tls.source=rancher`) or to request Let's Encrypt issued certificates (`ingress.tls.source=letsEncrypt`).
 
 {{% accordion id="cert-manager" label="Click to Expand" %}}
 
-> **Important:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade documentation]({{<baseurl>}}/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
+> **Important:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
 
 These instructions are adapted from the [official cert-manager documentation](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm).
 
@@ -213,7 +213,7 @@ When you run this command, the `hostname` option must match the `Common Name` or
 
 Although an entry in the `Subject Alternative Names` is technically required, having a matching `Common Name` maximizes compatibility with older browsers and applications.
 
-> If you want to check if your certificates are correct, see [How do I check Common Name and Subject Alternative Names in my server certificate?]({{<baseurl>}}/rancher/v2.6/en/faq/technical/#how-do-i-check-common-name-and-subject-alternative-names-in-my-server-certificate)
+> If you want to check if your certificates are correct, see [How do I check Common Name and Subject Alternative Names in my server certificate?](https://rancher.com/docs/rancher/v2.6/en/faq/technical/#how-do-i-check-common-name-and-subject-alternative-names-in-my-server-certificate)
 
 - Set the `hostname`.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
@@ -239,17 +239,17 @@ helm install rancher rancher-latest/rancher \
   --set privateCA=true
 ```
 
-Now that Rancher is deployed, see [Adding TLS Secrets]({{<baseurl>}}/rancher/v2.6/en/installation/resources/tls-secrets/) to publish the certificate files so Rancher and the Ingress controller can use them.
+Now that Rancher is deployed, see [Adding TLS Secrets](https://rancher.com/docs/rancher/v2.6/en/installation/resources/tls-secrets/) to publish the certificate files so Rancher and the Ingress controller can use them.
 {{% /tab %}}
 {{% /tabs %}}
 
 The Rancher chart configuration has many options for customizing the installation to suit your specific environment. Here are some common advanced scenarios.
 
-- [HTTP Proxy]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#http-proxy)
-- [Private container image Registry]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#private-registry-and-air-gap-installs)
-- [TLS Termination on an External Load Balancer]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination)
+- [HTTP Proxy](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#http-proxy)
+- [Private container image Registry](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#private-registry-and-air-gap-installs)
+- [TLS Termination on an External Load Balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination)
 
-See the [Chart Options]({{<baseurl>}}/rancher/v2.6/en/installation/resources/chart-options/) for the full list of options.
+See the [Chart Options](https://rancher.com/docs/rancher/v2.6/en/installation/resources/chart-options/) for the full list of options.
 
 
 ### 6. Verify that the Rancher Server is Successfully Deployed
@@ -282,4 +282,4 @@ That's it. You should have a functional Rancher server.
 
 In a web browser, go to the DNS name that forwards traffic to your load balancer. Then you should be greeted by the colorful login page.
 
-Doesn't work? Take a look at the [Troubleshooting]({{<baseurl>}}/rancher/v2.6/en/installation/resources/troubleshooting/) Page
+Doesn't work? Take a look at the [Troubleshooting](https://rancher.com/docs/rancher/v2.6/en/installation/resources/troubleshooting/) Page

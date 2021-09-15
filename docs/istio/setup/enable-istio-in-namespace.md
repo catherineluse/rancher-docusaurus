@@ -42,4 +42,4 @@ To add the annotation to a workload,
 > **NOTE:** If you are having issues with a Job you deployed not completing, you will need to add this annotation to your pod using the provided steps. Since Istio Sidecars run indefinitely, a Job cannot be considered complete even after its task has completed. 
 
 
-### [Next: Add Deployments with the Istio Sidecar ]({{<baseurl>}}/rancher/v2.6/en/istio/setup/deploy-workloads)
+### [Next: Add Deployments with the Istio Sidecar ](https://rancher.com/docs/rancher/v2.6/en/istio/setup/deploy-workloads)

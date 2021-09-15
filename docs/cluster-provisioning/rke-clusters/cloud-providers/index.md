@@ -19,15 +19,15 @@ The following cloud providers can be enabled:
 
 ### Setting up the Amazon Cloud Provider
 
-For details on enabling the Amazon cloud provider, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/amazon)
+For details on enabling the Amazon cloud provider, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/amazon)
 
 ### Setting up the Azure Cloud Provider
 
-For details on enabling the Azure cloud provider, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/azure)
+For details on enabling the Azure cloud provider, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/azure)
 
 ### Setting up the GCE Cloud Provider
 
-For details on enabling the Google Compute Engine cloud provider, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/gce)
+For details on enabling the Google Compute Engine cloud provider, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/gce)
 
 ### Setting up the vSphere Cloud Provider
 
@@ -37,7 +37,7 @@ For details on enabling the vSphere cloud provider, refer to [this page.](./vsph
 
 The `Custom` cloud provider is available if you want to configure any [Kubernetes cloud provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/).
 
-For the custom cloud provider option, you can refer to the [RKE docs]({{<baseurl>}}/rke/latest/en/config-options/cloud-providers/) on how to edit the yaml file for your specific cloud provider. There are specific cloud providers that have more detailed configuration :
+For the custom cloud provider option, you can refer to the [RKE docs](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to edit the yaml file for your specific cloud provider. There are specific cloud providers that have more detailed configuration :
 
-* [vSphere]({{<baseurl>}}/rke/latest/en/config-options/cloud-providers/vsphere/)
-* [OpenStack]({{<baseurl>}}/rke/latest/en/config-options/cloud-providers/openstack/)
+* [vSphere](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/vsphere/)
+* [OpenStack](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/openstack/)

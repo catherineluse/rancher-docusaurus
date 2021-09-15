@@ -3,7 +3,7 @@ title: Managing Cloud Credentials
 weight: 7011
 ---
 
-When you create a cluster [hosted by an infrastructure provider]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools), [node templates]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node.
+When you create a cluster [hosted by an infrastructure provider](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools), [node templates](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) are used to provision the cluster nodes. These templates use Docker Machine configuration options to define an operating system image and settings/parameters for the node.
 
 Node templates can use cloud credentials to access the credential information required to provision nodes in the infrastructure providers. The same cloud credential can be used by multiple node templates. By using a cloud credential, you do not have to re-enter access keys for the same cloud provider. Cloud credentials are stored as Kubernetes secrets.
 
@@ -11,7 +11,7 @@ Cloud credentials are only used by node templates if there are fields marked as 
 
 You can create cloud credentials in two contexts:
 
-- [During creation of a node template]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) for a cluster.
+- [During creation of a node template](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) for a cluster.
 - In the **User Settings**
 
 All cloud credentials are bound to the user profile of who created it. They **cannot** be shared across users.
@@ -21,12 +21,12 @@ All cloud credentials are bound to the user profile of who created it. They **ca
 1. Click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
-1. Click a cloud credential type. The values of this dropdown is based on the `active` [node drivers]({{<baseurl>}}/rancher/v2.6/en/admin-settings/drivers/node-drivers/) in Rancher.
+1. Click a cloud credential type. The values of this dropdown is based on the `active` [node drivers](https://rancher.com/docs/rancher/v2.6/en/admin-settings/drivers/node-drivers/) in Rancher.
 1. Enter a name for the cloud credential.
 1. Based on the selected cloud credential type, enter the required values to authenticate with the infrastructure provider.
 1. Click **Create**.
 
-**Result:** The cloud credential is created and can immediately be used to [create node templates]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates).
+**Result:** The cloud credential is created and can immediately be used to [create node templates](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates).
 
 ## Updating a Cloud Credential
 
@@ -37,11 +37,11 @@ When access credentials are changed or compromised, updating a cloud credential 
 1. Choose the cloud credential you want to edit and click the **⋮ > Edit Config**.
 1. Update the credential information and click **Save**.
 
-**Result:** The cloud credential is updated with the new access credentials. All existing node templates using this cloud credential will automatically use the updated information whenever [new nodes are added]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/).
+**Result:** The cloud credential is updated with the new access credentials. All existing node templates using this cloud credential will automatically use the updated information whenever [new nodes are added](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/).
 
 ## Deleting a Cloud Credential
 
-In order to delete cloud credentials, there must not be any node template associated with it. If you are unable to delete the cloud credential, [delete any node templates]({{<baseurl>}}/rancher/v2.6/en/user-settings/node-templates/#deleting-a-node-template) that are still associated to that cloud credential.
+In order to delete cloud credentials, there must not be any node template associated with it. If you are unable to delete the cloud credential, [delete any node templates](https://rancher.com/docs/rancher/v2.6/en/user-settings/node-templates/#deleting-a-node-template) that are still associated to that cloud credential.
 
 1. Click **☰ > Cluster Management**.
 1. Click **Cloud Credentials**.

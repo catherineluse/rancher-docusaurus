@@ -36,7 +36,7 @@ The following steps quickly deploy a Rancher Server with a single node cluster a
 
 ### What's Next?
 
-Use Rancher to create a deployment. For more information, see [Creating Deployments]({{<baseurl>}}/rancher/v2.6/en/quick-start-guide/workload).
+Use Rancher to create a deployment. For more information, see [Creating Deployments](https://rancher.com/docs/rancher/v2.6/en/quick-start-guide/workload).
 
 ## Destroying the Environment
 

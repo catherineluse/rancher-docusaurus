@@ -5,7 +5,7 @@ weight: 1200
 ---
 If your organization uses [Keycloak Identity Provider (IdP)](https://www.keycloak.org) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials. Rancher supports integration with Keycloak using the OpenID Connect (OIDC) protocol and the SAML protocol. Both implementations are functionally equivalent when used with Rancher. This page describes the process to configure Rancher to work with Keycloak using the OIDC protocol.
 
-If you prefer to use Keycloak with the SAML protocol instead, refer to [this page]({{<baseurl>}}/rancher/v2.6/en/admin-settings/authentication/keycloak-saml/).
+If you prefer to use Keycloak with the SAML protocol instead, refer to [this page](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/keycloak-saml/).
 
 If you have an existing configuration using the SAML protocol and want to switch to the OIDC protocol, refer to [this section](#migrating-from-saml-to-oidc).
 
@@ -118,7 +118,7 @@ Configure Rancher to use Keycloak (OIDC) by following the steps in [this section
 
 ## Annex: Troubleshooting
 
-If you are experiencing issues while testing the connection to the Keycloak server, first double-check the configuration options of your OIDC client. You may also inspect the Rancher logs to help pinpoint what's causing issues. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging]({{<baseurl>}}/rancher/v2.6/en/faq/technical/#how-can-i-enable-debug-logging) in this documentation.
+If you are experiencing issues while testing the connection to the Keycloak server, first double-check the configuration options of your OIDC client. You may also inspect the Rancher logs to help pinpoint what's causing issues. Debug logs may contain more detailed information about the error. Please refer to [How can I enable debug logging](https://rancher.com/docs/rancher/v2.6/en/faq/technical/#how-can-i-enable-debug-logging) in this documentation.
 
 All Keycloak related log entries will be prepended with either `[generic oidc]` or `[keycloak oidc]`.
 

@@ -5,7 +5,7 @@ weight: 70
 
 Following an upgrade to the latest version of Rancher, downstream Kubernetes clusters can be upgraded to use the latest supported version of Kubernetes.
 
-Rancher calls RKE (Rancher Kubernetes Engine) as a library when provisioning and editing RKE clusters. For more information on configuring the upgrade strategy for RKE clusters, refer to the [RKE documentation]({{<baseurl>}}/rke/latest/en/).
+Rancher calls RKE (Rancher Kubernetes Engine) as a library when provisioning and editing RKE clusters. For more information on configuring the upgrade strategy for RKE clusters, refer to the [RKE documentation](https://rancher.com/docs/rke/latest/en/).
 
 This section covers the following topics:
 
@@ -30,7 +30,7 @@ Before a new version of Rancher is released, it's tested with the latest minor v
 
 RKE v1.1.0 changed the way that clusters are upgraded.
 
-In this section of the [RKE documentation,]({{<baseurl>}}/rke/latest/en/upgrades/how-upgrades-work) you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster.
+In this section of the [RKE documentation,](https://rancher.com/docs/rke/latest/en/upgrades/how-upgrades-work) you'll learn what happens when you edit or upgrade your RKE Kubernetes cluster.
 
 
 # Recommended Best Practice for Upgrades
@@ -47,8 +47,8 @@ The restore operation will work on a cluster that is not in a healthy or active 
 
 > **Prerequisites:**
 >
-> - The options below are available only for [Rancher-launched RKE Kubernetes clusters]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/) and [Registered K3s Kubernetes clusters.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/registered-clusters/#additional-features-for-registered-k3s-clusters)
-> - Before upgrading Kubernetes, [back up your cluster.]({{<baseurl>}}/rancher/v2.6/en/backups)
+> - The options below are available only for [Rancher-launched RKE Kubernetes clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) and [Registered K3s Kubernetes clusters.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/registered-clusters/#additional-features-for-registered-k3s-clusters)
+> - Before upgrading Kubernetes, [back up your cluster.](https://rancher.com/docs/rancher/v2.6/en/backups)
 
 1. In the upper left corner, click **☰ > Cluster Management**.
 1. On the **Clusters** page, go to the cluster you want to upgrade and click **⋮ > Edit Config**.
@@ -61,12 +61,12 @@ The restore operation will work on a cluster that is not in a healthy or active 
 
 A cluster can be restored to a backup in which the previous Kubernetes version was used. For more information, refer to the following sections:
 
-- [Backing up a cluster]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/backing-up-etcd/#how-snapshots-work)
-- [Restoring a cluster from backup]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/restoring-etcd/#restoring-a-cluster-from-a-snapshot)
+- [Backing up a cluster](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/backing-up-etcd/#how-snapshots-work)
+- [Restoring a cluster from backup](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/restoring-etcd/#restoring-a-cluster-from-a-snapshot)
 
 # Configuring the Upgrade Strategy
 
-As of RKE v1.1.0, additional upgrade options became available to give you more granular control over the upgrade process. These options can be used to maintain availability of your applications during a cluster upgrade if certain [conditions and requirements]({{<baseurl>}}/rke/latest/en/upgrades/maintaining-availability) are met.
+As of RKE v1.1.0, additional upgrade options became available to give you more granular control over the upgrade process. These options can be used to maintain availability of your applications during a cluster upgrade if certain [conditions and requirements](https://rancher.com/docs/rke/latest/en/upgrades/maintaining-availability) are met.
 
 The upgrade strategy can be configured in the Rancher UI, or by editing the `cluster.yml`. More advanced options are available by editing the `cluster.yml`.
 
@@ -95,7 +95,7 @@ To enable draining each node during a cluster upgrade,
 1. On the **Clusters** page, go to the cluster you want to enable node draining and click **⋮ > Edit Config**.
 1. Click **⋮ > Edit**.
 1. In the **Upgrade Strategy** tab, go to the **Drain nodes** field and click **Yes**. Node draining is configured separately for control plane and worker nodes.
-1. Configure the options for how pods are deleted. For more information about each option, refer to [this section.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/nodes/#aggressive-and-safe-draining-options)
+1. Configure the options for how pods are deleted. For more information about each option, refer to [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/nodes/#aggressive-and-safe-draining-options)
 1. Optionally, configure a grace period. The grace period is the timeout given to each pod for cleaning things up, so they will have chance to exit gracefully. Pods might need to finish any outstanding requests, roll back transactions or save state to some external storage. If this value is negative, the default value specified in the pod will be used.
 1. Optionally, configure a timeout, which is the amount of time the drain should continue to wait before giving up.
 1. Click **Save**.
@@ -108,13 +108,13 @@ To enable draining each node during a cluster upgrade,
 
 _Available as of RKE v1.1.0_
 
-In [this section of the RKE documentation,]({{<baseurl>}}/rke/latest/en/upgrades/maintaining-availability/) you'll learn the requirements to prevent downtime for your applications when upgrading the cluster.
+In [this section of the RKE documentation,](https://rancher.com/docs/rke/latest/en/upgrades/maintaining-availability/) you'll learn the requirements to prevent downtime for your applications when upgrading the cluster.
 
 ### Configuring the Upgrade Strategy in the cluster.yml
 
 More advanced upgrade strategy configuration options are available by editing the `cluster.yml`.
 
-For details, refer to [Configuring the Upgrade Strategy]({{<baseurl>}}/rke/latest/en/upgrades/configuring-strategy) in the RKE documentation. The section also includes an example `cluster.yml` for configuring the upgrade strategy.
+For details, refer to [Configuring the Upgrade Strategy](https://rancher.com/docs/rke/latest/en/upgrades/configuring-strategy) in the RKE documentation. The section also includes an example `cluster.yml` for configuring the upgrade strategy.
 
 # Troubleshooting
 

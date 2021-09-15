@@ -5,8 +5,8 @@ weight: 110
 
 The following audit logs are used in Rancher to track events occuring on the local and downstream clusters:
 
-* [Kubernetes Audit Logs]({{<baseurl>}}/rke/latest/en/config-options/audit-log/)
-* [Rancher API Audit Logs]({{<baseurl>}}/rancher/v2.6/en/installation/resources/advanced/api-audit-log/)
+* [Kubernetes Audit Logs](https://rancher.com/docs/rke/latest/en/config-options/audit-log/)
+* [Rancher API Audit Logs](https://rancher.com/docs/rancher/v2.6/en/installation/resources/advanced/api-audit-log/)
 
 Audit logs in Rancher v2.6 have been enhanced to include the external Identity Provider name (common name of the user in the external Auth provider) in both the Rancher and downstream Kubernetes audit logs.
 

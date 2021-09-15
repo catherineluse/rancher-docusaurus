@@ -44,7 +44,7 @@ The Benchmark version is included in the generated report.
 
 The Benchmark provides recommendations of two types: Scored and Not Scored. Recommendations marked as Not Scored in the Benchmark are not included in the generated report.
 
-Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's <a href="{{<baseurl>}}/rancher/v2.6/en/security/#the-cis-benchmark-and-self-assessment" target="_blank">self-assessment guide for the corresponding Kubernetes version.</a>
+Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's <a href="https://rancher.com/docs/rancher/v2.6/en/security/#the-cis-benchmark-and-self-assessment" target="_blank">self-assessment guide for the corresponding Kubernetes version.</a>
 
 The report contains the following information:
 
@@ -63,7 +63,7 @@ The report contains the following information:
 | `actual_value` | The test's actual value, present if reported by `kube-bench`. |
 | `expected_result` | The test's expected result, present if reported by `kube-bench`. |
 
-Refer to <a href="{{<baseurl>}}/rancher/v2.6/en/security/" target="_blank">the table in the cluster hardening guide</a> for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
+Refer to <a href="https://rancher.com/docs/rancher/v2.6/en/security/" target="_blank">the table in the cluster hardening guide</a> for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
 
 # Test Profiles
 
@@ -91,7 +91,7 @@ There are two types of RKE cluster scan profiles:
 
 The EKS and GKE cluster scan profiles are based on CIS Benchmark versions that are specific to those types of clusters.
 
-In order to pass the "Hardened" profile, you will need to follow the steps on the <a href="{{<baseurl>}}/rancher/v2.6/en/security/#rancher-hardening-guide" target="_blank">hardening guide</a> and use the `cluster.yml` defined in the hardening guide to provision a hardened cluster.
+In order to pass the "Hardened" profile, you will need to follow the steps on the <a href="https://rancher.com/docs/rancher/v2.6/en/security/#rancher-hardening-guide" target="_blank">hardening guide</a> and use the `cluster.yml` defined in the hardening guide to provision a hardened cluster.
 
 The default profile and the supported CIS benchmark version depends on the type of cluster that will be scanned:
 
@@ -104,7 +104,7 @@ The `rancher-cis-benchmark` supports the CIS 1.6 Benchmark version.
 
 # About Skipped and Not Applicable Tests
 
-For a list of skipped and not applicable tests, refer to <a href="{{<baseurl>}}/rancher/v2.6/en/cis-scans/skipped-tests" target="_blank">this page.</a>
+For a list of skipped and not applicable tests, refer to <a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/skipped-tests" target="_blank">this page.</a>
 
 For now, only user-defined skipped tests are marked as skipped in the generated report.
 
@@ -112,11 +112,11 @@ Any skipped tests that are defined as being skipped by one of the default profil
 
 # Roles-based Access Control
 
-For information about permissions, refer to <a href="{{<baseurl>}}/rancher/v2.6/en/cis-scans/rbac" target="_blank">this page.</a>
+For information about permissions, refer to <a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/rbac" target="_blank">this page.</a>
 
 # Configuration
 
-For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to <a href="{{<baseurl>}}/rancher/v2.6/en/cis-scans/configuration" target="_blank">this page.</a>
+For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to <a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/configuration" target="_blank">this page.</a>
 
 # How-to Guides
 
@@ -232,9 +232,9 @@ Alerts can be configured to be sent out for a scan that runs on a schedule.
 
 > **Prerequisite:** 
 >
-> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/configuration)
+> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration)
 >
-> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
+> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
 
 While installing or upgrading the `rancher-cis-benchmark` Helm chart, set the following flag to `true` in the `values.yaml`:
 
@@ -258,9 +258,9 @@ The CIS Benchmark application supports two types of alerts:
 
 > **Prerequisite:** 
 >
-> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/configuration)
+> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration)
 >
-> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
+> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
 
 To configure alerts for a scan that runs on a schedule,
 

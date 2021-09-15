@@ -22,7 +22,7 @@ You can configure the Kubernetes options one of two ways:
 
 The version of Kubernetes installed on your cluster nodes. Rancher packages its own version of Kubernetes based on [hyperkube](https://github.com/rancher/hyperkube).
 
-For more detail, see [Upgrading Kubernetes]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/upgrading-kubernetes).
+For more detail, see [Upgrading Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/upgrading-kubernetes).
 
 #### Encrypt Secrets
 
@@ -104,9 +104,9 @@ Add additional hostnames or IPv4/IPv6 addresses as Subject Alternative Names on 
 
 Authorized Cluster Endpoint can be used to directly access the Kubernetes API server, without requiring communication through Rancher.
 
-For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.]({{<baseurl>}}/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint)
+For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint)
 
-We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.]({{<baseurl>}}/rancher/v2.6/en/overview/architecture-recommendations/#architecture-for-an-authorized-cluster-endpoint)
+We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture-recommendations/#architecture-for-an-authorized-cluster-endpoint)
 
 ### Registries
 

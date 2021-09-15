@@ -39,7 +39,7 @@ If you are registering a K3s cluster, make sure the `cluster.yml` is readable. I
 1. Enter a **Cluster Name**.
 1. Choose the type of cluster.
 4. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
-5. If it is a generic custom cluster, use **Agent Environment Variables** under **Cluster Options** to set environment variables for [rancher cluster agent]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.
+5. If it is a generic custom cluster, use **Agent Environment Variables** under **Cluster Options** to set environment variables for [rancher cluster agent](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/). The environment variables can be set using key value pairs. If rancher agent requires use of proxy to communicate with Rancher server, `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY` environment variables can be set using agent environment variables.
 6. Click **Create**.
 7. The prerequisite for `cluster-admin` privileges is shown (see **Prerequisites** above), including an example command to fulfil the prerequisite.
 8. Copy the `kubectl` command to your clipboard and run it on a node where kubeconfig is configured to point to the cluster you want to import. If you are unsure it is configured correctly, run `kubectl get nodes` to verify before running the command shown in Rancher.
@@ -85,20 +85,20 @@ The control that Rancher has to manage a registered cluster depends on the type 
 
 After registering a cluster, the cluster owner can:
 
-- [Manage cluster access]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/) through role-based access control
-- Enable [monitoring, alerts and notifiers]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/)
-- Enable [logging]({{<baseurl>}}/rancher/v2.6/en/logging/)
-- Enable [Istio]({{<baseurl>}}/rancher/v2.6/en/istio/)
-- Use [pipelines]({{<baseurl>}}/rancher/v2.6/en/project-admin/pipelines/)
+- [Manage cluster access](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/) through role-based access control
+- Enable [monitoring, alerts and notifiers](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/)
+- Enable [logging](https://rancher.com/docs/rancher/v2.6/en/logging/)
+- Enable [Istio](https://rancher.com/docs/rancher/v2.6/en/istio/)
+- Use [pipelines](https://rancher.com/docs/rancher/v2.6/en/project-admin/pipelines/)
 - Manage projects and workloads
 
 ### Additional Features for Registered K3s Clusters
 
-[K3s]({{<baseurl>}}/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution.
+[K3s](https://rancher.com/docs/k3s/latest/en/) is a lightweight, fully compliant Kubernetes distribution.
 
 When a K3s cluster is registered in Rancher, Rancher will recognize it as K3s. The Rancher UI will expose the features for [all registered clusters,](#features-for-all-registered-clusters) in addition to the following features for editing and upgrading the cluster:
 
-- The ability to [upgrade the K3s version]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/upgrading-kubernetes/)
+- The ability to [upgrade the K3s version](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/upgrading-kubernetes/)
 - The ability to configure the maximum number of nodes that will be upgraded concurrently
 - The ability to see a read-only version of the K3s cluster's configuration arguments and environment variables used to launch each node in the cluster
 
@@ -110,7 +110,7 @@ Amazon EKS clusters and GKE clusters can now be registered in Rancher. For the m
 
 When you delete an EKS cluster or GKE cluster that was created in Rancher, the cluster is destroyed. When you delete a cluster that was registered in Rancher, it is disconnected from the Rancher server, but it still exists and you can still access it in the same way you did before it was registered in Rancher.
 
-The capabilities for registered clusters are listed in the table on [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/)
+The capabilities for registered clusters are listed in the table on [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/)
 
 # Configuring K3s Cluster Upgrades
 

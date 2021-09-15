@@ -62,7 +62,7 @@ sudo systemctl restart docker
 
 You need several command line tools on the host where you have SSH access to the Linux nodes to create and interact with the cluster:
 
-*  [RKE CLI binary]({{<baseurl>}}/rke/latest/en/installation/#download-the-rke-binary)
+*  [RKE CLI binary](https://rancher.com/docs/rke/latest/en/installation/#download-the-rke-binary)
 
 ```
 sudo curl -fsSL -o /usr/local/bin/rke https://github.com/rancher/rke/releases/download/v1.1.4/rke_linux-amd64
@@ -85,7 +85,7 @@ chmod +x get_helm.sh
 sudo ./get_helm.sh
 ```
 
-Next, create a YAML file that describes the RKE cluster. Ensure that the IP addresses of the nodes and the SSH username are correct. For more information on the cluster YAML, have a look at the [RKE documentation]({{<baseurl>}}/rke/latest/en/example-yamls/).
+Next, create a YAML file that describes the RKE cluster. Ensure that the IP addresses of the nodes and the SSH username are correct. For more information on the cluster YAML, have a look at the [RKE documentation](https://rancher.com/docs/rke/latest/en/example-yamls/).
 
 ```
 nodes:
@@ -139,13 +139,13 @@ default backend - 404
 Save a copy of the following files in a secure location:
 
 - `rancher-cluster.yml`: The RKE cluster configuration file.
-- `kube_config_rancher-cluster.yml`: The [Kubeconfig file]({{<baseurl>}}/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
-- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file]({{<baseurl>}}/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates.
+- `kube_config_rancher-cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
+- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates.
 
 > **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 ### Issues or errors?
 
-See the [Troubleshooting]({{<baseurl>}}/rancher/v2.6/en/installation/resources/troubleshooting/) page.
+See the [Troubleshooting](https://rancher.com/docs/rancher/v2.6/en/installation/resources/troubleshooting/) page.
 
 ### [Next: Install Rancher](../install-rancher)

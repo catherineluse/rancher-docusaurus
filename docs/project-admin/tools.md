@@ -32,8 +32,8 @@ Logging is helpful because it allows you to:
 
 Rancher can integrate with Elasticsearch, splunk, kafka, syslog, and fluentd.
 
-For details, refer to the [logging section.]({{<baseurl>}}/rancher/v2.6/en/logging)
+For details, refer to the [logging section.](https://rancher.com/docs/rancher/v2.6/en/logging)
 
 ## Monitoring
 
-Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with [Prometheus](https://prometheus.io/), a leading open-source monitoring solution. For details, refer to the [monitoring section.]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting)
+Using Rancher, you can monitor the state and processes of your cluster nodes, Kubernetes components, and software deployments through integration with [Prometheus](https://prometheus.io/), a leading open-source monitoring solution. For details, refer to the [monitoring section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting)

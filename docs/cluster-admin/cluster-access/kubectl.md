@@ -48,9 +48,9 @@ Rancher will discover and show resources created by `kubectl`. However, these re
 
 # Authenticating Directly with a Downstream Cluster
 
-This section intended to help you set up an alternative method to access an [RKE cluster.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters)
+This section intended to help you set up an alternative method to access an [RKE cluster.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters)
 
-This method is only available for RKE clusters that have the [authorized cluster endpoint]({{<baseurl>}}/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint) enabled. When Rancher creates this RKE cluster, it generates a kubeconfig file that includes additional kubectl context(s) for accessing your cluster. This additional context allows you to use kubectl to authenticate with the downstream cluster without authenticating through Rancher. For a longer explanation of how the authorized cluster endpoint works, refer to [this page.](../ace)
+This method is only available for RKE clusters that have the [authorized cluster endpoint](https://rancher.com/docs/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint) enabled. When Rancher creates this RKE cluster, it generates a kubeconfig file that includes additional kubectl context(s) for accessing your cluster. This additional context allows you to use kubectl to authenticate with the downstream cluster without authenticating through Rancher. For a longer explanation of how the authorized cluster endpoint works, refer to [this page.](../ace)
 
 We recommend that as a best practice, you should set up this method to access your RKE cluster, so that just in case you can’t connect to Rancher, you can still access the cluster.
 
@@ -69,7 +69,7 @@ In this example, when you use `kubectl` with the first context, `my-cluster`, yo
 
 With the second context, `my-cluster-controlplane-1`, you would authenticate with the authorized cluster endpoint, communicating with an downstream RKE cluster directly.
 
-We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.]({{<baseurl>}}/rancher/v2.6/en/overview/architecture-recommendations/#architecture-for-an-authorized-cluster-endpoint)
+We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture-recommendations/#architecture-for-an-authorized-cluster-endpoint)
 
 Now that you have the name of the context needed to authenticate directly with the cluster, you can pass the name of the context in as an option when running kubectl commands. The commands will differ depending on whether your cluster has an FQDN defined. Examples are provided in the sections below.
 

@@ -64,7 +64,7 @@ Use Rancher to set up and configure your Kubernetes cluster.
 1. Optional: Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 1. Optional: Add Kubernetes [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) to the cluster.
 1. Enter your Google project ID and your Google cloud credentials.
-1. Fill out the rest of the form. For help, refer to the [GKE cluster configuration reference.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference)
+1. Fill out the rest of the form. For help, refer to the [GKE cluster configuration reference.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference)
 1. Click **Create**.
 
 **Result:** You have successfully deployed a GKE cluster.
@@ -80,11 +80,11 @@ You can access your cluster after its state is updated to **Active**.
 
 # Private Clusters
 
-Private GKE clusters are supported. Note: This advanced setup can require more steps during the cluster provisioning process. For details, see [this section.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference/private-clusters/)
+Private GKE clusters are supported. Note: This advanced setup can require more steps during the cluster provisioning process. For details, see [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference/private-clusters/)
 
 # Configuration Reference
 
-For details on configuring GKE clusters in Rancher, see [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference)
+For details on configuring GKE clusters in Rancher, see [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference)
 # Updating Kubernetes Version
 
 The Kubernetes version of a cluster can be upgraded to any version available in the region or zone fo the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
@@ -94,7 +94,7 @@ The Kubernetes version of a cluster can be upgraded to any version available in 
 
 # Syncing
 
-The GKE provisioner can synchronize the state of a GKE cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/syncing)
+The GKE provisioner can synchronize the state of a GKE cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/syncing)
 
-For information on configuring the refresh interval, see [this section.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference/#configuring-the-refresh-interval)
+For information on configuring the refresh interval, see [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference/#configuring-the-refresh-interval)
 

@@ -25,7 +25,7 @@ Use the command example to start a Rancher container with your private CA certif
 
 The example below is based on having the CA root certificates in the `/host/certs` directory on the host and mounting this directory on `/container/certs` inside the Rancher container.
 
-Privileged access is [required.]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
+Privileged access is [required.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
 
 ```
 docker run -d --restart=unless-stopped \
@@ -42,9 +42,9 @@ The API Audit Log records all the user and system transactions made through Ranc
 
 The API Audit Log writes to `/var/log/auditlog` inside the rancher container by default. Share that directory as a volume and set your `AUDIT_LEVEL` to enable the log.
 
-See [API Audit Log]({{<baseurl>}}/rancher/v2.6/en/installation/resources/advanced/api-audit-log) for more information and options.
+See [API Audit Log](https://rancher.com/docs/rancher/v2.6/en/installation/resources/advanced/api-audit-log) for more information and options.
 
-Privileged access is [required.]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
+Privileged access is [required.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
 
 ```
 docker run -d --restart=unless-stopped \
@@ -67,9 +67,9 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-Privileged access is [required.]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
+Privileged access is [required.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
 
-See [TLS settings]({{<baseurl>}}/rancher/v2.6/en/installation/resources/tls-settings) for more information and options.
+See [TLS settings](https://rancher.com/docs/rancher/v2.6/en/installation/resources/tls-settings) for more information and options.
 
 ### Air Gap
 
@@ -93,7 +93,7 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-Privileged access is [required.]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
+Privileged access is [required.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
 
 ### Running `rancher/rancher` and `rancher/rancher-agent` on the Same Node
 
@@ -112,4 +112,4 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:latest
 ```
 
-Privileged access is [required.]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)
+Privileged access is [required.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/#privileged-access-for-rancher)

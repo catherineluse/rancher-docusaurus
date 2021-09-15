@@ -17,7 +17,7 @@ A restore is performed by creating a Restore custom resource.
 
 > **Important**
 >
-> * Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to [migrate rancher.]({{<baseurl>}}/rancher/v2.6/en/backups/migrating-rancher)
+> * Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to [migrate rancher.](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher)
 > * While restoring Rancher on the same setup, the Rancher deployment is manually scaled down before the restore starts, then the operator will scale it back up once the restore completes. So Rancher will be unavailable during the restore.
 
 ### Scale the Rancher Deployment to 0
@@ -36,7 +36,7 @@ A restore is performed by creating a Restore custom resource.
 1. Go to the cluster that you created and click **Explore**.
 1. In the left navigation bar, click **Rancher Backups > Restore**.
 1. Click **Create**.
-1. Create the Restore with the form, or with YAML.  For creating the Restore resource using form, refer to the  [configuration reference]({{<baseurl>}}/rancher/v2.6/en/backups/configuration/restore-config) and to the [examples.]({{<baseurl>}}/rancher/v2.6/en/backups/examples) The following is an example Restore custom resource:
+1. Create the Restore with the form, or with YAML.  For creating the Restore resource using form, refer to the  [configuration reference](https://rancher.com/docs/rancher/v2.6/en/backups/configuration/restore-config) and to the [examples.](https://rancher.com/docs/rancher/v2.6/en/backups/examples) The following is an example Restore custom resource:
 
     ```yaml
     apiVersion: resources.cattle.io/v1
@@ -56,7 +56,7 @@ A restore is performed by creating a Restore custom resource.
 	      endpoint: s3.us-west-2.amazonaws.com
       ```
 
-      For help configuring the Restore, refer to the [configuration reference]({{<baseurl>}}/rancher/v2.6/en/backups/configuration/restore-config/) and to the [examples.]({{<baseurl>}}/rancher/v2.6/en/backups/examples/)
+      For help configuring the Restore, refer to the [configuration reference](https://rancher.com/docs/rancher/v2.6/en/backups/configuration/restore-config/) and to the [examples.](https://rancher.com/docs/rancher/v2.6/en/backups/examples/)
 
 1. Click **Create**.
 
@@ -95,12 +95,12 @@ helm rollback rancher 3 -n cattle-system
 
 # Rolling Back to Rancher v2.2-v2.4+
 
-To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs]({{<baseurl>}}/rancher/v2.0-v2.4/en/backups/restore/rke-restore/) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
+To roll back to Rancher before v2.5, follow the procedure detailed here: [Restoring Backups — Kubernetes installs](https://rancher.com/docs/rancher/v2.0-v2.4/en/backups/restore/rke-restore/) Restoring a snapshot of the Rancher server cluster will revert Rancher to the version and state at the time of the snapshot.
 
-For information on how to roll back Rancher installed with Docker, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/single-node-rollbacks)
+For information on how to roll back Rancher installed with Docker, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/single-node-rollbacks)
 
 > Managed clusters are authoritative for their state. This means restoring the rancher server will not revert workload deployments or changes made on managed clusters after the snapshot was taken.
 
 # Rolling Back to Rancher v2.0-v2.1
 
-Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here]({{<baseurl>}}/rancher/v2.0-v2.4/en/backups/restore/rke-restore/v2.0-v2.1) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.
+Rolling back to Rancher v2.0-v2.1 is no longer supported. The instructions for rolling back to these versions are preserved [here](https://rancher.com/docs/rancher/v2.0-v2.4/en/backups/restore/rke-restore/v2.0-v2.1) and are intended to be used only in cases where upgrading to Rancher v2.2+ is not feasible.

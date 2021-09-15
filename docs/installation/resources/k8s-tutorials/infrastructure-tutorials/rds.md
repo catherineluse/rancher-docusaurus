@@ -31,4 +31,4 @@ This information will be used to connect to the database in the following format
 mysql://username:password@tcp(hostname:3306)/database-name
 ```
 
-For more information on configuring the datastore for K3s, refer to the [K3s documentation.]({{<baseurl>}}/k3s/latest/en/installation/datastore/)
+For more information on configuring the datastore for K3s, refer to the [K3s documentation.](https://rancher.com/docs/k3s/latest/en/installation/datastore/)

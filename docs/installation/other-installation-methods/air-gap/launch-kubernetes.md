@@ -5,7 +5,7 @@ weight: 300
 
 > Skip this section if you are installing Rancher on a single node with Docker.
 
-This section describes how to install a Kubernetes cluster according to our [best practices for the Rancher server environment.]({{<baseurl>}}/rancher/v2.6/en/overview/architecture-recommendations/#environment-for-kubernetes-installations) This cluster should be dedicated to run only the Rancher server.
+This section describes how to install a Kubernetes cluster according to our [best practices for the Rancher server environment.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture-recommendations/#environment-for-kubernetes-installations) This cluster should be dedicated to run only the Rancher server.
 
 Rancher can be installed on any Kubernetes cluster, including hosted Kubernetes providers.
 
@@ -57,7 +57,7 @@ configs:
 
 Note, at this time only secure registries are supported with K3s (SSL with custom CA).
 
-For more information on private registries configuration file for K3s, refer to the [K3s documentation.]({{<baseurl>}}/k3s/latest/en/installation/private-registry/)
+For more information on private registries configuration file for K3s, refer to the [K3s documentation.](https://rancher.com/docs/k3s/latest/en/installation/private-registry/)
 
 ### 3. Install K3s
 
@@ -126,7 +126,7 @@ users:
 kubectl --kubeconfig ~/.kube/config/k3s.yaml get pods --all-namespaces
 ```
 
-For more information about the `kubeconfig` file, refer to the [K3s documentation]({{<baseurl>}}/k3s/latest/en/cluster-access/) or the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) about organizing cluster access using `kubeconfig` files.
+For more information about the `kubeconfig` file, refer to the [K3s documentation](https://rancher.com/docs/k3s/latest/en/cluster-access/) or the [official Kubernetes documentation](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) about organizing cluster access using `kubeconfig` files.
 
 ### Note on Upgrading
 
@@ -141,7 +141,7 @@ We will create a Kubernetes cluster using Rancher Kubernetes Engine (RKE). Befor
 
 ### 1. Install RKE
 
-Install RKE by following the instructions in the [RKE documentation.]({{<baseurl>}}/rke/latest/en/installation/)
+Install RKE by following the instructions in the [RKE documentation.](https://rancher.com/docs/rke/latest/en/installation/)
 
 ### 2. Create an RKE Config File
 
@@ -151,7 +151,7 @@ This file is an RKE configuration file, which is a configuration for the cluster
 
 Replace values in the code sample below with help of the _RKE Options_ table. Use the IP address or DNS names of the three nodes you created.
 
-> **Tip:** For more details on the options available, see the RKE [Config Options]({{<baseurl>}}/rke/latest/en/config-options/).
+> **Tip:** For more details on the options available, see the RKE [Config Options](https://rancher.com/docs/rke/latest/en/config-options/).
 
 <figcaption>RKE Options</figcaption>
 
@@ -206,8 +206,8 @@ rke up --config ./rancher-cluster.yml
 Save a copy of the following files in a secure location:
 
 - `rancher-cluster.yml`: The RKE cluster configuration file.
-- `kube_config_rancher-cluster.yml`: The [Kubeconfig file]({{<baseurl>}}/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
-- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file]({{<baseurl>}}/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
+- `kube_config_rancher-cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
+- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
 {{% /tab %}}
 {{% /tabs %}}
 
@@ -215,6 +215,6 @@ Save a copy of the following files in a secure location:
 
 ### Issues or errors?
 
-See the [Troubleshooting]({{<baseurl>}}/rancher/v2.6/en/installation/resources/troubleshooting/) page.
+See the [Troubleshooting](https://rancher.com/docs/rancher/v2.6/en/installation/resources/troubleshooting/) page.
 
 ### [Next: Install Rancher](../install-rancher)

@@ -108,7 +108,7 @@ To give role-based access to your service principal,
 1. Click **Cloud Credentials**.
 1. Click **Create**.
 1. Click **Azure**.
-1. Fill out the form. For help with filling out the form, see the [configuration reference.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/aks-config-reference/#cloud-credentials)
+1. Fill out the form. For help with filling out the form, see the [configuration reference.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/aks-config-reference/#cloud-credentials)
 1. Click **Create**.
 
 # 2. Create the AKS Cluster
@@ -118,7 +118,7 @@ Use Rancher to set up and configure your Kubernetes cluster.
 1. Click **☰ > Cluster Management**.
 1. In the **Clusters** section, click **Create**.
 1. Click **Azure AKS**.
-1. Fill out the form. For help with filling out the form, see the [configuration reference.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/aks-config-reference)
+1. Fill out the form. For help with filling out the form, see the [configuration reference.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/aks-config-reference)
 1. Click **Create**.
 
 **Result:** Your cluster is created and assigned a state of **Provisioning**. Rancher is standing up your cluster.
@@ -132,7 +132,7 @@ RBAC is required for AKS clusters that are registered or imported into Rancher.
 
 # AKS Cluster Configuration Reference
 
-For more information about how to configure AKS clusters from the Rancher UI, see the [configuration reference.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/aks-config-reference)
+For more information about how to configure AKS clusters from the Rancher UI, see the [configuration reference.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/aks-config-reference)
 
 # Private Clusters
 
@@ -150,6 +150,6 @@ For more information about connecting to an AKS private cluster, see the [AKS do
 
 # Syncing
 
-The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/syncing)
+The AKS provisioner can synchronize the state of an AKS cluster between Rancher and the provider. For an in-depth technical explanation of how this works, see [Syncing.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/syncing)
 
-For information on configuring the refresh interval, see [this section.]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference/#configuring-the-refresh-interval)
+For information on configuring the refresh interval, see [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/gke-config-reference/#configuring-the-refresh-interval)

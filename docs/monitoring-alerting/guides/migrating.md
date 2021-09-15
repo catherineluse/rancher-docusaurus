@@ -32,13 +32,13 @@ Unlike in Monitoring & Alerting V1, both features are packaged in a single Helm 
 
 Monitoring V2 can only be configured on the cluster level. Project-level monitoring and alerting is no longer supported.
 
-For more information on how to configure Monitoring & Alerting V2, see [this page.]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/configuration)
+For more information on how to configure Monitoring & Alerting V2, see [this page.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration)
 
 # Changes to Role-based Access Control
 
 Project owners and members no longer get access to Grafana or Prometheus by default. If view-only users had access to Grafana, they would be able to see data from any namespace. For Kiali, any user can edit things they don’t own in any namespace.
 
-For more information about role-based access control in `rancher-monitoring`, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/rbac)
+For more information about role-based access control in `rancher-monitoring`, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/rbac)
 
 # Migrating from Monitoring V1 to Monitoring V2
 
@@ -126,7 +126,7 @@ or add the Prometheus Rule through the Cluster Explorer
 ```img
 {{< img "/img/rancher/monitoring/migration/alert_2.4_to_2.5_target.png" "">}}
 ```
-For more details on how to configure PrometheusRules in Monitoring V2 see [Monitoring Configuration]({{<baseurl>}}/rancher/v2.6/en/monitoring-alerting/configuration/).
+For more details on how to configure PrometheusRules in Monitoring V2 see [Monitoring Configuration](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/).
 
 ### Migrating Notifiers
 

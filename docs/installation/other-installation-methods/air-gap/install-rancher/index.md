@@ -28,9 +28,9 @@ This section describes installing Rancher:
 
 From a system that has access to the internet, fetch the latest Helm chart and copy the resulting manifests to a system that has access to the Rancher server cluster.
 
-1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements]({{<baseurl>}}/rancher/v2.6/en/installation/resources/helm-version) to choose a version of Helm to install Rancher.
+1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](https://rancher.com/docs/rancher/v2.6/en/installation/resources/helm-version) to choose a version of Helm to install Rancher.
 
-2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#helm-chart-repositories).
+2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#helm-chart-repositories).
   {{< release-channel >}}
     ```
     helm repo add rancher-<CHART_REPO> https://releases.rancher.com/server-charts/<CHART_REPO>
@@ -52,7 +52,7 @@ Rancher Server is designed to be secure by default and requires SSL/TLS configur
 
 When Rancher is installed on an air gapped Kubernetes cluster, there are two recommended options for the source of the certificate.
 
-> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
+> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
 
 | Configuration                              | Chart option                 | Description                                                                                                                                                 | Requires cert-manager |
 | ------------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
@@ -79,7 +79,7 @@ Based on the choice your made in [2. Choose your SSL Configuration](#2-choose-yo
 By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
 
 > **Note:**
-> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation]({{<baseurl>}}/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
+> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
 
 ### 1. Add the cert-manager repo
 
@@ -186,7 +186,7 @@ If you are using a Private CA signed cert, add `--set privateCA=true` following 
 
 **Optional**: To install a specific Rancher version, set the `rancherImageTag` value, example: `--set rancherImageTag=v2.3.6`
 
-Then refer to [Adding TLS Secrets]({{<baseurl>}}/rancher/v2.6/en/installation/resources/tls-secrets/) to publish the certificate files so Rancher and the ingress controller can use them.
+Then refer to [Adding TLS Secrets](https://rancher.com/docs/rancher/v2.6/en/installation/resources/tls-secrets/) to publish the certificate files so Rancher and the ingress controller can use them.
 
 # 4. Install Rancher
 
@@ -230,12 +230,12 @@ kubectl -n cattle-system apply -R -f ./rancher
 ```
 The installation is complete.
 
-> **Note:** If you don't intend to send telemetry data, opt out [telemetry]({{<baseurl>}}/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
+> **Note:** If you don't intend to send telemetry data, opt out [telemetry](https://rancher.com/docs/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
 
 # Additional Resources
 
 These resources could be helpful when installing Rancher:
 
-- [Rancher Helm chart options]({{<baseurl>}}/rancher/v2.6/en/installation/resources/chart-options/)
-- [Adding TLS secrets]({{<baseurl>}}/rancher/v2.6/en/installation/resources/tls-secrets/)
-- [Troubleshooting Rancher Kubernetes Installations]({{<baseurl>}}/rancher/v2.6/en/installation/resources/troubleshooting/)
+- [Rancher Helm chart options](https://rancher.com/docs/rancher/v2.6/en/installation/resources/chart-options/)
+- [Adding TLS secrets](https://rancher.com/docs/rancher/v2.6/en/installation/resources/tls-secrets/)
+- [Troubleshooting Rancher Kubernetes Installations](https://rancher.com/docs/rancher/v2.6/en/installation/resources/troubleshooting/)

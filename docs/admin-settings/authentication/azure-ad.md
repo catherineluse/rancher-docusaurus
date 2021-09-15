@@ -68,7 +68,7 @@ From the Azure portal, create a client secret. Rancher will use this key to auth
 
 1. Click **New client secret**.
 ```img
-     ![Create new client secret]({{< baseurl >}}/img/rancher/select-client-secret.png)
+     ![Create new client secret](https://rancher.com/docs/img/rancher/select-client-secret.png)
 ```
     1. Enter a **Description** (something like `Rancher`).
 
@@ -95,7 +95,7 @@ Next, set API permissions for Rancher within Azure.
 
 1. From the **Azure Active Directory Graph**, select the following **Delegated Permissions**:
 ```img
-    ![Select API Permissions]({{< baseurl >}}/img/rancher/select-required-permissions-2.png)
+    ![Select API Permissions](https://rancher.com/docs/img/rancher/select-required-permissions-2.png)
 ```
     <br/>
     <br/>

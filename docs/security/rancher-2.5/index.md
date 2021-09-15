@@ -17,8 +17,8 @@ Rancher v2.5 introduced the capability to deploy Rancher on any Kubernetes clust
 
 Rancher has the following Kubernetes distributions:
 
-- [**RKE,**]({{<baseurl>}}/rke/latest/en/) Rancher Kubernetes Engine, is a CNCF-certified Kubernetes distribution that runs entirely within Docker containers. 
-- [**K3s,**]({{<baseurl>}}/k3s/latest/en/) is a fully conformant, lightweight Kubernetes distribution. It is easy to install, with half the memory of upstream Kubernetes, all in a binary of less than 100 MB.
+- [**RKE,**](https://rancher.com/docs/rke/latest/en/) Rancher Kubernetes Engine, is a CNCF-certified Kubernetes distribution that runs entirely within Docker containers. 
+- [**K3s,**](https://rancher.com/docs/k3s/latest/en/) is a fully conformant, lightweight Kubernetes distribution. It is easy to install, with half the memory of upstream Kubernetes, all in a binary of less than 100 MB.
 - [**RKE2**](https://docs.rke2.io/) is a fully conformant Kubernetes distribution that focuses on security and compliance within the U.S. Federal Government sector.
 
 To harden a Kubernetes cluster outside of Rancher's distributions, refer to your Kubernetes provider docs.
@@ -45,11 +45,11 @@ Kubernetes v1.20 | CIS v1.6 | [Link](https://docs.rke2.io/security/cis_self_asse
 
 Kubernetes Version | CIS Benchmark Version | Self Assessment Guide | Hardening Guide
 ---|---|---|---
-Kubernetes v1.17, v1.18, & v1.19 | CIS v1.5 | [Link]({{<baseurl>}}/k3s/latest/en/security/self_assessment/) | [Link]({{<baseurl>}}/k3s/latest/en/security/hardening_guide/)
+Kubernetes v1.17, v1.18, & v1.19 | CIS v1.5 | [Link](https://rancher.com/docs/k3s/latest/en/security/self_assessment/) | [Link](https://rancher.com/docs/k3s/latest/en/security/hardening_guide/)
 
 
 # Rancher with SELinux
 
 [Security-Enhanced Linux (SELinux)](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) is a security enhancement to Linux. After being historically used by government agencies, SELinux is now industry standard and is enabled by default on CentOS 7 and 8.
 
-To use Rancher with SELinux, we recommend installing the `rancher-selinux` RPM according to the instructions on [this page.]({{<baseurl>}}/rancher/v2.6/en/security/selinux/#installing-the-rancher-selinux-rpm)
+To use Rancher with SELinux, we recommend installing the `rancher-selinux` RPM according to the instructions on [this page.](https://rancher.com/docs/rancher/v2.6/en/security/selinux/#installing-the-rancher-selinux-rpm)

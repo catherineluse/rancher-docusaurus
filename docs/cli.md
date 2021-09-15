@@ -17,7 +17,7 @@ The binary can be downloaded directly from the UI. The link can be found in the 
 After you download the Rancher CLI, you need to make a few configurations. Rancher CLI requires:
 
 - Your Rancher Server URL, which is used to connect to Rancher Server.
-- An API Bearer Token, which is used to authenticate with Rancher. For more information about obtaining a Bearer Token, see [Creating an API Key]({{<baseurl>}}/rancher/v2.6/en/user-settings/api-keys/).
+- An API Bearer Token, which is used to authenticate with Rancher. For more information about obtaining a Bearer Token, see [Creating an API Key](https://rancher.com/docs/rancher/v2.6/en/user-settings/api-keys/).
 
 ### CLI Authentication
 
@@ -31,7 +31,7 @@ If Rancher Server uses a self-signed certificate, Rancher CLI prompts you to con
 
 ### Project Selection
 
-Before you can perform any commands, you must select a Rancher project to perform those commands against. To select a [project]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/projects-and-namespaces/) to work on, use the command `./rancher context switch`. When you enter this command, a list of available projects displays. Enter a number to choose your project.
+Before you can perform any commands, you must select a Rancher project to perform those commands against. To select a [project](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/projects-and-namespaces/) to work on, use the command `./rancher context switch`. When you enter this command, a list of available projects displays. Enter a number to choose your project.
 
 **Example: `./rancher context switch` Output**
 ```
@@ -58,16 +58,16 @@ The following commands are available for use in Rancher CLI.
 | Command  | Result  |
 |---|---|
 | `apps, [app]`  | Performs operations on catalog applications (i.e. individual [Helm charts](https://docs.helm.sh/developing_charts/) or Rancher charts.  |
-| `catalog`  | Performs operations on [catalogs]({{<baseurl>}}/rancher/v2.6/en/helm-charts/).  |
-| `clusters, [cluster]`  | Performs operations on your [clusters]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/).  |
-| `context`  | Switches between Rancher [projects]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/projects-and-namespaces/). For an example, see [Project Selection](#project-selection).  |
-| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/projects-and-namespaces/) and [workloads]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/)). Specify resources by name or ID.  |
+| `catalog`  | Performs operations on [catalogs](https://rancher.com/docs/rancher/v2.6/en/helm-charts/).  |
+| `clusters, [cluster]`  | Performs operations on your [clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/).  |
+| `context`  | Switches between Rancher [projects](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/projects-and-namespaces/). For an example, see [Project Selection](#project-selection).  |
+| `inspect [OPTIONS] [RESOURCEID RESOURCENAME]`  | Displays details about [Kubernetes resources](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#resource-types) or Rancher resources (i.e.: [projects](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/projects-and-namespaces/) and [workloads](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/)). Specify resources by name or ID.  |
 | `kubectl`  |Runs [kubectl commands](https://kubernetes.io/docs/reference/kubectl/overview/#operations).   |
 | `login, [l]`  | Logs into a Rancher Server. For an example, see [CLI Authentication](#cli-authentication).  |
 | `namespaces, [namespace]`  |Performs operations on namespaces.   |
 | `nodes, [node]`  |Performs operations on nodes.   |
-| `projects, [project]`  | Performs operations on [projects]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/projects-and-namespaces/).  |
-| `ps`  | Displays [workloads]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads) in a project.  |
+| `projects, [project]`  | Performs operations on [projects](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/projects-and-namespaces/).  |
+| `ps`  | Displays [workloads](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads) in a project.  |
 | `settings, [setting]`  | Shows the current settings for your Rancher Server.  |
 | `ssh`  | Connects to one of your cluster nodes using the SSH protocol.  |
 | `help, [h]`  | Shows a list of commands or help for one command.  |

@@ -156,7 +156,7 @@ spec:
 
 Adding the above YAML results in a link to Grafana being created, as shown in the following screenshot:
 ```img
-![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-grafana-link.png)
+![Screenshot of Grafana Link](https://rancher.com/docs/img/rancher/example-grafana-link.png)
 ```
 ### Example of Link with `toService`
 
@@ -188,5 +188,5 @@ spec:
 
 Adding the `toService` parameters above results in a link to Grafana being created, as shown in the following screenshot:
 ```img
-![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-service-link.png)
+![Screenshot of Grafana Link](https://rancher.com/docs/img/rancher/example-service-link.png)
 ```

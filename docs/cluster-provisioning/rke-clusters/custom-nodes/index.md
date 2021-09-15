@@ -7,7 +7,7 @@ weight: 2225
 
 When you create a custom cluster, Rancher uses RKE (the Rancher Kubernetes Engine) to create a Kubernetes cluster in on-prem bare-metal servers, on-prem virtual machines, or in any node hosted by an infrastructure provider.
 
-To use this option you'll need access to servers you intend to use in your Kubernetes cluster. Provision each server according to the [requirements]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/node-requirements), which includes some hardware specifications and Docker. After you install Docker on each server, you willl also run the command provided in the Rancher UI on each server to turn each one into a Kubernetes node.
+To use this option you'll need access to servers you intend to use in your Kubernetes cluster. Provision each server according to the [requirements](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements), which includes some hardware specifications and Docker. After you install Docker on each server, you willl also run the command provided in the Rancher UI on each server to turn each one into a Kubernetes node.
 
 This section describes how to set up a custom cluster.
 
@@ -15,7 +15,7 @@ This section describes how to set up a custom cluster.
 
 >**Want to use Windows hosts as Kubernetes workers?**
 >
->See [Configuring Custom Clusters for Windows]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/) before you start.
+>See [Configuring Custom Clusters for Windows](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/) before you start.
 
 <!-- TOC -->
 
@@ -33,11 +33,11 @@ Begin creation of a custom cluster by provisioning a Linux host. Your host can b
 - An on-prem VM
 - A bare-metal server
 
-If you want to reuse a node from a previous custom cluster, [clean the node]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/cleaning-cluster-nodes/) before using it in a cluster again. If you reuse a node that hasn't been cleaned, cluster provisioning may fail.
+If you want to reuse a node from a previous custom cluster, [clean the node](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/cleaning-cluster-nodes/) before using it in a cluster again. If you reuse a node that hasn't been cleaned, cluster provisioning may fail.
 
-Provision the host according to the [installation requirements]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/node-requirements) and the [checklist for production-ready clusters.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/production)
+Provision the host according to the [installation requirements](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements) and the [checklist for production-ready clusters.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/production)
 
-If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements]({{<baseurl>}}/rke//latest/en/config-options/dual-stack#requirements) when provisioning the host.
+If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) when provisioning the host.
 
 ### 2. Create the Custom Cluster
 
@@ -49,23 +49,23 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 
     >**Using Windows nodes as Kubernetes workers?**
     >
-    >- See [Enable the Windows Support Option]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
+    >- See [Enable the Windows Support Option](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
     >- The only Network Provider available for clusters with Windows support is Flannel.
     >
-    >**Dual-stack on Amazon EC2:** If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements]({{<baseurl>}}/rke//latest/en/config-options/dual-stack#requirements) when configuring RKE.
+    >**Dual-stack on Amazon EC2:** If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) when configuring RKE.
 
 6.	<a id="step-6"></a>Click **Next**.
 
 4. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 
-7.	From **Node Role**, choose the roles that you want filled by a cluster node. You must provision at least one node for each role: `etcd`, `worker`, and `control plane`. All three roles are required for a custom cluster to finish provisioning. For more information on roles, see [this section.]({{<baseurl>}}/rancher/v2.6/en/overview/concepts/#roles-for-nodes-in-kubernetes-clusters)
+7.	From **Node Role**, choose the roles that you want filled by a cluster node. You must provision at least one node for each role: `etcd`, `worker`, and `control plane`. All three roles are required for a custom cluster to finish provisioning. For more information on roles, see [this section.](https://rancher.com/docs/rancher/v2.6/en/overview/concepts/#roles-for-nodes-in-kubernetes-clusters)
 
 	>**Notes:**
 	>
-    >- Using Windows nodes as Kubernetes workers? See [this section]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
+    >- Using Windows nodes as Kubernetes workers? See [this section](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
 	>- Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
 
-8.	<a id="step-8"></a>**Optional**: Click **[Show advanced options]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+8.	<a id="step-8"></a>**Optional**: Click **[Show advanced options](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 
 9. Copy the command displayed on screen to your clipboard.
 
@@ -122,5 +122,5 @@ Key=kubernetes.io/cluster/CLUSTERID, Value=shared
 
 After creating your cluster, you can access it through the Rancher UI. As a best practice, we recommend setting up these alternate ways of accessing your cluster:
 
-- **Access your cluster with the kubectl CLI:** Follow [these steps]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/cluster-access/kubectl/#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
-- **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/cluster-access/kubectl/#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through Rancher. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.
+- **Access your cluster with the kubectl CLI:** Follow [these steps](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/cluster-access/kubectl/#accessing-clusters-with-kubectl-on-your-workstation) to access clusters with kubectl on your workstation. In this case, you will be authenticated through the Rancher server’s authentication proxy, then Rancher will connect you to the downstream cluster. This method lets you manage the cluster without the Rancher UI.
+- **Access your cluster with the kubectl CLI, using the authorized cluster endpoint:** Follow [these steps](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/cluster-access/kubectl/#authenticating-directly-with-a-downstream-cluster) to access your cluster with kubectl directly, without authenticating through Rancher. We recommend setting up this alternative method to access your cluster so that in case you can’t connect to Rancher, you can still access the cluster.

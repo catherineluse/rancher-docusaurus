@@ -7,15 +7,15 @@ You can view and manipulate all of the custom resources and CRDs in a Kubernetes
 
 ## Workloads
 
-Deploy applications to your cluster nodes using [workloads]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/), which are objects that contain pods that run your apps, along with metadata that set rules for the deployment's behavior. Workloads can be deployed within the scope of the entire clusters or within a namespace.
+Deploy applications to your cluster nodes using [workloads](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/), which are objects that contain pods that run your apps, along with metadata that set rules for the deployment's behavior. Workloads can be deployed within the scope of the entire clusters or within a namespace.
 
-When deploying a workload, you can deploy from any image. There are a variety of [workload types]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/#workload-types) to choose from which determine how your application should run.
+When deploying a workload, you can deploy from any image. There are a variety of [workload types](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/#workload-types) to choose from which determine how your application should run.
 
 Following a workload deployment, you can continue working with it. You can:
 
-- [Upgrade]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/upgrade-workloads) the workload to a newer version of the application it's running.
-- [Roll back]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/rollback-workloads) a workload to a previous version, if an issue occurs during upgrade.
-- [Add a sidecar]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/add-a-sidecar), which is a workload that supports a primary workload.
+- [Upgrade](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/upgrade-workloads) the workload to a newer version of the application it's running.
+- [Roll back](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/rollback-workloads) a workload to a previous version, if an issue occurs during upgrade.
+- [Add a sidecar](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/add-a-sidecar), which is a workload that supports a primary workload.
 
 ## Load Balancing and Ingress
 
@@ -27,10 +27,10 @@ If you want your applications to be externally accessible, you must add a load b
 
 Rancher supports two types of load balancers:
 
-- [Layer-4 Load Balancers]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/load-balancers/#layer-4-load-balancer)
-- [Layer-7 Load Balancers]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/load-balancers/#layer-7-load-balancer)
+- [Layer-4 Load Balancers](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/load-balancers/#layer-4-load-balancer)
+- [Layer-7 Load Balancers](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/load-balancers/#layer-7-load-balancer)
 
-For more information, see [load balancers]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/load-balancers).
+For more information, see [load balancers](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/load-balancers).
 
 #### Ingress
 
@@ -38,7 +38,7 @@ Load Balancers can only handle one IP address per service, which means if you ru
 
 Ingress is a set of rules that act as a load balancer. Ingress works in conjunction with one or more ingress controllers to dynamically route service requests. When the ingress receives a request, the ingress controller(s) in your cluster program the load balancer to direct the request to the correct service based on service subdomains or path rules that you've configured.
 
-For more information, see [Ingress]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/ingress).
+For more information, see [Ingress](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/load-balancers-and-ingress/ingress).
 
 When using ingresses in a project, you can program the ingress hostname to an external DNS by setting up a Global DNS entry.
 
@@ -46,13 +46,13 @@ When using ingresses in a project, you can program the ingress hostname to an ex
 
 After you expose your cluster to external requests using a load balancer and/or ingress, it's only available by IP address. To create a resolveable hostname, you must create a service record, which is a record that maps an IP address, external hostname, DNS record alias, workload(s), or labelled pods to a specific hostname.
 
-For more information, see [Service Discovery]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/service-discovery).
+For more information, see [Service Discovery](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/service-discovery).
 
 ## Pipelines
 
-After your project has been [configured to a version control provider]({{<baseurl>}}/rancher/v2.6/en/project-admin/pipelines/#1-configure-version-control-providers), you can add the repositories and start configuring a pipeline for each repository.
+After your project has been [configured to a version control provider](https://rancher.com/docs/rancher/v2.6/en/project-admin/pipelines/#1-configure-version-control-providers), you can add the repositories and start configuring a pipeline for each repository.
 
-For more information, see [Pipelines]({{<baseurl>}}/rancher/v2.6/en/pipelines/).
+For more information, see [Pipelines](https://rancher.com/docs/rancher/v2.6/en/pipelines/).
 
 ## Applications
 
@@ -64,7 +64,7 @@ Within the context of a Rancher project or namespace, _resources_ are files and 
 
 Resources include:
 
-- [Certificates]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/certificates/): Files used to encrypt/decrypt data entering or leaving the cluster.
-- [ConfigMaps]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/configmaps/): Files that store general configuration information, such as a group of config files.
-- [Secrets]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/secrets/): Files that store sensitive data like passwords, tokens, or keys.
-- [Registries]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/registries/): Files that carry credentials used to authenticate with private registries.
+- [Certificates](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/certificates/): Files used to encrypt/decrypt data entering or leaving the cluster.
+- [ConfigMaps](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/configmaps/): Files that store general configuration information, such as a group of config files.
+- [Secrets](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/secrets/): Files that store sensitive data like passwords, tokens, or keys.
+- [Registries](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/registries/): Files that carry credentials used to authenticate with private registries.

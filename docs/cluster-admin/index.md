@@ -11,11 +11,11 @@ This page covers the following topics:
 - [Managing clusters in Rancher](#managing-clusters-in-rancher)
 - [Configuring tools](#configuring-tools)
 
-> This section assumes a basic familiarity with Docker and Kubernetes. For a brief explanation of how Kubernetes components work together, refer to the [concepts]({{<baseurl>}}/rancher/v2.6/en/overview/concepts) page.
+> This section assumes a basic familiarity with Docker and Kubernetes. For a brief explanation of how Kubernetes components work together, refer to the [concepts](https://rancher.com/docs/rancher/v2.6/en/overview/concepts) page.
 
 ## Managing Clusters in Rancher
 
-After clusters have been [provisioned into Rancher]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/), [cluster owners]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#cluster-roles) will need to manage these clusters. There are many different options of how to manage your cluster. 
+After clusters have been [provisioned into Rancher](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/), [cluster owners](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#cluster-roles) will need to manage these clusters. There are many different options of how to manage your cluster. 
 
 {{% include file="/rancher/v2.6/en/cluster-provisioning/cluster-capabilities-table" %}}
 

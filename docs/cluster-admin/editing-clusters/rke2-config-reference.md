@@ -22,7 +22,7 @@ You can configure the Kubernetes options one of two ways:
 
 The version of Kubernetes installed on your cluster nodes. Rancher packages its own version of Kubernetes based on [hyperkube](https://github.com/rancher/hyperkube).
 
-For more detail, see [Upgrading Kubernetes]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/upgrading-kubernetes).
+For more detail, see [Upgrading Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/upgrading-kubernetes).
 
 #### Container Network Provider
 
@@ -41,17 +41,17 @@ For more details on the different networking providers and how to configure them
 
 #### Cloud Provider
 
-You can configure a [Kubernetes cloud provider]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers). If you want to use dynamically provisioned [volumes and storage]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/volumes-and-storage/) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
+You can configure a [Kubernetes cloud provider](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers). If you want to use dynamically provisioned [volumes and storage](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/volumes-and-storage/) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
->**Note:** If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference [this documentation]({{<baseurl>}}/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
+>**Note:** If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference [this documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
 
 #### Default Pod Security Policy
 
-Choose the default [pod security policy]({{<baseurl>}}/rancher/v2.6/en/admin-settings/pod-security-policies/) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/policies/) on the specifications of each available policy.
+Choose the default [pod security policy](https://rancher.com/docs/rancher/v2.6/en/admin-settings/pod-security-policies/) for the cluster. Please refer to the [RKE2 documentation](https://docs.rke2.io/security/policies/) on the specifications of each available policy.
 
 #### Worker CIS Profile
 
-Select a [CIS benchmark]({{<baseurl>}}/rancher/v2.6/en/cis-scans/) to validate the system configuration against.
+Select a [CIS benchmark](https://rancher.com/docs/rancher/v2.6/en/cis-scans/) to validate the system configuration against.
 
 #### Project Network Isolation
 
@@ -75,7 +75,7 @@ Refer to the [RKE2 documentation](https://docs.rke2.io/networking/#nginx-ingress
 
 #### Metrics Server
 
-Option to enable or disable [Metrics Server]({{<baseurl>}}/rke/latest/en/config-options/add-ons/metrics-server/).
+Option to enable or disable [Metrics Server](https://rancher.com/docs/rke/latest/en/config-options/add-ons/metrics-server/).
 
 Each cloud provider capable of launching a cluster using RKE2 can collect metrics and monitor for your cluster nodes. Enable this option to view your node metrics from your cloud provider's portal.
 
@@ -129,9 +129,9 @@ Authorized Cluster Endpoint can be used to directly access the Kubernetes API se
 
 This is enabled by default in Rancher-launched Kubernetes clusters, using the IP of the node with the `controlplane` role and the default Kubernetes self signed certificates.
 
-For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.]({{<baseurl>}}/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint)
+For more detail on how an authorized cluster endpoint works and why it is used, refer to the [architecture section.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture/#4-authorized-cluster-endpoint)
 
-We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.]({{<baseurl>}}/rancher/v2.6/en/overview/architecture-recommendations/#architecture-for-an-authorized-cluster-endpoint)
+We recommend using a load balancer with the authorized cluster endpoint. For details, refer to the [recommended architecture section.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture-recommendations/#architecture-for-an-authorized-cluster-endpoint)
 
 ### Registries
 

@@ -9,7 +9,7 @@ This section assumes that you understand the Kubernetes concepts of storage clas
 
 New storage is often provisioned by a cloud provider such as Amazon EBS. However, new storage doesn't have to be in the cloud.
 
-If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [this page.]({{<baseurl>}}/rancher/v2.6/en/longhorn)
+If you have a pool of block storage, and you don't want to use a cloud provider, Longhorn could help you provide persistent storage to your Kubernetes cluster. For more information, see [this page.](https://rancher.com/docs/rancher/v2.6/en/longhorn)
 
 To provision new storage for your workloads, follow these steps:
 
@@ -18,9 +18,9 @@ To provision new storage for your workloads, follow these steps:
 
 ### Prerequisites
 
-- To set up persistent storage, the `Manage Volumes` [role]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-role-reference) is required.
+- To set up persistent storage, the `Manage Volumes` [role](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-role-reference) is required.
 - If you are provisioning storage for a cluster hosted in the cloud, the storage and cluster hosts must have the same cloud provider.
-- The cloud provider must be enabled. For details on enabling cloud providers, refer to [this page.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/)
+- The cloud provider must be enabled. For details on enabling cloud providers, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/)
 - Make sure your storage provisioner is available to be enabled.
 
 The following storage provisioners are enabled by default:
@@ -37,7 +37,7 @@ Local | `local`
 Network File System | `nfs`
 hostPath | `host-path`
 
-To use a storage provisioner that is not on the above list, you will need to use a [feature flag to enable unsupported storage drivers.]({{<baseurl>}}/rancher/v2.6/en/installation/resources/feature-flags/enable-not-default-storage-drivers/)
+To use a storage provisioner that is not on the above list, you will need to use a [feature flag to enable unsupported storage drivers.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/feature-flags/enable-not-default-storage-drivers/)
 
 ### 1. Add a storage class and configure it to use your storage
 

@@ -47,7 +47,7 @@ _**Note:**_ This value cannot exceed max-ttl of API tokens.(`https://<Rancher-Se
 
 Users can enable token hashing, where tokens will undergo a one-way hash using the SHA256 algorithm. This is a non-reversible process, once enabled, this feature cannot be disabled. It is advisable to take backups prior to enabling and/or evaluated in a test environment first.
 
-To enable token hashing, refer to [this section]({{<baseurl>}}/rancher/v2.6/en/installation/resources/feature-flags).
+To enable token hashing, refer to [this section](https://rancher.com/docs/rancher/v2.6/en/installation/resources/feature-flags).
 
 This feature will affect all tokens which include, but are not limited to, the following:
 

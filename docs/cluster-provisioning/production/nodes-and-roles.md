@@ -5,7 +5,7 @@ weight: 1
 
 This section describes the roles for etcd nodes, controlplane nodes, and worker nodes in Kubernetes, and how the roles work together in a cluster.
 
-This diagram is applicable to Kubernetes clusters [launched with Rancher using RKE.]({{<baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/).
+This diagram is applicable to Kubernetes clusters [launched with Rancher using RKE.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/).
 
 ```img
 ![Cluster diagram](./assets/img/rancher/clusterdiagram.svg)<br/>

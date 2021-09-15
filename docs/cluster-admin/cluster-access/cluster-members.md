@@ -5,7 +5,7 @@ weight: 2020
 
 If you want to provide a user with access and permissions to _all_ projects, nodes, and resources within a cluster, assign the user a cluster membership.
 
->**Tip:** Want to provide a user with access to a _specific_ project within a cluster? See [Adding Project Members]({{<baseurl>}}/rancher/v2.6/en/cluster-admin/projects-and-namespaces/project-members/) instead.
+>**Tip:** Want to provide a user with access to a _specific_ project within a cluster? See [Adding Project Members](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/projects-and-namespaces/project-members/) instead.
 
 There are two contexts where you can add cluster members:
 
@@ -28,23 +28,23 @@ Cluster administrators can edit the membership for a cluster, controlling which 
 
  	If external authentication is configured:
 
-	-  Rancher returns users from your [external authentication]({{<baseurl>}}/rancher/v2.6/en/admin-settings/authentication/) source as you type.
+	-  Rancher returns users from your [external authentication](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/) source as you type.
 
 		>**Using AD but can't find your users?**
-		>There may be an issue with your search attribute configuration. See [Configuring Active Directory Authentication: Step 5]({{<baseurl>}}/rancher/v2.6/en/admin-settings/authentication/ad/).
+		>There may be an issue with your search attribute configuration. See [Configuring Active Directory Authentication: Step 5](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/ad/).
 
 	- A drop-down allows you to add groups instead of individual users. The drop-down only lists groups that you, the logged in user, are part of.
 
-		>**Note:** If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users]({{<baseurl>}}/rancher/v2.6/en/admin-settings/authentication/#external-authentication-configuration-and-principal-users).
+		>**Note:** If you are logged in as a local user, external users do not display in your search results. For more information, see [External Authentication Configuration and Principal Users](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-authentication-configuration-and-principal-users).
 
 1. Assign the user or group **Cluster** roles.  
 
-	[What are Cluster Roles?]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/)
+	[What are Cluster Roles?](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/)
 
 	>**Tip:** For Custom Roles, you can modify the list of individual roles available for assignment.
 	>
-	> - To add roles to the list, [Add a Custom Role]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/default-custom-roles/).
-	> - To remove roles from the list, [Lock/Unlock Roles]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/locked-roles).
+	> - To add roles to the list, [Add a Custom Role](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/default-custom-roles/).
+	> - To remove roles from the list, [Lock/Unlock Roles](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/locked-roles).
 
 **Result:** The chosen users are added to the cluster.
 

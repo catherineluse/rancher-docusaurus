@@ -43,7 +43,7 @@ services:
       - '/lib/modules:/lib/modules:ro'
 ```
 
-For more information about the `extra_binds` directive, refer to [this section.]({{<baseurl>}}/rke/latest/en/config-options/services/services-extras/#extra-binds)
+For more information about the `extra_binds` directive, refer to [this section.](https://rancher.com/docs/rke/latest/en/config-options/services/services-extras/#extra-binds)
 
 # Installing the ceph-csi driver on an RKE2 cluster
 

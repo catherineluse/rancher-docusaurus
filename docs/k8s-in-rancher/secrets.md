@@ -5,7 +5,7 @@ weight: 3062
 
 [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/#overview-of-secrets) store sensitive data like passwords, tokens, or keys. They may contain one or more key value pairs.
 
-> This page is about secrets in general. For details on setting up a private registry, refer to the section on [registries.]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/registries)
+> This page is about secrets in general. For details on setting up a private registry, refer to the section on [registries.](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/registries)
 
 When configuring a workload, you'll be able to choose which secrets to include. Like config maps, secrets can be referenced by workloads as either an environment variable or a volume mount.
 
@@ -39,4 +39,4 @@ Mounted secrets will be updated automatically unless they are mounted as subpath
 
 Now that you have a secret added to the project or namespace, you can add it to a workload that you deploy.
 
-For more information on adding secret to a workload, see [Deploying Workloads]({{<baseurl>}}/rancher/v2.6/en/k8s-in-rancher/workloads/deploy-workloads/).
+For more information on adding secret to a workload, see [Deploying Workloads](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/workloads/deploy-workloads/).

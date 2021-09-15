@@ -9,9 +9,9 @@ The default TLS configuration only accepts TLS 1.2 and secure TLS cipher suites.
 
 The Audit Log is enabled and configured by passing environment variables to the Rancher server container. See the following to enable on your installation.
 
-- [TLS settings in Docker options]({{<baseurl>}}/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/advanced/#tls-settings)
+- [TLS settings in Docker options](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/advanced/#tls-settings)
 
-- [TLS settings in Helm chart options]({{<baseurl>}}/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#tls-settings)
+- [TLS settings in Helm chart options](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#tls-settings)
 
 # TLS Environment Variables
 

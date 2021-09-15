@@ -16,19 +16,19 @@ Rancher projects resolve this issue by allowing you to apply resources and acces
 
 You can use projects to perform actions like:
 
-- [Assign users access to a group of namespaces]({{<baseurl>}}/rancher/v2.6/en/project-admin/project-members)
-- Assign users [specific roles in a project]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-roles). A role can be owner, member, read-only, or [custom]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/default-custom-roles/)
-- [Set resource quotas]({{<baseurl>}}/rancher/v2.6/en/project-admin/resource-quotas/)
-- [Manage namespaces]({{<baseurl>}}/rancher/v2.6/en/project-admin/namespaces/)
-- [Configure tools]({{<baseurl>}}/rancher/v2.6/en/project-admin/tools/)
-- [Set up pipelines for continuous integration and deployment]({{<baseurl>}}/rancher/v2.6/en/project-admin/pipelines)
-- [Configure pod security policies]({{<baseurl>}}/rancher/v2.6/en/project-admin/pod-security-policies)
+- [Assign users access to a group of namespaces](https://rancher.com/docs/rancher/v2.6/en/project-admin/project-members)
+- Assign users [specific roles in a project](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-roles). A role can be owner, member, read-only, or [custom](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/default-custom-roles/)
+- [Set resource quotas](https://rancher.com/docs/rancher/v2.6/en/project-admin/resource-quotas/)
+- [Manage namespaces](https://rancher.com/docs/rancher/v2.6/en/project-admin/namespaces/)
+- [Configure tools](https://rancher.com/docs/rancher/v2.6/en/project-admin/tools/)
+- [Set up pipelines for continuous integration and deployment](https://rancher.com/docs/rancher/v2.6/en/project-admin/pipelines)
+- [Configure pod security policies](https://rancher.com/docs/rancher/v2.6/en/project-admin/pod-security-policies)
 
 ### Authorization
 
-Non-administrative users are only authorized for project access after an [administrator]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/global-permissions/), [cluster owner or member]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#cluster-roles), or [project owner]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-roles) adds them to the project's **Members** tab.
+Non-administrative users are only authorized for project access after an [administrator](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions/), [cluster owner or member](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#cluster-roles), or [project owner](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-roles) adds them to the project's **Members** tab.
 
-Whoever creates the project automatically becomes a [project owner]({{<baseurl>}}/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-roles).
+Whoever creates the project automatically becomes a [project owner](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#project-roles).
 
 ## Switching between Projects
 
