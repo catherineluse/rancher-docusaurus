@@ -18,7 +18,7 @@ The workloads and services that you want to be controlled by Istio must meet [Is
 
 # Install
 
-> **Quick Setup** If you don't need external traffic to reach Istio, and you just want to set up Istio for monitoring and tracing traffic within the cluster, skip the steps for [setting up the Istio gateway](https://rancher.com/docs/rancher/v2.6/en/istio/setup/gateway) and [setting up Istio's components for traffic management.](https://rancher.com/docs/rancher/v2.6/en/istio/setup/set-up-traffic-management)
+\> **Quick Setup** If you don't need external traffic to reach Istio, and you just want to set up Istio for monitoring and tracing traffic within the cluster, skip the steps for [setting up the Istio gateway](https://rancher.com/docs/rancher/v2.6/en/istio/setup/gateway) and [setting up Istio's components for traffic management.](https://rancher.com/docs/rancher/v2.6/en/istio/setup/set-up-traffic-management)
 
 1. [Enable Istio in the cluster.](https://rancher.com/docs/rancher/v2.6/en/istio/setup/enable-istio-in-cluster)
 1. [Enable Istio in all the namespaces where you want to use it.](https://rancher.com/docs/rancher/v2.6/en/istio/setup/enable-istio-in-namespace)

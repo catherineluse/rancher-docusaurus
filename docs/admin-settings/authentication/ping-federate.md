@@ -5,16 +5,16 @@ weight: 1200
 
 If your organization uses Ping Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.
 
->**Prerequisites:**
->
->- You must have a [Ping IdP Server](https://www.pingidentity.com/) configured.
->- Following are the Rancher Service Provider URLs needed for configuration:
-Metadata URL: `https://<rancher-server>/v1-saml/ping/saml/metadata`
-Assertion Consumer Service (ACS) URL: `https://<rancher-server>/v1-saml/ping/saml/acs`
+\>**Prerequisites:**
+\>
+\>- You must have a [Ping IdP Server](https://www.pingidentity.com/) configured.
+\>- Following are the Rancher Service Provider URLs needed for configuration:
+Metadata URL: `https://\<rancher-server\>/v1-saml/ping/saml/metadata`
+Assertion Consumer Service (ACS) URL: `https://\<rancher-server\>/v1-saml/ping/saml/acs`
 Note that these URLs will not return valid data until the authentication configuration is saved in Rancher.
->- Export a `metadata.xml` file from your IdP Server. For more information, see the [PingIdentity documentation](https://documentation.pingidentity.com/pingfederate/pf83/index.shtml#concept_exportingMetadata.html).
+\>- Export a `metadata.xml` file from your IdP Server. For more information, see the [PingIdentity documentation](https://documentation.pingidentity.com/pingfederate/pf83/index.shtml#concept_exportingMetadata.html).
 
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **Ping Identity**.
 1.	Complete the **Configure a Ping Account** form. Ping IdP lets you specify what data store you want to use. You can either add a database or use an existing ldap server. For example, if you select your Active Directory (AD) server, the examples below describe how you can map AD attributes to fields within Rancher.
@@ -43,8 +43,8 @@ Note that these URLs will not return valid data until the authentication configu
 
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Ping IdP to validate your Rancher PingIdentity configuration.
 
-    >**Note:** You may have to disable your popup blocker to see the IdP login page.
+    \>**Note:** You may have to disable your popup blocker to see the IdP login page.
 
 **Result:** Rancher is configured to work with PingIdentity. Your users can now sign into Rancher using their PingIdentity logins.
 
-{{< saml_caveats >}}
+{{ saml_caveats }}

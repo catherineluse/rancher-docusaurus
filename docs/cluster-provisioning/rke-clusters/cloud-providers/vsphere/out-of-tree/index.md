@@ -22,7 +22,7 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 
 ### 1. Create a vSphere cluster
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **VMware vSphere** or **Custom**.
 1. On the **Basics** tab in the **Cluster Configuration** section, set the **Cloud Provider** to **vSphere**.
@@ -31,9 +31,9 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 
 ### 2. Install the CPI plugin
  
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where the vSphere CPI plugin will be installed and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps & Marketplace \> Charts**.
 1. Click **vSphere CPI**.
 1. Fill out the required vCenter details.
 1. vSphere CPI initializes all nodes with ProviderID which is needed by the vSphere CSI driver. Check if all nodes are initialized with the ProviderID before installing CSI driver with the following command:
@@ -44,9 +44,9 @@ The Cloud Provider Interface (CPI) should be installed first before installing t
 
 ### 3. Installing the CSI plugin
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where the vSphere CSI plugin will be installed and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps & Marketplace \> Charts**.
 1. Click **vSphere CSI**.
 1. Click **Install**.
 1. Fill out the required vCenter details. On the **Features** tab, set **Enable CSI Migration** to **false**.

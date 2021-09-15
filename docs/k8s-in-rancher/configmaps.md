@@ -7,20 +7,20 @@ While most types of Kubernetes secrets store sensitive information, [ConfigMaps]
 
 ConfigMaps accept key value pairs in common string formats, like config files or JSON blobs. After you upload a config map, any workload can reference it as either an environment variable or a volume mount.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster that has the workload that should reference a ConfigMap and click **Explore**.
-1. In the left navigation bar, click **More Resources > Core > ConfigMaps**.
+1. In the left navigation bar, click **More Resources \> Core \> ConfigMaps**.
 1. Click **Create**.
 1. Enter a **Name** for the Config Map.
 
-    >**Note:** Kubernetes classifies ConfigMaps as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your ConfigMaps must have a unique name among the other certificates, registries, and secrets within your workspace.
+    \>**Note:** Kubernetes classifies ConfigMaps as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your ConfigMaps must have a unique name among the other certificates, registries, and secrets within your workspace.
 
 1. Select the **Namespace** you want to add Config Map to.
 
 1. On the **Data** tab, add a key-value pair to your ConfigMap. Add as many values as you need.  You can add multiple key value pairs to the ConfigMap by copying and pasting. Alternatively, use **Read from File** to add the data. Note: If you need to store sensitive data, [use a secret](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/secrets/), not a ConfigMap.
 1. Click **Create**.
 
-**Result:** Your ConfigMap is added to the namespace. You can view it in the Rancher UI from the **Resources > Config Maps** view.
+**Result:** Your ConfigMap is added to the namespace. You can view it in the Rancher UI from the **Resources \> Config Maps** view.
 
 ## What's Next?
 

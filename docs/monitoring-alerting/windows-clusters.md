@@ -30,7 +30,7 @@ If the cluster was provisioned before Rancher 2.5.8 (even if the current Rancher
 
 To facilitate this upgrade, Rancher 2.5.8 has released a brand new Helm chart called `rancher-wins-upgrader`.
 
-> **Prerequisite:** Make sure Monitoring V1 for Windows is uninstalled.
+\> **Prerequisite:** Make sure Monitoring V1 for Windows is uninstalled.
 
 1. Deploy `rancher-wins-upgrader` with the following override:
     ```yaml
@@ -43,9 +43,9 @@ To facilitate this upgrade, Rancher 2.5.8 has released a brand new Helm chart ca
       enabled: true
       as: c:\\etc\wmi-exporter\wmi-exporter.exe
     ```
-    > **Note for Non-Default Windows Prefix Path:** If you set up the RKE cluster with a `cluster.yml` that has a non-default `win_prefix_path`, you will need to update the `masquerade.as` field with your prefix path in place of  `c:\\`. 
-    >
-    > For example, if you have `win_prefix_path: 'c:\host\opt\'`, then you will need to set `as: c:\host\opt\etc\wmi-exporter\wmi-exporter.exe`.
+    \> **Note for Non-Default Windows Prefix Path:** If you set up the RKE cluster with a `cluster.yml` that has a non-default `win_prefix_path`, you will need to update the `masquerade.as` field with your prefix path in place of  `c:\\`. 
+    \>
+    \> For example, if you have `win_prefix_path: 'c:\host\opt\'`, then you will need to set `as: c:\host\opt\etc\wmi-exporter\wmi-exporter.exe`.
 2. Once all your hosts have been successfully upgraded, please ensure that you deploy the Helm chart once again with default values to avoid conflicts with the following settings:
     ```yaml
     masquerade:

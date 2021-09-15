@@ -5,7 +5,7 @@ weight: 2
 
 This feature enables a UI that lets you create, read, update and delete virtual services and destination rules, which are traffic management features of Istio.
 
-> **Prerequisite:** Turning on this feature does not enable Istio. A cluster administrator needs to [enable Istio for the cluster](https://rancher.com/docs/rancher/v2.6/en/istio/setup) in order to use the feature.
+\> **Prerequisite:** Turning on this feature does not enable Istio. A cluster administrator needs to [enable Istio for the cluster](https://rancher.com/docs/rancher/v2.6/en/istio/setup) in order to use the feature.
 
 To enable or disable this feature, refer to the instructions on [the main page about enabling experimental features.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/feature-flags/)
 
@@ -27,7 +27,7 @@ The feature enables two UI tabs: one tab for **Virtual Services** and another fo
 
 To see these tabs,
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster where Istio is installed and click **Explore**.
 1. In the left navigation bar, click **Istio**.
 1. You will see tabs for **Kiali** and **Jaeger**. From the left navigation bar, you can view and configure **Virtual Services** and **Destination Rules**.

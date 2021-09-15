@@ -15,26 +15,26 @@ Rancher has to be started with the lower/previous version after a rollback.
 
 A restore is performed by creating a Restore custom resource.
 
-> **Important**
->
-> * Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to [migrate rancher.](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher)
-> * While restoring Rancher on the same setup, the Rancher deployment is manually scaled down before the restore starts, then the operator will scale it back up once the restore completes. So Rancher will be unavailable during the restore.
+\> **Important**
+\>
+\> * Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to [migrate rancher.](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher)
+\> * While restoring Rancher on the same setup, the Rancher deployment is manually scaled down before the restore starts, then the operator will scale it back up once the restore completes. So Rancher will be unavailable during the restore.
 
 ### Scale the Rancher Deployment to 0
 
-1. In the upper left corner, click **☰ > local**.
+1. In the upper left corner, click **☰ \> local**.
 1. From the menu on the left, click **Workload**.
 1. Under **Workload**, click on **Deployments**.
 1. At the top, click on the dropdown to adjust the filter. Select **cattle-system** as the filter.
-1. Find the row for the `rancher` deployment and click **⋮ > Edit Config**.
+1. Find the row for the `rancher` deployment and click **⋮ \> Edit Config**.
 1. Change **Replicas** to 0.
 1. Scroll to the bottom and click **Save**.
 
 ### Create the Restore Custom Resource
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
-1. In the left navigation bar, click **Rancher Backups > Restore**.
+1. In the left navigation bar, click **Rancher Backups \> Restore**.
 1. Click **Create**.
 1. Create the Restore with the form, or with YAML.  For creating the Restore resource using form, refer to the  [configuration reference](https://rancher.com/docs/rancher/v2.6/en/backups/configuration/restore-config) and to the [examples.](https://rancher.com/docs/rancher/v2.6/en/backups/examples) The following is an example Restore custom resource:
 
@@ -99,7 +99,7 @@ To roll back to Rancher before v2.5, follow the procedure detailed here: [Restor
 
 For information on how to roll back Rancher installed with Docker, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/single-node-docker/single-node-rollbacks)
 
-> Managed clusters are authoritative for their state. This means restoring the rancher server will not revert workload deployments or changes made on managed clusters after the snapshot was taken.
+\> Managed clusters are authoritative for their state. This means restoring the rancher server will not revert workload deployments or changes made on managed clusters after the snapshot was taken.
 
 # Rolling Back to Rancher v2.0-v2.1
 

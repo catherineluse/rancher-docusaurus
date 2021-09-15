@@ -73,11 +73,11 @@ See [TLS settings](https://rancher.com/docs/rancher/v2.6/en/installation/resourc
 
 ### Air Gap
 
-If you are visiting this page to complete an air gap installation, you must prepend your private registry URL to the server tag when running the installation command in the option that you choose. Add `<REGISTRY.DOMAIN.COM:PORT>` with your private registry URL in front of `rancher/rancher:latest`.
+If you are visiting this page to complete an air gap installation, you must prepend your private registry URL to the server tag when running the installation command in the option that you choose. Add `\<REGISTRY.DOMAIN.COM:PORT\>` with your private registry URL in front of `rancher/rancher:latest`.
 
 **Example:**
 
-     <REGISTRY.DOMAIN.COM:PORT>/rancher/rancher:latest
+     \<REGISTRY.DOMAIN.COM:PORT\>/rancher/rancher:latest
 
 ### Persistent Data
 

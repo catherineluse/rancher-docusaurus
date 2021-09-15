@@ -3,22 +3,22 @@ title: Security
 weight: 20
 ---
 
-<table width="100%">
-<tr style="vertical-align: top;">
-<td width="30%" style="border: none;">
-<h4>Security policy</h4>
-<p style="padding: 8px">Rancher Labs supports responsible disclosure, and endeavours to resolve all issues in a reasonable time frame. </p>
-</td>
-<td width="30%" style="border: none;">
-<h4>Reporting process</h4>
-<p style="padding: 8px">Please submit possible security issues by emailing <a href="mailto:security@rancher.com">security@rancher.com</a></p>
-</td>
-<td width="30%" style="border: none;">
-<h4>Announcements</h4>
-<p style="padding: 8px">Subscribe to the <a href="https://forums.rancher.com/c/announcements">Rancher announcements forum</a> for release updates.</p>
-</td>
-</tr>
-</table>
+\<table width="100%"\>
+\<tr style="vertical-align: top;"\>
+\<td width="30%" style="border: none;"\>
+\<h4\>Security policy\</h4\>
+\<p style="padding: 8px"\>Rancher Labs supports responsible disclosure, and endeavours to resolve all issues in a reasonable time frame. \</p\>
+\</td\>
+\<td width="30%" style="border: none;"\>
+\<h4\>Reporting process\</h4\>
+\<p style="padding: 8px"\>Please submit possible security issues by emailing \<a href="mailto:security@rancher.com"\>security@rancher.com\</a\>\</p\>
+\</td\>
+\<td width="30%" style="border: none;"\>
+\<h4\>Announcements\</h4\>
+\<p style="padding: 8px"\>Subscribe to the \<a href="https://forums.rancher.com/c/announcements"\>Rancher announcements forum\</a\> for release updates.\</p\>
+\</td\>
+\</tr\>
+\</table\>
 
 Security is at the heart of all Rancher features. From integrating with all the popular authentication tools and services, to an enterprise grade [RBAC capability,](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac) Rancher makes your Kubernetes clusters even more secure.
 
@@ -55,11 +55,11 @@ We provide two RPMs (Red Hat packages) that enable Rancher products to function 
 
 ### Rancher Hardening Guide
 
-The Rancher Hardening Guide is based on controls and best practices found in the <a href="https://www.cisecurity.org/benchmark/kubernetes/" target="_blank">CIS Kubernetes Benchmark</a> from the Center for Internet Security.
+The Rancher Hardening Guide is based on controls and best practices found in the \<a href="https://www.cisecurity.org/benchmark/kubernetes/" target="_blank"\>CIS Kubernetes Benchmark\</a\> from the Center for Internet Security.
 
 The hardening guides provide prescriptive guidance for hardening a production installation of Rancher. See Rancher's guides for [Self Assessment of the CIS Kubernetes Benchmark](#the-cis-benchmark-and-self-sssessment) for the full list of security controls.
 
-> The hardening guides describe how to secure the nodes in your cluster, and it is recommended to follow a hardening guide before installing Kubernetes.
+\> The hardening guides describe how to secure the nodes in your cluster, and it is recommended to follow a hardening guide before installing Kubernetes.
 
 Each version of the hardening guide is intended to be used with specific versions of the CIS Kubernetes Benchmark, Kubernetes, and Rancher.
 

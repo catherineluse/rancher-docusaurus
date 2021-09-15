@@ -5,7 +5,7 @@ weight: 2030
 
 After you launch a Kubernetes cluster in Rancher, you can manage individual nodes from the cluster's **Node** tab. Depending on the [option used](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/) to provision the cluster, there are different node options available.
 
-> If you want to manage the _cluster_ and not individual nodes, see [Editing Clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters).
+\> If you want to manage the _cluster_ and not individual nodes, see [Editing Clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters).
 
 This section covers the following topics:
 
@@ -61,7 +61,7 @@ Rancher uses [node templates](https://rancher.com/docs/rancher/v2.6/en/cluster-p
 
 ### Nodes Provisioned by Hosted Kubernetes Providers
 
-Options for managing nodes [hosted by a Kubernetes provider]({{<baseurl >}}/rancher/v2.6/en/cluster-provisioning/hosted-kubernetes-clusters/) are somewhat limited in Rancher. Rather than using the Rancher UI to make edits such as scaling the number of nodes up or down, edit the cluster directly.
+Options for managing nodes [hosted by a Kubernetes provider](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/hosted-kubernetes-clusters/) are somewhat limited in Rancher. Rather than using the Rancher UI to make edits such as scaling the number of nodes up or down, edit the cluster directly.
 
 ### Registered Nodes
 
@@ -88,7 +88,7 @@ Use **Delete** to remove defective nodes from the cloud provider.
 
 When you the delete a defective node, Rancher can automatically replace it with an identically provisioned node if the node is in a node pool and [node auto-replace is enabled.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#about-node-auto-replace)
 
->**Tip:** If your cluster is hosted by an infrastructure provider, and you want to scale your cluster down instead of deleting a defective node, [scale down](#scaling-nodes) rather than delete.
+\>**Tip:** If your cluster is hosted by an infrastructure provider, and you want to scale your cluster down instead of deleting a defective node, [scale down](#scaling-nodes) rather than delete.
 
 # Scaling Nodes
 
@@ -98,15 +98,15 @@ For nodes hosted by an infrastructure provider, you can scale the number of node
 
 For [nodes hosted by an infrastructure provider](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/), you have the option of downloading its SSH key so that you can connect to it remotely from your desktop.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to SSH into a node and click the name of the cluster.
-1. On the **Machine Pools** tab, find the node that you want to remote into and click  **⋮ > Download SSH Key**. A ZIP file containing files used for SSH will be downloaded.
+1. On the **Machine Pools** tab, find the node that you want to remote into and click  **⋮ \> Download SSH Key**. A ZIP file containing files used for SSH will be downloaded.
 1. Extract the ZIP file to any location.
 1. Open Terminal. Change your location to the extracted ZIP file.
 1. Enter the following command:
 
     ```
-    ssh -i id_rsa root@<IP_OF_HOST>
+    ssh -i id_rsa root@\<IP_OF_HOST\>
     ```
 
 # Cordoning a Node
@@ -146,7 +146,7 @@ The timeout given to each pod for cleaning things up, so they will have chance t
 
 The amount of time drain should continue to wait before giving up.
 
->**Kubernetes Known Issue:** The [timeout setting](https://github.com/kubernetes/kubernetes/pull/64378) was not enforced while draining a node before Kubernetes 1.12.
+\>**Kubernetes Known Issue:** The [timeout setting](https://github.com/kubernetes/kubernetes/pull/64378) was not enforced while draining a node before Kubernetes 1.12.
 
 ### Drained and Cordoned State
 
@@ -156,7 +156,7 @@ If the drain continues without error, the node enters a `draining` state. You'll
 
 Once drain successfully completes, the node will be in a state of `drained`. You can then power off or delete the node.
 
->**Want to know more about cordon and drain?** See the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/cluster-management/#maintenance-on-a-node).
+\>**Want to know more about cordon and drain?** See the [Kubernetes documentation](https://kubernetes.io/docs/tasks/administer-cluster/cluster-management/#maintenance-on-a-node).
 
 # Labeling a Node to be Ignored by Rancher
 
@@ -168,7 +168,7 @@ In that case, you may want to label the node to be ignored by Rancher so that Ra
 
 You can label nodes to be ignored by using a setting in the Rancher UI, or by using `kubectl`.
 
-> **Note:** There is an [open issue](https://github.com/rancher/rancher/issues/24172) in which nodes labeled to be ignored can get stuck in an updating state.
+\> **Note:** There is an [open issue](https://github.com/rancher/rancher/issues/24172) in which nodes labeled to be ignored can get stuck in an updating state.
 
 
 ### Labeling Nodes to be Ignored with kubectl

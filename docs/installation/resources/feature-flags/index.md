@@ -21,7 +21,7 @@ Because the API sets the actual value and the command line sets the default valu
 
 For example, if you install Rancher, then set a feature flag to true with the Rancher API, then upgrade Rancher with a command that sets the feature flag to false, the default value will still be false, but the feature will still be enabled because it was set with the Rancher API. If you then deleted the set value (true) with the Rancher API, setting it to NULL, the default value (false) would take effect.
 
-> **Note:** There are some feature flags that may require a restart of the Rancher server container. These features that require a restart are marked in the table of these docs and in the UI.
+\> **Note:** There are some feature flags that may require a restart of the Rancher server container. These features that require a restart are marked in the table of these docs and in the UI.
 
 The following is a list of the feature flags available in Rancher:
 
@@ -55,7 +55,7 @@ When you install Rancher, enable the feature you want with a feature flag. The c
 
 ### Enabling Features for Kubernetes Installs
 
-> **Note:** Values set from the Rancher API will override the value passed in through the command line.
+\> **Note:** Values set from the Rancher API will override the value passed in through the command line.
 
 When installing Rancher with a Helm chart, use the `--features` option. In the below example, two features are enabled by passing the feature flag names names in a comma separated list:
 
@@ -65,7 +65,7 @@ helm install rancher-latest/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org \
   --set 'extraEnv[0].name=CATTLE_FEATURES'
-  --set 'extraEnv[0].value=<FEATURE-FLAG-NAME-1>=true,<FEATURE-FLAG-NAME-2>=true'
+  --set 'extraEnv[0].value=\<FEATURE-FLAG-NAME-1\>=true,\<FEATURE-FLAG-NAME-2\>=true'
 ```
 
 Note: If you are installing an alpha version, Helm requires adding the `--devel` option to the command.
@@ -79,30 +79,30 @@ Here is an example of a command for passing in the feature flag names when rende
 The Helm 3 command is as follows:
 
 ```
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+helm template rancher ./rancher-[VERSION].tgz --output-dir . \
   --no-hooks \ # prevent files for Helm hooks from being generated
   --namespace cattle-system \
-  --set hostname=<RANCHER.YOURDOMAIN.COM> \
-  --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+  --set hostname=[RANCHER.YOURDOMAIN.COM] \
+  --set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
   --set ingress.tls.source=secret \
-  --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+  --set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
   --set useBundledSystemChart=true # Use the packaged Rancher system charts
   --set 'extraEnv[0].name=CATTLE_FEATURES'
-  --set 'extraEnv[0].value=<FEATURE-FLAG-NAME-1>=true,<FEATURE-FLAG-NAME-2>=true'
+  --set 'extraEnv[0].value=\<FEATURE-FLAG-NAME-1\>=true,\<FEATURE-FLAG-NAME-2\>=true'
 ```
 
 The Helm 2 command is as follows:
 
 ```
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+helm template rancher ./rancher-[VERSION].tgz --output-dir . \
   --namespace cattle-system \
-  --set hostname=<RANCHER.YOURDOMAIN.COM> \
-  --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+  --set hostname=[RANCHER.YOURDOMAIN.COM] \
+  --set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
   --set ingress.tls.source=secret \
-  --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+  --set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
   --set useBundledSystemChart=true # Use the packaged Rancher system charts
   --set 'extraEnv[0].name=CATTLE_FEATURES'
-  --set 'extraEnv[0].value=<FEATURE-FLAG-NAME-1>=true,<FEATURE-FLAG-NAME-2>=true'
+  --set 'extraEnv[0].value=\<FEATURE-FLAG-NAME-1\>=true,\<FEATURE-FLAG-NAME-2\>=true'
 ```
 
 ### Enabling Features for Docker Installs
@@ -113,29 +113,29 @@ When installing Rancher with Docker, use the `--features` option. In the below e
 docker run -d -p 80:80 -p 443:443 \
   --restart=unless-stopped \
   rancher/rancher:rancher-latest \
-  --features=<FEATURE-FLAG-NAME-1>=true,<FEATURE-NAME-2>=true 
+  --features=\<FEATURE-FLAG-NAME-1\>=true,\<FEATURE-NAME-2\>=true 
 ```
 
 
 # Enabling Features with the Rancher UI
 
-1. In the upper left corner, click **☰ > Global Settings**.
+1. In the upper left corner, click **☰ \> Global Settings**.
 1. Click **Feature Flags**.
-1. To enable a feature, go to the disabled feature you want to enable and click **⋮ > Activate**.
+1. To enable a feature, go to the disabled feature you want to enable and click **⋮ \> Activate**.
 
 **Result:** The feature is enabled.
 
 ### Disabling Features with the Rancher UI
 
-1. In the upper left corner, click **☰ > Global Settings**.
+1. In the upper left corner, click **☰ \> Global Settings**.
 1. Click **Feature Flags**. You will see a list of experimental features.
-1. To disable a feature, go to the enabled feature you want to disable and click **⋮ > Deactivate**.
+1. To disable a feature, go to the enabled feature you want to disable and click **⋮ \> Deactivate**.
 
 **Result:** The feature is disabled.
 
 # Enabling Features with the Rancher API
 
-1. Go to `<RANCHER-SERVER-URL>/v3/features`.
+1. Go to `\<RANCHER-SERVER-URL\>/v3/features`.
 1. In the `data` section, you will see an array containing all of the features that can be turned on with feature flags. The name of the feature is in the `id` field. Click the name of the feature you want to enable.
 1. In the upper left corner of the screen, under **Operations,** click **Edit**.
 1. In the **Value** drop-down menu, click **True**.
@@ -147,7 +147,7 @@ docker run -d -p 80:80 -p 443:443 \
 
 ### Disabling Features with the Rancher API
 
-1. Go to `<RANCHER-SERVER-URL>/v3/features`.
+1. Go to `\<RANCHER-SERVER-URL\>/v3/features`.
 1. In the `data` section, you will see an array containing all of the features that can be turned on with feature flags. The name of the feature is in the `id` field. Click the name of the feature you want to enable.
 1. In the upper left corner of the screen, under **Operations,** click **Edit**.
 1. In the **Value** drop-down menu, click **False**.

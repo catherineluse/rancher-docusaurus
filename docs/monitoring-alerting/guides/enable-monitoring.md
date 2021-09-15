@@ -15,11 +15,11 @@ You can enable monitoring with or without SSL.
 - Make sure your cluster fulfills the resource requirements. The cluster should have at least 1950Mi memory available, 2700m CPU, and 50Gi storage. A breakdown of the resource limits and requests is [here.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/helm-chart-options/#configuring-resource-limits-and-requests)
 - When installing monitoring on an RKE cluster using RancherOS or Flatcar Linux nodes, change the etcd node certificate directory to `/opt/rke/etc/kubernetes/ssl`.
 
-> **Note:** If you want to set up Alertmanager, Grafana or Ingress, it has to be done with the settings on the Helm chart deployment. It's problematic to create Ingress outside the deployment.
+\> **Note:** If you want to set up Alertmanager, Grafana or Ingress, it has to be done with the settings on the Helm chart deployment. It's problematic to create Ingress outside the deployment.
 
 # Setting Resource Limits and Requests
 
-The resource requests and limits can be configured when installing `rancher-monitoring`.  To configure Prometheus resources from the Rancher UI, click **Apps & Marketplace > Monitoring** in the upper left corner.
+The resource requests and limits can be configured when installing `rancher-monitoring`.  To configure Prometheus resources from the Rancher UI, click **Apps & Marketplace \> Monitoring** in the upper left corner.
 
 For more information about the default limits, see [this page.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/helm-chart-options/#configuring-resource-limits-and-requests)
 
@@ -27,7 +27,7 @@ For more information about the default limits, see [this page.](https://rancher.
 
 ### Enable Monitoring for use without SSL
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. Click **Apps & Marketplace**.
 1. Click **Charts**.
@@ -42,9 +42,9 @@ For more information about the default limits, see [this page.](https://rancher.
 1. Follow the steps on [this page](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/secrets/) to create a secret in order for SSL to be used for alerts.
  - The secret should be created in the `cattle-monitoring-system` namespace. If it doesn't exist, create it first.
  - Add the `ca`, `cert`, and `key` files to the secret.
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to enable monitoring for use with SSL and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps & Marketplace \> Charts**.
 1. Click **Monitoring**.
 1. Click **Install** or **Update**, depending on whether you have already installed Monitoring.
 1. Check the box for **Customize Helm options before install** and click **Next**.

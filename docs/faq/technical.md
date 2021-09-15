@@ -7,9 +7,9 @@ weight: 8006
 
 Docker Install:
 ```
-$ docker exec -ti <container_id> reset-password
+$ docker exec -ti \<container_id\> reset-password
 New password for default administrator (user-xxxxx):
-<new_password>
+\<new_password\>
 ```
 
 Kubernetes install (Helm):
@@ -17,7 +17,7 @@ Kubernetes install (Helm):
 $ KUBECONFIG=./kube_config_rancher-cluster.yml
 $ kubectl --kubeconfig $KUBECONFIG -n cattle-system exec $(kubectl --kubeconfig $KUBECONFIG -n cattle-system get pods -l app=rancher --no-headers | head -1 | awk '{ print $1 }') -c rancher -- reset-password
 New password for default administrator (user-xxxxx):
-<new_password>
+\<new_password\>
 ```
 
 
@@ -25,10 +25,10 @@ New password for default administrator (user-xxxxx):
 ### I deleted/deactivated the last admin, how can I fix it?
 Docker Install:
 ```
-$ docker exec -ti <container_id> ensure-default-admin
+$ docker exec -ti \<container_id\> ensure-default-admin
 New default administrator (user-xxxxx)
 New password for default administrator (user-xxxxx):
-<new_password>
+\<new_password\>
 ```
 
 Kubernetes install (Helm):
@@ -36,7 +36,7 @@ Kubernetes install (Helm):
 $ KUBECONFIG=./kube_config_rancher-cluster.yml
 $ kubectl --kubeconfig $KUBECONFIG -n cattle-system exec $(kubectl --kubeconfig $KUBECONFIG -n cattle-system get pods -l app=rancher | grep '1/1' | head -1 | awk '{ print $1 }') -- ensure-default-admin
 New password for default administrator (user-xxxxx):
-<new_password>
+\<new_password\>
 ```
 ### How can I enable debug logging?
 
@@ -98,7 +98,7 @@ You can add additional arguments/binds/environment variables via the [Config Fil
 
 Use the `openssl verify` command to validate your certificate chain:
 
->**Note:** Configure `SSL_CERT_DIR` and `SSL_CERT_FILE` to a dummy location to make sure the OS installed certificates are not used when verifying manually.
+\>**Note:** Configure `SSL_CERT_DIR` and `SSL_CERT_FILE` to a dummy location to make sure the OS installed certificates are not used when verifying manually.
 
 ```
 SSL_CERT_DIR=/dummy SSL_CERT_FILE=/dummy openssl verify -CAfile ca.pem rancher.yourdomain.com.pem

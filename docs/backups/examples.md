@@ -266,8 +266,8 @@ metadata:
   name: creds
 type: Opaque
 data:
-  accessKey: <Enter your access key>
-  secretKey: <Enter your secret key>
+  accessKey: \<Enter your access key\>
+  secretKey: \<Enter your secret key\>
 ```
 
 # Example EncryptionConfiguration

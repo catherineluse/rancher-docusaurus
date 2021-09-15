@@ -18,10 +18,10 @@ Edit resource quotas when:
 - You want to limit the resources that a project and its namespaces can use.
 - You want to scale the resources available to a project up or down when a research quota is already in effect.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to apply a resource quota and click **Explore**.
-1. Click **Cluster > Projects/Namespaces**.
-1. Find the project that you want to add a resource quota to. From that project, select **⋮ > Edit Config**.
+1. Click **Cluster \> Projects/Namespaces**.
+1. Find the project that you want to add a resource quota to. From that project, select **⋮ \> Edit Config**.
 
 1. Expand **Resource Quotas** and click **Add Resource**. Alternatively, you can edit existing quotas.
 

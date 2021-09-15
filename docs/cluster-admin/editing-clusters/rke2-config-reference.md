@@ -15,7 +15,7 @@ You can configure the Kubernetes options one of two ways:
 
 # Configuration Options in the Rancher UI
 
-> Some advanced configuration options are not exposed in the Rancher UI forms, but they can be enabled by editing the RKE2 cluster configuration file in YAML. For the complete reference of configurable options for RKE2 Kubernetes clusters in YAML, see the [RKE2 documentation.](https://docs.rke2.io/install/install_options/install_options/)
+\> Some advanced configuration options are not exposed in the Rancher UI forms, but they can be enabled by editing the RKE2 cluster configuration file in YAML. For the complete reference of configurable options for RKE2 Kubernetes clusters in YAML, see the [RKE2 documentation.](https://docs.rke2.io/install/install_options/install_options/)
 
 ### Basics
 #### Kubernetes Version
@@ -28,7 +28,7 @@ For more detail, see [Upgrading Kubernetes](https://rancher.com/docs/rancher/v2.
 
 The [Network Provider](https://kubernetes.io/docs/concepts/cluster-administration/networking/) that the cluster uses.
 
-> After you launch the cluster, you cannot change your network provider. Therefore, choose which network provider you want to use carefully, as Kubernetes doesn't allow switching between network providers. Once a cluster is created with a network provider, changing network providers would require you  tear down the entire cluster and all its applications.
+\> After you launch the cluster, you cannot change your network provider. Therefore, choose which network provider you want to use carefully, as Kubernetes doesn't allow switching between network providers. Once a cluster is created with a network provider, changing network providers would require you  tear down the entire cluster and all its applications.
 
 Out of the box, Rancher is compatible with the following network providers:
 
@@ -43,7 +43,7 @@ For more details on the different networking providers and how to configure them
 
 You can configure a [Kubernetes cloud provider](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers). If you want to use dynamically provisioned [volumes and storage](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/volumes-and-storage/) in Kubernetes, typically you must select the specific cloud provider in order to use it. For example, if you want to use Amazon EBS, you would need to select the `aws` cloud provider.
 
->**Note:** If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference [this documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
+\>**Note:** If the cloud provider you want to use is not listed as an option, you will need to use the [config file option](#cluster-config-file) to configure the cloud provider. Please reference [this documentation](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/) on how to configure the cloud provider.
 
 #### Default Pod Security Policy
 

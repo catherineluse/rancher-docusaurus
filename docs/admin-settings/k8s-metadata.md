@@ -5,19 +5,19 @@ weight: 30
 
 The RKE metadata feature allows you to provision clusters with new versions of Kubernetes as soon as they are released, without upgrading Rancher. This feature is useful for taking advantage of patch versions of Kubernetes, for example, if you want to upgrade to Kubernetes v1.14.7 when your Rancher server originally supported v1.14.6.
 
-> **Note:** The Kubernetes API can change between minor versions. Therefore, we don't support introducing minor Kubernetes versions, such as introducing v1.15 when Rancher currently supports v1.14. You would need to upgrade Rancher to add support for minor Kubernetes versions.
+\> **Note:** The Kubernetes API can change between minor versions. Therefore, we don't support introducing minor Kubernetes versions, such as introducing v1.15 when Rancher currently supports v1.14. You would need to upgrade Rancher to add support for minor Kubernetes versions.
 
 Rancher's Kubernetes metadata contains information specific to the Kubernetes version that Rancher uses to provision [RKE clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/). Rancher syncs the data periodically and creates custom resource definitions (CRDs) for **system images,** **service options** and **addon templates**. Consequently, when a new Kubernetes version is compatible with the Rancher server version, the Kubernetes metadata makes the new version available to Rancher for provisioning clusters. The metadata gives you an overview of the information that the [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/) (RKE) uses for deploying various Kubernetes versions.
 
 This table below describes the CRDs that are affected by the periodic data sync. 
 
-> **Note:** Only administrators can edit metadata CRDs. It is recommended not to update existing objects unless explicitly advised.
+\> **Note:** Only administrators can edit metadata CRDs. It is recommended not to update existing objects unless explicitly advised.
 
 | Resource | Description | Rancher API URL |
 |----------|-------------|-----------------|
-| System Images | List of system images used to deploy Kubernetes through RKE. | `<RANCHER_SERVER_URL>/v3/rkek8ssystemimages` |
-| Service Options | Default options passed to Kubernetes components like `kube-api`, `scheduler`, `kubelet`, `kube-proxy`, and `kube-controller-manager` | `<RANCHER_SERVER_URL>/v3/rkek8sserviceoptions` |
-| Addon Templates | YAML definitions used to deploy addon components like Canal, Calico, Flannel, Weave, Kube-dns, CoreDNS, `metrics-server`, `nginx-ingress` | `<RANCHER_SERVER_URL>/v3/rkeaddons` |
+| System Images | List of system images used to deploy Kubernetes through RKE. | `\<RANCHER_SERVER_URL\>/v3/rkek8ssystemimages` |
+| Service Options | Default options passed to Kubernetes components like `kube-api`, `scheduler`, `kubelet`, `kube-proxy`, and `kube-controller-manager` | `\<RANCHER_SERVER_URL\>/v3/rkek8sserviceoptions` |
+| Addon Templates | YAML definitions used to deploy addon components like Canal, Calico, Flannel, Weave, Kube-dns, CoreDNS, `metrics-server`, `nginx-ingress` | `\<RANCHER_SERVER_URL\>/v3/rkeaddons` |
 
 Administrators might configure the RKE metadata settings to do the following:
 
@@ -31,7 +31,7 @@ The option to refresh the Kubernetes metadata is available for administrators by
 
 To force Rancher to refresh the Kubernetes metadata, a manual refresh action is available:
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. In the left navigation menu, click **Drivers**.
 1. Click **Refresh Kubernetes Metadata**.
 
@@ -39,7 +39,7 @@ You can configure Rancher to only refresh metadata when desired by setting `refr
 
 ### Configuring the Metadata Synchronization
 
-> Only administrators can change these settings.
+\> Only administrators can change these settings.
 
 The RKE metadata config controls how often Rancher syncs metadata and where it downloads data from. You can configure the metadata from the settings in the Rancher UI, or through the Rancher API at the endpoint `v3/settings/rke-metadata-config`.
 
@@ -47,8 +47,8 @@ The way that the metadata is configured depends on the Rancher version.
 
 To edit the metadata config in Rancher,
 
-1. In the upper left corner, click **☰ > Global Settings**.
-1. Go to the **rke-metadata-config** section. Click  **⋮ > Edit Setting**.
+1. In the upper left corner, click **☰ \> Global Settings**.
+1. Go to the **rke-metadata-config** section. Click  **⋮ \> Edit Setting**.
 1. You can optionally fill in the following parameters:
 
   - `refresh-interval-minutes`: This is the amount of time that Rancher waits to sync the metadata. To disable the periodic refresh, set `refresh-interval-minutes` to 0.

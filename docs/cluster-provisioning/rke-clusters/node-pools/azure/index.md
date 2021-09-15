@@ -27,9 +27,9 @@ The following is a template `az cli` script that you have to run for creating an
   
 ```
 az ad sp create-for-rbac \
-  --name="<Rancher ServicePrincipal name>" \
+  --name="\<Rancher ServicePrincipal name\>" \
   --role="Contributor" \
-  --scopes="/subscriptions/<subscription Id>"
+  --scopes="/subscriptions/\<subscription Id\>"
 ```
   
 The creation of this service principal returns three pieces of identification information, *The application ID, also called the client ID*, *The client secret*, and *The tenant ID*. This information will be used when you create a node template for Azure.
@@ -43,7 +43,7 @@ The creation of this service principal returns three pieces of identification in
  
 ### 1. Create your cloud credentials
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
 1. Click **Azure**.
@@ -56,8 +56,8 @@ The creation of this service principal returns three pieces of identification in
 
 Creating a [node template](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) for Azure will allow Rancher to provision new nodes in Azure. Node templates can be reused for other clusters.
 
-1. Click **☰ > Cluster Management**.
-1. Click **RKE1 Configuration > Node Templates**.
+1. Click **☰ \> Cluster Management**.
+1. Click **RKE1 Configuration \> Node Templates**.
 1. Click **Add Template**.
 1. Click **Azure**.
 1. Fill out a node template for Azure. For help filling out the form, refer to [Azure Node Template Configuration.](./azure-node-template-config)
@@ -66,7 +66,7 @@ Creating a [node template](https://rancher.com/docs/rancher/v2.6/en/cluster-prov
 
 Use Rancher to create a Kubernetes cluster in Azure.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **Azure**.
 1. Enter a **Cluster Name**.

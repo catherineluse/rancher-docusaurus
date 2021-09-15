@@ -24,7 +24,7 @@ To see the links to the external monitoring UIs, including Grafana dashboards, y
 
 For any panel, you can click the title and click **Explore** to get the PromQL queries powering the graphic.
 
-For this example, we would like to get the CPU usage for the Alertmanager container, so we click **CPU Utilization > Inspect.**
+For this example, we would like to get the CPU usage for the Alertmanager container, so we click **CPU Utilization \> Inspect.**
 
 The **Data** tab shows the underlying data as a time series, with the time in first column and the PromQL query result in the second column. Copy the PromQL query.
     

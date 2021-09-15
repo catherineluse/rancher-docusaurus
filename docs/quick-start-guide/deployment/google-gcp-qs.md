@@ -7,8 +7,8 @@ The following steps will quickly deploy a Rancher server on GCP in a single-node
 
 ## Prerequisites
 
->**Note**
->Deploying to Google GCP will incur charges.
+\>**Note**
+\>Deploying to Google GCP will incur charges.
 
 - [Google GCP Account](https://console.cloud.google.com/): A Google GCP Account is required to create resources for deploying Rancher and Kubernetes.
 - [Google GCP Project](https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project): Use this link to follow a tutorial to create a GCP Project if you don't have one yet.

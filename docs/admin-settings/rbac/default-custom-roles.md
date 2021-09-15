@@ -7,7 +7,7 @@ Within Rancher, _roles_ determine what actions a user can make within a cluster 
 
 Note that _roles_ are different from _permissions_, which determine what clusters and projects you can access.
 
-> It is possible for a custom role to enable privilege escalation. For details, see [this section.](#privilege-escalation)
+\> It is possible for a custom role to enable privilege escalation. For details, see [this section.](#privilege-escalation)
 
 This section covers the following topics:
 
@@ -31,7 +31,7 @@ While Rancher comes out-of-the-box with a set of default user roles, you can als
 
 The steps to add custom roles differ depending on the version of Rancher.
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
 1.  Select a tab to determine the scope of the role you're adding. The tabs are:
 
@@ -43,13 +43,13 @@ The steps to add custom roles differ depending on the version of Rancher.
 1. Enter a **Name** for the role.
 1.  Optional: Choose the **Cluster/Project Creator Default** option to assign this role to a user when they create a new cluster or project. Using this feature, you can expand or restrict the default roles for cluster/project creators.
 
-    > Out of the box, the Cluster Creator Default and the Project Creator Default roles are `Cluster Owner` and `Project Owner` respectively.
+    \> Out of the box, the Cluster Creator Default and the Project Creator Default roles are `Cluster Owner` and `Project Owner` respectively.
 
 1.  Use the **Grant Resources** options to assign individual [Kubernetes API endpoints](https://kubernetes.io/docs/reference/) to the role.
 
-    > When viewing the resources associated with default roles created by Rancher, if there are multiple Kubernetes API resources on one line item, the resource will have `(Custom)` appended to it. These are not custom resources but just an indication that there are multiple Kubernetes API resources as one resource.
+    \> When viewing the resources associated with default roles created by Rancher, if there are multiple Kubernetes API resources on one line item, the resource will have `(Custom)` appended to it. These are not custom resources but just an indication that there are multiple Kubernetes API resources as one resource.
     
-    > The Resource text field provides a method to search for pre-defined Kubernetes API resources, or enter a custom resource name for the grant. The pre-defined or `(Custom)` resource must be selected from the dropdown, after entering a resource name into this field.
+    \> The Resource text field provides a method to search for pre-defined Kubernetes API resources, or enter a custom resource name for the grant. The pre-defined or `(Custom)` resource must be selected from the dropdown, after entering a resource name into this field.
 
     You can also choose the individual cURL methods (`Create`, `Delete`, `Get`, etc.) available for use with each endpoint you assign.
 
@@ -65,14 +65,14 @@ The custom role can then be assigned to a user or group so that the role takes e
 
 To create a custom role based on an existing role,
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
 1. Click the **Cluster** or **Project/Namespaces** tab. Click **Create Cluster Role** or **Create Project/Namespaces Role** depending on the scope. Note: Only cluster roles and project/namespace roles can inherit from another role.
 1. Enter a name for the role.
 1. In the **Inherit From** tab, select the role(s) that the custom role will inherit permissions from.
 1. In the **Grant Resources** tab, select the Kubernetes resource operations that will be enabled for users with the custom role.
 
-    > The Resource text field provides a method to search for pre-defined Kubernetes API resources, or enter a custom resource name for the grant. The pre-defined or `(Custom)` resource must be selected from the dropdown, after entering a resource name into this field.
+    \> The Resource text field provides a method to search for pre-defined Kubernetes API resources, or enter a custom resource name for the grant. The pre-defined or `(Custom)` resource must be selected from the dropdown, after entering a resource name into this field.
 1. Optional: Assign the role as default.
 1. Click **Create**.
 
@@ -86,9 +86,9 @@ Custom roles can be deleted, but built-in roles cannot be deleted.
 
 To delete a custom role,
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
-2. Go to the custom global role that should be deleted and click **⋮ (…) > Delete**.
+2. Go to the custom global role that should be deleted and click **⋮ (…) \> Delete**.
 3. Click **Delete**.
 
 # Assigning a Custom Role to a Group
@@ -99,17 +99,17 @@ When a user in the group logs in, they get the built-in Standard User global rol
 
 If a user is removed from the external authentication provider group, they would lose their permissions from the custom role that was assigned to the group. They would continue to have their individual Standard User role.
 
-> **Prerequisites:** You can only assign a global role to a group if:
->
-> * You have set up an [external authentication provider](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-vs-local-authentication)
-> * The external authentication provider supports [user groups](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/user-groups/)
-> * You have already set up at least one user group with the authentication provider
+\> **Prerequisites:** You can only assign a global role to a group if:
+\>
+\> * You have set up an [external authentication provider](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-vs-local-authentication)
+\> * The external authentication provider supports [user groups](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/user-groups/)
+\> * You have already set up at least one user group with the authentication provider
 
 To assign a custom role to a group, follow these steps:
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Groups**.
-1. Go to the existing group that will be assigned the custom role and click **⋮ > Edit Config**.
+1. Go to the existing group that will be assigned the custom role and click **⋮ \> Edit Config**.
 1. If you have created roles, they will show in the **Custom** section. Choose any custom role that will be assigned to the group.
 1. Optional: In the **Global Permissions** or **Built-in** sections, select any additional permissions that the group should have.
 1. Click **Save.**.

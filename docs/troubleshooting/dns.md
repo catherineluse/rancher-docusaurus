@@ -35,7 +35,7 @@ kubectl -n kube-system get svc -l k8s-app=kube-dns
 
 ```
 NAME               TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
-service/kube-dns   ClusterIP   10.43.0.10   <none>        53/UDP,53/TCP   4m13s
+service/kube-dns   ClusterIP   10.43.0.10   \<none\>        53/UDP,53/TCP   4m13s
 ```
 
 ### Check if domain names are resolving
@@ -106,14 +106,14 @@ If you want to check resolving of domain names on all of the hosts, execute the 
 4. Configure the environment variable `DOMAIN` to a fully qualified domain name (FQDN) that the host should be able to resolve (`www.google.com` is used as an example) and run the following command to let each container on every host resolve the configured domain name (it's a single line command).
 
     ```
-    export DOMAIN=www.google.com; echo "=> Start DNS resolve test"; kubectl get pods -l name=dnstest --no-headers -o custom-columns=NAME:.metadata.name,HOSTIP:.status.hostIP | while read pod host; do kubectl exec $pod -- /bin/sh -c "nslookup $DOMAIN > /dev/null 2>&1"; RC=$?; if [ $RC -ne 0 ]; then echo $host cannot resolve $DOMAIN; fi; done; echo "=> End DNS resolve test"
+    export DOMAIN=www.google.com; echo "=\> Start DNS resolve test"; kubectl get pods -l name=dnstest --no-headers -o custom-columns=NAME:.metadata.name,HOSTIP:.status.hostIP | while read pod host; do kubectl exec $pod -- /bin/sh -c "nslookup $DOMAIN \> /dev/null 2\>&1"; RC=$?; if [ $RC -ne 0 ]; then echo $host cannot resolve $DOMAIN; fi; done; echo "=\> End DNS resolve test"
     ```
 
 5. When this command has finished running, the output indicating everything is correct is:
 
     ```
-    => Start DNS resolve test
-    => End DNS resolve test
+    =\> Start DNS resolve test
+    =\> End DNS resolve test
     ```
 
 If you see error in the output, that means that the mentioned host(s) is/are not able to resolve the given FQDN.
@@ -121,10 +121,10 @@ If you see error in the output, that means that the mentioned host(s) is/are not
 Example error output of a situation where host with IP 209.97.182.150 had the UDP ports blocked.
 
 ```
-=> Start DNS resolve test
+=\> Start DNS resolve test
 command terminated with exit code 1
 209.97.182.150 cannot resolve www.google.com
-=> End DNS resolve test
+=\> End DNS resolve test
 ```
 
 Cleanup the alpine DaemonSet by running `kubectl delete ds/dnstest`.
@@ -194,7 +194,7 @@ services:
       resolv-conf: "/run/resolvconf/resolv.conf"
 ```
 
-> **Note:** As the `kubelet` is running inside a container, the path for files located in `/etc` and `/usr` are in `/host/etc` and `/host/usr` inside the `kubelet` container.
+\> **Note:** As the `kubelet` is running inside a container, the path for files located in `/etc` and `/usr` are in `/host/etc` and `/host/usr` inside the `kubelet` container.
 
 See [Editing Cluster as YAML](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/#editing-clusters-with-yaml) how to apply this change. When the provisioning of the cluster has finished, you have to remove the kube-dns pod to activate the new setting in the pod:
 

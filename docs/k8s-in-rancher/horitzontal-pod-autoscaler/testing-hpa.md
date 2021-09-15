@@ -65,7 +65,7 @@ spec:
 1. Deploy it to your cluster.
 
     ```
-    # kubectl create -f <HELLO_WORLD_MANIFEST>
+    # kubectl create -f \<HELLO_WORLD_MANIFEST\>
     ```
 
 1. Copy one of the HPAs below based on the metric type you're using:
@@ -134,8 +134,8 @@ spec:
     # kubectl describe hpa
     Name:                                                  hello-world
     Namespace:                                             default
-    Labels:                                                <none>
-    Annotations:                                           <none>
+    Labels:                                                \<none\>
+    Annotations:                                           \<none\>
     CreationTimestamp:                                     Mon, 23 Jul 2018 20:21:16 +0200
     Reference:                                             Deployment/hello-world
     Metrics:                                               ( current / target )
@@ -149,7 +149,7 @@ spec:
       AbleToScale     True    ReadyForNewScale    the last scale time was sufficiently old as to warrant a new scale
       ScalingActive   True    ValidMetricFound    the HPA was able to successfully calculate a replica count from memory resource
       ScalingLimited  False   DesiredWithinRange  the desired count is within the acceptable range
-    Events:           <none>
+    Events:           \<none\>
     ```
     {{% /accordion %}}
     {{% accordion id="hpa-info-custom-metrics" label="Custom Metrics" %}}
@@ -161,8 +161,8 @@ spec:
     ```
     Name:                                                  hello-world
     Namespace:                                             default
-    Labels:                                                <none>
-    Annotations:                                           <none>
+    Labels:                                                \<none\>
+    Annotations:                                           \<none\>
     CreationTimestamp:                                     Tue, 24 Jul 2018 18:36:28 +0200
     Reference:                                             Deployment/hello-world
     Metrics:                                               ( current / target )
@@ -177,14 +177,14 @@ spec:
       AbleToScale     True    ReadyForNewScale    the last scale time was sufficiently old as to warrant a new scale
       ScalingActive   True    ValidMetricFound    the HPA was able to successfully calculate a replica count from memory resource
       ScalingLimited  False   DesiredWithinRange  the desired count is within the acceptable range
-    Events:           <none>
+    Events:           \<none\>
     ```
     {{% /accordion %}}
 
 
 1. Generate a load for the service to test that your pods autoscale as intended. You can use any load-testing tool (Hey, Gatling, etc.), but we're using [Hey](https://github.com/rakyll/hey).
 
-1. Test that pod autoscaling works as intended.<br/></br>
+1. Test that pod autoscaling works as intended.
   **To Test Autoscaling Using Resource Metrics:**
   {{% accordion id="observe-upscale-2-pods-cpu" label="Upscale to 2 Pods: CPU Usage Up to Target" %}}
 Use your load testing tool to scale up to two pods based on CPU Usage.
@@ -197,8 +197,8 @@ Use your load testing tool to scale up to two pods based on CPU Usage.
     ```
     Name:                                                  hello-world
     Namespace:                                             default
-    Labels:                                                <none>
-    Annotations:                                           <none>
+    Labels:                                                \<none\>
+    Annotations:                                           \<none\>
     CreationTimestamp:                                     Mon, 23 Jul 2018 22:22:04 +0200
     Reference:                                             Deployment/hello-world
     Metrics:                                               ( current / target )
@@ -239,8 +239,8 @@ Use your load testing tool to upscale to 3 pods based on CPU usage with `horizon
    ```
       Name:                                                  hello-world
       Namespace:                                             default
-      Labels:                                                <none>
-      Annotations:                                           <none>
+      Labels:                                                \<none\>
+      Annotations:                                           \<none\>
       CreationTimestamp:                                     Mon, 23 Jul 2018 22:22:04 +0200
       Reference:                                             Deployment/hello-world
       Metrics:                                               ( current / target )
@@ -283,8 +283,8 @@ Use your load testing to scale down to 1 pod when all metrics are below target f
   ```
       Name:                                                  hello-world
       Namespace:                                             default
-      Labels:                                                <none>
-      Annotations:                                           <none>
+      Labels:                                                \<none\>
+      Annotations:                                           \<none\>
       CreationTimestamp:                                     Mon, 23 Jul 2018 22:22:04 +0200
       Reference:                                             Deployment/hello-world
       Metrics:                                               ( current / target )
@@ -306,7 +306,7 @@ Use your load testing to scale down to 1 pod when all metrics are below target f
         Normal  SuccessfulRescale  1s    horizontal-pod-autoscaler  New size: 1; reason: All metrics below target
   ```
   {{% /accordion %}}
-<br/>
+
 **To Test Autoscaling Using Custom Metrics:**
   {{% accordion id="custom-observe-upscale-2-pods-cpu" label="Upscale to 2 Pods: CPU Usage Up to Target" %}}
 Use your load testing tool to upscale two pods based on CPU usage.
@@ -319,8 +319,8 @@ Use your load testing tool to upscale two pods based on CPU usage.
   ```
     Name:                                                  hello-world
     Namespace:                                             default
-    Labels:                                                <none>
-    Annotations:                                           <none>
+    Labels:                                                \<none\>
+    Annotations:                                           \<none\>
     CreationTimestamp:                                     Tue, 24 Jul 2018 18:01:11 +0200
     Reference:                                             Deployment/hello-world
     Metrics:                                               ( current / target )
@@ -362,8 +362,8 @@ Use your load testing tool to scale up to three pods when the cpu_system usage l
    ```
       Name:                                                  hello-world
       Namespace:                                             default
-      Labels:                                                <none>
-      Annotations:                                           <none>
+      Labels:                                                \<none\>
+      Annotations:                                           \<none\>
       CreationTimestamp:                                     Tue, 24 Jul 2018 18:01:11 +0200
       Reference:                                             Deployment/hello-world
       Metrics:                                               ( current / target )
@@ -408,8 +408,8 @@ Use your load testing tool to upscale to four pods based on CPU usage. `horizont
   ```
       Name:                                                  hello-world
       Namespace:                                             default
-      Labels:                                                <none>
-      Annotations:                                           <none>
+      Labels:                                                \<none\>
+      Annotations:                                           \<none\>
       CreationTimestamp:                                     Tue, 24 Jul 2018 18:01:11 +0200
       Reference:                                             Deployment/hello-world
       Metrics:                                               ( current / target )
@@ -455,8 +455,8 @@ Use your load testing tool to scale down to one pod when all metrics below targe
     ```
         Name:                                                  hello-world
         Namespace:                                             default
-        Labels:                                                <none>
-        Annotations:                                           <none>
+        Labels:                                                \<none\>
+        Annotations:                                           \<none\>
         CreationTimestamp:                                     Tue, 24 Jul 2018 18:01:11 +0200
         Reference:                                             Deployment/hello-world
         Metrics:                                               ( current / target )

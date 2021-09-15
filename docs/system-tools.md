@@ -32,7 +32,7 @@ After you download the tools, complete the following actions:
 
 1. Give the file executable permissions by running the following command:
 
-    > **Using Windows?**
+    \> **Using Windows?**
     The file is already an executable, you can skip this step.
 
     ```
@@ -48,16 +48,16 @@ System Tools will use the provided kubeconfig file to deploy a DaemonSet, that w
 ### Usage
 
 ```
-./system-tools_darwin-amd64 logs --kubeconfig <KUBECONFIG>
+./system-tools_darwin-amd64 logs --kubeconfig \<KUBECONFIG\>
 ```
 
 The following are the options for the logs command:
 
 | Option                                                 | Description
 | ------------------------------------------------------ | ------------------------------------------------------
-| `--kubeconfig <KUBECONFIG_PATH>, -c <KUBECONFIG_PATH>` | The cluster's kubeconfig file.
-| `--output <FILENAME>, -o cluster-logs.tar`             | Name of the created tarball containing the logs. If no output filename is defined, the options defaults to `cluster-logs.tar`.
-| `--node <NODENAME>, -n node1`                         | Specify the nodes to collect the logs from. If no node is specified, logs from all nodes in the cluster will be collected.
+| `--kubeconfig \<KUBECONFIG_PATH\>, -c \<KUBECONFIG_PATH\>` | The cluster's kubeconfig file.
+| `--output \<FILENAME\>, -o cluster-logs.tar`             | Name of the created tarball containing the logs. If no output filename is defined, the options defaults to `cluster-logs.tar`.
+| `--node \<NODENAME\>, -n node1`                         | Specify the nodes to collect the logs from. If no node is specified, logs from all nodes in the cluster will be collected.
 
 # Stats
 
@@ -68,20 +68,20 @@ System Tools will deploy a DaemonSet, and run a predefined command based on `sar
 ### Usage
 
 ```
-./system-tools_darwin-amd64 stats --kubeconfig <KUBECONFIG>
+./system-tools_darwin-amd64 stats --kubeconfig \<KUBECONFIG\>
 ```
 
 The following are the options for the stats command:
 
 | Option                                                 | Description
 | ------------------------------------------------------ | ------------------------------
-| `--kubeconfig <KUBECONFIG_PATH>, -c <KUBECONFIG_PATH>` | The cluster's kubeconfig file.
-| `--node <NODENAME>, -n node1`                          | Specify the nodes to display the system metrics from. If no node is specified, logs from all nodes in the cluster will be displayed.
+| `--kubeconfig \<KUBECONFIG_PATH\>, -c \<KUBECONFIG_PATH\>` | The cluster's kubeconfig file.
+| `--node \<NODENAME\>, -n node1`                          | Specify the nodes to display the system metrics from. If no node is specified, logs from all nodes in the cluster will be displayed.
 | `--stats-command value, -s value`                      | The command to run to display the system metrics. If no command is defined, the options defaults to `/usr/bin/sar -u -r -F 1 1`.
 
 # Remove
 
->**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](https://rancher.com/docs/rancher/v2.6/en/backups/back-up-rancher) before executing the command.
+\>**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](https://rancher.com/docs/rancher/v2.6/en/backups/back-up-rancher) before executing the command.
 
 When you install Rancher on a Kubernetes cluster, it will create Kubernetes resources to run and to store configuration data. If you want to remove Rancher from your cluster, you can use the `remove` subcommand to remove the Kubernetes resources. When you use the `remove` subcommand, the following resources will be removed:
 
@@ -93,24 +93,24 @@ When you install Rancher on a Kubernetes cluster, it will create Kubernetes reso
 - All resources create under the `management.cattle.io` API Group.
 - All CRDs created by Rancher v2.x.
 
->**Using 2.0.8 or Earlier?**
->
->These versions of Rancher do not automatically delete the `serviceAccount`, `clusterRole`, and `clusterRoleBindings` resources after the job runs. You'll have to delete them yourself.
+\>**Using 2.0.8 or Earlier?**
+\>
+\>These versions of Rancher do not automatically delete the `serviceAccount`, `clusterRole`, and `clusterRoleBindings` resources after the job runs. You'll have to delete them yourself.
 
 ### Usage
 
 When you run the command below, all the resources listed [above](#remove) will be removed from the cluster.
 
->**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](https://rancher.com/docs/rancher/v2.6/en/backups/back-up-rancher) before executing the command.
+\>**Warning:** This command will remove data from your etcd nodes. Make sure you have created a [backup of etcd](https://rancher.com/docs/rancher/v2.6/en/backups/back-up-rancher) before executing the command.
 
 ```
-./system-tools remove --kubeconfig <KUBECONFIG> --namespace <NAMESPACE>
+./system-tools remove --kubeconfig \<KUBECONFIG\> --namespace \<NAMESPACE\>
 ```
 
 The following are the options for the `remove` command:
 
 | Option                                         | Description
 | ---------------------------------------------- | ------------
-| `--kubeconfig <KUBECONFIG_PATH>, -c <KUBECONFIG_PATH>` | The cluster's kubeconfig file
-| `--namespace <NAMESPACE>, -n cattle-system`    | Rancher 2.x deployment namespace (`<NAMESPACE>`). If no namespace is defined, the options defaults to `cattle-system`.
+| `--kubeconfig \<KUBECONFIG_PATH\>, -c \<KUBECONFIG_PATH\>` | The cluster's kubeconfig file
+| `--namespace \<NAMESPACE\>, -n cattle-system`    | Rancher 2.x deployment namespace (`\<NAMESPACE\>`). If no namespace is defined, the options defaults to `cattle-system`.
 | `--force`                                      | Skips the interactive removal confirmation and removes the Rancher deployment without prompt.

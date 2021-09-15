@@ -8,8 +8,8 @@ You can use Rancher to create a cluster hosted in Tencent Kubernetes Engine (TKE
 
 # Prerequisites in Tencent
 
->**Note**
->Deploying to TKE will incur charges.
+\>**Note**
+\>Deploying to TKE will incur charges.
 
 1. Make sure that the account you will be using to create the TKE cluster has the appropriate permissions by referring to the  [Cloud Access Management](https://intl.cloud.tencent.com/document/product/598/10600) documentation for details.
 
@@ -23,9 +23,9 @@ You can use Rancher to create a cluster hosted in Tencent Kubernetes Engine (TKE
 
 You will need to enable the Tencent TKE cluster driver:
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Drivers**.
-1. In the **Cluster Drivers** tab, go to the **Tencent TKE** cluster driver and click **⋮ > Activate**.
+1. In the **Cluster Drivers** tab, go to the **Tencent TKE** cluster driver and click **⋮ \> Activate**.
 
 When the cluster driver is finished downloading, you will be able to create Tencent TKE clusters in Rancher.
 

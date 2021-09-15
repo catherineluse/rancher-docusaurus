@@ -5,7 +5,7 @@ weight: 1210
 
 If your organization uses Okta Identity Provider (IdP) for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.
 
->**Note:** Okta integration only supports Service Provider initiated logins.
+\>**Note:** Okta integration only supports Service Provider initiated logins.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Setting | Value
 
 ## Configuring Okta in Rancher
 
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **Okta**.
 1.	Complete the **Configure Okta Account** form. The examples below describe how you can map Okta attributes from attribute statements to fields within Rancher.
@@ -33,9 +33,9 @@ Setting | Value
     | Private Key / Certificate | A key/certificate pair used for Assertion Encryption.                         |
     | Metadata XML              | The `Identity Provider metadata` file that you find in the application `Sign On` section.  |
 
-    >**Tip:** You can generate a key/certificate pair using an openssl command. For example:
-    >    
-    >        openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.key -out myservice.crt
+    \>**Tip:** You can generate a key/certificate pair using an openssl command. For example:
+    \>    
+    \>        openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.key -out myservice.crt
 
 
 
@@ -43,8 +43,8 @@ Setting | Value
 
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Okta IdP to validate your Rancher Okta configuration.
 
-    >**Note:** If nothing seems to happen, it's likely because your browser blocked the pop-up. Make sure you disable the pop-up blocker for your rancher domain and whitelist it in any other extensions you might utilize.
+    \>**Note:** If nothing seems to happen, it's likely because your browser blocked the pop-up. Make sure you disable the pop-up blocker for your rancher domain and whitelist it in any other extensions you might utilize.
 
 **Result:** Rancher is configured to work with Okta. Your users can now sign into Rancher using their Okta logins.
 
-{{< saml_caveats >}}
+{{ saml_caveats }}

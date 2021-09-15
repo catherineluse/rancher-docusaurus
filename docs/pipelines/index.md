@@ -3,7 +3,7 @@ title: Pipelines
 weight: 10
 ---
 
-> As of Rancher v2.5, Git-based deployment pipelines are now deprecated. We recommend handling pipelines with Rancher Continuous Delivery powered by [Fleet.](https://fleet.rancher.io/) To get to Fleet in Rancher, click <b>☰ > Continuous Delivery</b>. Note that pipelines in Kubernetes 1.21+ are no longer supported.
+\> As of Rancher v2.5, Git-based deployment pipelines are now deprecated. We recommend handling pipelines with Rancher Continuous Delivery powered by [Fleet.](https://fleet.rancher.io/) To get to Fleet in Rancher, click \<b\>☰ \> Continuous Delivery\</b\>. Note that pipelines in Kubernetes 1.21+ are no longer supported.
 
 Rancher's pipeline provides a simple CI/CD experience. Use it to automatically checkout code, run builds or scripts, publish Docker images or catalog applications, and deploy the updated software to users.
 
@@ -17,7 +17,7 @@ After configuring Rancher and GitHub, you can deploy containers running Jenkins 
 - Run unit tests.  
 - Run regression tests.
 
->**Note:** Rancher's pipeline provides a simple CI/CD experience, but it does not offer the full power and flexibility of and is not a replacement of enterprise-grade Jenkins or other CI tools your team uses.
+\>**Note:** Rancher's pipeline provides a simple CI/CD experience, but it does not offer the full power and flexibility of and is not a replacement of enterprise-grade Jenkins or other CI tools your team uses.
 
 This section covers the following topics:
 
@@ -51,7 +51,7 @@ When you configure a pipeline in one of your projects, a namespace specifically 
 
     The pipeline's build engine. Because project users do not directly interact with Jenkins, it's managed and locked.
 
-    >**Note:**  There is no option to use existing Jenkins deployments as the pipeline engine.
+    \>**Note:**  There is no option to use existing Jenkins deployments as the pipeline engine.
 
   - **Docker Registry:**
 
@@ -61,7 +61,7 @@ When you configure a pipeline in one of your projects, a namespace specifically 
 
     Minio storage is used to store the logs for pipeline executions.
 
-  >**Note:** The managed Jenkins instance works statelessly, so don't worry about its data persistency. The Docker Registry and Minio instances use ephemeral volumes by default, which is fine for most use cases. If you want to make sure pipeline logs can survive node failures, you can configure persistent volumes for them, as described in [data persistency for pipeline components](https://rancher.com/docs/rancher/v2.6/en/pipelines/storage).
+  \>**Note:** The managed Jenkins instance works statelessly, so don't worry about its data persistency. The Docker Registry and Minio instances use ephemeral volumes by default, which is fine for most use cases. If you want to make sure pipeline logs can survive node failures, you can configure persistent volumes for them, as described in [data persistency for pipeline components](https://rancher.com/docs/rancher/v2.6/en/pipelines/storage).
 
 # Roles-based Access Control for Pipelines
 
@@ -75,11 +75,11 @@ Project members can only configure repositories and pipelines.
 
 ### Prerequisite
 
-> **Prerequisite:** Because the pipelines app was deprecated in favor of Fleet, you will need to turn on the feature flag for legacy features before using pipelines. Note that pipelines in Kubernetes 1.21+ are no longer supported.
->
-> 1. In the upper left corner, click **☰ > Global Settings**.
-> 1. Click **Feature Flags**.
-> 1. Go to the `legacy` feature flag and click **⋮ > Activate**.
+\> **Prerequisite:** Because the pipelines app was deprecated in favor of Fleet, you will need to turn on the feature flag for legacy features before using pipelines. Note that pipelines in Kubernetes 1.21+ are no longer supported.
+\>
+\> 1. In the upper left corner, click **☰ \> Global Settings**.
+\> 1. Click **Feature Flags**.
+\> 1. Go to the `legacy` feature flag and click **⋮ \> Activate**.
 
 1. [Configure version control providers](#1-configure-version-control-providers)
 2. [Configure repositories](#2-configure-repositories)
@@ -98,10 +98,10 @@ Select your provider's tab below and follow the directions.
 {{% tabs %}}
 {{% tab "GitHub" %}}
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
 1. Click the **Configuration** tab.
 1. Follow the directions displayed to **Setup a Github application**. Rancher redirects you to Github to set up an OAuth App in Github.
 1. From GitHub, copy the **Client ID** and **Client Secret**. Paste them into Rancher.
@@ -111,10 +111,10 @@ Select your provider's tab below and follow the directions.
 {{% /tab %}}
 {{% tab "GitLab" %}}
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
 1. Click the **Configuration** tab.
 1. Click **GitLab**.
 1. Follow the directions displayed to **Setup a GitLab application**. Rancher redirects you to GitLab.
@@ -122,16 +122,16 @@ Select your provider's tab below and follow the directions.
 1. If you're using GitLab for enterprise setup, select **Use a private gitlab enterprise installation**. Enter the host address of your GitLab installation.
 1. Click **Authenticate**.
 
->**Note:**
-> 1. Pipeline uses Gitlab [v4 API](https://docs.gitlab.com/ee/api/v3_to_v4.html) and the supported Gitlab version is 9.0+.  
-> 2. If you use GitLab 10.7+ and your Rancher setup is in a local network, enable the **Allow requests to the local network from hooks and services** option in GitLab admin settings.
+\>**Note:**
+\> 1. Pipeline uses Gitlab [v4 API](https://docs.gitlab.com/ee/api/v3_to_v4.html) and the supported Gitlab version is 9.0+.  
+\> 2. If you use GitLab 10.7+ and your Rancher setup is in a local network, enable the **Allow requests to the local network from hooks and services** option in GitLab admin settings.
 {{% /tab %}}
 {{% tab "Bitbucket Cloud" %}}
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
 1. Click the **Configuration** tab.
 1. Click **Bitbucket** and leave **Use Bitbucket Cloud** selected by default.
 1. Follow the directions displayed to **Setup a Bitbucket Cloud application**. Rancher redirects you to Bitbucket to setup an OAuth consumer in Bitbucket.
@@ -141,22 +141,22 @@ Select your provider's tab below and follow the directions.
 {{% /tab %}}
 {{% tab "Bitbucket Server" %}}
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
 1. Click the **Configuration** tab.
 1. Click **Bitbucket** and choose the **Use private Bitbucket Server setup** option.
 1. Follow the directions displayed to **Setup a Bitbucket Server application**.
 1. Enter the host address of your Bitbucket server installation.
 1. Click **Authenticate**.
 
->**Note:**
-> Bitbucket server needs to do SSL verification when sending webhooks to Rancher. Please ensure that Rancher server's certificate is trusted by the Bitbucket server. There are two options:
->
-> 1. Setup Rancher server with a certificate from a trusted CA.
-> 1. If you're using self-signed certificates, import Rancher server's certificate to the Bitbucket server. For instructions, see the Bitbucket server documentation for [configuring self-signed certificates](https://confluence.atlassian.com/bitbucketserver/if-you-use-self-signed-certificates-938028692.html).
->
+\>**Note:**
+\> Bitbucket server needs to do SSL verification when sending webhooks to Rancher. Please ensure that Rancher server's certificate is trusted by the Bitbucket server. There are two options:
+\>
+\> 1. Setup Rancher server with a certificate from a trusted CA.
+\> 1. If you're using self-signed certificates, import Rancher server's certificate to the Bitbucket server. For instructions, see the Bitbucket server documentation for [configuring self-signed certificates](https://confluence.atlassian.com/bitbucketserver/if-you-use-self-signed-certificates-938028692.html).
+\>
 {{% /tab %}}
 {{% /tabs %}}
 
@@ -166,10 +166,10 @@ Select your provider's tab below and follow the directions.
 
 After the version control provider is authorized, you are automatically re-directed to start configuring which repositories that you want start using pipelines with. Even if someone else has set up the version control provider, you will see their repositories and can build a pipeline.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
 1. Click on **Configure Repositories**.
 
 1. A list of repositories are displayed. If you are configuring repositories the first time, click on **Authorize & Fetch Your Own Repositories** to fetch your repository list.
@@ -184,15 +184,15 @@ After the version control provider is authorized, you are automatically re-direc
 
 Now that repositories are added to your project, you can start configuring the pipeline by adding automated stages and steps. For your convenience, there are multiple built-in step types for dedicated tasks.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
 1. Find the repository that you want to set up a pipeline for.
 1. Configure the pipeline through the UI or using a yaml file in the repository, i.e. `.rancher-pipeline.yml` or `.rancher-pipeline.yaml`. Pipeline configuration is split into stages and steps. Stages must fully complete before moving onto the next stage, but steps in a stage run concurrently. For each stage, you can add different step types. Note: As you build out each step, there are different advanced options based on the step type. Advanced options include trigger rules, environment variables, and secrets. For more information on configuring the pipeline through the UI or the YAML file, refer to the [pipeline configuration reference.](https://rancher.com/docs/rancher/v2.6/en/pipelines/config)
 
-   * If you are going to use the UI, select the vertical **⋮ > Edit Config** to configure the pipeline using the UI. After the pipeline is configured, you must view the YAML file and push it to the repository.
-   * If you are going to use the YAML file, select the vertical **⋮ > View/Edit YAML** to configure the pipeline. If you choose to use a YAML file, you need to push it to the repository after any changes in order for it to be updated in the repository. When editing the pipeline configuration, it takes a few moments for Rancher to check for an existing pipeline configuration.
+   * If you are going to use the UI, select the vertical **⋮ \> Edit Config** to configure the pipeline using the UI. After the pipeline is configured, you must view the YAML file and push it to the repository.
+   * If you are going to use the YAML file, select the vertical **⋮ \> View/Edit YAML** to configure the pipeline. If you choose to use a YAML file, you need to push it to the repository after any changes in order for it to be updated in the repository. When editing the pipeline configuration, it takes a few moments for Rancher to check for an existing pipeline configuration.
 
 1. Select which `branch` to use from the list of branches.
 
@@ -228,7 +228,7 @@ The configuration reference also covers how to configure:
 
 # Running your Pipelines
 
-Run your pipeline for the first time. Find your pipeline and select the vertical **⋮ > Run**.
+Run your pipeline for the first time. Find your pipeline and select the vertical **⋮ \> Run**.
 
 During this initial run, your pipeline is tested, and the following pipeline components are deployed to your project as workloads in a new namespace dedicated to the pipeline:
 
@@ -248,14 +248,14 @@ Available Events:
 * **Pull Request**: Whenever a pull request is made to the repository, the pipeline is triggered.
 * **Tag**: When a tag is created in the repository, the pipeline is triggered.
 
-> **Note:** This option doesn't exist for Rancher's [example repositories](https://rancher.com/docs/rancher/v2.6/en/pipelines/example-repos/).
+\> **Note:** This option doesn't exist for Rancher's [example repositories](https://rancher.com/docs/rancher/v2.6/en/pipelines/example-repos/).
 
 ### Modifying the Event Triggers for the Repository
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
-1. Find the repository where you want to modify the event triggers. Select the vertical **⋮ > Setting**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
+1. Find the repository where you want to modify the event triggers. Select the vertical **⋮ \> Setting**.
 1. Select which event triggers (**Push**, **Pull Request** or **Tag**) you want for the repository.
 1. Click **Save**.

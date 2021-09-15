@@ -18,7 +18,7 @@ kubectl -n cattle-system create secret tls tls-rancher-ingress \
   --key=tls.key
 ```
 
-> **Note:** If you want to replace the certificate, you can delete the `tls-rancher-ingress` secret using `kubectl -n cattle-system delete secret tls-rancher-ingress` and add a new one using the command shown above. If you are using a private CA signed certificate, replacing the certificate is only possible if the new certificate is signed by the same CA as the certificate currently in use.
+\> **Note:** If you want to replace the certificate, you can delete the `tls-rancher-ingress` secret using `kubectl -n cattle-system delete secret tls-rancher-ingress` and add a new one using the command shown above. If you are using a private CA signed certificate, replacing the certificate is only possible if the new certificate is signed by the same CA as the certificate currently in use.
 
 # Using a Private CA Signed Certificate
 
@@ -31,7 +31,7 @@ kubectl -n cattle-system create secret generic tls-ca \
   --from-file=cacerts.pem=./cacerts.pem
 ```
 
-> **Note:** The configured `tls-ca` secret is retrieved when Rancher starts. On a running Rancher installation the updated CA will take effect after new Rancher pods are started.
+\> **Note:** The configured `tls-ca` secret is retrieved when Rancher starts. On a running Rancher installation the updated CA will take effect after new Rancher pods are started.
 
 # Updating a Private CA Certificate
 

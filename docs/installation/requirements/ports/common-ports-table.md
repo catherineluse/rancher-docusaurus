@@ -19,4 +19,4 @@ headless: true
 |    UDP   	|       6783-6784   | Weave UDP Ports      	                                                            |
 |    TCP   	|       10250      	| Metrics server communication with all nodes API                                     	                                |
 |    TCP   	|       10254      	| Ingress controller livenessProbe/readinessProbe 	                                |
-| TCP/UDP	| 30000-</br>32767 	| NodePort port range                             	                                |
+| TCP/UDP	| 30000-32767 	| NodePort port range                             	                                |

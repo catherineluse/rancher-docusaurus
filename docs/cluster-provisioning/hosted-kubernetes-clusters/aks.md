@@ -19,8 +19,8 @@ You can use Rancher to create a cluster hosted in Microsoft Azure Kubernetes Ser
 
 # Prerequisites in Microsoft Azure
 
->**Note**
->Deploying to AKS will incur charges.
+\>**Note**
+\>Deploying to AKS will incur charges.
 
 To interact with Azure APIs, an AKS cluster requires an Azure Active Directory (AD) service principal. The service principal is needed to dynamically create and manage other Azure resources, and it provides credentials for your cluster to communicate with AKS. For more information about the service principal, refer to the [AKS documentation](https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal).
 
@@ -45,10 +45,10 @@ The result should show information about the new service principal:
 ```
 {
   "appId": "xxxx--xxx",
-  "displayName": "<SERVICE-PRINCIPAL-NAME>",
-  "name": "http://<SERVICE-PRINCIPAL-NAME>",
-  "password": "<SECRET>",
-  "tenant": "<TENANT NAME>"
+  "displayName": "\<SERVICE-PRINCIPAL-NAME\>",
+  "name": "http://\<SERVICE-PRINCIPAL-NAME\>",
+  "password": "\<SECRET\>",
+  "tenant": "\<TENANT NAME\>"
 }
 ```
 
@@ -59,7 +59,7 @@ Below is an example command for assigning the Contributor role to a service prin
 ```
 az role assignment create \
   --assignee $appId \
-  --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
+  --scope /subscriptions/$\<SUBSCRIPTION-ID\>/resourceGroups/$\<GROUP\> \
   --role Contributor
 ```
 
@@ -67,7 +67,7 @@ You can also create the service principal and give it Contributor privileges by 
 
 ```
 az ad sp create-for-rbac \
-  --scope /subscriptions/$<SUBSCRIPTION-ID>/resourceGroups/$<GROUP> \
+  --scope /subscriptions/$\<SUBSCRIPTION-ID\>/resourceGroups/$\<GROUP\> \
   --role Contributor
 ```
 
@@ -83,7 +83,7 @@ You can also follow these instructions to set up a service principal and give it
 1. Enter a name. This will be the name of your service principal.
 1. Optional: Choose which accounts can use the service principal.
 1. Click **Register**.
-1. You should now see the name of your service principal under **Azure Active Directory > App registrations**. 
+1. You should now see the name of your service principal under **Azure Active Directory \> App registrations**. 
 1. Click the name of your service principal. Take note of the tenant ID and application ID (also called app ID or client ID) so that you can use it when provisioning your AKS cluster. Then click **Certificates & secrets**.
 1. Click **New client secret**.
 1. Enter a short description, pick an expiration time, and click **Add**. Take note of the client secret so that you can use it when provisioning the AKS cluster.
@@ -104,7 +104,7 @@ To give role-based access to your service principal,
 
 # 1. Create the AKS Cloud Credentials
 
-1. In the Rancher UI, click **☰ > Cluster Management**.
+1. In the Rancher UI, click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
 1. Click **Azure**.
@@ -115,7 +115,7 @@ To give role-based access to your service principal,
 
 Use Rancher to set up and configure your Kubernetes cluster.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. In the **Clusters** section, click **Create**.
 1. Click **Azure AKS**.
 1. Fill out the form. For help with filling out the form, see the [configuration reference.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/editing-clusters/aks-config-reference)
@@ -144,7 +144,7 @@ The first way to ensure that Rancher is running on the same [NAT](https://docs.m
 
 The second way is to run a command to register the cluster with Rancher. Once the cluster is provisioned, you can run the displayed command anywhere you can connect to the cluster’s Kubernetes API. This command is displayed in a pop-up when you provision an AKS cluster with a private API endpoint enabled.
 
-> **Note:** Please be aware that when registering an existing AKS cluster, the cluster might take some time, possibly hours, to appear in the `Cluster To register` dropdown list. This outcome will be based on region. 
+\> **Note:** Please be aware that when registering an existing AKS cluster, the cluster might take some time, possibly hours, to appear in the `Cluster To register` dropdown list. This outcome will be based on region. 
 
 For more information about connecting to an AKS private cluster, see the [AKS documentation.](https://docs.microsoft.com/en-us/azure/aks/private-clusters#options-for-connecting-to-the-private-cluster)
 

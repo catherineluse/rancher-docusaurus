@@ -29,7 +29,7 @@ The steps to create a cluster differ based on your Rancher version.
 
 ### 1. Create your cloud credentials
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
 1. Click **Amazon**.
@@ -44,26 +44,26 @@ The steps to create a cluster differ based on your Rancher version.
 
 Creating a [node template](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) for EC2 will allow Rancher to provision new nodes in EC2. Node templates can be reused for other clusters.
 
-1. Click **☰ > Cluster Management**.
-1. Click **RKE1 Configuration > Node Templates**
+1. Click **☰ \> Cluster Management**.
+1. Click **RKE1 Configuration \> Node Templates**
 1. Click **Add Template**.
 1. Fill out a node template for EC2. For help filling out the form, refer to [EC2 Node Template Configuration.](./ec2-node-template-config)
 1. Click **Create**.
 
-    >**Note:** If you want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) that must be taken into consideration.
+    \>**Note:** If you want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) that must be taken into consideration.
 
 ### 3. Create a cluster with node pools using the node template
 
 Add one or more node pools to your cluster. For more information about node pools, see [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools)
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **Amazon EC2**.
 1. Create a node pool for each Kubernetes role. For each node pool, choose a node template that you created. For more information about node pools, including best practices for assigning Kubernetes roles to them, see [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools) 
 1. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 1. Use **Cluster Options** to choose the version of Kubernetes that will be installed, what network provider will be used and if you want to enable project network isolation. Refer to [Selecting Cloud Providers](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/) to configure the Kubernetes Cloud Provider. For help configuring the cluster, refer to the [RKE cluster configuration reference.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/options)
 
-    >**Note:** If you want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) that must be taken into consideration.
+    \>**Note:** If you want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) that must be taken into consideration.
 1. Click **Create**.
 
 **Result:** 

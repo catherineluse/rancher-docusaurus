@@ -12,7 +12,7 @@ This guide outlines a reference architecture for installing Rancher on an RKE Ku
 - [4. Storage Considerations](#4-storage-considerations)
 - [5. Backups and Disaster Recovery](#5-backups-and-disaster-recovery)
 ```img
-<figcaption>Solution Overview</figcaption>
+\<figcaption\>Solution Overview\</figcaption\>
 
 ![Solution Overview](/docs/img/rancher/rancher-on-prem-vsphere.svg)
 ```

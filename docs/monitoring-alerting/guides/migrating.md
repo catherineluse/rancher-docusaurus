@@ -48,9 +48,9 @@ Before you can install Monitoring V2, Monitoring V1 needs to be uninstalled comp
 
 * Remove all cluster and project specific alerts and alerts groups.
 * Remove all notifiers.
-* Disable all project monitoring installations under Cluster -> Project -> Tools -> Monitoring.
+* Disable all project monitoring installations under Cluster -\> Project -\> Tools -\> Monitoring.
 * Ensure that all project-monitoring apps in all projects have been removed and are not recreated after a few minutes
-* Disable the cluster monitoring installation under Cluster -> Tools -> Monitoring.
+* Disable the cluster monitoring installation under Cluster -\> Tools -\> Monitoring.
 * Ensure that the cluster-monitoring app and the monitoring-operator app in the System project have been removed and are not recreated after a few minutes.
 
 #### RKE Template Clusters
@@ -99,7 +99,7 @@ It is only possible to directly migrate expression-based alerts to Monitoring V2
 
 To migrate the following expression alert
 ```img
-{{< img "/img/rancher/monitoring/migration/alert_2.4_to_2.5_source.png" "">}}
+{{ img "/img/rancher/monitoring/migration/alert_2.4_to_2.5_source.png" ""}}
 ```
 you have to either create a PrometheusRule configuration like this in any namespace
 
@@ -114,7 +114,7 @@ spec:
     - name: custom.rules
       rules:
         - alert: Custom Expression Alert
-          expr: prometheus_query > 5
+          expr: prometheus_query \> 5
           for: 5m
           labels:
             severity: critical
@@ -124,7 +124,7 @@ spec:
 
 or add the Prometheus Rule through the Cluster Explorer
 ```img
-{{< img "/img/rancher/monitoring/migration/alert_2.4_to_2.5_target.png" "">}}
+{{ img "/img/rancher/monitoring/migration/alert_2.4_to_2.5_target.png" ""}}
 ```
 For more details on how to configure PrometheusRules in Monitoring V2 see [Monitoring Configuration](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/).
 

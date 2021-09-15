@@ -13,7 +13,7 @@ You're ready to create your first Kubernetes [workload](https://kubernetes.io/do
 
 For this workload, you'll be deploying the application Rancher Hello-World.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1.  From the **Clusters** page, go to the cluster where the workload should be deployed and click **Explore**.
 1. Click **Workload**.
 1. Click **Create**.
@@ -35,7 +35,7 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 * Your workload is deployed. This process might take a few minutes to complete.
 * When your workload completes deployment, it's assigned a state of **Active**. You can view this status from the project's **Workloads** page.
 
-<br/>
+
 
 ### 2. Viewing Your Application
 
@@ -47,12 +47,12 @@ When using a cloud-hosted virtual machine, you may not have access to the port r
 
 ```sh
 gettingstarted@rancher:~$ curl http://localhost:31568
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Rancher</title>
-    <link rel="icon" href="img/favicon.png">
-    <style>
+\<!DOCTYPE html\>
+\<html\>
+  \<head\>
+    \<title\>Rancher\</title\>
+    \<link rel="icon" href="img/favicon.png"\>
+    \<style\>
       body {
         background-color: white;
         text-align: center;
@@ -73,44 +73,44 @@ gettingstarted@rancher:~$ curl http://localhost:31568
       #logo {
         margin-bottom: 40px;
       }
-    </style>
-  </head>
-  <body>
-    <img id="logo" src="img/rancher-logo.svg" alt="Rancher logo" width=400 />
-    <h1>Hello world!</h1>
-    <h3>My hostname is hello-world-66b4b9d88b-78bhx</h3>
-    <div id='Services'>
-      <h3>k8s services found 2</h3>
+    \</style\>
+  \</head\>
+  \<body\>
+    \<img id="logo" src="img/rancher-logo.svg" alt="Rancher logo" width=400 /\>
+    \<h1\>Hello world!\</h1\>
+    \<h3\>My hostname is hello-world-66b4b9d88b-78bhx\</h3\>
+    \<div id='Services'\>
+      \<h3\>k8s services found 2\</h3\>
 
-      <b>INGRESS_D1E1A394F61C108633C4BD37AEDDE757</b> tcp://10.43.203.31:80<br />
+      \<b\>INGRESS_D1E1A394F61C108633C4BD37AEDDE757\</b\> tcp://10.43.203.31:80\<br /\>
 
-      <b>KUBERNETES</b> tcp://10.43.0.1:443<br />
+      \<b\>KUBERNETES\</b\> tcp://10.43.0.1:443\<br /\>
 
-    </div>
-    <br />
+    \</div\>
+    \<br /\>
 
-    <div id='rancherLinks' class="row social">
-      <a class="p-a-xs" href="https://rancher.com/docs"><img src="img/favicon.png" alt="Docs" height="25" width="25"></a>
-      <a class="p-a-xs" href="https://slack.rancher.io/"><img src="img/icon-slack.svg" alt="slack" height="25" width="25"></a>
-      <a class="p-a-xs" href="https://github.com/rancher/rancher"><img src="img/icon-github.svg" alt="github" height="25" width="25"></a>
-      <a class="p-a-xs" href="https://twitter.com/Rancher_Labs"><img src="img/icon-twitter.svg" alt="twitter" height="25" width="25"></a>
-      <a class="p-a-xs" href="https://www.facebook.com/rancherlabs/"><img src="img/icon-facebook.svg" alt="facebook" height="25" width="25"></a>
-      <a class="p-a-xs" href="https://www.linkedin.com/groups/6977008/profile"><img src="img/icon-linkedin.svg" height="25" alt="linkedin" width="25"></a>
-    </div>
-    <br />
-    <button class='button' onclick='myFunction()'>Show request details</button>
-    <div id="reqInfo" style='display:none'>
-      <h3>Request info</h3>
-      <b>Host:</b> 172.22.101.111:31411 <br />
-      <b>Pod:</b> hello-world-66b4b9d88b-78bhx </b><br />
+    \<div id='rancherLinks' class="row social"\>
+      \<a class="p-a-xs" href="https://rancher.com/docs"\>\<img src="img/favicon.png" alt="Docs" height="25" width="25"\>\</a\>
+      \<a class="p-a-xs" href="https://slack.rancher.io/"\>\<img src="img/icon-slack.svg" alt="slack" height="25" width="25"\>\</a\>
+      \<a class="p-a-xs" href="https://github.com/rancher/rancher"\>\<img src="img/icon-github.svg" alt="github" height="25" width="25"\>\</a\>
+      \<a class="p-a-xs" href="https://twitter.com/Rancher_Labs"\>\<img src="img/icon-twitter.svg" alt="twitter" height="25" width="25"\>\</a\>
+      \<a class="p-a-xs" href="https://www.facebook.com/rancherlabs/"\>\<img src="img/icon-facebook.svg" alt="facebook" height="25" width="25"\>\</a\>
+      \<a class="p-a-xs" href="https://www.linkedin.com/groups/6977008/profile"\>\<img src="img/icon-linkedin.svg" height="25" alt="linkedin" width="25"\>\</a\>
+    \</div\>
+    \<br /\>
+    \<button class='button' onclick='myFunction()'\>Show request details\</button\>
+    \<div id="reqInfo" style='display:none'\>
+      \<h3\>Request info\</h3\>
+      \<b\>Host:\</b\> 172.22.101.111:31411 \<br /\>
+      \<b\>Pod:\</b\> hello-world-66b4b9d88b-78bhx \</b\>\<br /\>
 
-      <b>Accept:</b> [*/*]<br />
+      \<b\>Accept:\</b\> [*/*]\<br /\>
 
-      <b>User-Agent:</b> [curl/7.47.0]<br />
+      \<b\>User-Agent:\</b\> [curl/7.47.0]\<br /\>
 
-    </div>
-    <br />
-    <script>
+    \</div\>
+    \<br /\>
+    \<script\>
       function myFunction() {
           var x = document.getElementById("reqInfo");
           if (x.style.display === "none") {
@@ -119,9 +119,9 @@ gettingstarted@rancher:~$ curl http://localhost:31568
               x.style.display = "none";
           }
       }
-    </script>
-  </body>
-</html>
+    \</script\>
+  \</body\>
+\</html\>
 gettingstarted@rancher:~$
 
 ```

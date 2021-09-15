@@ -22,7 +22,7 @@ When upgrading from any 1.4 version of Istio to any 1.5 version, the Rancher ins
 
 See the official upgrade notes for additional information on the 1.5 release and upgrading from 1.4: https://istio.io/latest/news/releases/1.5.x/announcing-1.5/upgrade-notes/
 
-> **Note:** Rancher continues to use the Helm installation method, which produces a different architecture from an istioctl installation.
+\> **Note:** Rancher continues to use the Helm installation method, which produces a different architecture from an istioctl installation.
 
 ### Known Issues
 

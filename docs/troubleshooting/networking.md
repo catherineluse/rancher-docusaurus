@@ -48,12 +48,12 @@ To test the overlay network, you can launch the following `DaemonSet` definition
 4. Run the following script, from the same location.  It will have each `overlaytest` container on every host ping each other:
     ```
     #!/bin/bash
-    echo "=> Start network overlay test"
+    echo "=\> Start network overlay test"
       kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.metadata.name}{" "}{@.spec.nodeName}{"\n"}{end}' |
       while read spod shost 
         do kubectl get pods -l name=overlaytest -o jsonpath='{range .items[*]}{@.status.podIP}{" "}{@.spec.nodeName}{"\n"}{end}' |
         while read tip thost
-          do kubectl --request-timeout='10s' exec $spod -c overlaytest -- /bin/sh -c "ping -c2 $tip > /dev/null 2>&1"
+          do kubectl --request-timeout='10s' exec $spod -c overlaytest -- /bin/sh -c "ping -c2 $tip \> /dev/null 2\>&1"
             RC=$?
             if [ $RC -ne 0 ]
               then echo FAIL: $spod on $shost cannot reach pod IP $tip on $thost
@@ -61,13 +61,13 @@ To test the overlay network, you can launch the following `DaemonSet` definition
             fi
         done
       done
-    echo "=> End network overlay test"
+    echo "=\> End network overlay test"
     ```
 
 5. When this command has finished running, it will output the state of each route:
 
     ```
-    => Start network overlay test
+    =\> Start network overlay test
     Error from server (NotFound): pods "wk2" not found
     FAIL: overlaytest-5bglp on wk2 cannot reach pod IP 10.42.7.3 on wk2
     Error from server (NotFound): pods "wk2" not found
@@ -82,7 +82,7 @@ To test the overlay network, you can launch the following `DaemonSet` definition
     FAIL: overlaytest-xpxwp on wk1 cannot reach pod IP 10.42.7.3 on wk2
     wk1 can reach cp1
     wk1 can reach wk1
-    => End network overlay test
+    =\> End network overlay test
     ```
     If you see error in the output, there is some issue with the route between the pods on the two hosts.  In the above output the node `wk2` has no connectivity over the overlay network. This could be because the [required ports](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements/#networking-requirements) for overlay networking are not opened for `wk2`.
 6. You can now clean up the DaemonSet by running `kubectl delete ds/overlaytest`.

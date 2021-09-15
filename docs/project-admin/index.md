@@ -34,6 +34,6 @@ Whoever creates the project automatically becomes a [project owner](https://ranc
 
 To switch between projects, use the drop-down available in the navigation bar. Alternatively, you can switch between projects directly in the navigation bar.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to switch projects and click **Explore**.
 1. In the top navigation bar, select the project that you want to open.

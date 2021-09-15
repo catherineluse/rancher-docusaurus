@@ -56,7 +56,7 @@ The a vSphere cluster is created in Rancher depends on the Rancher version.
 
 ### 1. Create your cloud credentials
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
 1. Click **VMware vSphere**.
@@ -69,8 +69,8 @@ The a vSphere cluster is created in Rancher depends on the Rancher version.
 
 Creating a [node template](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) for vSphere will allow Rancher to provision new nodes in vSphere. Node templates can be reused for other clusters.
 
-1. Click **☰ > Cluster Management**.
-1. Click **RKE1 Configuration > Node Templates**.
+1. Click **☰ \> Cluster Management**.
+1. Click **RKE1 Configuration \> Node Templates**.
 1. Click **Create**.
 1. Click **Add Template**.
 1. Click **vSphere**.
@@ -81,7 +81,7 @@ Creating a [node template](https://rancher.com/docs/rancher/v2.6/en/cluster-prov
 
 Use Rancher to create a Kubernetes cluster in vSphere.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **VMware vSphere**.
 1. Enter a **Cluster Name** and use your vSphere cloud credentials. Click **Continue**.

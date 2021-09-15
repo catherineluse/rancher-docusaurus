@@ -3,7 +3,7 @@ title: Multi-cluster Apps
 weight: 2
 ---
 
-> As of Rancher v2.5, multi-cluster apps are deprecated. We now recommend using [Fleet](https://rancher.com/docs/rancher/v2.6/en/deploy-across-clusters/fleet) for deploying apps across clusters.
+\> As of Rancher v2.5, multi-cluster apps are deprecated. We now recommend using [Fleet](https://rancher.com/docs/rancher/v2.6/en/deploy-across-clusters/fleet) for deploying apps across clusters.
 
 Typically, most applications are deployed on a single Kubernetes cluster, but there will be times you might want to deploy multiple copies of the same application across different clusters and/or projects. In Rancher, a _multi-cluster application_,  is an application deployed using a Helm chart across multiple clusters. With the ability to deploy the same application across multiple clusters, it avoids the repetition of the same action on each cluster, which could introduce user error during application configuration. With multi-cluster applications, you can customize to have the same configuration across all projects/clusters as well as have the ability to change the configuration based on your target project. Since multi-cluster application is considered a single application, it's easy to manage and maintain this application.
 
@@ -39,17 +39,17 @@ To create a multi-cluster app in Rancher, you must have at least one of the foll
 
 Because multi-cluster apps were deprecated and replaced with Fleet in Rancher v2.5, you will need to enable multi-cluster apps with a feature flag.
 
-1. In the upper left corner, click **☰ > Global Settings**.
+1. In the upper left corner, click **☰ \> Global Settings**.
 1. Click **Feature Flags**.
 1. Go to the `legacy` feature flag and click **Activate**.
 
 # Launching a Multi-Cluster App
 
-1. In the upper left corner, click **☰ > Multi-cluster Apps**.
+1. In the upper left corner, click **☰ \> Multi-cluster Apps**.
 1. Click **Launch**.
 1. Find the application that you want to launch.
 1.  (Optional) Review the detailed descriptions, which are derived from the Helm chart's `README`.
-1. Under **Configuration Options** enter a **Name** for the multi-cluster application. By default, this name is also used to create a Kubernetes namespace in each [target project](#targets) for the multi-cluster application. The namespace is named as `<MULTI-CLUSTER_APPLICATION_NAME>-<PROJECT_ID>`.
+1. Under **Configuration Options** enter a **Name** for the multi-cluster application. By default, this name is also used to create a Kubernetes namespace in each [target project](#targets) for the multi-cluster application. The namespace is named as `\<MULTI-CLUSTER_APPLICATION_NAME\>-\<PROJECT_ID\>`.
 1. Select a **Template Version**.
 1. Complete the [multi-cluster applications specific configuration options](#multi-cluster-app-configuration-options) as well as the [application configuration options](#application-configuration-options).
 1. Select the **Members** who can [interact with the multi-cluster application](#members).
@@ -88,13 +88,13 @@ Rancher will let you select from two options for Roles, **Project** and **Cluste
 
 When launching the application, Rancher will confirm if you have these permissions in the target projects before launching the application.
 
-> **Note:** There are some applications like _Grafana_ or _Datadog_ that require access to specific cluster-scoped resources. These applications will require the _Cluster_ role. If you find out later that the application requires cluster roles, the multi-cluster application can be upgraded to update the roles.
+\> **Note:** There are some applications like _Grafana_ or _Datadog_ that require access to specific cluster-scoped resources. These applications will require the _Cluster_ role. If you find out later that the application requires cluster roles, the multi-cluster application can be upgraded to update the roles.
 
 # Application Configuration Options
 
 For each Helm chart, there are a list of desired answers that must be entered in order to successfully deploy the chart. When entering answers, you must format them using the syntax rules found in [Using Helm: The format and limitations of –set](https://helm.sh/docs/intro/using_helm/#the-format-and-limitations-of---set), as Rancher passes them as `--set` flags to Helm.
 
-> For example, when entering an answer that includes two values separated by a comma (i.e. `abc, bcd`), it is required to wrap the values with double quotes (i.e., ``"abc, bcd"``).
+\> For example, when entering an answer that includes two values separated by a comma (i.e. `abc, bcd`), it is required to wrap the values with double quotes (i.e., ``"abc, bcd"``).
 
 ### Using a questions.yml file
 
@@ -118,7 +118,7 @@ By default, multi-cluster applications can only be managed by the user who creat
 
     - **Read-only**: This access type cannot modify any configuration option for the multi-cluster application. Users can only view these applications.
 
-    > **Note:**  Please ensure only trusted users are given _Owner_ or _Member_ access as they will automatically be able to manage applications created for this multi-cluster application in target projects they might not have direct access to.
+    \> **Note:**  Please ensure only trusted users are given _Owner_ or _Member_ access as they will automatically be able to manage applications created for this multi-cluster application in target projects they might not have direct access to.
 
 ### Overriding Application Configuration Options for Specific Projects
 
@@ -148,9 +148,9 @@ The creator and any users added with the access-type "owner" to a multi-cluster 
 
 One of the benefits of using a multi-cluster application as opposed to multiple individual applications of the same type, is the ease of management. Multi-cluster applications can be cloned, upgraded or rolled back.
 
-> **Prerequisite:** The `legacy` feature flag needs to be enabled.
+\> **Prerequisite:** The `legacy` feature flag needs to be enabled.
 
-1. In the upper left corner, click **☰ > Multi-cluster Apps**.
+1. In the upper left corner, click **☰ \> Multi-cluster Apps**.
 
 2. Choose the multi-cluster application you want to take one of these actions on and click the **⋮**. Select one of the following options:
 
@@ -160,10 +160,10 @@ One of the benefits of using a multi-cluster application as opposed to multiple 
 
 # Deleting a Multi-Cluster Application
 
-> **Prerequisite:** The `legacy` feature flag needs to be enabled.
+\> **Prerequisite:** The `legacy` feature flag needs to be enabled.
 
-1. In the upper left corner, click **☰ > Multi-cluster Apps**.
+1. In the upper left corner, click **☰ \> Multi-cluster Apps**.
 
-2. Choose the multi-cluster application you want to delete and click the **⋮ > Delete**. When deleting the multi-cluster application, all applications and namespaces are deleted in all of the target projects.
+2. Choose the multi-cluster application you want to delete and click the **⋮ \> Delete**. When deleting the multi-cluster application, all applications and namespaces are deleted in all of the target projects.
 
-   > **Note:** The applications in the target projects, that are created for a multi-cluster application, cannot be deleted individually. The applications can only be deleted when the multi-cluster application is deleted.
+   \> **Note:** The applications in the target projects, that are created for a multi-cluster application, cannot be deleted individually. The applications can only be deleted when the multi-cluster application is deleted.

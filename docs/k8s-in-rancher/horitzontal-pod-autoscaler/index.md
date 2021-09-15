@@ -22,7 +22,7 @@ You can create, manage, and delete HPAs using the Rancher UI. From the Rancher U
 Clusters created in Rancher v2.0.7 and higher automatically have all the requirements needed (metrics-server and Kubernetes cluster configuration) to use HPA.
 ## Testing HPAs with a Service Deployment
 
-You can see your HPA's current number of replicas by going to your project and clicking **Resources > HPA**. For more information, refer to [Get HPA Metrics and Status](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/horitzontal-pod-autoscaler/manage-hpa-with-rancher-ui/).
+You can see your HPA's current number of replicas by going to your project and clicking **Resources \> HPA**. For more information, refer to [Get HPA Metrics and Status](https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/horitzontal-pod-autoscaler/manage-hpa-with-rancher-ui/).
 
 You can also use `kubectl` to get the status of HPAs that you test with your load testing tool. For more information, refer to [Testing HPAs with kubectl]
 (https://rancher.com/docs/rancher/v2.6/en/k8s-in-rancher/horitzontal-pod-autoscaler/testing-hpa/).

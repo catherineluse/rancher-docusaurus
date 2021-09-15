@@ -34,7 +34,7 @@ If you are registering a K3s cluster, make sure the `cluster.yml` is readable. I
 
 # Registering a Cluster
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, **Import Existing**.
 1. Enter a **Cluster Name**.
 1. Choose the type of cluster.
@@ -49,13 +49,13 @@ If you are registering a K3s cluster, make sure the `cluster.yml` is readable. I
 
 **Result:**
 
-- Your cluster is registered and assigned a state of **Pending**. Rancher is deploying resources to manage your cluster.</li>
+- Your cluster is registered and assigned a state of **Pending**. Rancher is deploying resources to manage your cluster.
 - You can access your cluster after its state is updated to **Active**.
 - **Active** clusters are assigned two Projects: `Default` (containing the namespace `default`) and `System` (containing the namespaces `cattle-system`, `ingress-nginx`, `kube-public` and `kube-system`, if present).
 
 
-> **Note:**
-> You can not re-register a cluster that is currently active in a Rancher setup.
+\> **Note:**
+\> You can not re-register a cluster that is currently active in a Rancher setup.
 
 ### Configuring a K3s Cluster to Enable Registration in Rancher
 
@@ -114,7 +114,7 @@ The capabilities for registered clusters are listed in the table on [this page.]
 
 # Configuring K3s Cluster Upgrades
 
-> It is a Kubernetes best practice to back up the cluster before upgrading. When upgrading a high-availability K3s cluster with an external database, back up the database in whichever way is recommended by the relational database provider.
+\> It is a Kubernetes best practice to back up the cluster before upgrading. When upgrading a high-availability K3s cluster with an external database, back up the database in whichever way is recommended by the relational database provider.
 
 The **concurrency** is the maximum number of nodes that are permitted to be unavailable during an upgrade. If number of unavailable nodes is larger than the **concurrency,** the upgrade will fail. If an upgrade fails, you may need to repair or remove failed nodes before the upgrade can succeed.
 
@@ -190,11 +190,11 @@ All the capabilities and their type definitions can be viewed in the Rancher API
 
 To annotate a registered cluster,
 
-1. Click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the custom cluster you want to annotate and click **⋮ > Edit Config**.
+1. Click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the custom cluster you want to annotate and click **⋮ \> Edit Config**.
 1. Expand the **Labels & Annotations** section.
 1. Click **Add Annotation**.
-1. Add an annotation to the cluster with the format `capabilities/<capability>: <value>` where `value` is the cluster capability that will be overridden by the annotation. In this scenario, Rancher is not aware of any capabilities of the cluster until you add the annotation.
+1. Add an annotation to the cluster with the format `capabilities/\<capability\>: \<value\>` where `value` is the cluster capability that will be overridden by the annotation. In this scenario, Rancher is not aware of any capabilities of the cluster until you add the annotation.
 1. Click **Save**.
 
 **Result:** The annotation does not give the capabilities to the cluster, but it does indicate to Rancher that the cluster has those capabilities.

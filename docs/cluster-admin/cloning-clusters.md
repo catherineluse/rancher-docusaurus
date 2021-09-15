@@ -14,7 +14,7 @@ Duplication of registered clusters is not supported.
 | [Custom Cluster](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/custom-nodes)              | ✓              |
 | [Registered Cluster](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/registered-clusters/)            |               |
 
-> **Warning:** During the process of duplicating a cluster, you will edit a config file full of cluster settings. However, we recommend editing only values explicitly listed in this document, as cluster duplication is designed for simple cluster copying, _not_ wide scale configuration changes. Editing other values may invalidate the config file, which will lead to cluster deployment failure.
+\> **Warning:** During the process of duplicating a cluster, you will edit a config file full of cluster settings. However, we recommend editing only values explicitly listed in this document, as cluster duplication is designed for simple cluster copying, _not_ wide scale configuration changes. Editing other values may invalidate the config file, which will lead to cluster deployment failure.
 
 ## Prerequisites
 
@@ -33,12 +33,12 @@ Begin by using Rancher CLI to export the configuration for the cluster that you 
         ./rancher cluster ls
 
 
-1. Find the cluster that you want to clone, and copy either its resource `ID` or `NAME` to your clipboard. From this point on, we'll refer to the resource `ID` or `NAME` as `<RESOURCE_ID>`, which is used as a placeholder in the next step.
+1. Find the cluster that you want to clone, and copy either its resource `ID` or `NAME` to your clipboard. From this point on, we'll refer to the resource `ID` or `NAME` as `\<RESOURCE_ID\>`, which is used as a placeholder in the next step.
 
 1. Enter the following command to export the configuration for your cluster.
 
 
-        ./rancher clusters export <RESOURCE_ID>
+        ./rancher clusters export \<RESOURCE_ID\>
 
 
     **Step Result:** The YAML for a cloned cluster prints to Terminal.
@@ -49,19 +49,19 @@ Begin by using Rancher CLI to export the configuration for the cluster that you 
 
 Use your favorite text editor to modify the cluster configuration in `cluster-template.yml` for your cloned cluster.
 
-> **Note:** Cluster configuration directives must be nested under the `rancher_kubernetes_engine_config` directive in `cluster.yml`. For more information, refer to the section on [the config file structure in Rancher v2.3.0+.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/options/#config-file-structure-in-rancher-v2-3-0)
+\> **Note:** Cluster configuration directives must be nested under the `rancher_kubernetes_engine_config` directive in `cluster.yml`. For more information, refer to the section on [the config file structure in Rancher v2.3.0+.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/options/#config-file-structure-in-rancher-v2-3-0)
 
 1. Open `cluster-template.yml` (or whatever you named your config) in your favorite text editor.
 
-    >**Warning:** Only edit the cluster config values explicitly called out below. Many of the values listed in this file are used to provision your cloned cluster, and editing their values may break the provisioning process.
+    \>**Warning:** Only edit the cluster config values explicitly called out below. Many of the values listed in this file are used to provision your cloned cluster, and editing their values may break the provisioning process.
 
 
-1. As depicted in the example below, at the `<CLUSTER_NAME>` placeholder, replace your original cluster's name with a unique name (`<CLUSTER_NAME>`). If your cloned cluster has a duplicate name, the cluster will not provision successfully.
+1. As depicted in the example below, at the `\<CLUSTER_NAME\>` placeholder, replace your original cluster's name with a unique name (`\<CLUSTER_NAME\>`). If your cloned cluster has a duplicate name, the cluster will not provision successfully.
 
     ```yml
     Version: v3
     clusters:
-        <CLUSTER_NAME>: # ENTER UNIQUE NAME
+        \<CLUSTER_NAME\>: # ENTER UNIQUE NAME
         dockerRootDir: /var/lib/docker
         enableNetworkPolicy: false
         rancherKubernetesEngineConfig:
@@ -74,11 +74,11 @@ Use your favorite text editor to modify the cluster configuration in `cluster-te
         ignoreDockerVersion: true
     ```
 
-1. For each `nodePools` section, replace the original nodepool name with a unique name at the `<NODEPOOL_NAME>` placeholder.  If your cloned cluster has a duplicate nodepool name, the cluster will not provision successfully.
+1. For each `nodePools` section, replace the original nodepool name with a unique name at the `\<NODEPOOL_NAME\>` placeholder.  If your cloned cluster has a duplicate nodepool name, the cluster will not provision successfully.
 
     ```yml
     nodePools:
-        <NODEPOOL_NAME>:
+        \<NODEPOOL_NAME\>:
         clusterId: do
         controlPlane: true
         etcd: true

@@ -16,11 +16,11 @@ API Keys are composed of four components:
 - **Secret Key:** The token's password. For applications that prompt you for two different strings for API authentication, you usually enter the two keys together.
 - **Bearer Token:** The token username and password concatenated together. Use this string for applications that prompt you for one authentication string.
 
->Note: Users may opt to enable [token hashing](https://rancher.com/docs/rancher/v2.6/en/api/api-tokens).
+\>Note: Users may opt to enable [token hashing](https://rancher.com/docs/rancher/v2.6/en/api/api-tokens).
 
 ## Creating an API Key
 
-1. Select **User Avatar > Account & API Keys** from upper right corner.
+1. Select **User Avatar \> Account & API Keys** from upper right corner.
 
 2. Click **Create API Key**.
 

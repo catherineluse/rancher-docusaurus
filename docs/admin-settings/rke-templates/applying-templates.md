@@ -21,7 +21,7 @@ This section covers the following topics:
 
 To add a cluster [hosted by an infrastructure provider](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters) using an RKE template, use these steps:
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create** and choose the infrastructure provider.
 1. Provide the cluster name and node template details as usual.
 1. To use an RKE template, under the **Cluster Options**, check the box for **Use an existing RKE template and revision**.
@@ -40,7 +40,7 @@ If a cluster was created from an RKE template, you can edit the cluster to updat
 
 An existing cluster's settings can be [saved as an RKE template.](#converting-an-existing-cluster-to-use-an-rke-template) In that situation, you can also edit the cluster to update the cluster to a new revision of the template.
 
-> **Note:** You can't change the cluster to use a different RKE template. You can only update the cluster to a new revision of the same template.
+\> **Note:** You can't change the cluster to use a different RKE template. You can only update the cluster to a new revision of the same template.
 
 ### Converting an Existing Cluster to Use an RKE Template
 
@@ -50,8 +50,8 @@ RKE templates cannot be applied to existing clusters, except if you save an exis
 
 To convert an existing cluster to use an RKE template,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the cluster that will be converted to use an RKE template. Click **⋮  > Save as RKE Template**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the cluster that will be converted to use an RKE template. Click **⋮  \> Save as RKE Template**.
 1. Enter a name for the template in the form that appears, and click **Create**.
 
 **Results:**

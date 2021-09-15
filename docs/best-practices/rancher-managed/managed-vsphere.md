@@ -10,7 +10,7 @@ This guide outlines a reference architecture for provisioning downstream Rancher
 - [3. Storage Considerations](#3-storage-considerations)
 - [4. Backups and Disaster Recovery](#4-backups-and-disaster-recovery)
 ```img
-<figcaption>Solution Overview</figcaption>
+\<figcaption\>Solution Overview\</figcaption\>
 
 ![Solution Overview](./assets/img/rancher/solution_overview.drawio.svg)
 ```

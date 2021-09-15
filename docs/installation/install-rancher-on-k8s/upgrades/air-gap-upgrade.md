@@ -4,7 +4,7 @@ shortTitle: Air Gap Upgrade
 weight: 1
 ---
 
-> These instructions assume you have already followed the instructions for a Kubernetes upgrade on [this page,](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/upgrades/) including the prerequisites, up until step 3. Upgrade Rancher.
+\> These instructions assume you have already followed the instructions for a Kubernetes upgrade on [this page,](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/upgrades/) including the prerequisites, up until step 3. Upgrade Rancher.
 
 ### Rancher Helm Template Options
 
@@ -14,49 +14,49 @@ Based on the choice you made during installation, complete one of the procedures
 
 Placeholder | Description
 ------------|-------------
-`<VERSION>` | The version number of the output tarball.
-`<RANCHER.YOURDOMAIN.COM>` | The DNS name you pointed at your load balancer.
-`<REGISTRY.YOURDOMAIN.COM:PORT>` | The DNS name for your private registry.
-`<CERTMANAGER_VERSION>` | Cert-manager version running on k8s cluster.
+`[VERSION]` | The version number of the output tarball.
+`[RANCHER.YOURDOMAIN.COM]` | The DNS name you pointed at your load balancer.
+`[REGISTRY.YOURDOMAIN.COM:PORT]` | The DNS name for your private registry.
+`[CERTMANAGER_VERSION]` | Cert-manager version running on k8s cluster.
 
 
 ### Option A: Default Self-signed Certificate
 
 ```
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+helm template rancher ./rancher-[VERSION].tgz --output-dir . \
     --no-hooks \ # prevent files for Helm hooks from being generated
 	--namespace cattle-system \
-	--set hostname=<RANCHER.YOURDOMAIN.COM> \
-	--set certmanager.version=<CERTMANAGER_VERSION> \
-	--set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
-	--set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+	--set hostname=[RANCHER.YOURDOMAIN.COM] \
+	--set certmanager.version=[CERTMANAGER_VERSION] \
+	--set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
+	--set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
 ### Option B: Certificates from Files using Kubernetes Secrets
 
 ```plain
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+helm template rancher ./rancher-[VERSION].tgz --output-dir . \
 	--no-hooks \ # prevent files for Helm hooks from being generated
 	--namespace cattle-system \
-	--set hostname=<RANCHER.YOURDOMAIN.COM> \
-	--set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+	--set hostname=[RANCHER.YOURDOMAIN.COM] \
+	--set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
 	--set ingress.tls.source=secret \
-	--set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+	--set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
 If you are using a Private CA signed cert, add `--set privateCA=true` following `--set ingress.tls.source=secret`:
 
 ```plain
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+helm template rancher ./rancher-[VERSION].tgz --output-dir . \
 	--no-hooks \ # prevent files for Helm hooks from being generated
 	--namespace cattle-system \
-	--set hostname=<RANCHER.YOURDOMAIN.COM> \
-	--set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+	--set hostname=[RANCHER.YOURDOMAIN.COM] \
+	--set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
 	--set ingress.tls.source=secret \
 	--set privateCA=true \
-	--set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+	--set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
 	--set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
@@ -74,9 +74,9 @@ kubectl -n cattle-system apply -R -f ./rancher
 
 Log into Rancher to confirm that the upgrade succeeded.
 
->**Having network issues following upgrade?**
->
-> See [Restoring Cluster Networking](https://rancher.com/docs/rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades/namespace-migration).
+\>**Having network issues following upgrade?**
+\>
+\> See [Restoring Cluster Networking](https://rancher.com/docs/rancher/v2.0-v2.4/en/installation/install-rancher-on-k8s/upgrades/namespace-migration).
 
 # Known Upgrade Issues
 

@@ -5,7 +5,7 @@ weight: 1
 
 This section describes how to set up existing persistent storage for workloads in Rancher.
 
-> This section assumes that you understand the Kubernetes concepts of persistent volumes and persistent volume claims. For more information, refer to the section on [how storage works.](../how-storage-works)
+\> This section assumes that you understand the Kubernetes concepts of persistent volumes and persistent volume claims. For more information, refer to the section on [how storage works.](../how-storage-works)
 
 To set up storage, follow these steps:
 
@@ -30,9 +30,9 @@ If you have a pool of block storage, and you don't want to use a cloud provider,
 
 These steps describe how to set up a PersistentVolume at the cluster level in Kubernetes.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to add a persistent volume and click **Explore**.
-1. In the left navigation bar, click **Storage > Persistent Volumes**.
+1. In the left navigation bar, click **Storage \> Persistent Volumes**.
 1. Click **Create**.
 1. Enter a **Name** for the persistent volume.
 1. Select the **Volume Plugin** for the disk type or service that you're using. When adding storage to a cluster that's hosted by a cloud provider, use the cloud provider's plug-in for cloud storage. For example, if you have a Amazon EC2 cluster and you want to use cloud storage for it, you must use the `Amazon EBS Disk` volume plugin.
@@ -53,9 +53,9 @@ You can configure storage for the StatefulSet during or after workload creation.
 
 The following steps describe how to assign existing storage to a new StatefulSet:
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure storage for the StatefulSet and click **Explore**.
-1. In the left navigation bar, click **Workload > StatefulSets**.
+1. In the left navigation bar, click **Workload \> StatefulSets**.
 1. Click **Create**.
 1. Choose the namespace where the workload will be deployed.
 1. Enter a name for the StatefulSet.
@@ -69,10 +69,10 @@ The following steps describe how to assign existing storage to a new StatefulSet
 
 The following steps describe how to assign persistent storage to an existing workload:
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure storage for the StatefulSet and click **Explore**.
-1. In the left navigation bar, click **Workload > StatefulSets**.
-1. Go to the workload that you want to add the persistent storage to. Click **⋮ > Edit**.
+1. In the left navigation bar, click **Workload \> StatefulSets**.
+1. Go to the workload that you want to add the persistent storage to. Click **⋮ \> Edit**.
 1. On the **Volume Claim Templates** tab, click **Add Claim Template**.
 1. Click **Use an existing Persistent Volume**.
 1. In the Persistent Volumes field, select the Persistent Volume that you created.

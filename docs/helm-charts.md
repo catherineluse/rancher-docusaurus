@@ -17,7 +17,7 @@ The charts page contains all Rancher, Partner, and Custom Charts.
 
 All three types are deployed and managed in the same way.
 
-> Apps managed by the Cluster Manager (the global view in the legacy Rancher UI) should continue to be managed only by the Cluster Manager, and apps managed with <b>Apps & Marketplace</b> in the new UI must be managed only by <b>Apps & Marketplace</b>.
+\> Apps managed by the Cluster Manager (the global view in the legacy Rancher UI) should continue to be managed only by the Cluster Manager, and apps managed with \<b\>Apps & Marketplace\</b\> in the new UI must be managed only by \<b\>Apps & Marketplace\</b\>.
 
 ### Repositories
 
@@ -41,8 +41,8 @@ After installing a chart, you can find it in the _"Installed Apps"_ tab. In this
 
 Most Rancher tools have additional pages located in the toolbar below the _"Apps & Marketplace"_ section to help manage and use the features. These pages include links to dashboards, forms to easily add Custom Resources, and additional information.
 
-> If you are upgrading your chart using _"Customize Helm options before upgrade"_ , please be aware that using the _"--force"_ option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
-> 
->  * use the default upgrade option ( i.e do not use _"--force"_ option )
->  * uninstall the existing chart and install the upgraded chart
->  * delete the resources with immutable fields from the cluster before performing the _"--force"_ upgrade
+\> If you are upgrading your chart using _"Customize Helm options before upgrade"_ , please be aware that using the _"--force"_ option may result in errors if your chart has immutable fields. This is because some objects in Kubernetes cannot be changed once they are created. To ensure you do not get this error you can:
+\> 
+\>  * use the default upgrade option ( i.e do not use _"--force"_ option )
+\>  * uninstall the existing chart and install the upgraded chart
+\>  * delete the resources with immutable fields from the cluster before performing the _"--force"_ upgrade

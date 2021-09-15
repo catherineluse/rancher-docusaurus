@@ -49,9 +49,9 @@ The `rancher-backup` operator can be installed from the Rancher UI, or with the 
 
 ### Installing rancher-backup with the Rancher UI
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the `local` cluster and click **Explore**.
-1. In the left navigation bar, **Apps & Marketplace > Charts**.
+1. In the left navigation bar, **Apps & Marketplace \> Charts**.
 1. Click **Rancher Backups**.
 1. Click **Install**.
 1. Optional: Configure the default storage location. For help, refer to the [configuration section.](./configuration/storage-config)

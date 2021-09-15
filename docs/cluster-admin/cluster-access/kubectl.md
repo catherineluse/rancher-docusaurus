@@ -20,7 +20,7 @@ For more information on using kubectl, see [Kubernetes Documentation: Overview o
 
 You can access and manage your clusters by logging into Rancher and opening the kubectl shell in the UI. No further configuration necessary.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster you want to access with kubectl and click **Explore**.
 1. In the top navigation menu, click the **Kubectl Shell** button. Use the window that opens to interact with your Kubernetes cluster.
 
@@ -30,9 +30,9 @@ This section describes how to download your cluster's kubeconfig file, launch ku
 
 This alternative method of accessing the cluster allows you to authenticate with Rancher and manage your cluster without using the Rancher UI.
 
-> **Prerequisites:** These instructions assume that you have already created a Kubernetes cluster, and that kubectl is installed on your workstation. For help installing kubectl, refer to the official [Kubernetes documentation.](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+\> **Prerequisites:** These instructions assume that you have already created a Kubernetes cluster, and that kubectl is installed on your workstation. For help installing kubectl, refer to the official [Kubernetes documentation.](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-1. Log into Rancher. Click **☰ > Cluster Management**.
+1. Log into Rancher. Click **☰ \> Cluster Management**.
 1. Go to the cluster that you want to access with kubectl and click **Explore**.
 1. In the top navigation bar, click **Download KubeConfig** button.
 1. Save the YAML file on your local computer. Move the file to `~/.kube/config`. Note: The default location that kubectl uses for the kubeconfig file is `~/.kube/config`, but you can use any directory and specify it using the `--kubeconfig` flag, as in this command:
@@ -54,7 +54,7 @@ This method is only available for RKE clusters that have the [authorized cluster
 
 We recommend that as a best practice, you should set up this method to access your RKE cluster, so that just in case you can’t connect to Rancher, you can still access the cluster.
 
-> **Prerequisites:** The following steps assume that you have created a Kubernetes cluster and followed the steps to [connect to your cluster with kubectl from your workstation.](#accessing-clusters-with-kubectl-from-your-workstation)
+\> **Prerequisites:** The following steps assume that you have created a Kubernetes cluster and followed the steps to [connect to your cluster with kubectl from your workstation.](#accessing-clusters-with-kubectl-from-your-workstation)
 
 To find the name of the context(s) in your downloaded kubeconfig file, run:
 
@@ -77,27 +77,27 @@ When `kubectl` works normally, it confirms that you can access your cluster whil
 
 ### Connecting Directly to Clusters with FQDN Defined
 
-If an FQDN is defined for the cluster, a single context referencing the FQDN will be created. The context will be named `<CLUSTER_NAME>-fqdn`. When you want to use `kubectl` to access this cluster without Rancher, you will need to use this context.
+If an FQDN is defined for the cluster, a single context referencing the FQDN will be created. The context will be named `\<CLUSTER_NAME\>-fqdn`. When you want to use `kubectl` to access this cluster without Rancher, you will need to use this context.
 
 Assuming the kubeconfig file is located at `~/.kube/config`:
 
 ```
-kubectl --context <CLUSTER_NAME>-fqdn get nodes
+kubectl --context \<CLUSTER_NAME\>-fqdn get nodes
 ```
 Directly referencing the location of the kubeconfig file:
 ```
-kubectl --kubeconfig /custom/path/kube.config --context <CLUSTER_NAME>-fqdn get pods
+kubectl --kubeconfig /custom/path/kube.config --context \<CLUSTER_NAME\>-fqdn get pods
 ```
 
 ### Connecting Directly to Clusters without FQDN Defined
 
-If there is no FQDN defined for the cluster, extra contexts will be created referencing the IP address of each node in the control plane. Each context will be named `<CLUSTER_NAME>-<NODE_NAME>`. When you want to use `kubectl` to access this cluster without Rancher, you will need to use this context.
+If there is no FQDN defined for the cluster, extra contexts will be created referencing the IP address of each node in the control plane. Each context will be named `\<CLUSTER_NAME\>-\<NODE_NAME\>`. When you want to use `kubectl` to access this cluster without Rancher, you will need to use this context.
 
 Assuming the kubeconfig file is located at `~/.kube/config`:
 ```
-kubectl --context <CLUSTER_NAME>-<NODE_NAME> get nodes
+kubectl --context \<CLUSTER_NAME\>-\<NODE_NAME\> get nodes
 ```
 Directly referencing the location of the kubeconfig file:
 ```
-kubectl --kubeconfig /custom/path/kube.config --context <CLUSTER_NAME>-<NODE_NAME> get pods
+kubectl --kubeconfig /custom/path/kube.config --context \<CLUSTER_NAME\>-\<NODE_NAME\> get pods
 ```

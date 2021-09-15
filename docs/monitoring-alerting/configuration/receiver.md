@@ -6,7 +6,7 @@ weight: 1
 
 The [Alertmanager Config](https://prometheus.io/docs/alerting/latest/configuration/#configuration-file) Secret contains the configuration of an Alertmanager instance that sends out notifications based on alerts it receives from Prometheus.
 
-> This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../how-monitoring-works/#3-how-alertmanager-works)
+\> This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../../how-monitoring-works/#3-how-alertmanager-works)
 
 - [Creating Receivers in the Rancher UI](#creating-receivers-in-the-rancher-ui)
 - [Receiver Configuration](#receiver-configuration)
@@ -26,10 +26,10 @@ The [Alertmanager Config](https://prometheus.io/docs/alerting/latest/configurati
 # Creating Receivers in the Rancher UI
 _Available as of v2.5.4_
 
-> **Prerequisites:**
->
->- The monitoring application needs to be installed.
->- If you configured monitoring with an existing Alertmanager Secret, it must have a format that is supported by Rancher's UI. Otherwise you will only be able to make changes based on modifying the Alertmanager Secret directly. Note: We are continuing to make enhancements to what kinds of Alertmanager Configurations we can support using the Routes and Receivers UI, so please [file an issue](https://github.com/rancher/rancher/issues/new) if you have a request for a feature enhancement.
+\> **Prerequisites:**
+\>
+\>- The monitoring application needs to be installed.
+\>- If you configured monitoring with an existing Alertmanager Secret, it must have a format that is supported by Rancher's UI. Otherwise you will only be able to make changes based on modifying the Alertmanager Secret directly. Note: We are continuing to make enhancements to what kinds of Alertmanager Configurations we can support using the Routes and Receivers UI, so please [file an issue](https://github.com/rancher/rancher/issues/new) if you have a request for a feature enhancement.
 
 To create notification receivers in the Rancher UI,
 
@@ -56,14 +56,14 @@ Currently the Rancher Alerting Drivers app provides access to the following inte
 
 The following types of receivers can be configured in the Rancher UI:
 
-- <a href="#slack">Slack</a>
-- <a href="#email">Email</a>
-- <a href="#pagerduty">PagerDuty</a>
-- <a href="#opsgenie">Opsgenie</a>
-- <a href="#webhook">Webhook</a>
-- <a href="#custom">Custom</a>
-- <a href="#teams">Teams</a>
-- <a href="#sms">SMS</a>
+- \<a href="#slack"\>Slack\</a\>
+- \<a href="#email"\>Email\</a\>
+- \<a href="#pagerduty"\>PagerDuty\</a\>
+- \<a href="#opsgenie"\>Opsgenie\</a\>
+- \<a href="#webhook"\>Webhook\</a\>
+- \<a href="#custom"\>Custom\</a\>
+- \<a href="#teams"\>Teams\</a\>
+- \<a href="#sms"\>SMS\</a\>
 
 The custom receiver option can be used to configure any receiver in YAML that cannot be configured by filling out the other forms in the Rancher UI.
 
@@ -72,7 +72,7 @@ The custom receiver option can be used to configure any receiver in YAML that ca
 | Field | Type | Description |
 |------|--------------|------|
 | URL | String   |  Enter your Slack webhook URL. For instructions to create a Slack webhook, see the [Slack documentation.](https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack)  |
-| Default Channel |  String   |  Enter the name of the channel that you want to send alert notifications in the following format: `#<channelname>`. | 
+| Default Channel |  String   |  Enter the name of the channel that you want to send alert notifications in the following format: `#\<channelname\>`. | 
 | Proxy URL   |    String    |  Proxy for the webhook notifications.  |
 | Enable Send Resolved Alerts |   Bool    |  Whether to send a follow-up notification if an alert has been resolved (e.g. [Resolved] High CPU Usage). |
 
@@ -125,7 +125,7 @@ Opsgenie Responders:
 | Proxy URL | Proxy for the webhook notification. |
 | Enable Send Resolved Alerts | Whether to send a follow-up notification if an alert has been resolved (e.g. [Resolved] High CPU Usage).    |
 
-<!-- TODO add info on webhook for teams and sms and link to them -->
+\<!-- TODO add info on webhook for teams and sms and link to them --\>
 
 # Custom
 
@@ -162,7 +162,7 @@ Use the example below as the URL where:
 url: http://rancher-alerting-drivers-prom2teams.ns-1.svc:8089/v2/teams-instance-1
 ```
 
-<!-- https://github.com/idealista/prom2teams -->
+\<!-- https://github.com/idealista/prom2teams --\>
 
 # SMS
 
@@ -170,7 +170,7 @@ url: http://rancher-alerting-drivers-prom2teams.ns-1.svc:8089/v2/teams-instance-
 
 The SMS receiver is not a native receiver and must be enabled before it can be used. You can enable the SMS receiver for a Rancher managed cluster by going to the Apps page and installing the rancher-alerting-drivers app with the SMS option selected.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to install `rancher-alerting-drivers` and click **Explore**.
 1. In the left navigation bar, click 
 1. Click the **Alerting Drivers** app.
@@ -206,7 +206,7 @@ name: telegram-receiver-1
 url http://rancher-alerting-drivers-sachet.ns-1.svc:9876/alert
 ```
 
-<!-- https://github.com/messagebird/sachet -->
+\<!-- https://github.com/messagebird/sachet --\>
 
 
 # Configuring Multiple Receivers
@@ -235,7 +235,7 @@ receivers:
   slack_configs:
   - send_resolved: true
     text: '{{ template "slack.rancher.text" . }}'
-    api_url: <user-provided slack webhook url here>
+    api_url: \<user-provided slack webhook url here\>
 templates:
 - /etc/alertmanager/config/*.tmpl
 ```

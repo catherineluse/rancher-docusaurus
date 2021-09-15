@@ -36,11 +36,11 @@ Step types include:
 - [Deploy YAML](#step-type-deploy-yaml)
 - [Deploy Catalog App](#step-type-deploy-catalog-app)
 
-<!--
+\<!--
 ### Clone
 
-The first stage is preserved to be a cloning step that checks out source code from your repo. Rancher handles the cloning of the git repository. This action is equivalent to `git clone <repository_link> <workspace_dir>`.
--->
+The first stage is preserved to be a cloning step that checks out source code from your repo. Rancher handles the cloning of the git repository. This action is equivalent to `git clone \<repository_link\> \<workspace_dir\>`.
+--\>
 
 ### Configuring Steps By UI
 
@@ -116,7 +116,7 @@ The option to publish an image to an insecure registry is not exposed in the UI,
      Dockerfile Path | The relative path to the Dockerfile in the source code repo. By default, this path is `./Dockerfile`, which assumes the Dockerfile is in the root directory. You can set it to other paths in different use cases (`./path/to/myDockerfile` for example). |
      Image Name | The image name in `name:tag` format. The registry address is not required. For example, to build  `example.com/repo/my-image:dev`, enter `repo/my-image:dev`. |
      Push image to remote repository | An option to set the registry that publishes the image that's built.  To use this option, enable it and choose a registry from the drop-down. If this option is disabled, the image is pushed to the internal registry. |
-     Build Context <br/><br/> (**Show advanced options**)| By default, the root directory of the source code (`.`). For more details, see the Docker [build command documentation](https://docs.docker.com/engine/reference/commandline/build/).
+     Build Context  (**Show advanced options**)| By default, the root directory of the source code (`.`). For more details, see the Docker [build command documentation](https://docs.docker.com/engine/reference/commandline/build/).
 
 ### Configuring Building and Publishing Images by YAML
 
@@ -130,7 +130,6 @@ PLUGIN_MIRROR           | Docker daemon registry mirror
 PLUGIN_INSECURE         | Docker daemon allows insecure registries
 PLUGIN_BUILD_ARGS       | Docker build args, a comma separated list
 
-<br>
 
 ```yaml
 # This example shows an environment variable being used
@@ -311,7 +310,7 @@ You can enable notifications to any notifiers based on the build status of a pip
 
 1. If you don't have any existing notifiers, Rancher will provide a warning that no notifiers are set up and provide a link to be able to go to the notifiers page. Follow the [instructions](https://rancher.com/docs/rancher/v2.0-v2.4/en/cluster-admin/tools/notifiers) to add a notifier. If you  already have notifiers, you can add them to the notification by clicking the **Add Recipient** button.
 
-    > **Note:** Notifiers are configured at a cluster level and require a different level of permissions.
+    \> **Note:** Notifiers are configured at a cluster level and require a different level of permissions.
 
 1. For each recipient, select which notifier type from the dropdown. Based on the type of notifier, you can use the default recipient or override the recipient with a different one. For example, if you have a notifier for _Slack_, you can update which channel to send the notification to. You can add additional notifiers by clicking **Add Recipient**.
 
@@ -380,11 +379,11 @@ This section covers the following topics:
 
 ### Configuring Pipeline Triggers
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
-1. From the repository for which you want to manage trigger rules, select the vertical **⋮ > Edit Config**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
+1. From the repository for which you want to manage trigger rules, select the vertical **⋮ \> Edit Config**.
 1. Click on **Show Advanced Options**.
 1. In the **Trigger Rules** section, configure rules to run or skip the pipeline.
 
@@ -396,11 +395,11 @@ This section covers the following topics:
 
 ### Configuring Stage Triggers
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
-1. From the repository for which you want to manage trigger rules, select the vertical **⋮ > Edit Config**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
+1. From the repository for which you want to manage trigger rules, select the vertical **⋮ \> Edit Config**.
 1. Find the **stage** that you want to manage trigger rules, click the **Edit** icon for that stage.
 1. Click **Show advanced options**.
 1. In the **Trigger Rules** section, configure rules to run or skip the stage.
@@ -418,11 +417,11 @@ This section covers the following topics:
 
 ### Configuring Step Triggers
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
-1. From the repository for which you want to manage trigger rules, select the vertical **⋮ > Edit Config**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
+1. From the repository for which you want to manage trigger rules, select the vertical **⋮ \> Edit Config**.
 1. Find the **step** that you want to manage trigger rules, click the **Edit** icon for that step.
 1. Click **Show advanced options**.
 1. In the **Trigger Rules** section, configure rules to run or skip the step.
@@ -470,11 +469,11 @@ When configuring a pipeline, certain [step types](#step-types) allow you to use 
 
 ### Configuring Environment Variables by UI
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
-1. From the pipeline for which you want to edit build triggers, select **⋮ > Edit Config**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
+1. From the pipeline for which you want to edit build triggers, select **⋮ \> Edit Config**.
 1. Within one of the stages, find the **step** that you want to add an environment variable for, click the **Edit** icon.
 1. Click **Show advanced options**.
 1. Click **Add Variable**, and then enter a key and value in the fields that appear. Add more variables if needed.
@@ -502,17 +501,16 @@ If you need to use security-sensitive information in your pipeline scripts (like
 
 ### Prerequisite
 Create a secret in the same project as your pipeline, or explicitly in the namespace where pipeline build pods run.
-<br>
 
->**Note:** Secret injection is disabled on [pull request events](#triggers-and-trigger-rules).
+\>**Note:** Secret injection is disabled on [pull request events](#triggers-and-trigger-rules).
 
 ### Configuring Secrets by UI
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
-1. From the pipeline for which you want to edit build triggers, select **⋮ > Edit Config**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
+1. From the pipeline for which you want to edit build triggers, select **⋮ \> Edit Config**.
 1. Within one of the stages, find the **step** that you want to use a secret for, click the **Edit** icon.
 1. Click **Show advanced options**.
 1. Click **Add From Secret**. Select the secret file that you want to use. Then choose a key. Optionally, you can enter an alias for the key.
@@ -552,7 +550,7 @@ Variable Name           | Description
 `CICD_EXECUTION_SEQUENCE` | Build number of the pipeline.
 `CICD_EXECUTION_ID`       | Combination of `{CICD_PIPELINE_ID}-{CICD_EXECUTION_SEQUENCE}`.
 `CICD_REGISTRY`           | Address for the Docker registry for the previous publish image step, available in the Kubernetes manifest file of a `Deploy YAML` step.
-`CICD_IMAGE`              | Name of the image built from the previous publish image step, available in the Kubernetes manifest file of a `Deploy YAML` step. It does not contain the image tag.<br/><br/> [Example](https://github.com/rancher/pipeline-example-go/blob/master/deployment.yaml)
+`CICD_IMAGE`              | Name of the image built from the previous publish image step, available in the Kubernetes manifest file of a `Deploy YAML` step. It does not contain the image tag. [Example](https://github.com/rancher/pipeline-example-go/blob/master/deployment.yaml)
 
 # Global Pipeline Execution Settings
 
@@ -560,18 +558,18 @@ After configuring a version control provider, there are several options that can
 
 ### Changing Pipeline Settings
 
-> **Prerequisite:** Because the pipelines app was deprecated in favor of Fleet, you will need to turn on the feature flag for legacy features before using pipelines. Note that pipelines in Kubernetes 1.21+ are no longer supported.
->
-> 1. In the upper left corner, click **☰ > Global Settings**.
-> 1. Click **Feature Flags**.
-> 1. Go to the `legacy` feature flag and click **⋮ > Activate**.
+\> **Prerequisite:** Because the pipelines app was deprecated in favor of Fleet, you will need to turn on the feature flag for legacy features before using pipelines. Note that pipelines in Kubernetes 1.21+ are no longer supported.
+\>
+\> 1. In the upper left corner, click **☰ \> Global Settings**.
+\> 1. Click **Feature Flags**.
+\> 1. Go to the `legacy` feature flag and click **⋮ \> Activate**.
 
 To edit these settings:
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to configure pipelines and click **Explore**.
 1. In the dropdown menu in the top navigation bar, select the project where you want to configure pipelines.
-1. In the left navigation bar, click **Legacy > Project > Pipelines**.
+1. In the left navigation bar, click **Legacy \> Project \> Pipelines**.
 
 - [Executor Quota](#executor-quota)
 - [Resource Quota for Executors](#resource-quota-for-executors)
@@ -620,7 +618,7 @@ stages:
       memoryLimit: 1Gi
 ```
 
->**Note:** Rancher sets default compute resources for pipeline steps except for `Build and Publish Images` and `Run Script` steps. You can override the default value by specifying compute resources in the same way.
+\>**Note:** Rancher sets default compute resources for pipeline steps except for `Build and Publish Images` and `Run Script` steps. You can override the default value by specifying compute resources in the same way.
 
 ### Custom CA  
 

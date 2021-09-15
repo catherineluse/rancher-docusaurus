@@ -7,18 +7,18 @@ weight: 3
 
 This section describes how to install a Kubernetes cluster. This cluster should be dedicated to run only the Rancher server.
 
-> Rancher can run on any Kubernetes cluster, included hosted Kubernetes solutions such as Amazon EKS. The below instructions represent only one possible way to install Kubernetes.
+\> Rancher can run on any Kubernetes cluster, included hosted Kubernetes solutions such as Amazon EKS. The below instructions represent only one possible way to install Kubernetes.
 
 The Rancher management server can only be run on Kubernetes cluster in an infrastructure provider where Kubernetes is installed using RKE or K3s. Use of Rancher on hosted Kubernetes providers, such as EKS, is not supported.
 
 For systems without direct internet access, refer to [Air Gap: Kubernetes install.](https://rancher.com/docs/rancher/v2.6/en/installation/other-installation-methods/air-gap/)
 
-> **Single-node Installation Tip:**
-> In a single-node Kubernetes cluster, the Rancher server does not have high availability, which is important for running Rancher in production. However, installing Rancher on a single-node cluster can be useful if you want to save resources by using a single node in the short term, while preserving a high-availability migration path.
->
-> To set up a single-node RKE cluster, configure only one node in the `cluster.yml` . The single node should have all three roles: `etcd`, `controlplane`, and `worker`.
->
-> In both single-node setups, Rancher can be installed with Helm on the Kubernetes cluster in the same way that it would be installed on any other cluster.
+\> **Single-node Installation Tip:**
+\> In a single-node Kubernetes cluster, the Rancher server does not have high availability, which is important for running Rancher in production. However, installing Rancher on a single-node cluster can be useful if you want to save resources by using a single node in the short term, while preserving a high-availability migration path.
+\>
+\> To set up a single-node RKE cluster, configure only one node in the `cluster.yml` . The single node should have all three roles: `etcd`, `controlplane`, and `worker`.
+\>
+\> In both single-node setups, Rancher can be installed with Helm on the Kubernetes cluster in the same way that it would be installed on any other cluster.
 
 # Installing Kubernetes
 
@@ -67,7 +67,7 @@ ingress:
     use-forwarded-headers: "true"
 ```
 
-<figcaption>Common RKE Nodes Options</figcaption>
+\<figcaption\>Common RKE Nodes Options\</figcaption\>
 
 | Option             | Required | Description                                                                            |
 | ------------------ | -------- | -------------------------------------------------------------------------------------- |
@@ -77,11 +77,11 @@ ingress:
 | `internal_address` | no       | The private DNS or IP address for internal cluster traffic                             |
 | `ssh_key_path`     | no       | Path to SSH private key used to authenticate to the node (defaults to `~/.ssh/id_rsa`) |
 
-> **Advanced Configurations:** RKE has many configuration options for customizing the install to suit your specific environment.
->
-> Please see the [RKE Documentation](https://rancher.com/docs/rke/latest/en/config-options/) for the full list of options and capabilities.
-> 
-> For tuning your etcd cluster for larger Rancher installations, see the [etcd settings guide](https://rancher.com/docs/rancher/v2.6/en/installation/resources/advanced/etcd/).
+\> **Advanced Configurations:** RKE has many configuration options for customizing the install to suit your specific environment.
+\>
+\> Please see the [RKE Documentation](https://rancher.com/docs/rke/latest/en/config-options/) for the full list of options and capabilities.
+\> 
+\> For tuning your etcd cluster for larger Rancher installations, see the [etcd settings guide](https://rancher.com/docs/rancher/v2.6/en/installation/resources/advanced/etcd/).
 
 ### 2. Run RKE
 
@@ -99,7 +99,7 @@ Assuming you have installed `kubectl`, you need to place the `kubeconfig` file i
 
 When you ran `rke up`, RKE should have created a `kubeconfig` file named `kube_config_rancher-cluster.yml`. This file has the credentials for `kubectl` and `helm`.
 
-> **Note:** If you have used a different file name from `rancher-cluster.yml`, then the kube config file will be named `kube_config_<FILE_NAME>.yml`.
+\> **Note:** If you have used a different file name from `rancher-cluster.yml`, then the kube config file will be named `kube_config_\<FILE_NAME\>.yml`.
 
 Move this file to `$HOME/.kube/config`, or if you are working with multiple Kubernetes clusters, set the `KUBECONFIG` environmental variable to the path of `kube_config_rancher-cluster.yml`:
 
@@ -149,16 +149,16 @@ This confirms that you have successfully installed a Kubernetes cluster that the
 
 ### 5. Save Your Files
 
-> **Important**
-> The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
+\> **Important**
+\> The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
 
 Save a copy of the following files in a secure location:
 
 - `rancher-cluster.yml`: The RKE cluster configuration file.
 - `kube_config_rancher-cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
-- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
+- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster._The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
 
-> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
+\> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 ### Issues or errors?
 

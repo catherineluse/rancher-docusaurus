@@ -49,7 +49,7 @@ Before you can set up Google OAuth in Rancher, you need to log in to your G Suit
 1. On the **Create Credentials** dropdown, select **OAuth client ID**.
 1. Click **Web application**.
 1. Provide a name.
-1. Fill out the **Authorized JavaScript origins** and **Authorized redirect URIs**. Note: The Rancher UI page for setting up Google OAuth (available from the Global view under **Security > Authentication > Google**) provides you the exact links to enter for this step.
+1. Fill out the **Authorized JavaScript origins** and **Authorized redirect URIs**. Note: The Rancher UI page for setting up Google OAuth (available from the Global view under **Security \> Authentication \> Google**) provides you the exact links to enter for this step.
  - Under **Authorized JavaScript origins,** enter your Rancher server URL.
  - Under **Authorized redirect URIs,** enter your Rancher server URL appended with the path `verify-auth`. For example, if your URI is `https://rancherServer`, you will enter `https://rancherServer/verify-auth`.
 1. Click on **Create**.
@@ -109,7 +109,7 @@ Using the Unique ID of the service account key, register it as an Oauth Client u
 # Configuring Google OAuth in Rancher
 
 1. Sign into Rancher using a local user assigned the [administrator](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions) role. This user is also called the local principal.
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **Google**. The instructions in the UI cover the steps to set up authentication with Google OAuth.
 	1. Admin Email: Provide the email of an administrator account from your GSuite setup. In order to perform user and group lookups, google apis require an administrator's email in conjunction with the service account key.

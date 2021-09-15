@@ -11,11 +11,11 @@ Populating the private registry with images is the same process for installing R
 
 The steps in this section differ depending on whether or not you are planning to use Rancher to provision a downstream cluster with Windows nodes or not. By default, we provide the steps of how to populate your private registry assuming that Rancher will provision downstream Kubernetes clusters with only Linux nodes. But if you plan on provisioning any [downstream Kubernetes clusters using Windows nodes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/), there are separate instructions to support the images needed.
 
-> **Prerequisites:**
->
-> You must have a [private registry](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry) available to use.
->
-> If the registry has certs, follow [this K3s documentation](https://rancher.com/docs/k3s/latest/en/installation/private-registry/) about adding a private registry. The certs and registry configuration files need to be mounted into the Rancher container.
+\> **Prerequisites:**
+\>
+\> You must have a [private registry](https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry) available to use.
+\>
+\> If the registry has certs, follow [this K3s documentation](https://rancher.com/docs/k3s/latest/en/installation/private-registry/) about adding a private registry. The certs and registry configuration files need to be mounted into the Rancher container.
 
 {{% tabs %}}
 {{% tab "Linux Only Clusters" %}}
@@ -47,19 +47,19 @@ If you will use ARM64 hosts, the registry must support manifests. As of April 20
 
 ### 2. Collect the cert-manager image
 
-> Skip this step if you are using your own certificates, or if you are terminating TLS on an external load balancer.
+\> Skip this step if you are using your own certificates, or if you are terminating TLS on an external load balancer.
 
 In a Kubernetes Install, if you elect to use the Rancher default self-signed TLS certificates, you must add the [`cert-manager`](https://hub.helm.sh/charts/jetstack/cert-manager) image to `rancher-images.txt` as well. 
 
 1.  Fetch the latest `cert-manager` Helm chart and parse the template for image details:
 
-    > **Note:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
+    \> **Note:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
 
     ```plain
     helm repo add jetstack https://charts.jetstack.io
     helm repo update
     helm fetch jetstack/cert-manager --version v1.5.1
-    helm template ./cert-manager-<version>.tgz | grep -oP '(?<=image: ").*(?=")' >> ./rancher-images.txt
+    helm template ./cert-manager-[version].tgz | grep -oP '(?\<=image: ").*(?=")' \>\> ./rancher-images.txt
     ```
 
 2.  Sort and unique the images list to remove any overlap between the sources:
@@ -91,7 +91,7 @@ The `rancher-images.txt` is expected to be on the workstation in the same direct
 
 1.  Log into your private registry if required:
    ```plain
-   docker login <REGISTRY.YOURDOMAIN.COM:PORT>
+   docker login [REGISTRY.YOURDOMAIN.COM:PORT]
    ```
 1.  Make `rancher-load-images.sh` an executable:
    ```
@@ -100,7 +100,7 @@ The `rancher-images.txt` is expected to be on the workstation in the same direct
 
 1.  Use `rancher-load-images.sh` to extract, tag and push `rancher-images.txt` and `rancher-images.tar.gz` to your private registry:
    ```plain
-   ./rancher-load-images.sh --image-list ./rancher-images.txt --registry <REGISTRY.YOURDOMAIN.COM:PORT>
+   ./rancher-load-images.sh --image-list ./rancher-images.txt --registry [REGISTRY.YOURDOMAIN.COM:PORT]
    ```
 {{% /tab %}}
 {{% tab "Linux and Windows Clusters" %}}
@@ -111,10 +111,10 @@ For Rancher servers that will provision Linux and Windows clusters, there are di
 
 The Windows images need to be collected and pushed from a Windows server workstation.
 
-1. <a href="#windows-1">Find the required assets for your Rancher version</a>
-2. <a href="#windows-2">Save the images to your Windows Server workstation</a>
-3. <a href="#windows-3">Prepare the Docker daemon</a>
-4. <a href="#windows-4">Populate the private registry</a>
+1. \<a href="#windows-1"\>Find the required assets for your Rancher version\</a\>
+2. \<a href="#windows-2"\>Save the images to your Windows Server workstation\</a\>
+3. \<a href="#windows-3"\>Prepare the Docker daemon\</a\>
+4. \<a href="#windows-4"\>Populate the private registry\</a\>
 
 ### Prerequisites
 
@@ -124,7 +124,7 @@ The workstation must have Docker 18.02+ in order to support manifests, which are
 
 Your registry must support manifests. As of April 2020, Amazon Elastic Container Registry does not support manifests.
 
-<a name="windows-1"></a>
+\<a name="windows-1"\>\</a\>
 
 ### 1. Find the required assets for your Rancher version
 
@@ -138,7 +138,7 @@ Your registry must support manifests. As of April 2020, Amazon Elastic Container
 | `rancher-save-images.ps1`    | This script pulls all the images in the `rancher-windows-images.txt` from Docker Hub and saves all of the images as `rancher-windows-images.tar.gz`. |
 | `rancher-load-images.ps1`    | This script loads the images from the `rancher-windows-images.tar.gz` file and pushes them to your private registry.                                 |
 
-<a name="windows-2"></a>
+\<a name="windows-2"\>\</a\>
 
 ### 2. Save the images to your Windows Server workstation
 
@@ -151,7 +151,7 @@ Your registry must support manifests. As of April 2020, Amazon Elastic Container
 
    **Result:** Docker begins pulling the images used for an air gap install. Be patient. This process takes a few minutes. When the process completes, your current directory will output a tarball named `rancher-windows-images.tar.gz`. Check that the output is in the directory.
 
-<a name="windows-3"></a>
+\<a name="windows-3"\>\</a\>
 
 ### 3. Prepare the Docker daemon
 
@@ -162,13 +162,13 @@ Append your private registry address to the `allow-nondistributable-artifacts` c
      ...
      "allow-nondistributable-artifacts": [
        ...
-       "<REGISTRY.YOURDOMAIN.COM:PORT>"
+       "[REGISTRY.YOURDOMAIN.COM:PORT]"
      ]
      ...
    }
    ```
 
-<a name="windows-4"></a>
+\<a name="windows-4"\>\</a\>
 
 ### 4. Populate the private registry
 
@@ -178,22 +178,22 @@ The `rancher-windows-images.txt` is expected to be on the workstation in the sam
 
 1. Using `powershell`, log into your private registry if required:
    ```plain
-   docker login <REGISTRY.YOURDOMAIN.COM:PORT>
+   docker login [REGISTRY.YOURDOMAIN.COM:PORT]
    ```
 
 1. Using `powershell`, use `rancher-load-images.ps1` to extract, tag and push the images from `rancher-images.tar.gz` to your private registry:
    ```plain
-   ./rancher-load-images.ps1 --registry <REGISTRY.YOURDOMAIN.COM:PORT>
+   ./rancher-load-images.ps1 --registry [REGISTRY.YOURDOMAIN.COM:PORT]
    ```
 
 # Linux Steps
 
 The Linux images need to be collected and pushed from a Linux host, but _must be done after_ populating the Windows images into the private registry. These step are different from the Linux only steps as the Linux images that are pushed will actually manifests that support Windows and Linux images.
 
-1. <a href="#linux-1">Find the required assets for your Rancher version</a>
-2. <a href="#linux-2">Collect all the required images</a>
-3. <a href="#linux-3">Save the images to your Linux workstation</a>
-4. <a href="#linux-4">Populate the private registry</a>
+1. \<a href="#linux-1"\>Find the required assets for your Rancher version\</a\>
+2. \<a href="#linux-2"\>Collect all the required images\</a\>
+3. \<a href="#linux-3"\>Save the images to your Linux workstation\</a\>
+4. \<a href="#linux-4"\>Populate the private registry\</a\>
 
 ### Prerequisites
 
@@ -203,7 +203,7 @@ These steps expect you to use a Linux workstation that has internet access, acce
 
 The workstation must have Docker 18.02+ in order to support manifests, which are required when provisioning Windows clusters.
 
-<a name="linux-1"></a>
+\<a name="linux-1"\>\</a\>
 
 ### 1. Find the required assets for your Rancher version
 
@@ -218,19 +218,19 @@ The workstation must have Docker 18.02+ in order to support manifests, which are
 | `rancher-save-images.sh`     | This script pulls all the images in the `rancher-images.txt` from Docker Hub and saves all of the images as `rancher-images.tar.gz`. |
 | `rancher-load-images.sh`     | This script loads images from the `rancher-images.tar.gz` file and pushes them to your private registry.                             |
 
-<a name="linux-2"></a>
+\<a name="linux-2"\>\</a\>
 
 ### 2. Collect all the required images
 
 **For Kubernetes Installs using Rancher Generated Self-Signed Certificate:** In a Kubernetes Install, if you elect to use the Rancher default self-signed TLS certificates, you must add the [`cert-manager`](https://hub.helm.sh/charts/jetstack/cert-manager) image to `rancher-images.txt` as well. You skip this step if you are using you using your own certificates.
 
 1. Fetch the latest `cert-manager` Helm chart and parse the template for image details:
-   > **Note:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
+   \> **Note:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.12.0, please see our [upgrade documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
    ```plain
    helm repo add jetstack https://charts.jetstack.io
    helm repo update
    helm fetch jetstack/cert-manager --version v0.12.0
-   helm template ./cert-manager-<version>.tgz | grep -oP '(?<=image: ").*(?=")' >> ./rancher-images.txt
+   helm template ./cert-manager-[version].tgz | grep -oP '(?\<=image: ").*(?=")' \>\> ./rancher-images.txt
    ```
 
 2. Sort and unique the images list to remove any overlap between the sources:
@@ -238,7 +238,7 @@ The workstation must have Docker 18.02+ in order to support manifests, which are
    sort -u rancher-images.txt -o rancher-images.txt
    ```
 
-<a name="linux-3"></a>
+\<a name="linux-3"\>\</a\>
 
 ### 3. Save the images to your workstation
 
@@ -254,7 +254,7 @@ The workstation must have Docker 18.02+ in order to support manifests, which are
 
 **Result:** Docker begins pulling the images used for an air gap install. Be patient. This process takes a few minutes. When the process completes, your current directory will output a tarball named `rancher-images.tar.gz`. Check that the output is in the directory.
 
-<a name="linux-4"></a>
+\<a name="linux-4"\>\</a\>
 
 ### 4. Populate the private registry
 
@@ -264,7 +264,7 @@ The image list, `rancher-images.txt` or `rancher-windows-images.txt`, is expecte
 
 1. Log into your private registry if required:
    ```plain
-   docker login <REGISTRY.YOURDOMAIN.COM:PORT>
+   docker login [REGISTRY.YOURDOMAIN.COM:PORT]
    ```
 
 1. Make `rancher-load-images.sh` an executable:
@@ -277,7 +277,7 @@ The image list, `rancher-images.txt` or `rancher-windows-images.txt`, is expecte
 ```plain
 ./rancher-load-images.sh --image-list ./rancher-images.txt \
    --windows-image-list ./rancher-windows-images.txt \
-   --registry <REGISTRY.YOURDOMAIN.COM:PORT>
+   --registry [REGISTRY.YOURDOMAIN.COM:PORT]
 ```
 
 

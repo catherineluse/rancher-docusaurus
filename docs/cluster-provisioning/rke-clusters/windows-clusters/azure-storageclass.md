@@ -37,5 +37,5 @@ In order to have the Azure platform create the required storage resources, follo
 1.  Create these in your cluster using one of the follow command.
 
     ```
-    # kubectl create -f <MANIFEST>
+    # kubectl create -f \<MANIFEST\>
     ```

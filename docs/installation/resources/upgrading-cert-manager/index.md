@@ -14,20 +14,20 @@ To address these changes, this guide will do two things:
 1. Document the procedure for upgrading cert-manager
 1. Explain the cert-manager API changes and link to cert-manager's official documentation for migrating your data
 
-> **Important:**
-> If you are currently running the cert-manger whose version is older than v0.11, and want to upgrade both Rancher and cert-manager to a newer version, you need to reinstall both of them:
+\> **Important:**
+\> If you are currently running the cert-manger whose version is older than v0.11, and want to upgrade both Rancher and cert-manager to a newer version, you need to reinstall both of them:
 
-> 1. Take a one-time snapshot of your Kubernetes cluster running Rancher server
-> 2. Uninstall Rancher, cert-manager, and the CustomResourceDefinition for cert-manager
-> 3. Install the newer version of Rancher and cert-manager 
+\> 1. Take a one-time snapshot of your Kubernetes cluster running Rancher server
+\> 2. Uninstall Rancher, cert-manager, and the CustomResourceDefinition for cert-manager
+\> 3. Install the newer version of Rancher and cert-manager 
 
-> The reason is that when Helm upgrades Rancher, it will reject the upgrade and show error messages if the running Rancher app does not match the chart template used to install it. Because cert-manager changed its API group and we cannot modify released charts for Rancher, there will always be a mismatch on the cert-manager's API version, therefore the upgrade will be rejected.
+\> The reason is that when Helm upgrades Rancher, it will reject the upgrade and show error messages if the running Rancher app does not match the chart template used to install it. Because cert-manager changed its API group and we cannot modify released charts for Rancher, there will always be a mismatch on the cert-manager's API version, therefore the upgrade will be rejected.
 
 # Upgrade Cert-Manager
 
 The namespace used in these instructions depends on the namespace cert-manager is currently installed in. If it is in kube-system use that in the instructions below. You can verify by running `kubectl get pods --all-namespaces` and checking which namespace the cert-manager-\* pods are listed in. Do not change the namespace cert-manager is running in or this can cause issues.
 
-> These instructions have been updated for Helm 3. If you are still using Helm 2, refer to [these instructions.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/helm-2-instructions)
+\> These instructions have been updated for Helm 3. If you are still using Helm 2, refer to [these instructions.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/helm-2-instructions)
 
 In order to upgrade cert-manager, follow these instructions:
 
@@ -38,11 +38,11 @@ In order to upgrade cert-manager, follow these instructions:
 
     ```plain
     kubectl get -o yaml --all-namespaces \
-    issuer,clusterissuer,certificates,certificaterequests > cert-manager-backup.yaml
+    issuer,clusterissuer,certificates,certificaterequests \> cert-manager-backup.yaml
     ```
 
-    > **Important:**
-    > If you are upgrading from a version older than 0.11.0, Update the apiVersion on all your backed up resources from `certmanager.k8s.io/v1alpha1` to `cert-manager.io/v1alpha2`. If you use any cert-manager annotations on any of your other resources, you will need to update them to reflect the new API group. For details, refer to the documentation on [additional annotation changes.](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/#additional-annotation-changes)
+    \> **Important:**
+    \> If you are upgrading from a version older than 0.11.0, Update the apiVersion on all your backed up resources from `certmanager.k8s.io/v1alpha1` to `cert-manager.io/v1alpha2`. If you use any cert-manager annotations on any of your other resources, you will need to update them to reflect the new API group. For details, refer to the documentation on [additional annotation changes.](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/#additional-annotation-changes)
 
 1. [Uninstall existing deployment](https://cert-manager.io/docs/installation/uninstall/kubernetes/#uninstalling-with-helm)
 
@@ -62,8 +62,8 @@ In order to upgrade cert-manager, follow these instructions:
     kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/vX.Y.Z/cert-manager.crds.yaml
     ```
 
-    > **Note:**
-    > If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false` flag to your `kubectl apply` command above. Otherwise, you will receive a validation error relating to the `x-kubernetes-preserve-unknown-fields` field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation.
+    \> **Note:**
+    \> If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false` flag to your `kubectl apply` command above. Otherwise, you will receive a validation error relating to the `x-kubernetes-preserve-unknown-fields` field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation.
 
 1. Create the namespace for cert-manager if needed
 
@@ -130,9 +130,9 @@ Before you can perform the upgrade, you must prepare your air gapped environment
     ```plain
     helm template cert-manager ./cert-manager-v0.12.0.tgz --output-dir . \
     --namespace cert-manager \
-    --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller
-    --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook
-    --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
+    --set image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-controller
+    --set webhook.image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-webhook
+    --set cainjector.image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-cainjector
     ```
 
     The Helm 2 command is as follows:
@@ -140,9 +140,9 @@ Before you can perform the upgrade, you must prepare your air gapped environment
     ```plain
     helm template ./cert-manager-v0.12.0.tgz --output-dir . \
     --name cert-manager --namespace cert-manager \
-    --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller
-    --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook
-    --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
+    --set image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-controller
+    --set webhook.image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-webhook
+    --set cainjector.image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-cainjector
     ```
 
 1. Download the required CRD file for cert-manager (old and new)
@@ -158,11 +158,11 @@ Before you can perform the upgrade, you must prepare your air gapped environment
 
     ```plain
     kubectl get -o yaml --all-namespaces \
-    issuer,clusterissuer,certificates,certificaterequests > cert-manager-backup.yaml
+    issuer,clusterissuer,certificates,certificaterequests \> cert-manager-backup.yaml
     ```
 
-    > **Important:**
-    > If you are upgrading from a version older than 0.11.0, Update the apiVersion on all your backed up resources from `certmanager.k8s.io/v1alpha1` to `cert-manager.io/v1alpha2`. If you use any cert-manager annotations on any of your other resources, you will need to update them to reflect the new API group. For details, refer to the documentation on [additional annotation changes.](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/#additional-annotation-changes)
+    \> **Important:**
+    \> If you are upgrading from a version older than 0.11.0, Update the apiVersion on all your backed up resources from `certmanager.k8s.io/v1alpha1` to `cert-manager.io/v1alpha2`. If you use any cert-manager annotations on any of your other resources, you will need to update them to reflect the new API group. For details, refer to the documentation on [additional annotation changes.](https://cert-manager.io/docs/installation/upgrading/upgrading-0.10-0.11/#additional-annotation-changes)
 
 1. Delete the existing cert-manager installation
 
@@ -184,8 +184,8 @@ Before you can perform the upgrade, you must prepare your air gapped environment
     kubectl apply -f cert-manager/cert-manager-crd.yaml
     ```
 
-    > **Note:**
-    > If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false` flag to your `kubectl apply` command above. Otherwise, you will receive a validation error relating to the `x-kubernetes-preserve-unknown-fields` field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation.
+    \> **Note:**
+    \> If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false` flag to your `kubectl apply` command above. Otherwise, you will receive a validation error relating to the `x-kubernetes-preserve-unknown-fields` field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation.
 
 1. Create the namespace for cert-manager
 

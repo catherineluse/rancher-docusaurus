@@ -23,7 +23,7 @@ This section describes how projects and namespaces work with Rancher. It covers 
 
 A namespace is a concept introduced by Kubernetes. According to the [official Kubernetes documentation on namespaces,](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
-> Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces. [...] Namespaces are intended for use in environments with many users spread across multiple teams, or projects. For clusters with a few to tens of users, you should not need to create or think about namespaces at all.
+\> Kubernetes supports multiple virtual clusters backed by the same physical cluster. These virtual clusters are called namespaces. [...] Namespaces are intended for use in environments with many users spread across multiple teams, or projects. For clusters with a few to tens of users, you should not need to create or think about namespaces at all.
 
 Namespaces provide the following functionality:
 
@@ -92,7 +92,7 @@ If you require another level of organization beyond the **Default** project, you
 
 When troubleshooting, you can view the `system` project to check if important namespaces in the Kubernetes system are working properly. This easily accessible project saves you from troubleshooting individual system namespace containers.
 
-To open it, open the cluster view and click **Cluster > Projects/Namespaces**. This view shows all of the namespaces in the `system` project.
+To open it, open the cluster view and click **Cluster \> Projects/Namespaces**. This view shows all of the namespaces in the `system` project.
 
 The `system` project:
 
@@ -101,7 +101,7 @@ The `system` project:
 - Allows you to add more namespaces or move its namespaces to other projects.
 - Cannot be deleted because it's required for cluster operations.
 
->**Note:** In RKE clusters where the project network isolation option is enabled, the `system` project overrides the project network isolation option so that it can communicate with other projects, collect logs, and check health.
+\>**Note:** In RKE clusters where the project network isolation option is enabled, the `system` project overrides the project network isolation option so that it can communicate with other projects, collect logs, and check health.
 
 # Project Authorization
 
@@ -125,9 +125,9 @@ This section describes how to create a new project with a name and with optional
 
 ### 1. Name a New Project
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster you want to project in and click **Explore**.
-1. Click **Cluster > Projects/Namespaces**.
+1. Click **Cluster \> Projects/Namespaces**.
 1. Click **Create Project**.
 1. Enter a **Project Name**.
 
@@ -147,10 +147,10 @@ Use the **Members** section to provide other users with project access and roles
 
 By default, your user is added as the project `Owner`.
 
->**Notes on Permissions:**
->
->- Users assigned the `Owner` or `Member` role for a project automatically inherit the `namespace creation` role. However, this role is a [Kubernetes ClusterRole](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole), meaning its scope extends to all projects in the cluster. Therefore, users explicitly assigned the `Owner` or `Member` role for a project can create namespaces in other projects they're assigned to, even with only the `Read Only` role assigned.
->- Choose `Custom` to create a custom role on the fly: [Custom Project Roles](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#custom-project-roles).
+\>**Notes on Permissions:**
+\>
+\>- Users assigned the `Owner` or `Member` role for a project automatically inherit the `namespace creation` role. However, this role is a [Kubernetes ClusterRole](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole), meaning its scope extends to all projects in the cluster. Therefore, users explicitly assigned the `Owner` or `Member` role for a project can create namespaces in other projects they're assigned to, even with only the `Read Only` role assigned.
+\>- Choose `Custom` to create a custom role on the fly: [Custom Project Roles](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/cluster-project-roles/#custom-project-roles).
 
 To add members:
 

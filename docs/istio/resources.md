@@ -9,7 +9,7 @@ The CPU and memory allocations for each component are [configurable.](#configuri
 
 Before enabling Istio, we recommend that you confirm that your Rancher worker nodes have enough CPU and memory to run all of the components of Istio.
 
-> **Tip:** In larger deployments, it is strongly advised that the infrastructure be placed on dedicated nodes in the cluster by adding a node selector for each Istio component.
+\> **Tip:** In larger deployments, it is strongly advised that the infrastructure be placed on dedicated nodes in the cluster by adding a node selector for each Istio component.
 
 The table below shows a summary of the minimum recommended resource requests and limits for the CPU and memory of each core Istio component.
 
@@ -33,11 +33,11 @@ You can find more information about Istio configuration in the [official Istio d
 
 To configure the resources allocated to an Istio component,
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. In the left navigation bar, click **Apps & Marketplace**.
 1. Click **Installed Apps**.
-1. Go to the `istio-system` namespace. In one of the Istio workloads, such as `rancher-istio`, click **⋮ > Edit/Upgrade**.
+1. Go to the `istio-system` namespace. In one of the Istio workloads, such as `rancher-istio`, click **⋮ \> Edit/Upgrade**.
 1. Click **Upgrade** to edit the base components via changes to the values.yaml or add an [overlay file](https://rancher.com/docs/rancher/v2.6/en/istio/configuration-reference/#overlay-file). For more information about editing the overlay file, see [this section.](./#editing-the-overlay-file)
 1. Change the CPU or memory allocations, the nodes where each component will be scheduled to, or the node tolerations.
 1. Click **Upgrade**. to rollout changes

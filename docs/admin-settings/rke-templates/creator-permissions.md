@@ -24,9 +24,9 @@ Administrators can give users permission to create RKE templates in two ways:
 
 An administrator can individually grant the role **Create RKE Templates** to any existing user by following these steps:
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Users**.
-1. Choose the user you want to edit and click **⋮ > Edit Config**.
+1. Choose the user you want to edit and click **⋮ \> Edit Config**.
 1. In the **Built-in** section, check the box for **Create new RKE Cluster Templates** role along with any other roles the user should have. You may want to also check the box for **Create RKE Template Revisions**.
 1. Click **Save**.
 
@@ -36,9 +36,9 @@ An administrator can individually grant the role **Create RKE Templates** to any
 
 Alternatively, the administrator can give all new users the default permission to create RKE templates by following the following steps. This will not affect the permissions of existing users.
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
-1. Go to the role named **Create new RKE Cluster Templates and click **⋮ > Edit Config**.
+1. Go to the role named **Create new RKE Cluster Templates and click **⋮ \> Edit Config**.
 1. Select the option **Yes: Default role for new users**.
 1. Click **Save**.
 1. If you would like new users to also be able to create RKE template revisions, enable that role as default as well.
@@ -49,9 +49,9 @@ Alternatively, the administrator can give all new users the default permission t
 
 Administrators can remove a user's permission to create templates with the following steps. Note: Administrators have full control over all resources regardless of whether fine-grained permissions are selected.
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Users**.
-1. Choose the user you want to edit permissions for and click **⋮ > Edit Config**.
+1. Choose the user you want to edit permissions for and click **⋮ \> Edit Config**.
 1. In the **Built-in** section, un-check the box for **Create RKE Templates** and **Create RKE Template Revisions,** if applicable. In this section, you can change the user back to a standard user, or give the user a different set of permissions.
 1. Click **Save**.
 

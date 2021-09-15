@@ -11,7 +11,7 @@ This page covers the following topics:
 - [Managing clusters in Rancher](#managing-clusters-in-rancher)
 - [Configuring tools](#configuring-tools)
 
-> This section assumes a basic familiarity with Docker and Kubernetes. For a brief explanation of how Kubernetes components work together, refer to the [concepts](https://rancher.com/docs/rancher/v2.6/en/overview/concepts) page.
+\> This section assumes a basic familiarity with Docker and Kubernetes. For a brief explanation of how Kubernetes components work together, refer to the [concepts](https://rancher.com/docs/rancher/v2.6/en/overview/concepts) page.
 
 ## Managing Clusters in Rancher
 

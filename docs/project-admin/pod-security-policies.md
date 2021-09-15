@@ -3,7 +3,7 @@ title: Pod Security Policies
 weight: 5600
 ---
 
-> These cluster options are only available for [clusters in which Rancher has launched Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/).  
+\> These cluster options are only available for [clusters in which Rancher has launched Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/).  
 
 You can always assign a pod security policy (PSP) to an existing project if you didn't assign one during creation.
 
@@ -14,10 +14,10 @@ You can always assign a pod security policy (PSP) to an existing project if you 
 
 ### Applying a Pod Security Policy
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to move a namespace and click **Explore**.
-1. Click **Cluster > Projects/Namespaces**.
-1. Find the project that you want to add a PSP to. From that project, select **⋮ > Edit Config**.
+1. Click **Cluster \> Projects/Namespaces**.
+1. Find the project that you want to add a PSP to. From that project, select **⋮ \> Edit Config**.
 1. From the **Pod Security Policy** drop-down, select the PSP you want to apply to the project.
   Assigning a PSP to a project will:
 
@@ -29,4 +29,4 @@ You can always assign a pod security policy (PSP) to an existing project if you 
 
 **Result:** The PSP is applied to the project and any namespaces added to the project.
 
->**Note:** Any workloads that are already running in a cluster or project before a PSP is assigned will not be checked to determine if they comply with the PSP. Workloads would need to be cloned or upgraded to see if they pass the PSP.
+\>**Note:** Any workloads that are already running in a cluster or project before a PSP is assigned will not be checked to determine if they comply with the PSP. Workloads would need to be cloned or upgraded to see if they pass the PSP.

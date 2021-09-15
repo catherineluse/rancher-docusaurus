@@ -3,7 +3,7 @@ title: '3. Install Kubernetes (Skip for Docker Installs)'
 weight: 300
 ---
 
-> Skip this section if you are installing Rancher on a single node with Docker.
+\> Skip this section if you are installing Rancher on a single node with Docker.
 
 This section describes how to install a Kubernetes cluster according to our [best practices for the Rancher server environment.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture-recommendations/#environment-for-kubernetes-installations) This cluster should be dedicated to run only the Rancher server.
 
@@ -50,9 +50,9 @@ configs:
       username: xxxxxx # this is the registry username
       password: xxxxxx # this is the registry password
     tls:
-      cert_file: <path to the cert file used in the registry>
-      key_file:  <path to the key file used in the registry>
-      ca_file: <path to the ca file used in the registry>
+      cert_file: \<path to the cert file used in the registry\>
+      key_file:  \<path to the key file used in the registry\>
+      ca_file: \<path to the ca file used in the registry\>
 ```
 
 Note, at this time only secure registries are supported with K3s (SSL with custom CA).
@@ -86,7 +86,7 @@ INSTALL_K3S_SKIP_DOWNLOAD=true K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetok
 Note, take care to ensure you replace `myserver` with the IP or valid DNS of the server and replace `mynodetoken` with the node-token from the server.
 The node-token is on the server at `/var/lib/rancher/k3s/server/node-token`
 
->**Note:** K3s additionally provides a `--resolv-conf` flag for kubelets, which may help with configuring DNS in air-gap networks.
+\>**Note:** K3s additionally provides a `--resolv-conf` flag for kubelets, which may help with configuring DNS in air-gap networks.
 
 ### 4. Save and Start Using the kubeconfig File
 
@@ -151,19 +151,19 @@ This file is an RKE configuration file, which is a configuration for the cluster
 
 Replace values in the code sample below with help of the _RKE Options_ table. Use the IP address or DNS names of the three nodes you created.
 
-> **Tip:** For more details on the options available, see the RKE [Config Options](https://rancher.com/docs/rke/latest/en/config-options/).
+\> **Tip:** For more details on the options available, see the RKE [Config Options](https://rancher.com/docs/rke/latest/en/config-options/).
 
-<figcaption>RKE Options</figcaption>
+\<figcaption\>RKE Options\</figcaption\>
 
 | Option             | Required             | Description                                                                             |
 | ------------------ | -------------------- | --------------------------------------------------------------------------------------- |
 | `address`          | ✓                    | The DNS or IP address for the node within the air gapped network.                          |
 | `user`             | ✓                    | A user that can run Docker commands.                                                    |
 | `role`             | ✓                    | List of Kubernetes roles assigned to the node.                                          |
-| `internal_address` | optional<sup>1</sup> | The DNS or IP address used for internal cluster traffic.                                |
+| `internal_address` | optional\<sup\>1\</sup\> | The DNS or IP address used for internal cluster traffic.                                |
 | `ssh_key_path`     |                      | Path to the SSH private key used to authenticate to the node (defaults to `~/.ssh/id_rsa`). |
 
-> <sup>1</sup> Some services like AWS EC2 require setting the `internal_address` if you want to use self-referencing security groups or firewalls.
+\> \<sup\>1\</sup\> Some services like AWS EC2 require setting the `internal_address` if you want to use self-referencing security groups or firewalls.
 
 ```yaml
 nodes:
@@ -184,7 +184,7 @@ nodes:
     ssh_key_path: /home/user/.ssh/id_rsa
 
 private_registries:
-  - url: <REGISTRY.YOURDOMAIN.COM:PORT> # private registry url
+  - url: [REGISTRY.YOURDOMAIN.COM:PORT] # private registry url
     user: rancher
     password: '*********'
     is_default: true
@@ -200,18 +200,18 @@ rke up --config ./rancher-cluster.yml
 
 ### 4. Save Your Files
 
-> **Important**
-> The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
+\> **Important**
+\> The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
 
 Save a copy of the following files in a secure location:
 
 - `rancher-cluster.yml`: The RKE cluster configuration file.
 - `kube_config_rancher-cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
-- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates.<br/><br/>_The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
+- `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates._The Kubernetes Cluster State file is only created when using RKE v0.2.0 or higher._
 {{% /tab %}}
 {{% /tabs %}}
 
-> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
+\> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 ### Issues or errors?
 

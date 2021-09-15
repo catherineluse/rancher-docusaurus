@@ -27,7 +27,7 @@ The API is generally RESTful but has several features to make the definition of 
 
 - So the theory is that you can load just the list of schemas and know everything about the API.  This is in fact how the UI for the API works, it contains no code specific to Rancher itself.  The URL to get Schemas is sent in every HTTP response as a `X-Api-Schemas` header.  From there you can follow the `collection` link on each schema to know where to list resources, and other `links` inside of the returned resources to get any other information.
 
-- In practice, you will probably just want to construct URL strings.  We highly suggest limiting this to the top-level to list a collection (`/v3/<type>`) or get a specific resource (`/v3/<type>/<id>`).  Anything deeper than that is subject to change in future releases.
+- In practice, you will probably just want to construct URL strings.  We highly suggest limiting this to the top-level to list a collection (`/v3/\<type\>`) or get a specific resource (`/v3/\<type\>/\<id\>`).  Anything deeper than that is subject to change in future releases.
 
 - Resources have relationships between each other called links.  Each resource includes a map of `links` with the name of the link and the URL to retrieve that information.  Again you should `GET` the resource and then follow the URL in the `links` map, not construct these strings yourself.
 
@@ -37,7 +37,7 @@ The API is generally RESTful but has several features to make the definition of 
 
 - To delete a resource, send a HTTP `DELETE` to the `links.remove` link on the resource.  If the link is missing then you don't have permission to update the resource.
 
-- To create a new resource, HTTP `POST` to the collection URL in the schema (which is `/v3/<type>`).
+- To create a new resource, HTTP `POST` to the collection URL in the schema (which is `/v3/\<type\>`).
 
 ## Filtering
 

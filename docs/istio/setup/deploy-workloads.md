@@ -3,16 +3,16 @@ title: 3. Add Deployments and Services with the Istio Sidecar
 weight: 4
 ---
 
-> **Prerequisite:** To enable Istio for a workload, the cluster and namespace must have the Istio app installed.  
+\> **Prerequisite:** To enable Istio for a workload, the cluster and namespace must have the Istio app installed.  
 
 Enabling Istio in a namespace only enables automatic sidecar injection for new workloads. To enable the Envoy sidecar for existing workloads, you need to enable it manually for each workload.
 
 To inject the Istio sidecar on an existing workload in the namespace,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the visualizations and click **Explore**.
 1. Click **Workload**.
-1. Go to the workload where you want to inject the Istio sidecar and click **⋮ > Redeploy**. When the workload is redeployed, it will have the Envoy sidecar automatically injected.
+1. Go to the workload where you want to inject the Istio sidecar and click **⋮ \> Redeploy**. When the workload is redeployed, it will have the Envoy sidecar automatically injected.
 
 Wait a few minutes for the workload to upgrade to have the istio sidecar. Click it and go to the Containers section. You should be able to see `istio-proxy` alongside your original workload. This means the Istio sidecar is enabled for the workload. Istio is doing all the wiring for the sidecar envoy. Now Istio can do all the features automatically if you enable them in the yaml.
 
@@ -20,7 +20,7 @@ Wait a few minutes for the workload to upgrade to have the istio sidecar. Click 
 
 There are a few ways to add new **Deployments** in your namespace:
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. Click **Workload**.
 1. Click **Create**.
@@ -30,9 +30,9 @@ There are a few ways to add new **Deployments** in your namespace:
 
 To add a **Service** to your namespace:
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
-1. Click **Service Discovery > Services**.
+1. Click **Service Discovery \> Services**.
 1. Click **Create**.
 1. Select the type of service that you want.
 1. Fill out the form, or **Edit as Yaml**.
@@ -40,17 +40,17 @@ To add a **Service** to your namespace:
 
 You can also create deployments and services using the kubectl **shell**
 
-1. Run `kubectl create -f <name of service/deployment file>.yaml` if your file is stored locally in the cluster
-1. Or run `cat<< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command. 
+1. Run `kubectl create -f \<name of service/deployment file\>.yaml` if your file is stored locally in the cluster
+1. Or run `cat\<\< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command. 
 
 ### Example Deployments and Services
 
 Next we add the Kubernetes resources for the sample deployments and services for the BookInfo app in Istio's documentation.
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. In the top navigation bar, open the kubectl shell.
-1. Run `cat<< EOF | kubectl apply -f -`
+1. Run `cat\<\< EOF | kubectl apply -f -`
 1. Copy the below resources into the the shell.
 1. Run `EOF`
 

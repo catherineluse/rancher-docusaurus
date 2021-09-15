@@ -7,9 +7,9 @@ If your organization uses Microsoft Active Directory as central user repository,
 
 Rancher uses LDAP to communicate with the Active Directory server. The authentication flow for Active Directory is therefore the same as for the [OpenLDAP authentication](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/openldap) integration.
 
-> **Note:**
->
-> Before you start, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-authentication-configuration-and-principal-users).
+\> **Note:**
+\>
+\> Before you start, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-authentication-configuration-and-principal-users).
 
 ## Prerequisites
 
@@ -19,15 +19,15 @@ Usually a (non-admin) **Domain User** account should be used for this purpose, a
 
 Note however, that in some locked-down Active Directory configurations this default behaviour may not apply. In such case you will need to ensure that the service account user has at least **Read** and **List Content** permissions granted either on the Base OU (enclosing users and groups) or globally for the domain.
 
-> **Using TLS?**
->
-> If the certificate used by the AD server is self-signed or not from a recognized certificate authority, make sure have at hand the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to paste in this certificate during the configuration so that Rancher is able to validate the certificate chain.
+\> **Using TLS?**
+\>
+\> If the certificate used by the AD server is self-signed or not from a recognized certificate authority, make sure have at hand the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to paste in this certificate during the configuration so that Rancher is able to validate the certificate chain.
 
 ## Configuration Steps
 ### Open Active Directory Configuration
 
 1. Log into the Rancher UI using the initial local `admin` account.
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **ActiveDirectory**. The **Authentication Provider: ActiveDirectory** form will be displayed.
 1. Fill out the form. For help, refer to the details on configuration options below.
@@ -37,9 +37,9 @@ Note however, that in some locked-down Active Directory configurations this defa
 
 In the section titled `1. Configure an Active Directory server`,   complete the fields with the information specific to your Active Directory server. Please refer to the following table for detailed information on the required values for each parameter.
 
-> **Note:**
->
-> If you are unsure about the correct values to enter in the  user/group Search Base field, please refer to [Identify Search Base and Schema using ldapsearch](#annex-identify-search-base-and-schema-using-ldapsearch).
+\> **Note:**
+\>
+\> If you are unsure about the correct values to enter in the  user/group Search Base field, please refer to [Identify Search Base and Schema using ldapsearch](#annex-identify-search-base-and-schema-using-ldapsearch).
 
 **Table 1: AD Server parameters**
 
@@ -63,9 +63,9 @@ In the section titled `2. Customize Schema` you must provide Rancher with a corr
 
 Rancher uses LDAP queries to search for and retrieve information about users and groups within the Active Directory. The attribute mappings configured in this section are used to construct search filters and resolve group membership. It is therefore paramount that the provided settings reflect the reality of your AD domain.
 
-> **Note:**
->
-> If you are unfamiliar with the schema used in your Active Directory domain, please refer to [Identify Search Base and Schema using ldapsearch](#annex-identify-search-base-and-schema-using-ldapsearch) to determine the correct configuration values.
+\> **Note:**
+\>
+\> If you are unfamiliar with the schema used in your Active Directory domain, please refer to [Identify Search Base and Schema using ldapsearch](#annex-identify-search-base-and-schema-using-ldapsearch) to determine the correct configuration values.
 
 #### User Schema
 
@@ -80,7 +80,7 @@ The table below details the parameters for the user schema section configuration
 | Login Attribute | The attribute whose value matches the username part of credentials entered by your users when logging in to Rancher. If your users authenticate with their UPN (e.g. "jdoe@acme.com") as username then this field must normally be set to `userPrincipalName`. Otherwise for the old, NetBIOS-style logon names (e.g. "jdoe") it's usually `sAMAccountName`. |
 | User Member Attribute | The attribute containing the groups that a user is a member of. |
 | Search Attribute | When a user enters text to add users or groups in the UI, Rancher queries the AD server and attempts to match users by the attributes provided in this setting. Multiple attributes can be specified by separating them with the pipe ("\|") symbol. To match UPN usernames (e.g. jdoe@acme.com) you should usually set the value of this field to `userPrincipalName`. |
-| Search Filter | This filter gets applied to the list of users that is searched when Rancher attempts to add users to a site access list or tries to add members to clusters or projects. For example, a user search filter could be <code>(&#124;(memberOf=CN=group1,CN=Users,DC=testad,DC=rancher,DC=io)(memberOf=CN=group2,CN=Users,DC=testad,DC=rancher,DC=io))</code>. Note: If the search filter does not use [valid AD search syntax,](https://docs.microsoft.com/en-us/windows/win32/adsi/search-filter-syntax) the list of users will be empty.  |
+| Search Filter | This filter gets applied to the list of users that is searched when Rancher attempts to add users to a site access list or tries to add members to clusters or projects. For example, a user search filter could be \<code\>(&#124;(memberOf=CN=group1,CN=Users,DC=testad,DC=rancher,DC=io)(memberOf=CN=group2,CN=Users,DC=testad,DC=rancher,DC=io))\</code\>. Note: If the search filter does not use [valid AD search syntax,](https://docs.microsoft.com/en-us/windows/win32/adsi/search-filter-syntax) the list of users will be empty.  |
 | User Enabled Attribute | The attribute containing an integer value representing a bitwise enumeration of user account flags. Rancher uses this to determine if a user account is disabled. You should normally leave this set to the AD standard `userAccountControl`. |
 | Disabled Status Bitmask | This is the value of the `User Enabled Attribute` designating a disabled user account. You should normally leave this set to the default value of "2" as specified in the Microsoft Active Directory schema (see [here](https://docs.microsoft.com/en-us/windows/desktop/adschema/a-useraccountcontrol#remarks)). |
 
@@ -99,7 +99,7 @@ The table below details the parameters for the group schema configuration.
 | Group Member User Attribute | The name of the **user attribute** whose format matches the group members in the `Group Member Mapping Attribute`. |
 | Group Member Mapping Attribute | The name of the group attribute containing the members of a group. |
 | Search Attribute | Attribute used to construct search filters when adding groups to clusters or projects. See description of user schema `Search Attribute`. |
-| Search Filter | This filter gets applied to the list of groups that is searched when Rancher attempts to add groups to a site access list or tries to add groups to clusters or projects. For example, a group search filter could be <code>(&#124;(cn=group1)(cn=group2))</code>. Note: If the search filter does not use [valid AD search syntax,](https://docs.microsoft.com/en-us/windows/win32/adsi/search-filter-syntax) the list of groups will be empty. |
+| Search Filter | This filter gets applied to the list of groups that is searched when Rancher attempts to add groups to a site access list or tries to add groups to clusters or projects. For example, a group search filter could be \<code\>(&#124;(cn=group1)(cn=group2))\</code\>. Note: If the search filter does not use [valid AD search syntax,](https://docs.microsoft.com/en-us/windows/win32/adsi/search-filter-syntax) the list of groups will be empty. |
 | Group DN Attribute | The name of the group attribute whose format matches the values in the user attribute describing a the user's memberships. See  `User Member Attribute`. |
 | Nested Group Membership | This settings defines whether Rancher should resolve nested group memberships. Use only if your organisation makes use of these nested memberships (ie. you have groups that contain other groups as members. We advise avoiding nested groups when possible). |
 
@@ -109,9 +109,9 @@ The table below details the parameters for the group schema configuration.
 
 Once you have completed the configuration, proceed by testing the connection to the AD server **using your AD admin account**. If the test is successful, authentication with the configured Active Directory will be enabled implicitly with the account you test with set as admin.
 
-> **Note:**
->
-> The AD user pertaining to the credentials entered in this step will be mapped to the local principal account and assigned administrator privileges in Rancher. You should therefore make a conscious decision on which AD account you use to perform this step.
+\> **Note:**
+\>
+\> The AD user pertaining to the credentials entered in this step will be mapped to the local principal account and assigned administrator privileges in Rancher. You should therefore make a conscious decision on which AD account you use to perform this step.
 
 1. Enter the **username** and **password** for the AD account that should be mapped to the local principal account.
 2. Click **Authenticate with Active Directory** to finalise the setup.
@@ -121,9 +121,9 @@ Once you have completed the configuration, proceed by testing the connection to 
 - Active Directory authentication has been enabled.
 - You have been signed into Rancher as administrator using the provided AD credentials.
 
-> **Note:**
->
-> You will still be able to login using the locally configured `admin` account and password in case of a disruption of LDAP services.
+\> **Note:**
+\>
+\> You will still be able to login using the locally configured `admin` account and password in case of a disruption of LDAP services.
 
 ## Annex: Identify Search Base and Schema using ldapsearch
 
@@ -149,7 +149,7 @@ $ ldapsearch -x -D "acme\jdoe" -w "secret" -p 389 \
 
 This command performs an LDAP search with the search base set to the domain root (`-b "dc=acme,dc=com"`) and a filter targeting the user account (`sAMAccountNam=jdoe`), returning the attributes for said user:
 ```img
-{{< img "/img/rancher/ldapsearch-user.png" "LDAP User">}}
+{{ img "/img/rancher/ldapsearch-user.png" "LDAP User"}}
 ```
 Since in this case the user's DN is `CN=John Doe,CN=Users,DC=acme,DC=com` [5], we should configure the **User Search Base** with the parent node DN `CN=Users,DC=acme,DC=com`.
 
@@ -164,9 +164,9 @@ The output of the above `ldapsearch` query also allows to determine the correct 
 - `Login Attribute`: **sAMAccountName** [3]
 - `User Member Attribute`: **memberOf** [4]
 
-> **Note:**
->
-> If the AD users in our organisation were to authenticate with their UPN (e.g. jdoe@acme.com) instead of the short logon name, then we would have to set the `Login Attribute` to **userPrincipalName** instead.
+\> **Note:**
+\>
+\> If the AD users in our organisation were to authenticate with their UPN (e.g. jdoe@acme.com) instead of the short logon name, then we would have to set the `Login Attribute` to **userPrincipalName** instead.
 
 We'll also set the `Search Attribute` parameter to **sAMAccountName|name**. That way users can be added to clusters/projects in the Rancher UI either by entering their username or full name.
 
@@ -182,7 +182,7 @@ $ ldapsearch -x -D "acme\jdoe" -w "secret" -p 389 \
 
 This command will inform us on the attributes used for group objects:
 ```img
-{{< img "/img/rancher/ldapsearch-group.png" "LDAP Group">}}
+{{ img "/img/rancher/ldapsearch-group.png" "LDAP Group"}}
 ```
 Again, this allows us to determine the correct values to enter in the group schema configuration:
 

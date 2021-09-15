@@ -10,7 +10,7 @@ When a Route is changed, the Prometheus Operator regenerates the Alertmanager cu
 
 For more information about configuring routes, refer to the [official Alertmanager documentation.](https://www.prometheus.io/docs/alerting/latest/configuration/#route)
 
-> This section assumes familiarity with how monitoring components work together. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/how-monitoring-works)
+\> This section assumes familiarity with how monitoring components work together. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/how-monitoring-works)
 
 - [Route Restrictions](#route-restrictions)
 - [Route Configuration](#route-configuration)
@@ -44,7 +44,7 @@ The route needs to refer to a [receiver](#receiver-configuration) that has alrea
 
 | Field |    Default | Description |
 |-------|--------------|---------|
-| Group By |  N/a | The labels by which incoming alerts are grouped together. For example, `[ group_by: '[' <labelname>, ... ']' ]` Multiple alerts coming in for labels such as `cluster=A` and `alertname=LatencyHigh` can be batched into a single group. To aggregate by all possible labels, use the special value `'...'` as the sole label name, for example: `group_by: ['...']`  Grouping by `...` effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what you want, unless you have a very low alert volume or your upstream notification system performs its own grouping. |
+| Group By |  N/a | The labels by which incoming alerts are grouped together. For example, `[ group_by: '[' \<labelname\>, ... ']' ]` Multiple alerts coming in for labels such as `cluster=A` and `alertname=LatencyHigh` can be batched into a single group. To aggregate by all possible labels, use the special value `'...'` as the sole label name, for example: `group_by: ['...']`  Grouping by `...` effectively disables aggregation entirely, passing through all alerts as-is. This is unlikely to be what you want, unless you have a very low alert volume or your upstream notification system performs its own grouping. |
 | Group Wait | 30s | How long to wait to buffer alerts of the same group before sending initially. |
 | Group Interval | 5m | How long to wait before sending an alert that has been added to a group of alerts for which an initial notification has already been sent. |
 | Repeat Interval |  4h | How long to wait before re-sending a given alert that has already been sent. |
@@ -55,12 +55,12 @@ The **Match** field refers to a set of equality matchers used to identify which 
 
 ```yaml
 match:
-  [ <labelname>: <labelvalue>, ... ]
+  [ \<labelname\>: \<labelvalue\>, ... ]
 ```
 
 The **Match Regex** field refers to a set of regex-matchers used to identify which alerts to send to a given Route based on labels defined on that alert. When you add key-value pairs in the Rancher UI, they correspond to the YAML in this format:
 
 ```yaml
 match_re:
-  [ <labelname>: <regex>, ... ]
+  [ \<labelname\>: \<regex\>, ... ]
 ```

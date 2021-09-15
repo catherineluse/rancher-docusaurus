@@ -13,11 +13,11 @@ To allow the Grafana dashboard to persist after the Grafana instance restarts, a
 {{% tabs %}}
 {{% tab "Rancher v2.5.8+" %}}
 
-> **Prerequisites:**
-> 
-> - The monitoring application needs to be installed.
-> - To create the persistent dashboard, you must have at least the **Manage Config Maps** Rancher RBAC permissions assigned to you in the project or namespace that contains the Grafana Dashboards. This correlates to the `monitoring-dashboard-edit` or `monitoring-dashboard-admin` Kubernetes native RBAC Roles exposed by the Monitoring chart.
-> - To see the links to the external monitoring UIs, including Grafana dashboards, you will need at least a [project-member role.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/rbac/#users-with-rancher-cluster-manager-based-permissions)
+\> **Prerequisites:**
+\> 
+\> - The monitoring application needs to be installed.
+\> - To create the persistent dashboard, you must have at least the **Manage Config Maps** Rancher RBAC permissions assigned to you in the project or namespace that contains the Grafana Dashboards. This correlates to the `monitoring-dashboard-edit` or `monitoring-dashboard-admin` Kubernetes native RBAC Roles exposed by the Monitoring chart.
+\> - To see the links to the external monitoring UIs, including Grafana dashboards, you will need at least a [project-member role.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/rbac/#users-with-rancher-cluster-manager-based-permissions)
 
 ### 1. Get the JSON model of the dashboard that you want to persist
 
@@ -30,7 +30,7 @@ To use your own dashboard:
 1. Click on the link to open Grafana. On the cluster detail page, click **Monitoring**.
 1. Log in to Grafana. Note: The default Admin username and password for the Grafana instance is `admin/prom-operator`. Alternative credentials can also be supplied on deploying or upgrading the chart.
 
-    > **Note:** Regardless of who has the password, in order to access the Grafana instance, you still need at least the <b>Manage Services</b> or <b>View Monitoring</b> permissions in the project that Rancher Monitoring is deployed into. Alternative credentials can also be supplied on deploying or upgrading the chart.
+    \> **Note:** Regardless of who has the password, in order to access the Grafana instance, you still need at least the \<b\>Manage Services\</b\> or \<b\>View Monitoring\</b\> permissions in the project that Rancher Monitoring is deployed into. Alternative credentials can also be supplied on deploying or upgrading the chart.
 1. Create a dashboard using Grafana's UI. Once complete, go to the dashboard's settings by clicking on the gear icon in the top navigation menu. In the left navigation menu, click **JSON Model**.
 1. Copy the JSON data structure that appears.
 
@@ -46,11 +46,11 @@ kind: ConfigMap
 metadata:
   labels:
     grafana_dashboard: "1"
-  name: <dashboard-name>
+  name: \<dashboard-name\>
   namespace: cattle-dashboards # Change if using a non-default namespace
 data:
-  <dashboard-name>.json: |-
-    <copied-json>
+  \<dashboard-name\>.json: |-
+    \<copied-json\>
 ```
 
 By default, Grafana is configured to watch all ConfigMaps with the `grafana_dashboard` label within the `cattle-dashboards` namespace.
@@ -59,11 +59,11 @@ To specify that you would like Grafana to watch for ConfigMaps across all namesp
 
 To create the ConfigMap in the Rancher UI,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the visualizations and click **Explore**.
-1. Click **More Resources > Core > ConfigMaps**.
+1. Click **More Resources \> Core \> ConfigMaps**.
 1. Click **Create**.
-1. Set up the key-value pairs similar to the example above. When entering the value for `<dashboard-name>.json`, click **Read from File** to upload the JSON data model as the value.
+1. Set up the key-value pairs similar to the example above. When entering the value for `\<dashboard-name\>.json`, click **Read from File** to upload the JSON data model as the value.
 1. Click **Create**.
 
 **Result:** After the ConfigMap is created, it should show up on the Grafana UI and be persisted even if the Grafana pod is restarted.
@@ -84,18 +84,18 @@ Note that the RBAC roles exposed by the Monitoring chart to add Grafana Dashboar
 
 {{% /tab %}}
 {{% tab "Rancher before v2.5.8" %}}
-> **Prerequisites:**
-> 
-> - The monitoring application needs to be installed.
-> - You must have the cluster-admin ClusterRole permission.
+\> **Prerequisites:**
+\> 
+\> - The monitoring application needs to be installed.
+\> - You must have the cluster-admin ClusterRole permission.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to configure the Grafana namespace and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Grafana**.
 1. Log in to Grafana. Note: The default Admin username and password for the Grafana instance is `admin/prom-operator`. Alternative credentials can also be supplied on deploying or upgrading the chart.
 
-    > **Note:** Regardless of who has the password, cluster administrator permission in Rancher is still required to access the Grafana instance.
+    \> **Note:** Regardless of who has the password, cluster administrator permission in Rancher is still required to access the Grafana instance.
 1. Go to the dashboard that you want to persist. In the top navigation menu, go to the dashboard settings by clicking the gear icon.
 1. In the left navigation menu, click **JSON Model**.
 1. Copy the JSON data structure that appears.
@@ -107,11 +107,11 @@ Note that the RBAC roles exposed by the Monitoring chart to add Grafana Dashboar
     metadata:
       labels:
         grafana_dashboard: "1"
-      name: <dashboard-name>
+      name: \<dashboard-name\>
       namespace: cattle-dashboards
     data:
-      <dashboard-name>.json: |-
-        <copied-json>
+      \<dashboard-name\>.json: |-
+        \<copied-json\>
 	```
 
 **Result:** After the ConfigMap is created, it should show up on the Grafana UI and be persisted even if the Grafana pod is restarted.

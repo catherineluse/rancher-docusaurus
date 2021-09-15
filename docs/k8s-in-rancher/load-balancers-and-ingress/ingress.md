@@ -6,9 +6,9 @@ weight: 3042
 
 Ingresses can be added for workloads to provide load balancing, SSL termination and host/path based routing. When using ingresses in a project, you can program the ingress hostname to an external DNS by setting up a Global DNS entry.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster that you want to add an ingress to and click **Explore**.
-1. Click **Service Discovery > Ingresses**.
+1. Click **Service Discovery \> Ingresses**.
 1. Click **Create**.
 1. Select an existing **Namespace** from the drop-down list.
 1. Enter a **Name** for the ingress.

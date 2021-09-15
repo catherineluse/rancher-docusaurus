@@ -13,55 +13,55 @@ If your organization uses Keycloak Identity Provider (IdP) for user authenticati
 
      Setting | Value
      ------------|------------
-      `Sign Documents` | `ON` <sup>1</sup>
-      `Sign Assertions` | `ON` <sup>1</sup>
+      `Sign Documents` | `ON` \<sup\>1\</sup\>
+      `Sign Assertions` | `ON` \<sup\>1\</sup\>
       All other `ON/OFF` Settings | `OFF`
-      `Client ID` | Either `https://yourRancherHostURL/v1-saml/keycloak/saml/metadata` or the value configured in the `Entry ID Field` of the Rancher Keycloak configuration<sup>2</sup>
-      `Client Name` | <CLIENT_NAME> (e.g. `rancher`)
+      `Client ID` | Either `https://yourRancherHostURL/v1-saml/keycloak/saml/metadata` or the value configured in the `Entry ID Field` of the Rancher Keycloak configuration\<sup\>2\</sup\>
+      `Client Name` | \<CLIENT_NAME\> (e.g. `rancher`)
       `Client Protocol` | `SAML`
       `Valid Redirect URI` | `https://yourRancherHostURL/v1-saml/keycloak/saml/acs`
 
-      ><sup>1</sup>: Optionally, you can enable either one or both of these settings.
-      ><sup>2</sup>: Rancher SAML metadata won't be generated until a SAML provider is configured and saved.
+      \>\<sup\>1\</sup\>: Optionally, you can enable either one or both of these settings.
+      \>\<sup\>2\</sup\>: Rancher SAML metadata won't be generated until a SAML provider is configured and saved.
 ```img
-  {{< img "/img/rancher/keycloak/keycloak-saml-client-configuration.png" "">}}
+  {{ img "/img/rancher/keycloak/keycloak-saml-client-configuration.png" ""}}
 ```      
 - In the new SAML client, create Mappers to expose the users fields
   - Add all "Builtin Protocol Mappers"
 ```img
-    {{< img "/img/rancher/keycloak/keycloak-saml-client-builtin-mappers.png" "">}}
+    {{ img "/img/rancher/keycloak/keycloak-saml-client-builtin-mappers.png" ""}}
 ```
   - Create a new "Group list" mapper to map the member attribute to a user's groups
 ```img
-    {{< img "/img/rancher/keycloak/keycloak-saml-client-group-mapper.png" "">}}
+    {{ img "/img/rancher/keycloak/keycloak-saml-client-group-mapper.png" ""}}
 ```
 - Export a `metadata.xml` file from your Keycloak client:
   From the `Installation` tab, choose the `SAML Metadata IDPSSODescriptor` format option and download your file.
   
-  >**Note**
-  > Keycloak versions 6.0.0 and up no longer provide the IDP metadata under the `Installation` tab.
-  > You can still get the XML from the following url:
-  >  
-  > `https://{KEYCLOAK-URL}/auth/realms/{REALM-NAME}/protocol/saml/descriptor`
-  >  
-  > The XML obtained from this URL contains `EntitiesDescriptor` as the root element. Rancher expects the root element to be `EntityDescriptor` rather than `EntitiesDescriptor`. So before passing this XML to Rancher, follow these steps to adjust it:
-  >  
-  >    * Copy all the attributes from `EntitiesDescriptor` to the `EntityDescriptor` that are not present.
-  >    * Remove the `<EntitiesDescriptor>` tag from the beginning.
-  >    * Remove the `</EntitiesDescriptor>` from the end of the xml.
-  >  
-  > You are left with something similar as the example below:
-  >  
-  > ```
-  > <EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" entityID="https://{KEYCLOAK-URL}/auth/realms/{REALM-NAME}">
-  >   .... 
-  > </EntityDescriptor>
-  > ```
+  \>**Note**
+  \> Keycloak versions 6.0.0 and up no longer provide the IDP metadata under the `Installation` tab.
+  \> You can still get the XML from the following url:
+  \>  
+  \> `https://{KEYCLOAK-URL}/auth/realms/{REALM-NAME}/protocol/saml/descriptor`
+  \>  
+  \> The XML obtained from this URL contains `EntitiesDescriptor` as the root element. Rancher expects the root element to be `EntityDescriptor` rather than `EntitiesDescriptor`. So before passing this XML to Rancher, follow these steps to adjust it:
+  \>  
+  \>    * Copy all the attributes from `EntitiesDescriptor` to the `EntityDescriptor` that are not present.
+  \>    * Remove the `\<EntitiesDescriptor\>` tag from the beginning.
+  \>    * Remove the `\</EntitiesDescriptor\>` from the end of the xml.
+  \>  
+  \> You are left with something similar as the example below:
+  \>  
+  \> ```
+  \> \<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" entityID="https://{KEYCLOAK-URL}/auth/realms/{REALM-NAME}"\>
+  \>   .... 
+  \> \</EntityDescriptor\>
+  \> ```
 
 ## Configuring Keycloak in Rancher
 
 
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **Keycloak SAML**.
 1.	Complete the **Configure Keycloak Account** form. For help with filling the form, see the [configuration reference](#configuration-reference).
@@ -69,28 +69,28 @@ If your organization uses Keycloak Identity Provider (IdP) for user authenticati
 
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Keycloak IdP to validate your Rancher Keycloak configuration.
 
-    >**Note:** You may have to disable your popup blocker to see the IdP login page.
+    \>**Note:** You may have to disable your popup blocker to see the IdP login page.
 
 **Result:** Rancher is configured to work with Keycloak. Your users can now sign into Rancher using their Keycloak logins.
 
-{{< saml_caveats >}}
+{{ saml_caveats }}
 
 ## Configuration Reference
 
 | Field                     | Description                                                                                                                                              |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Display Name Field        | The attribute that contains the display name of users. <br/><br/>Example: `givenName`                                                                    |
-| User Name Field           | The attribute that contains the user name/given name. <br/><br/>Example: `email`                                                                         |
-| UID Field                 | An attribute that is unique to every user. <br/><br/>Example: `email`                                                                                    |
-| Groups Field              | Make entries for managing group memberships. <br/><br/>Example: `member`                                                                                 |
-| Entity ID Field           | The ID that needs to be configured as a client ID in the Keycloak client. <br/><br/>Default: `https://yourRancherHostURL/v1-saml/keycloak/saml/metadata` |
+| Display Name Field        | The attribute that contains the display name of users. Example: `givenName`                                                                    |
+| User Name Field           | The attribute that contains the user name/given name. Example: `email`                                                                         |
+| UID Field                 | An attribute that is unique to every user. Example: `email`                                                                                    |
+| Groups Field              | Make entries for managing group memberships. Example: `member`                                                                                 |
+| Entity ID Field           | The ID that needs to be configured as a client ID in the Keycloak client. Default: `https://yourRancherHostURL/v1-saml/keycloak/saml/metadata` |
 | Rancher API Host          | The URL for your Rancher Server.                                                                                                                         |
 | Private Key / Certificate | A key/certificate pair to create a secure shell between Rancher and your IdP.                                                                            |
 | IDP-metadata              | The `metadata.xml` file that you exported from your IdP server.                                                                                          |
 
->**Tip:** You can generate a key/certificate pair using an openssl command. For example:
->
->        openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.key -out myservice.cert
+\>**Tip:** You can generate a key/certificate pair using an openssl command. For example:
+\>
+\>        openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.key -out myservice.cert
 
 ## Annex: Troubleshooting
 

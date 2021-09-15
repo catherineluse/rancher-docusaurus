@@ -12,7 +12,7 @@ For a conceptual overview of how the Rancher server provisions clusters and what
 
 This section covers the following topics:
 
-<!-- TOC -->
+\<!-- TOC --\>
 
 - [Cluster Management Capabilities by Cluster Type](#cluster-management-capabilities-by-cluster-type)
 - [Setting up clusters in a hosted Kubernetes provider](#setting-up-clusters-in-a-hosted-kubernetes-provider)
@@ -22,7 +22,7 @@ This section covers the following topics:
 - [Registering Existing Clusters](#registering-existing-clusters)
 - [Importing Existing Clusters](#importing-existing-clusters)
 
-  <!-- /TOC -->
+  \<!-- /TOC --\>
 
 ### Cluster Management Capabilities by Cluster Type
 

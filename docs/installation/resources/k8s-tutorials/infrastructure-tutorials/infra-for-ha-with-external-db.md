@@ -9,7 +9,7 @@ The recommended infrastructure for the Rancher-only Kubernetes cluster differs d
 
 For more information about each installation option, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation)
 
-> **Note:** These nodes must be in the same region. You may place these servers in separate availability zones (datacenter).
+\> **Note:** These nodes must be in the same region. You may place these servers in separate availability zones (datacenter).
 
 To install the Rancher management server on a high-availability K3s cluster, we recommend setting up the following infrastructure:
 
@@ -53,8 +53,8 @@ For an example showing how to set up an NGINX load balancer, refer to [this page
 
 For a how-to guide for setting up an Amazon ELB Network Load Balancer, refer to [this page.](https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/nlb/)
 
-> **Important:**
-> Do not use this load balancer (i.e, the `local` cluster Ingress) to load balance applications other than Rancher following installation. Sharing this Ingress with other applications may result in websocket errors to Rancher following Ingress configuration reloads for other apps. We recommend dedicating the `local` cluster to Rancher and no other applications.
+\> **Important:**
+\> Do not use this load balancer (i.e, the `local` cluster Ingress) to load balance applications other than Rancher following installation. Sharing this Ingress with other applications may result in websocket errors to Rancher following Ingress configuration reloads for other apps. We recommend dedicating the `local` cluster to Rancher and no other applications.
 
 ### 4. Set up the DNS Record
 

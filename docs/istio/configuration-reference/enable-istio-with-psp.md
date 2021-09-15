@@ -7,12 +7,12 @@ If you have restrictive Pod Security Policies enabled, then Istio may not be abl
 
 The Istio CNI plugin removes the need for each application pod to have a privileged `NET_ADMIN` container. For further information, see the [Istio CNI Plugin docs](https://istio.io/docs/setup/additional-setup/cni). Please note that the [Istio CNI Plugin is in alpha](https://istio.io/about/feature-stages/).
 
-> **Prerequisites:**
->
-> - The cluster must be an RKE Kubernetes cluster.
-> - The cluster must have been created with a default PodSecurityPolicy. 
->
-> To enable pod security policy support when creating a Kubernetes cluster in the Rancher UI, go to <b>Advanced Options.</b> In the <b>Pod Security Policy Support</b> section, click <b>Enabled.</b> Then select a default pod security policy.
+\> **Prerequisites:**
+\>
+\> - The cluster must be an RKE Kubernetes cluster.
+\> - The cluster must have been created with a default PodSecurityPolicy. 
+\>
+\> To enable pod security policy support when creating a Kubernetes cluster in the Rancher UI, go to \<b\>Advanced Options.\</b\> In the \<b\>Pod Security Policy Support\</b\> section, click \<b\>Enabled.\</b\> Then select a default pod security policy.
 
 1. [Set the PodSecurityPolicy to unrestricted](#1-set-the-podsecuritypolicy-to-unrestricted)
 2. [Enable the CNI](#2-enable-the-cni)
@@ -24,10 +24,10 @@ An unrestricted PSP allows Istio to be installed.
 
 Set the PSP to `unrestricted` in the project where is Istio is installed, or the project where you plan to install Istio.
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
-1. Click **Cluster > Projects/Namespaces**.
-1. Find the **Project: System** and select the **⋮ > Edit Config**.
+1. Click **Cluster \> Projects/Namespaces**.
+1. Find the **Project: System** and select the **⋮ \> Edit Config**.
 1. Change the Pod Security Policy option to be unrestricted, then click **Save**.
 
 ### 2. Enable the CNI

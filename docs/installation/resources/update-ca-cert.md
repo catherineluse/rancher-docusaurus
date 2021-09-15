@@ -56,7 +56,7 @@ $ kubectl -n cattle-system create secret generic tls-ca \
 
 # 3. Reconfigure the Rancher deployment
 
-> Before proceeding, generate an API token in the Rancher UI (<b>User > API & Keys</b>) and save the Bearer Token which you might need in step 4.
+\> Before proceeding, generate an API token in the Rancher UI (\<b\>User \> API & Keys\</b\>) and save the Bearer Token which you might need in step 4.
 
 This step is required if Rancher was initially installed with self-signed certificates (`ingress.tls.source=rancher`) or with a Let's Encrypt issued certificate (`ingress.tls.source=letsEncrypt`).
 
@@ -81,13 +81,13 @@ If the certificate was signed by a private CA, add the `set privateCA=true` argu
 ```
 helm upgrade rancher rancher-stable/rancher \
   --namespace cattle-system \
-  --version <DEPLOYED_CHART_VERSION> \
+  --version \<DEPLOYED_CHART_VERSION\> \
   --set hostname=rancher.my.org \
   --set ingress.tls.source=secret \
   --set ...
 ```
 
-When the upgrade is completed, navigate to `https://<Rancher_SERVER>/v3/settings/cacerts` to verify that the value matches the CA certificate written in the `tls-ca` secret earlier.
+When the upgrade is completed, navigate to `https://\<Rancher_SERVER\>/v3/settings/cacerts` to verify that the value matches the CA certificate written in the `tls-ca` secret earlier.
 
 # 4. Reconfigure Rancher agents to trust the private CA
 
@@ -113,7 +113,7 @@ Method 3 can be used as a fallback if method 1 and 2 are unfeasible.
 For each cluster under Rancher management (except the `local` Rancher management cluster) run the following command using the Kubeconfig file of the Rancher management cluster (RKE or K3S).
 
 ```
-kubectl patch clusters.management.cattle.io <REPLACE_WITH_CLUSTERID> -p '{"status":{"agentImage":"dummy"}}' --type merge
+kubectl patch clusters.management.cattle.io \<REPLACE_WITH_CLUSTERID\> -p '{"status":{"agentImage":"dummy"}}' --type merge
 ```
 
 This command will cause all Agent Kubernetes resources to be reconfigured with the checksum of the new certificate.
@@ -124,7 +124,7 @@ This command will cause all Agent Kubernetes resources to be reconfigured with t
 Manually patch the agent Kubernetes resources by updating the `CATTLE_CA_CHECKSUM` environment variable to the value matching the checksum of the new CA certificate. Generate the new checksum value like so:
 
 ```
-$ curl -k -s -fL <RANCHER_SERVER>/v3/settings/cacerts | jq -r .value > cacert.tmp
+$ curl -k -s -fL \<RANCHER_SERVER\>/v3/settings/cacerts | jq -r .value \> cacert.tmp
 $ sha256sum cacert.tmp | awk '{print $1}'
 ```
 

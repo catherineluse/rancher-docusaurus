@@ -5,7 +5,7 @@ weight: 17
 
 Rancher can run a security scan to check whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark. The CIS scans can run on any Kubernetes cluster, including hosted Kubernetes providers such as EKS, AKS, and GKE.
 
-The `rancher-cis-benchmark` app leverages <a href="https://github.com/aquasecurity/kube-bench" target="_blank">kube-bench,</a> an open-source tool from Aqua Security, to check clusters for CIS Kubernetes Benchmark compliance. Also, to generate a cluster-wide report, the application utilizes <a href="https://github.com/vmware-tanzu/sonobuoy" target="_blank">Sonobuoy</a> for report aggregation.
+The `rancher-cis-benchmark` app leverages \<a href="https://github.com/aquasecurity/kube-bench" target="_blank"\>kube-bench,\</a\> an open-source tool from Aqua Security, to check clusters for CIS Kubernetes Benchmark compliance. Also, to generate a cluster-wide report, the application utilizes \<a href="https://github.com/vmware-tanzu/sonobuoy" target="_blank"\>Sonobuoy\</a\> for report aggregation.
 
 - [About the CIS Benchmark](#about-the-cis-benchmark)
 - [About the Generated Report](#about-the-generated-report)
@@ -32,7 +32,7 @@ The Center for Internet Security is a 501(c\)(3) non-profit organization, formed
 CIS Benchmarks are best practices for the secure configuration of a target system. CIS Benchmarks are developed through the generous volunteer efforts of subject matter experts, technology vendors, public and private community members, and the CIS Benchmark Development team.
 
 The official Benchmark documents are available through the CIS website. The sign-up form to access the documents is 
-<a href="https://learn.cisecurity.org/benchmarks" target="_blank">here.</a>
+\<a href="https://learn.cisecurity.org/benchmarks" target="_blank"\>here.\</a\>
 
 # About the Generated Report
 
@@ -44,7 +44,7 @@ The Benchmark version is included in the generated report.
 
 The Benchmark provides recommendations of two types: Scored and Not Scored. Recommendations marked as Not Scored in the Benchmark are not included in the generated report.
 
-Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's <a href="https://rancher.com/docs/rancher/v2.6/en/security/#the-cis-benchmark-and-self-assessment" target="_blank">self-assessment guide for the corresponding Kubernetes version.</a>
+Some tests are designated as "Not Applicable." These tests will not be run on any CIS scan because of the way that Rancher provisions RKE clusters. For information on how test results can be audited, and why some tests are designated to be not applicable, refer to Rancher's \<a href="https://rancher.com/docs/rancher/v2.6/en/security/#the-cis-benchmark-and-self-assessment" target="_blank"\>self-assessment guide for the corresponding Kubernetes version.\</a\>
 
 The report contains the following information:
 
@@ -63,7 +63,7 @@ The report contains the following information:
 | `actual_value` | The test's actual value, present if reported by `kube-bench`. |
 | `expected_result` | The test's expected result, present if reported by `kube-bench`. |
 
-Refer to <a href="https://rancher.com/docs/rancher/v2.6/en/security/" target="_blank">the table in the cluster hardening guide</a> for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
+Refer to \<a href="https://rancher.com/docs/rancher/v2.6/en/security/" target="_blank"\>the table in the cluster hardening guide\</a\> for information on which versions of Kubernetes, the Benchmark, Rancher, and our cluster hardening guide correspond to each other. Also refer to the hardening guide for configuration files of CIS-compliant clusters and information on remediating failed tests.
 
 # Test Profiles
 
@@ -91,7 +91,7 @@ There are two types of RKE cluster scan profiles:
 
 The EKS and GKE cluster scan profiles are based on CIS Benchmark versions that are specific to those types of clusters.
 
-In order to pass the "Hardened" profile, you will need to follow the steps on the <a href="https://rancher.com/docs/rancher/v2.6/en/security/#rancher-hardening-guide" target="_blank">hardening guide</a> and use the `cluster.yml` defined in the hardening guide to provision a hardened cluster.
+In order to pass the "Hardened" profile, you will need to follow the steps on the \<a href="https://rancher.com/docs/rancher/v2.6/en/security/#rancher-hardening-guide" target="_blank"\>hardening guide\</a\> and use the `cluster.yml` defined in the hardening guide to provision a hardened cluster.
 
 The default profile and the supported CIS benchmark version depends on the type of cluster that will be scanned:
 
@@ -104,7 +104,7 @@ The `rancher-cis-benchmark` supports the CIS 1.6 Benchmark version.
 
 # About Skipped and Not Applicable Tests
 
-For a list of skipped and not applicable tests, refer to <a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/skipped-tests" target="_blank">this page.</a>
+For a list of skipped and not applicable tests, refer to \<a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/skipped-tests" target="_blank"\>this page.\</a\>
 
 For now, only user-defined skipped tests are marked as skipped in the generated report.
 
@@ -112,11 +112,11 @@ Any skipped tests that are defined as being skipped by one of the default profil
 
 # Roles-based Access Control
 
-For information about permissions, refer to <a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/rbac" target="_blank">this page.</a>
+For information about permissions, refer to \<a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/rbac" target="_blank"\>this page.\</a\>
 
 # Configuration
 
-For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to <a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/configuration" target="_blank">this page.</a>
+For more information about configuring the custom resources for the scans, profiles, and benchmark versions, refer to \<a href="https://rancher.com/docs/rancher/v2.6/en/cis-scans/configuration" target="_blank"\>this page.\</a\>
 
 # How-to Guides
 
@@ -131,9 +131,9 @@ For more information about configuring the custom resources for the scans, profi
 - [Creating a Custom Benchmark Version for Running a Cluster Scan](#creating-a-custom-benchmark-version-for-running-a-cluster-scan)
 ### Installing CIS Benchmark
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to install CIS Benchmark and click **Explore**.
-1. In the left navigation bar, click **Apps & Marketplace > Charts**.
+1. In the left navigation bar, click **Apps & Marketplace \> Charts**.
 1. Click **CIS Benchmark**
 1. Click **Install**.
 
@@ -141,7 +141,7 @@ For more information about configuring the custom resources for the scans, profi
 
 ### Uninstalling CIS Benchmark
 
-1. From the **Cluster Dashboard,** go to the left navigation bar and click **Apps & Marketplace > Installed Apps**.
+1. From the **Cluster Dashboard,** go to the left navigation bar and click **Apps & Marketplace \> Installed Apps**.
 1. Go to the `cis-operator-system` namespace and check the boxes next to `rancher-cis-benchmark-crd` and `rancher-cis-benchmark`.
 1. Click **Delete** and confirm **Delete**.
 
@@ -155,9 +155,9 @@ Note: There is currently a limitation of running only one CIS scan at a time for
 
 To run a scan,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to run a CIS scan and click **Explore**.
-1. Click **CIS Benchmark > Scan**.
+1. Click **CIS Benchmark \> Scan**.
 1. Click **Create**.
 1. Choose a cluster scan profile. The profile determines which CIS Benchmark version will be used and which tests will be performed. If you choose the Default profile, then the CIS Operator will choose a profile applicable to the type of Kubernetes cluster it is installed on.
 1. Click **Create**.
@@ -167,12 +167,12 @@ To run a scan,
 
 To run a ClusterScan on a schedule,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to run a CIS scan and click **Explore**.
-1. Click **CIS Benchmark > Scan**.
+1. Click **CIS Benchmark \> Scan**.
 1. Choose a cluster scan profile. The profile determines which CIS Benchmark version will be used and which tests will be performed. If you choose the Default profile, then the CIS Operator will choose a profile applicable to the type of Kubernetes cluster it is installed on.
 1. Choose the option **Run scan on a schedule**.
-1. Enter a valid <a href="https://en.wikipedia.org/wiki/Cron#CRON_expression" target="_blank">cron schedule expression</a> in the field **Schedule**.
+1. Enter a valid \<a href="https://en.wikipedia.org/wiki/Cron#CRON_expression" target="_blank"\>cron schedule expression\</a\> in the field **Schedule**.
 1. Choose a **Retention** count, which indicates the number of reports maintained for this recurring scan. By default this count is 3. When this retention limit is reached, older reports will get purged.
 1. Click **Create**.
 
@@ -188,9 +188,9 @@ CIS scans can be run using test profiles with user-defined skips.
 
 To skip tests, you will create a custom CIS scan profile. A profile contains the configuration for the CIS scan, which includes the benchmark versions to use and any specific tests to skip in that benchmark.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to run a CIS scan and click **Explore**.
-1. Click **CIS Benchmark > Profile**.
+1. Click **CIS Benchmark \> Profile**.
 1. From here, you can create a profile in multiple ways. To make a new profile, click **Create** and fill out the form in the UI. To make a new profile based on an existing profile, go to the existing profile and click **⋮ Clone**.  If you are filling out the form, add the tests to skip using the test IDs, using the relevant CIS Benchmark as a reference. If you are creating the new test profile as YAML, you will add the IDs of the tests to skip in the `skipTests` directive. You will also give the profile a name:
 
     ```yaml
@@ -202,7 +202,7 @@ To skip tests, you will create a custom CIS scan profile. A profile contains the
         meta.helm.sh/release-namespace: cis-operator-system
       labels:
         app.kubernetes.io/managed-by: Helm
-      name: "<example-profile>"
+      name: "\<example-profile\>"
     spec:
       benchmarkVersion: cis-1.5
       skipTests:
@@ -219,9 +219,9 @@ When you [run a scan](#running-a-scan) that uses this profile, the defined tests
 
 To view the generated CIS scan reports,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to run a CIS scan and click **Explore**.
-1. Click **CIS Benchmark > Scan**.
+1. Click **CIS Benchmark \> Scan**.
 1. The **Scans** page will show the generated reports. To see a detailed report, go to a scan report and click the name.
 
 One can download the report from the Scans list or from the scan detail page.
@@ -230,11 +230,11 @@ One can download the report from the Scans list or from the scan detail page.
 
 Alerts can be configured to be sent out for a scan that runs on a schedule.
 
-> **Prerequisite:** 
->
-> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration)
->
-> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
+\> **Prerequisite:** 
+\>
+\> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration)
+\>
+\> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
 
 While installing or upgrading the `rancher-cis-benchmark` Helm chart, set the following flag to `true` in the `values.yaml`:
 
@@ -256,18 +256,18 @@ The CIS Benchmark application supports two types of alerts:
 - Alert on scan completion: This alert is sent out when the scan run finishes. The alert includes details including the ClusterScan's name and the ClusterScanProfile name.
 - Alert on scan failure: This alert is sent out if there are some test failures in the scan run or if the scan is in a `Fail` state.
 
-> **Prerequisite:** 
->
-> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration)
->
-> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
+\> **Prerequisite:** 
+\>
+\> Before enabling alerts for `rancher-cis-benchmark`, make sure to install the `rancher-monitoring` application and configure the Receivers and Routes. For more information, see [this section.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration)
+\>
+\> While configuring the routes for `rancher-cis-benchmark` alerts, you can specify the matching using the key-value pair `job: rancher-cis-scan`. An example route configuration is [here.](https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/configuration/receiver/#example-route-config-for-cis-scan-alerts)
 
 To configure alerts for a scan that runs on a schedule,
 
 1. Please enable alerts on the `rancher-cis-benchmark` application (#enabling-alerting-for-rancher-cis-benchmark)
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to run a CIS scan and click **Explore**.
-1. Click **CIS Benchmark > Scan**.
+1. Click **CIS Benchmark \> Scan**.
 1. Click **Create**.
 1. Choose a cluster scan profile. The profile determines which CIS Benchmark version will be used and which tests will be performed. If you choose the Default profile, then the CIS Operator will choose a profile applicable to the type of Kubernetes cluster it is installed on.
 1. Choose the option **Run scan on a schedule**.

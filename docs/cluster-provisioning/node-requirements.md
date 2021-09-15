@@ -5,7 +5,7 @@ weight: 1
 
 This page describes the requirements for the Rancher managed Kubernetes clusters where your apps and services will be installed. These downstream clusters should be separate from the three-node cluster running Rancher.
 
-> If Rancher is installed on a high-availability Kubernetes cluster, the Rancher server three-node cluster and downstream clusters have different requirements. For Rancher installation requirements, refer to the node requirements in the [installation section.](https://rancher.com/docs/rancher/v2.6/en/installation/requirements/)
+\> If Rancher is installed on a high-availability Kubernetes cluster, the Rancher server three-node cluster and downstream clusters have different requirements. For Rancher installation requirements, refer to the node requirements in the [installation section.](https://rancher.com/docs/rancher/v2.6/en/installation/requirements/)
 
 Make sure the nodes for the Rancher server fulfill the following requirements:
 

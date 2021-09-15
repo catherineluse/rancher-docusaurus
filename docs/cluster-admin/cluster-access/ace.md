@@ -41,4 +41,4 @@ The scheduling rules for `kube-api-auth` are listed below:
 
 | Component            | nodeAffinity nodeSelectorTerms             | nodeSelector | Tolerations                                                                    |
 | -------------------- | ------------------------------------------ | ------------ | ------------------------------------------------------------------------------ |
-| kube-api-auth        | `beta.kubernetes.io/os:NotIn:windows`<br/>`node-role.kubernetes.io/controlplane:In:"true"` | none         | `operator:Exists`              |
+| kube-api-auth        | `beta.kubernetes.io/os:NotIn:windows``node-role.kubernetes.io/controlplane:In:"true"` | none         | `operator:Exists`              |

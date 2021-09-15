@@ -25,7 +25,7 @@ The vSphere node templates have been updated, allowing you to bring cloud operat
 
 One of the biggest advantages of provisioning vSphere nodes with Rancher is that it allows you to take advantage of Rancher's self-healing node pools, also called the [node auto-replace feature,](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#about-node-auto-replace) in your on-premises clusters. Self-healing node pools are designed to help you replace worker nodes for stateless applications. When Rancher provisions nodes from a node template, Rancher can automatically replace unreachable nodes.
 
-> **Important:** It is not recommended to enable node auto-replace on a node pool of master nodes or nodes with persistent volumes attached, because VMs are treated ephemerally. When a node in a node pool loses connectivity with the cluster, its persistent volumes are destroyed, resulting in data loss for stateful applications.
+\> **Important:** It is not recommended to enable node auto-replace on a node pool of master nodes or nodes with persistent volumes attached, because VMs are treated ephemerally. When a node in a node pool loses connectivity with the cluster, its persistent volumes are destroyed, resulting in data loss for stateful applications.
 
 ### Dynamically Populated Options for Instances and Scheduling
 
@@ -40,7 +40,7 @@ You can provision VMs with any operating system that supports `cloud-init`. Only
 
 In this YouTube video, we demonstrate how to set up a node template with the new features designed to help you bring cloud operations to on-premises clusters.
 
-{{< youtube id="dPIwg6x1AlU">}}
+{{ youtube id="dPIwg6x1AlU"}}
 
 # Creating a vSphere Cluster
 

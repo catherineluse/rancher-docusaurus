@@ -45,13 +45,13 @@ The restore operation will work on a cluster that is not in a healthy or active 
 
 # Upgrading the Kubernetes Version
 
-> **Prerequisites:**
->
-> - The options below are available only for [Rancher-launched RKE Kubernetes clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) and [Registered K3s Kubernetes clusters.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/registered-clusters/#additional-features-for-registered-k3s-clusters)
-> - Before upgrading Kubernetes, [back up your cluster.](https://rancher.com/docs/rancher/v2.6/en/backups)
+\> **Prerequisites:**
+\>
+\> - The options below are available only for [Rancher-launched RKE Kubernetes clusters](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) and [Registered K3s Kubernetes clusters.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/registered-clusters/#additional-features-for-registered-k3s-clusters)
+\> - Before upgrading Kubernetes, [back up your cluster.](https://rancher.com/docs/rancher/v2.6/en/backups)
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the cluster you want to upgrade and click **⋮ > Edit Config**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the cluster you want to upgrade and click **⋮ \> Edit Config**.
 1. From the **Kubernetes Version** drop-down, choose the version of Kubernetes that you want to use for the cluster.
 1. Click **Save**.
 
@@ -78,8 +78,8 @@ By default, the maximum number of unavailable worker is defined as 10 percent of
 
 To change the default number or percentage of worker nodes,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the cluster you want to upgrade and click **⋮ > Edit Config**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the cluster you want to upgrade and click **⋮ \> Edit Config**.
 1. In the **Upgrade Strategy** tab, enter the **Worker Concurrency** as a fixed number or percentage. To get this number, you can take the number of nodes in your cluster and subtract the max unavailable nodes.
 1. Click **Save**.
 
@@ -91,9 +91,9 @@ By default, RKE [cordons](https://kubernetes.io/docs/concepts/architecture/nodes
 
 To enable draining each node during a cluster upgrade,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the cluster you want to enable node draining and click **⋮ > Edit Config**.
-1. Click **⋮ > Edit**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the cluster you want to enable node draining and click **⋮ \> Edit Config**.
+1. Click **⋮ \> Edit**.
 1. In the **Upgrade Strategy** tab, go to the **Drain nodes** field and click **Yes**. Node draining is configured separately for control plane and worker nodes.
 1. Configure the options for how pods are deleted. For more information about each option, refer to [this section.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/nodes/#aggressive-and-safe-draining-options)
 1. Optionally, configure a grace period. The grace period is the timeout given to each pod for cleaning things up, so they will have chance to exit gracefully. Pods might need to finish any outstanding requests, roll back transactions or save state to some external storage. If this value is negative, the default value specified in the pod will be used.
@@ -102,7 +102,7 @@ To enable draining each node during a cluster upgrade,
 
 **Result:** The cluster is updated to use the new upgrade strategy.
 
-> **Note:** As of Rancher v2.4.0, there is a [known issue](https://github.com/rancher/rancher/issues/25478) in which the Rancher UI doesn't show state of etcd and controlplane as drained, even though they are being drained.
+\> **Note:** As of Rancher v2.4.0, there is a [known issue](https://github.com/rancher/rancher/issues/25478) in which the Rancher UI doesn't show state of etcd and controlplane as drained, even though they are being drained.
 
 ### Maintaining Availability for Applications During Upgrades
 

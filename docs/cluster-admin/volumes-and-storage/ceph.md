@@ -34,7 +34,7 @@ On RKE clusters, the kubelet component is running in a Docker container and does
 
 To solve this limitation, you can either run `modprobe rbd` on worker nodes, or configure the kubelet containers to automatically mount the `/lib/modules` directory from the host into the container.
 
-For the kubelet configuration, put the following lines into the `cluster.yml` file prior to RKE cluster provisioning. You can also modify the `cluster.yml` later in the Rancher UI by clicking on **Edit Cluster > Edit as YAML** and restarting the worker nodes.
+For the kubelet configuration, put the following lines into the `cluster.yml` file prior to RKE cluster provisioning. You can also modify the `cluster.yml` later in the Rancher UI by clicking on **Edit Cluster \> Edit as YAML** and restarting the worker nodes.
 
 ```yaml
 services:
@@ -47,7 +47,7 @@ For more information about the `extra_binds` directive, refer to [this section.]
 
 # Installing the ceph-csi driver on an RKE2 cluster
 
-> **Note:** These steps are needed for dynamic RBD provisioning only.
+\> **Note:** These steps are needed for dynamic RBD provisioning only.
 
 For more information about the `ceph-csi-rbd` chart, refer to [this page.](https://github.com/ceph/ceph-csi/blob/devel/charts/ceph-csi-rbd/README.md)
 
@@ -81,7 +81,7 @@ Run these commands:
 helm repo add ceph-csi https://ceph.github.io/csi-charts
 helm repo update
 helm search repo ceph-csi -l
-helm inspect values ceph-csi/ceph-csi-rbd > ceph-csi-rbd-values.yaml
+helm inspect values ceph-csi/ceph-csi-rbd \> ceph-csi-rbd-values.yaml
 ```
 
 Modify the `ceph-csi-rbd-values.yaml` file and keep there only the required changes:
@@ -150,7 +150,7 @@ bXlQb29sQWRtaW4=
 For static RBD provisioning (the image within the ceph pool must exist), run these commands:
 
 ```
-cat > ceph-user-secret.yaml << EOF
+cat \> ceph-user-secret.yaml \<\< EOF
 apiVersion: v1
 kind: Secret
 metadata:
@@ -170,7 +170,7 @@ kubectl apply -f ceph-user-secret.yaml
 For dynamic RBD provisioning (used for automatic image creation within a given ceph pool), run these commands:
 
 ```
-cat > ceph-admin-secret.yaml << EOF
+cat \> ceph-admin-secret.yaml \<\< EOF
 apiVersion: v1
 kind: Secret
 metadata:
@@ -191,7 +191,7 @@ kubectl apply -f ceph-admin-secret.yaml
 
 ```
 # pod
-cat > ceph-rbd-pod-inline.yaml << EOF
+cat \> ceph-rbd-pod-inline.yaml \<\< EOF
 apiVersion: v1
 kind: Pod
 metadata:
@@ -229,7 +229,7 @@ kubectl exec pod/ceph-rbd-pod-inline -- df -k | grep rbd
 
 ```
 # pod-pvc-pv
-cat > ceph-rbd-pod-pvc-pv-allinone.yaml << EOF
+cat \> ceph-rbd-pod-pvc-pv-allinone.yaml \<\< EOF
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -292,7 +292,7 @@ This example is for dynamic provisioning. The ceph-csi driver is needed.
 
 ```
 # pod-pvc-sc
-cat > ceph-rbd-pod-pvc-sc-allinone.yaml <<EOF
+cat \> ceph-rbd-pod-pvc-sc-allinone.yaml \<\<EOF
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -357,7 +357,7 @@ sudo su
 curl -sfL https://get.rke2.io | sh -
 systemctl enable --now rke2-server
 
-cat > /root/.bashrc << EOF
+cat \> /root/.bashrc \<\< EOF
 export PATH=$PATH:/var/lib/rancher/rke2/bin/
 export KUBECONFIG=/etc/rancher/rke2/rke2.yaml
 EOF
@@ -371,7 +371,7 @@ token: K10ca0c38d4ff90d8b80319ab34092e315a8b732622e6adf97bc9eb0536REDACTED::serv
 ```
 mkdir -p /etc/rancher/rke2/
 
-cat > /etc/rancher/rke2/config.yaml << EOF
+cat \> /etc/rancher/rke2/config.yaml \<\< EOF
 server: https://10.100.103.23:9345
 token: K10ca0c38d4ff90d8b80319ab34092e315a8b732622e6adf97bc9eb0536REDACTED::server:ec0308000b8a6b595da000efREDACTED
 EOF
@@ -380,7 +380,7 @@ curl -sfL https://get.rke2.io | INSTALL_RKE2_TYPE="agent" sh -
 systemctl enable --now rke2-agent.service
 ```
 
-To import the cluster into Rancher, click **☰ > Cluster Management**. Then on the **Clusters** page, click **Import Existing**. Then run the provided kubectl command on the server/master node.
+To import the cluster into Rancher, click **☰ \> Cluster Management**. Then on the **Clusters** page, click **Import Existing**. Then run the provided kubectl command on the server/master node.
 
 # Tested Versions
 
@@ -409,8 +409,8 @@ Operating with the ceph - basic commands:
 ceph osd pool stats
 ceph osd pool delete myPool myPool --yes-i-really-really-mean-it
 rbd list -p myPool
-> csi-vol-f5d3766c-7296-11eb-b32a-c2b045952d38
-> image
+\> csi-vol-f5d3766c-7296-11eb-b32a-c2b045952d38
+\> image
 ```
 
 Delete the image: `rbd rm csi-vol-f5d3766c-7296-11eb-b32a-c2b045952d38 -p myPool`

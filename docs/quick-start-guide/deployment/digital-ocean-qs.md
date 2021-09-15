@@ -7,8 +7,8 @@ The following steps will quickly deploy a Rancher Server on DigitalOcean with a 
 
 ## Prerequisites
 
->**Note**
->Deploying to DigitalOcean will incur charges.
+\>**Note**
+\>Deploying to DigitalOcean will incur charges.
 
 - [DigitalOcean Account](https://www.digitalocean.com): You will require an account on DigitalOcean as this is where the server and cluster will run.
 - [DigitalOcean Access Key](https://www.digitalocean.com/community/tutorials/how-to-create-a-digitalocean-space-and-api-key): Use this link to create a DigitalOcean Access Key if you don't have one.

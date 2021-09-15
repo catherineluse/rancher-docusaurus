@@ -11,7 +11,7 @@ For a list of main features of the Rancher API server, refer to the [overview se
 
 For guidance about setting up the underlying infrastructure for the Rancher server, refer to the [architecture recommendations.](https://rancher.com/docs/rancher/v2.6/en/overview/architecture-recommendations)
 
-> This section assumes a basic familiarity with Docker and Kubernetes. For a brief explanation of how Kubernetes components work together, refer to the [concepts](https://rancher.com/docs/rancher/v2.6/en/overview/concepts) page.
+\> This section assumes a basic familiarity with Docker and Kubernetes. For a brief explanation of how Kubernetes components work together, refer to the [concepts](https://rancher.com/docs/rancher/v2.6/en/overview/concepts) page.
 
 This section covers the following topics:
 
@@ -35,7 +35,7 @@ For the best performance and security, we recommend a dedicated Kubernetes clust
 
 The diagram below shows how users can manipulate both [Rancher-launched Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/) clusters and [hosted Kubernetes](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/hosted-kubernetes-clusters/) clusters through Rancher's authentication proxy:
 ```img
-<figcaption>Managing Kubernetes Clusters through Rancher's Authentication Proxy</figcaption>
+\<figcaption\>Managing Kubernetes Clusters through Rancher's Authentication Proxy\</figcaption\>
 
 ![Architecture](./assets/img/rancher/rancher-architecture-rancher-api-server.svg)
 ```
@@ -55,7 +55,7 @@ This section describes how Rancher provisions and manages the downstream user cl
 
 The below diagram shows how the cluster controllers, cluster agents, and node agents allow Rancher to control downstream clusters.
 ```img
-<figcaption>Communicating with Downstream Clusters</figcaption>
+\<figcaption\>Communicating with Downstream Clusters\</figcaption\>
 
 ![Rancher Components](./assets/img/rancher/rancher-architecture-cluster-controller.svg)
 ```
@@ -107,7 +107,7 @@ The `cattle-node-agent` is deployed using a [DaemonSet](https://kubernetes.io/do
 
 An authorized cluster endpoint allows users to connect to the Kubernetes API server of a downstream cluster without having to route their requests through the Rancher authentication proxy.
 
-> The authorized cluster endpoint only works on Rancher-launched Kubernetes clusters. In other words, it only works in clusters where Rancher [used RKE](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters) to provision the cluster. It is not available for registered clusters, or for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
+\> The authorized cluster endpoint only works on Rancher-launched Kubernetes clusters. In other words, it only works in clusters where Rancher [used RKE](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters) to provision the cluster. It is not available for registered clusters, or for clusters in a hosted Kubernetes provider, such as Amazon's EKS.
 
 There are two main reasons why a user might need the authorized cluster endpoint:
 
@@ -118,7 +118,7 @@ The `kube-api-auth` microservice is deployed to provide the user authentication 
 
 Like the authorized cluster endpoint, the `kube-api-auth` authentication service is also only available for Rancher-launched Kubernetes clusters.
 
-> **Example scenario:** Let's say that the Rancher server is located in the United States, and User Cluster 1 is located in Australia. A user, Alice, also lives in Australia. Alice can manipulate resources in User Cluster 1 by using the Rancher UI, but her requests will have to be sent from Australia to the Rancher server in the United States, then be proxied back to Australia, where the downstream user cluster is. The geographical distance may cause significant latency, which Alice can reduce by using the authorized cluster endpoint.
+\> **Example scenario:** Let's say that the Rancher server is located in the United States, and User Cluster 1 is located in Australia. A user, Alice, also lives in Australia. Alice can manipulate resources in User Cluster 1 by using the Rancher UI, but her requests will have to be sent from Australia to the Rancher server in the United States, then be proxied back to Australia, where the downstream user cluster is. The geographical distance may cause significant latency, which Alice can reduce by using the authorized cluster endpoint.
 
 With this endpoint enabled for the downstream cluster, Rancher generates an extra Kubernetes context in the kubeconfig file in order to connect directly to the cluster. This file has the credentials for `kubectl` and `helm`. 
 
@@ -132,7 +132,7 @@ The files mentioned below are needed to maintain, troubleshoot and upgrade your 
 - `kube_config_rancher-cluster.yml`: The Kubeconfig file for the cluster, this file contains credentials for full access to the cluster. You can use this file to authenticate with a Rancher-launched Kubernetes cluster if Rancher goes down.
 - `rancher-cluster.rkestate`: The Kubernetes cluster state file. This file contains credentials for full access to the cluster. Note: This state file is only created when using RKE v0.2.0 or higher.
 
-> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
+\> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 For more information on connecting to a cluster without the Rancher authentication proxy and other configuration options, refer to the [kubeconfig file](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/cluster-access/kubectl/) documentation.
 

@@ -5,19 +5,19 @@ weight: 2
 
 A restore is performed by creating a Restore custom resource. 
 
-> **Important**
->
-> * Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to [migrate rancher.](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher)
-> * While restoring rancher on the same setup, the operator will scale down the rancher deployment when restore starts, and it will scale back up the deployment once restore completes. So Rancher will be unavailable during the restore.
+\> **Important**
+\>
+\> * Follow the instructions from this page for restoring rancher on the same cluster where it was backed up from. In order to migrate rancher to a new cluster, follow the steps to [migrate rancher.](https://rancher.com/docs/rancher/v2.6/en/backups/migrating-rancher)
+\> * While restoring rancher on the same setup, the operator will scale down the rancher deployment when restore starts, and it will scale back up the deployment once restore completes. So Rancher will be unavailable during the restore.
 
 ### Create the Restore Custom Resource
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the `local` cluster and click **Explore**. The `local` cluster runs the Rancher server.
-1. In the left navigation bar, click **Rancher Backups > Restores**.
+1. In the left navigation bar, click **Rancher Backups \> Restores**.
 1. Click **Create**.
 1. Create the Restore with the form, or with YAML.  For creating the Restore resource using form, refer to the [configuration reference](https://rancher.com/docs/rancher/v2.6/en/backups/configuration/restore-config) and to the [examples.](https://rancher.com/docs/rancher/v2.6/en/backups/examples)
-1. For using the YAML editor, we can click **Create > Create from YAML**. Enter the Restore YAML.
+1. For using the YAML editor, we can click **Create \> Create from YAML**. Enter the Restore YAML.
 
     ```yaml
     apiVersion: resources.cattle.io/v1

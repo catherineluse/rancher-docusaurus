@@ -31,14 +31,14 @@ From a system that has access to the internet, fetch the latest Helm chart and c
 1. If you haven't already, install `helm` locally on a workstation that has internet access. Note: Refer to the [Helm version requirements](https://rancher.com/docs/rancher/v2.6/en/installation/resources/helm-version) to choose a version of Helm to install Rancher.
 
 2. Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#helm-chart-repositories).
-  {{< release-channel >}}
+  {{ release-channel }}
     ```
-    helm repo add rancher-<CHART_REPO> https://releases.rancher.com/server-charts/<CHART_REPO>
+    helm repo add rancher-\<CHART_REPO\> https://releases.rancher.com/server-charts/\<CHART_REPO\>
     ```
 
 3. Fetch the latest Rancher chart. This will pull down the chart and save it in the current directory as a `.tgz` file.
     ```plain
-    helm fetch rancher-<CHART_REPO>/rancher
+    helm fetch rancher-\<CHART_REPO\>/rancher
     ```
 
     If you require a specific version of Rancher, you can fetch this with the Helm `--version` parameter like in the following example:
@@ -52,12 +52,12 @@ Rancher Server is designed to be secure by default and requires SSL/TLS configur
 
 When Rancher is installed on an air gapped Kubernetes cluster, there are two recommended options for the source of the certificate.
 
-> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
+\> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
 
 | Configuration                              | Chart option                 | Description                                                                                                                                                 | Requires cert-manager |
 | ------------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| Rancher Generated Self-Signed Certificates | `ingress.tls.source=rancher` | Use certificates issued by Rancher's generated CA (self signed)<br> This is the **default** and does not need to be added when rendering the Helm template. | yes                   |
-| Certificates from Files                    | `ingress.tls.source=secret`  | Use your own certificate files by creating Kubernetes Secret(s). <br> This option must be passed when rendering the Rancher Helm template.                  | no                    |
+| Rancher Generated Self-Signed Certificates | `ingress.tls.source=rancher` | Use certificates issued by Rancher's generated CA (self signed) This is the **default** and does not need to be added when rendering the Helm template. | yes                   |
+| Certificates from Files                    | `ingress.tls.source=secret`  | Use your own certificate files by creating Kubernetes Secret(s). This option must be passed when rendering the Rancher Helm template.                  | no                    |
 
 # Helm Chart Options for Air Gap Installations
 
@@ -65,8 +65,8 @@ When setting up the Rancher Helm template, there are several options in the Helm
 
 | Chart Option            | Chart Value                      | Description   |
 | ----------------------- | -------------------------------- | ---- |
-| `certmanager.version` | "<version>" | Configure proper Rancher TLS issuer depending of running cert-manager version. |
-| `systemDefaultRegistry` | `<REGISTRY.YOURDOMAIN.COM:PORT>` | Configure Rancher server to always pull from your private registry when provisioning clusters.  |
+| `certmanager.version` | "[version]" | Configure proper Rancher TLS issuer depending of running cert-manager version. |
+| `systemDefaultRegistry` | `[REGISTRY.YOURDOMAIN.COM:PORT]` | Configure Rancher server to always pull from your private registry when provisioning clusters.  |
 | `useBundledSystemChart` | `true`                           | Configure Rancher server to use the packaged copy of Helm system charts. The [system charts](https://github.com/rancher/system-charts) repository contains all the catalog items required for features such as monitoring, logging, alerting and global DNS. These [Helm charts](https://github.com/rancher/system-charts) are located in GitHub, but since you are in an air gapped environment, using the charts that are bundled within Rancher is much easier than setting up a Git mirror. |
 
 # 3. Render the Rancher Helm Template
@@ -78,8 +78,8 @@ Based on the choice your made in [2. Choose your SSL Configuration](#2-choose-yo
 
 By default, Rancher generates a CA and uses cert-manager to issue the certificate for access to the Rancher server interface.
 
-> **Note:**
-> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
+\> **Note:**
+\> Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade cert-manager documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
 
 ### 1. Add the cert-manager repo
 
@@ -105,9 +105,9 @@ Render the cert-manager template with the options you would like to use to insta
 ```plain
 helm template cert-manager ./cert-manager-v1.5.1.tgz --output-dir . \
     --namespace cert-manager \
-    --set image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-controller \
-    --set webhook.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-webhook \
-    --set cainjector.image.repository=<REGISTRY.YOURDOMAIN.COM:PORT>/quay.io/jetstack/cert-manager-cainjector
+    --set image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-controller \
+    --set webhook.image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-webhook \
+    --set cainjector.image.repository=[REGISTRY.YOURDOMAIN.COM:PORT]/quay.io/jetstack/cert-manager-cainjector
 ```
 
 ### 4. Download the cert-manager CRD
@@ -124,19 +124,19 @@ Render the Rancher template, declaring your chosen options. Use the reference ta
 
 Placeholder | Description
 ------------|-------------
-`<VERSION>` | The version number of the output tarball.
-`<RANCHER.YOURDOMAIN.COM>` | The DNS name you pointed at your load balancer.
-`<REGISTRY.YOURDOMAIN.COM:PORT>` | The DNS name for your private registry.
-`<CERTMANAGER_VERSION>` | Cert-manager version running on k8s cluster.
+`[VERSION]` | The version number of the output tarball.
+`[RANCHER.YOURDOMAIN.COM]` | The DNS name you pointed at your load balancer.
+`[REGISTRY.YOURDOMAIN.COM:PORT]` | The DNS name for your private registry.
+`[CERTMANAGER_VERSION]` | Cert-manager version running on k8s cluster.
 
 ```plain
-helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+helm template rancher ./rancher-[VERSION].tgz --output-dir . \
     --no-hooks \ # prevent files for Helm hooks from being generated
     --namespace cattle-system \
-    --set hostname=<RANCHER.YOURDOMAIN.COM> \
-    --set certmanager.version=<CERTMANAGER_VERSION> \
-    --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
-    --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+    --set hostname=[RANCHER.YOURDOMAIN.COM] \
+    --set certmanager.version=[CERTMANAGER_VERSION] \
+    --set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
+    --set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
@@ -155,32 +155,32 @@ Render the Rancher template, declaring your chosen options. Use the reference ta
 
 | Placeholder                      | Description                                     |
 | -------------------------------- | ----------------------------------------------- |
-| `<VERSION>`                      | The version number of the output tarball.       |
-| `<RANCHER.YOURDOMAIN.COM>`       | The DNS name you pointed at your load balancer. |
-| `<REGISTRY.YOURDOMAIN.COM:PORT>` | The DNS name for your private registry.         |
+| `[VERSION]`                      | The version number of the output tarball.       |
+| `[RANCHER.YOURDOMAIN.COM]`       | The DNS name you pointed at your load balancer. |
+| `[REGISTRY.YOURDOMAIN.COM:PORT]` | The DNS name for your private registry.         |
 
 ```plain
-   helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+   helm template rancher ./rancher-[VERSION].tgz --output-dir . \
     --no-hooks \ # prevent files for Helm hooks from being generated
     --namespace cattle-system \
-    --set hostname=<RANCHER.YOURDOMAIN.COM> \
-    --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+    --set hostname=[RANCHER.YOURDOMAIN.COM] \
+    --set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
     --set ingress.tls.source=secret \
-    --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+    --set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
 If you are using a Private CA signed cert, add `--set privateCA=true` following `--set ingress.tls.source=secret`:
 
 ```plain
-   helm template rancher ./rancher-<VERSION>.tgz --output-dir . \
+   helm template rancher ./rancher-[VERSION].tgz --output-dir . \
     --no-hooks \ # prevent files for Helm hooks from being generated
     --namespace cattle-system \
-    --set hostname=<RANCHER.YOURDOMAIN.COM> \
-    --set rancherImage=<REGISTRY.YOURDOMAIN.COM:PORT>/rancher/rancher \
+    --set hostname=[RANCHER.YOURDOMAIN.COM] \
+    --set rancherImage=[REGISTRY.YOURDOMAIN.COM:PORT]/rancher/rancher \
     --set ingress.tls.source=secret \
     --set privateCA=true \
-    --set systemDefaultRegistry=<REGISTRY.YOURDOMAIN.COM:PORT> \ # Set a default private registry to be used in Rancher
+    --set systemDefaultRegistry=[REGISTRY.YOURDOMAIN.COM:PORT] \ # Set a default private registry to be used in Rancher
     --set useBundledSystemChart=true # Use the packaged Rancher system charts
 ```
 
@@ -212,8 +212,8 @@ kubectl create namespace cert-manager
 kubectl apply -f cert-manager/cert-manager-crd.yaml
 ```
 
-    > **Note:**
-    > If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false` flag to your `kubectl apply` command above, or else you will receive a validation error relating to the `x-kubernetes-preserve-unknown-fields` field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation.
+    \> **Note:**
+    \> If you are running Kubernetes v1.15 or below, you will need to add the `--validate=false` flag to your `kubectl apply` command above, or else you will receive a validation error relating to the `x-kubernetes-preserve-unknown-fields` field in cert-manager’s CustomResourceDefinition resources. This is a benign error and occurs due to the way kubectl performs resource validation.
 
 1. Launch cert-manager.
 ```plain
@@ -230,7 +230,7 @@ kubectl -n cattle-system apply -R -f ./rancher
 ```
 The installation is complete.
 
-> **Note:** If you don't intend to send telemetry data, opt out [telemetry](https://rancher.com/docs/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
+\> **Note:** If you don't intend to send telemetry data, opt out [telemetry](https://rancher.com/docs/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
 
 # Additional Resources
 

@@ -9,7 +9,7 @@ Local authentication is the default until you configure an external authenticati
 
 Regardless of whether you use external authentication, you should create a few local authentication users so that you can continue using Rancher if your external authentication service encounters issues.
 
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Users**.
 1. Click **Create**.
 1.	Complete the **Add User** form.

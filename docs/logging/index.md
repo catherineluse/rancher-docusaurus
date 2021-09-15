@@ -59,7 +59,7 @@ Rancher logging has two roles, `logging-admin` and `logging-view`. For more info
 
 To manage `Flows,` `ClusterFlows`, `Outputs`, and `ClusterOutputs`, 
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to configure logging custom resources and click **Explore**.
 1. In the left navigation bar, click **Logging**.
 
@@ -111,22 +111,22 @@ The existence of these custom resources causes Rancher to create the `cattle-log
 
 The cluster namespace matches the cluster ID, so we need to find the cluster ID for each cluster.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster you want to get the ID of and click **Explore**.
-2. Copy the `<cluster-id>` portion from one of the URLs below. The `<cluster-id>` portion is the cluster namespace name.
+2. Copy the `\<cluster-id\>` portion from one of the URLs below. The `\<cluster-id\>` portion is the cluster namespace name.
 
 ```bash
 # Cluster Management UI
-https://<your-url>/c/<cluster-id>/
+https://\<your-url\>/c/\<cluster-id\>/
 
 # Cluster Dashboard
-https://<your-url>/dashboard/c/<cluster-id>/
+https://\<your-url\>/dashboard/c/\<cluster-id\>/
 ```
 
-Now that we have the `<cluster-id>` namespace, we can delete the CRs that cause `cattle-logging` to be continually recreated.
+Now that we have the `\<cluster-id\>` namespace, we can delete the CRs that cause `cattle-logging` to be continually recreated.
 *Warning:* ensure that logging, the version installed from the global view in the legacy Rancher UI, is not currently in use.
 
 ```bash
-kubectl delete clusterloggings.management.cattle.io -n <cluster-id>
-kubectl delete projectloggings.management.cattle.io -n <cluster-id>
+kubectl delete clusterloggings.management.cattle.io -n \<cluster-id\>
+kubectl delete projectloggings.management.cattle.io -n \<cluster-id\>
 ```

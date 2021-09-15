@@ -5,7 +5,7 @@ weight: 300
 
 Now that you have a running RKE cluster, you can install Rancher in it. For security reasons all traffic to Rancher must be encrypted with TLS. For this tutorial you are going to automatically issue a self-signed certificate through [cert-manager](https://cert-manager.io/). In a real-world use-case you will likely use Let's Encrypt or provide your own certificate. 
 
-> **Note:** These installation instructions assume you are using Helm 3.
+\> **Note:** These installation instructions assume you are using Helm 3.
 
 ### Install cert-manager
 
@@ -76,7 +76,7 @@ kubectl rollout status deployment -n cattle-system rancher
 
 You can now navigate to `https://rancher.example.com` and start using Rancher.
 
-> **Note:** If you don't intend to send telemetry data, opt out [telemetry](https://rancher.com/docs/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
+\> **Note:** If you don't intend to send telemetry data, opt out [telemetry](https://rancher.com/docs/rancher/v2.6/en/faq/telemetry/) during the initial login. Leaving this active in an air-gapped environment can cause issues if the sockets cannot be opened successfully.
 
 ### Additional Resources
 

@@ -9,12 +9,12 @@ If your organization uses Microsoft Active Directory Federation Services (AD FS)
 
 You must have Rancher installed.
 
-- Obtain your Rancher Server URL. During AD FS configuration, substitute this URL for the `<RANCHER_SERVER>` placeholder.
+- Obtain your Rancher Server URL. During AD FS configuration, substitute this URL for the `\<RANCHER_SERVER\>` placeholder.
 - You must have a global administrator account on your Rancher installation.
 
 You must have a [Microsoft AD FS Server](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) configured.
 
-- Obtain your AD FS Server IP/DNS name. During AD FS configuration, substitute this IP/DNS name for the `<AD_SERVER>` placeholder.
+- Obtain your AD FS Server IP/DNS name. During AD FS configuration, substitute this IP/DNS name for the `\<AD_SERVER\>` placeholder.
 - You must have access to add [Relying Party Trusts](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust) on your AD FS Server.
 
 ## Setup Outline
@@ -24,7 +24,7 @@ Setting up Microsoft AD FS with Rancher Server requires configuring AD FS on you
 - [1. Configuring Microsoft AD FS for Rancher](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/microsoft-adfs/microsoft-adfs-setup)
 - [2. Configuring Rancher for Microsoft AD FS](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/microsoft-adfs/rancher-adfs-setup)
 
-{{< saml_caveats >}}
+{{ saml_caveats }}
 
 
 ### [Next: Configuring Microsoft AD FS for Rancher](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/microsoft-adfs/microsoft-adfs-setup)

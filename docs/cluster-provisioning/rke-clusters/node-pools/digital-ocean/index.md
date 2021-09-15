@@ -16,7 +16,7 @@ Then you will create a DigitalOcean cluster in Rancher, and when configuring the
 
 ### 1. Create your cloud credentials
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
 1. Click **DigitalOcean**.
@@ -29,15 +29,15 @@ Then you will create a DigitalOcean cluster in Rancher, and when configuring the
 
 Creating a [node template](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/#node-templates) for DigitalOcean will allow Rancher to provision new nodes in DigitalOcean. Node templates can be reused for other clusters.
 
-1. Click **☰ > Cluster Management**.
-1. Click **RKE1 Configuration > Node Templates**.
+1. Click **☰ \> Cluster Management**.
+1. Click **RKE1 Configuration \> Node Templates**.
 1. Click **Add Template**.
 1. Click **DigitalOcean**.
 1. Fill out a node template for DigitalOcean. For help filling out the form, refer to [DigitalOcean Node Template Configuration.](./do-node-template-config)
 
 ### 3. Create a cluster with node pools using the node template
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **DigitalOcean**.
 1. Enter a **Cluster Name**.

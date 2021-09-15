@@ -52,7 +52,7 @@ To choose a Rancher version to install, refer to [Choosing a Rancher Version.](h
 
 To choose a version of Helm to install Rancher with, refer to the [Helm version requirements](https://rancher.com/docs/rancher/v2.6/en/installation/resources/helm-version)
 
-> **Note:** The installation instructions assume you are using Helm 3.
+\> **Note:** The installation instructions assume you are using Helm 3.
 
 To set up Rancher,
 
@@ -68,10 +68,10 @@ To set up Rancher,
 
 Use `helm repo add` command to add the Helm chart repository that contains charts to install Rancher. For more information about the repository choices and which is best for your use case, see [Choosing a Version of Rancher](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#helm-chart-repositories).
 
-{{< release-channel >}}
+{{ release-channel }}
 
 ```
-helm repo add rancher-<CHART_REPO> https://releases.rancher.com/server-charts/<CHART_REPO>
+helm repo add rancher-\<CHART_REPO\> https://releases.rancher.com/server-charts/\<CHART_REPO\>
 ```
 
 ### 2. Create a Namespace for Rancher
@@ -86,7 +86,7 @@ kubectl create namespace cattle-system
 
 The Rancher management server is designed to be secure by default and requires SSL/TLS configuration.
 
-> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
+\> **Note:** If you want terminate SSL/TLS externally, see [TLS termination on an External Load Balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination).
 
 There are three recommended options for the source of the certificate used for TLS termination at the Rancher server:
 
@@ -103,13 +103,13 @@ There are three recommended options for the source of the certificate used for T
 
 ### 4. Install cert-manager
 
-> You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination). 
+\> You should skip this step if you are bringing your own certificate files (option `ingress.tls.source=secret`), or if you use [TLS termination on an external load balancer](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/chart-options/#external-tls-termination). 
 
 This step is only required to use certificates issued by Rancher's generated CA (`ingress.tls.source=rancher`) or to request Let's Encrypt issued certificates (`ingress.tls.source=letsEncrypt`).
 
 {{% accordion id="cert-manager" label="Click to Expand" %}}
 
-> **Important:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
+\> **Important:** Recent changes to cert-manager require an upgrade. If you are upgrading Rancher and using a version of cert-manager older than v0.11.0, please see our [upgrade documentation](https://rancher.com/docs/rancher/v2.6/en/installation/resources/upgrading-cert-manager/).
 
 These instructions are adapted from the [official cert-manager documentation](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm).
 
@@ -161,7 +161,7 @@ Because `rancher` is the default option for `ingress.tls.source`, we are not spe
 - To install a specific Rancher version, use the `--version` flag, example: `--version 2.3.6`
 
 ```
-helm install rancher rancher-<CHART_REPO>/rancher \
+helm install rancher rancher-\<CHART_REPO\>/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org \
   --set bootstrapPassword=admin
@@ -189,7 +189,7 @@ In the following command,
 - If you are installing an alpha version, Helm requires adding the `--devel` option to the command. 
 
 ```
-helm install rancher rancher-<CHART_REPO>/rancher \
+helm install rancher rancher-\<CHART_REPO\>/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org \
   --set bootstrapPassword=admin \
@@ -213,7 +213,7 @@ When you run this command, the `hostname` option must match the `Common Name` or
 
 Although an entry in the `Subject Alternative Names` is technically required, having a matching `Common Name` maximizes compatibility with older browsers and applications.
 
-> If you want to check if your certificates are correct, see [How do I check Common Name and Subject Alternative Names in my server certificate?](https://rancher.com/docs/rancher/v2.6/en/faq/technical/#how-do-i-check-common-name-and-subject-alternative-names-in-my-server-certificate)
+\> If you want to check if your certificates are correct, see [How do I check Common Name and Subject Alternative Names in my server certificate?](https://rancher.com/docs/rancher/v2.6/en/faq/technical/#how-do-i-check-common-name-and-subject-alternative-names-in-my-server-certificate)
 
 - Set the `hostname`.
 - Set the `bootstrapPassword` to something unique for the `admin` user.
@@ -221,7 +221,7 @@ Although an entry in the `Subject Alternative Names` is technically required, ha
 - If you are installing an alpha version, Helm requires adding the `--devel` option to the command. 
 
 ```
-helm install rancher rancher-<CHART_REPO>/rancher \
+helm install rancher rancher-\<CHART_REPO\>/rancher \
   --namespace cattle-system \
   --set hostname=rancher.my.org \
   --set bootstrapPassword=admin \

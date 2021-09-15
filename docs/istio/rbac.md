@@ -39,6 +39,6 @@ Rancher will continue to use cluster-owner, cluster-member, project-owner, proje
 
 |CRDs                        | Admin | Edit | View  
 |----------------------------| ------| -----| -----
-| <ul><li>`config.istio.io`</li><ul><li>`adapters`</li><li>`attributemanifests`<li>`handlers`</li><li>`httpapispecbindings`</li><li>`httpapispecs`</li><li>`instances`</li><li>`quotaspecbindings`</li><li>`quotaspecs`</li><li>`rules`</lli><li>`templates`</li></ul></ul>| GLW | GLW | GLW
-|<ul><li>`networking.istio.io`</li><ul><li>`destinationrules`</li><li>`envoyfilters`<li>`gateways`</li><li>`serviceentries`</li><li>`sidecars`</li><li>`virtualservices`</li><li>`workloadentries`</li></ul></ul>| * | * | GLW 
-|<ul><li>`security.istio.io`</li><ul><li>`authorizationpolicies`</li><li>`peerauthentications`<li>`requestauthentications`</li></ul></ul>| * | * | GLW 
+| `config.istio.io`, `adapters`, `attributemanifests`, `handlers`, `httpapispecbindings`, `httpapispecs`, `instances`, `quotaspecbindings`, `quotaspecs`, `rules`, `templates`| GLW | GLW | GLW
+|`networking.istio.io`,`destinationrules`, `envoyfilters`\<li\>`gateways`, `serviceentries`, `sidecars`, `virtualservices`, `workloadentries`| * | * | GLW 
+|`security.istio.io`,`authorizationpolicies`, `peerauthentications`, `requestauthentications`| * | * | GLW 

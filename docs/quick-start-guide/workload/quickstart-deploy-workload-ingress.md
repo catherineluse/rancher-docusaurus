@@ -13,7 +13,7 @@ You're ready to create your first Kubernetes [workload](https://kubernetes.io/do
 
 For this workload, you'll be deploying the application Rancher Hello-World.
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. Click **Workload**.
 1. Click **Create**.
@@ -27,19 +27,19 @@ For this workload, you'll be deploying the application Rancher Hello-World.
 * Your workload is deployed. This process might take a few minutes to complete.
 * When your workload completes deployment, it's assigned a state of **Active**. You can view this status from the project's **Workloads** page.
 
-<br/>
+
 ### 2. Expose The Application Via An Ingress
 
 Now that the application is up and running it needs to be exposed so that other services can connect.
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 
 2.  From the main menu of the **Dashboard**, select **Projects**.
 
 3.  Open the **Default** project.
 
-4.  Click **Resources > Workloads > Load Balancing**. Click on the **Load Balancing** tab.
+4.  Click **Resources \> Workloads \> Load Balancing**. Click on the **Load Balancing** tab.
 
 5.  Click **Add Ingress**.
 
@@ -55,7 +55,7 @@ Now that the application is up and running it needs to be exposed so that other 
 
 ### View Your Application
 
-From the **Load Balancing** page, click the target link, which will look something like `hello.default.xxx.xxx.xxx.xxx.xip.io > hello-world`.
+From the **Load Balancing** page, click the target link, which will look something like `hello.default.xxx.xxx.xxx.xxx.xip.io \> hello-world`.
 
 Your application will open in a separate window.
 

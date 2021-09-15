@@ -33,7 +33,7 @@ Rancher v2.6 introduces provisioning for [RKE2](https://docs.rke2.io/) clusters 
 
 When you create an RKE or RKE2 cluster using a node template in Rancher, each resulting node pool is shown in a new **Machine Pools** tab. You can see the machine pools by doing the following:
 
-1. Click  **☰ > Cluster Management**.
+1. Click  **☰ \> Cluster Management**.
 1. Click the name of the RKE or RKE2 cluster.
 
 # Node Templates
@@ -60,8 +60,8 @@ Administrators can control all node templates. Admins can now maintain all the n
 
 To access all node templates, an administrator will need to do the following:
 
-1. Click **☰ > Cluster Management**.
-1. Click **RKE1 Configuration > Node Templates**.
+1. Click **☰ \> Cluster Management**.
+1. Click **RKE1 Configuration \> Node Templates**.
 
 **Result:** All node templates are listed. The templates can be edited or cloned by clicking the **⋮**.
 
@@ -95,7 +95,7 @@ When there are taints on the node pool and node template, if there is no conflic
 
 If a node is in a node pool, Rancher can automatically replace unreachable nodes. Rancher will use the existing node template for the given node pool to recreate the node if it becomes inactive for a specified number of minutes.
 
-> **Important:** Self-healing node pools are designed to help you replace worker nodes for <b>stateless</b> applications. It is not recommended to enable node auto-replace on a node pool of master nodes or nodes with persistent volumes attached, because VMs are treated ephemerally. When a node in a node pool loses connectivity with the cluster, its persistent volumes are destroyed, resulting in data loss for stateful applications.
+\> **Important:** Self-healing node pools are designed to help you replace worker nodes for \<b\>stateless\</b\> applications. It is not recommended to enable node auto-replace on a node pool of master nodes or nodes with persistent volumes attached, because VMs are treated ephemerally. When a node in a node pool loses connectivity with the cluster, its persistent volumes are destroyed, resulting in data loss for stateful applications.
 
 Node auto-replace works on top of the Kubernetes node controller. The node controller periodically checks the status of all the nodes (configurable via the `--node-monitor-period` flag of the `kube-controller`). When a node is unreachable, the node controller will taint that node. When this occurs, Rancher will begin its deletion countdown. You can configure the amount of time Rancher waits to delete the node. If the taint is not removed before the deletion countdown ends, Rancher will proceed to delete the node object. Rancher will then provision a node in accordance with the set quantity of the node pool.
 
@@ -113,8 +113,8 @@ When you create the node pool, you can specify the amount of time in minutes tha
 
 You can disable node auto-replace from the Rancher UI with the following steps:
 
-1. Click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the cluster where you want to disable node auto-replace and click **⋮ > Edit Config**.
+1. Click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the cluster where you want to disable node auto-replace and click **⋮ \> Edit Config**.
 1. In the **Node Pools** section, go to the node pool where you want to enable node auto-replace. In the **Recreate Unreachable After** field, enter 0.
 1. Click **Save**.
 

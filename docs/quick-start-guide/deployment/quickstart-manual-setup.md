@@ -12,7 +12,7 @@ Howdy Partner! This tutorial walks you through:
 
 This Quick Start Guide is divided into different tasks for easier consumption.
 
-<!-- TOC -->
+\<!-- TOC --\>
 
 
 1. [Provision a Linux Host](#1-provision-a-linux-host)
@@ -23,8 +23,8 @@ This Quick Start Guide is divided into different tasks for easier consumption.
 
 1. [Create the Cluster](#4-create-the-cluster)
 
-<!-- /TOC -->
-<br/>
+\<!-- /TOC --\>
+
 ### 1. Provision a Linux Host
 
  Begin creation of a custom cluster by provisioning a Linux host. Your host can be:
@@ -33,10 +33,10 @@ This Quick Start Guide is divided into different tasks for easier consumption.
 - An on-prem VM
 - A bare-metal server
 
-  >**Note:**
-  > When using a cloud-hosted virtual machine you need to allow inbound TCP communication to ports 80 and 443.  Please see your cloud-host's documentation for information regarding port configuration.
-  >
-  > For a full list of port requirements, refer to [Docker Installation](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements/).
+  \>**Note:**
+  \> When using a cloud-hosted virtual machine you need to allow inbound TCP communication to ports 80 and 443.  Please see your cloud-host's documentation for information regarding port configuration.
+  \>
+  \> For a full list of port requirements, refer to [Docker Installation](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements/).
 
   Provision the host according to our [Requirements](https://rancher.com/docs/rancher/v2.6/en/installation/requirements/).
 
@@ -58,15 +58,15 @@ To install Rancher on your host, connect to it and then use a shell to install.
 
 Log in to Rancher to begin using the application. After you log in, you'll make some one-time configurations.
 
-1.  Open a web browser and enter the IP address of your host: `https://<SERVER_IP>`.
+1.  Open a web browser and enter the IP address of your host: `https://\<SERVER_IP\>`.
 
-    Replace `<SERVER_IP>` with your host IP address.
+    Replace `\<SERVER_IP\>` with your host IP address.
 
 2.  When prompted, create a password for the default `admin` account there cowpoke!
 
-3. Set the **Rancher Server URL**. The URL can either be an IP address or a host name. However, each node added to your cluster must be able to connect to this URL.<br/><br/>If you use a hostname in the URL, this hostname must be resolvable by DNS on the nodes you want to add to you cluster.
+3. Set the **Rancher Server URL**. The URL can either be an IP address or a host name. However, each node added to your cluster must be able to connect to this URL.If you use a hostname in the URL, this hostname must be resolvable by DNS on the nodes you want to add to you cluster.
 
-<br/>
+
 
 ### 4. Create the Cluster
 
@@ -74,7 +74,7 @@ Welcome to Rancher! You are now able to create your first Kubernetes cluster.
 
 In this task, you can use the versatile **Custom** option. This option lets you add _any_ Linux host (cloud-hosted VM, on-prem VM, or bare-metal) to be used in a cluster.
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. From the **Clusters** page, click **Create**.
 2. Choose **Custom**.
 

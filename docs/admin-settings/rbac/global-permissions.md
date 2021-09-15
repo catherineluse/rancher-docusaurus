@@ -11,7 +11,7 @@ Global Permissions define user authorization outside the scope of any particular
 
 - **Restricted Admin:** These users have full control over downstream clusters, but cannot alter the local Kubernetes cluster.
 
-- <a id="user"></a>**Standard User:** These users can create new clusters and use them. Standard users can also assign other users permissions to their clusters.
+- \<a id="user"\>\</a\>**Standard User:** These users can create new clusters and use them. Standard users can also assign other users permissions to their clusters.
 
 - **User-Base:** User-Base users have login-access only.
 
@@ -100,7 +100,7 @@ The following table lists the permissions and actions that a `restricted-admin` 
 
 If Rancher already has a global administrator, they should change all global administrators over to the new `restricted-admin` role.
 
-This can be done through **Security > Users** and moving any Administrator role over to Restricted Administrator.
+This can be done through **Security \> Users** and moving any Administrator role over to Restricted Administrator.
 
 Signed-in users can change themselves over to the `restricted-admin` if they wish, but they should only do that as the last step, otherwise they won't have the permissions to do so.
 
@@ -114,7 +114,7 @@ When you create a new local user, you assign them a global permission as you com
 
 To see the default permissions for new users,
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
 1. The **Roles** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **Global** tab, in the **New User Default** column, the permissions given to new users by default are indicated with a checkmark.
 
@@ -126,7 +126,7 @@ When a user logs into Rancher using an external authentication provider for the 
 
 To see the default permissions for new users, 
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
 1. The **Roles** page has tabs for roles grouped by scope. Each table lists the roles in that scope. In the **New User Default** column on each page, the permissions given to new users by default are indicated with a checkmark.
 
@@ -173,26 +173,26 @@ The following table lists each custom global permission available and whether it
 
 For details on which Kubernetes resources correspond to each global permission,
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**.
 1.  If you click the name of an individual role, a table shows all of the operations and resources that are permitted by the role.
 
-> **Notes:**
->
-> - Each permission listed above is comprised of multiple individual permissions not listed in the Rancher UI. For a full list of these permissions and the rules they are comprised of, access through the API at `/v3/globalRoles`.
-> - When viewing the resources associated with default roles created by Rancher, if there are multiple Kubernetes API resources on one line item, the resource will have `(Custom)` appended to it. These are not custom resources but just an indication that there are multiple Kubernetes API resources as one resource.
+\> **Notes:**
+\>
+\> - Each permission listed above is comprised of multiple individual permissions not listed in the Rancher UI. For a full list of these permissions and the rules they are comprised of, access through the API at `/v3/globalRoles`.
+\> - When viewing the resources associated with default roles created by Rancher, if there are multiple Kubernetes API resources on one line item, the resource will have `(Custom)` appended to it. These are not custom resources but just an indication that there are multiple Kubernetes API resources as one resource.
 
 ### Configuring Default Global Permissions
 
 If you want to restrict the default permissions for new users, you can remove the `user` permission as default role and then assign multiple individual permissions as default instead. Conversely, you can also add administrative permissions on top of a set of other standard permissions.
 
-> **Note:** Default roles are only assigned to users added from an external authentication provider. For local users, you must explicitly assign global permissions when adding a user to Rancher. You can customize these global permissions when adding the user.
+\> **Note:** Default roles are only assigned to users added from an external authentication provider. For local users, you must explicitly assign global permissions when adding a user to Rancher. You can customize these global permissions when adding the user.
 
 To change the default global permissions that are assigned to external users upon their first log in, follow these steps:
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Roles**. On the **Roles** page, make sure the **Global** tab is selected.
-1. Find the permissions set that you want to add or remove as a default. Then edit the permission by selecting **⋮ > Edit Config**.
+1. Find the permissions set that you want to add or remove as a default. Then edit the permission by selecting **⋮ \> Edit Config**.
 1. If you want to add the permission as a default, Select **Yes: Default role for new users** and then click **Save**. If you want to remove a default permission, edit the permission and select **No**.
 
 **Result:** The default global permissions are configured based on your changes. Permissions assigned to new users display a check in the **New User Default** column.
@@ -201,13 +201,13 @@ To change the default global permissions that are assigned to external users upo
 
 To configure permission for a user,
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Users**.
-1. Go to the user whose access level you want to change and click **⋮ > Edit Config**.
+1. Go to the user whose access level you want to change and click **⋮ \> Edit Config**.
 1. In the **Global Permissions** and **Built-in** sections, check the boxes for each permission you want the user to have. If you have created roles from the **Roles** page, they will appear in the **Custom** section and you can choose from them as well.
 1. Click **Save**.
 
-> **Result:** The user's global permissions have been updated.
+\> **Result:** The user's global permissions have been updated.
 
 ### Configuring Global Permissions for Groups
 
@@ -221,17 +221,17 @@ For new users, the new permissions take effect when the users log in to Rancher 
 
 If a user is removed from the external authentication provider group, they would lose their permissions from the custom global role that was assigned to the group. They would continue to have any remaining roles that were assigned to them, which would typically include the roles marked as **New User Default**. Rancher will remove the permissions that are associated with the group when the user logs out, or when an administrator [refreshes group memberships,](#refreshing-group-memberships) whichever comes first.
 
-> **Prerequisites:** You can only assign a global role to a group if:
->
-> * You have set up an [external authentication provider](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-vs-local-authentication)
-> * The external authentication provider supports [user groups](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/user-groups/)
-> * You have already set up at least one user group with the authentication provider
+\> **Prerequisites:** You can only assign a global role to a group if:
+\>
+\> * You have set up an [external authentication provider](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-vs-local-authentication)
+\> * The external authentication provider supports [user groups](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/user-groups/)
+\> * You have already set up at least one user group with the authentication provider
 
 To assign a custom global role to a group, follow these steps:
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Groups**.
-1. Go to the group you want to assign a custom global role to and click **⋮ > Edit Config**.
+1. Go to the group you want to assign a custom global role to and click **⋮ \> Edit Config**.
 1. In the **Global Permissions,** **Custom,** and/or **Built-in** sections, select the permissions that the group should have.
 1. Click **Create**.
 
@@ -247,7 +247,7 @@ An administrator might also want to refresh group memberships if a user is remov
 
 To refresh group memberships,
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Users**.
 1. Click **Refresh Group Memberships**.
 

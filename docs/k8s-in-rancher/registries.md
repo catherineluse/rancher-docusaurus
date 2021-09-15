@@ -16,16 +16,16 @@ Currently, deployments pull the private registry credentials automatically only 
 
 # Creating a Registry
 
->**Prerequisites:** You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
+\>**Prerequisites:** You must have a [private registry](https://docs.docker.com/registry/deploying/) available to use.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to add a registry and click **Explore**.
-1. In the left navigation lick **More Resources > Core > Secrets**.
+1. In the left navigation lick **More Resources \> Core \> Secrets**.
 1. Click **Create**.
 1. Click **Registry**.
 1. Enter a **Name** for the registry.
 
-    >**Note:** Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your registry must have a unique name among all secrets within your workspace.
+    \>**Note:** Kubernetes classifies secrets, certificates, and registries all as [secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and no two secrets in a project or namespace can have duplicate names. Therefore, to prevent conflicts, your registry must have a unique name among all secrets within your workspace.
 
 1. Select a namespace for the registry.
 
@@ -36,7 +36,7 @@ Currently, deployments pull the private registry credentials automatically only 
 **Result:** 
 
 - Your secret is added to the project or namespace, depending on the scope you chose.
-- You can view the secret in the Rancher UI from the **Resources > Registries** view.
+- You can view the secret in the Rancher UI from the **Resources \> Registries** view.
 - Any workload that you create in the Rancher UI will have the credentials to access the registry if the workload is within the registry's scope.
 
 # Using a Private Registry
@@ -47,13 +47,13 @@ You can deploy a workload with an image from a private registry through the Ranc
 
 To deploy a workload with an image from your private registry,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to deploy a workload and click **Explore**.
 1. Click **Workload**.
 1. Click **Create**.
 1. Select the type of workload you want to create.
 1. Enter a unique name for the workload and choose a namespace.
-1. In the **Container Image** field, enter the URL of the path to the image in your private registry. For example, if your private registry is on Quay.io, you could use `quay.io/<Quay profile name>/<Image name>`.
+1. In the **Container Image** field, enter the URL of the path to the image in your private registry. For example, if your private registry is on Quay.io, you could use `quay.io/\<Quay profile name\>/\<Image name\>`.
 1. Click **Create**.
 
 **Result:** Your deployment should launch, authenticate using the private registry credentials you added in the Rancher UI, and pull the Docker image that you specified.
@@ -74,7 +74,7 @@ metadata:
 spec:
   containers:
   - name: private-reg-container
-    image: quay.io/<Quay profile name>/<image name>
+    image: quay.io/\<Quay profile name\>/\<image name\>
   imagePullSecrets:
   - name: testquay
 ```
@@ -86,8 +86,8 @@ You can use `kubectl` to create the secret with the private registry credentials
 ```
 kubectl create secret docker-registry testquay \
     --docker-server=quay.io \
-    --docker-username=<Profile name> \
-    --docker-password=<password>
+    --docker-username=\<Profile name\> \
+    --docker-password=\<password\>
 ```
 
 To see how the secret is stored in Kubernetes, you can use this command:
@@ -99,7 +99,7 @@ kubectl get secret testquay --output="jsonpath={.data.\.dockerconfigjson}" | bas
 The result looks like this:
 
 ```
-{"auths":{"quay.io":{"username":"<Profile name>","password":"<password>","auth":"c291bXlhbGo6dGVzdGFiYzEyMw=="}}}
+{"auths":{"quay.io":{"username":"\<Profile name\>","password":"\<password\>","auth":"c291bXlhbGo6dGVzdGFiYzEyMw=="}}}
 ```
 
 After the workload is deployed, you can check if the image was pulled successfully:
@@ -110,8 +110,8 @@ kubectl get events
 The result should look like this:
 ```
 14s         Normal    Scheduled          Pod    Successfully assigned default/private-reg2 to minikube
-11s         Normal    Pulling            Pod    pulling image "quay.io/<Profile name>/<image name>"
-10s         Normal    Pulled             Pod    Successfully pulled image "quay.io/<Profile name>/<image name>"
+11s         Normal    Pulling            Pod    pulling image "quay.io/\<Profile name\>/\<image name\>"
+10s         Normal    Pulled             Pod    Successfully pulled image "quay.io/\<Profile name\>/\<image name\>"
 ```
 
 For more information, refer to the Kubernetes documentation on [creating a pod that uses your secret.](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-pod-that-uses-your-secret)

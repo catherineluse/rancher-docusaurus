@@ -20,7 +20,7 @@ This section covers the following topics:
 
 The list of all available snapshots for the cluster is available.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. In the **Clusters** page, go to the cluster where you want to view the snapshots and click the name of the cluster.
 1. Click the **Snapshots** tab. The listed snapshots include a timestamp of when they were created.
 
@@ -36,12 +36,12 @@ Snapshots are composed of the cluster data in etcd, the Kubernetes version, and 
 
 When rolling back to a prior Kubernetes version, the [upgrade strategy options](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/upgrading-kubernetes/#configuring-the-upgrade-strategy) are ignored. Worker nodes are not cordoned or drained before being reverted to the older Kubernetes version, so that an unhealthy cluster can be more quickly restored to a healthy state.
 
-> **Prerequisite:** To restore snapshots from S3, the cluster needs to be configured to [take recurring snapshots on S3.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/backing-up-etcd/#configuring-recurring-snapshots)
+\> **Prerequisite:** To restore snapshots from S3, the cluster needs to be configured to [take recurring snapshots on S3.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/backing-up-etcd/#configuring-recurring-snapshots)
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. In the **Clusters** page, go to the cluster where you want to view the snapshots and click the name of the cluster.
 1. Click the **Snapshots** tab to view the list of saved snapshots. 
-1. Go to the snapshot you want to restore and click **⋮ > Restore Snapshot**.
+1. Go to the snapshot you want to restore and click **⋮ \> Restore Snapshot**.
 1. Click **Restore**.
 
 **Result:** The cluster will go into `updating` state and the process of restoring the `etcd` nodes from the snapshot will start. The cluster is restored when it returns to an `active` state.

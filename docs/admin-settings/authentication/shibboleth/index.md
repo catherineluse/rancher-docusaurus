@@ -9,7 +9,7 @@ In this configuration, when Rancher users log in, they will be redirected to the
 
 If you also configure OpenLDAP as the back end to Shibboleth, it will return a SAML assertion to Rancher with user attributes that include groups. Then the authenticated user will be able to access resources in Rancher that their groups have permissions for.
 
-> The instructions in this section assume that you understand how Rancher, Shibboleth, and OpenLDAP work together. For a more detailed explanation of how it works, refer to [this page.](./about)
+\> The instructions in this section assume that you understand how Rancher, Shibboleth, and OpenLDAP work together. For a more detailed explanation of how it works, refer to [this page.](./about)
 
 This section covers the following topics:
 
@@ -25,18 +25,18 @@ This section covers the following topics:
 # Setting up Shibboleth in Rancher
 
 ### Shibboleth Prerequisites
->
->- You must have a Shibboleth IdP Server configured.
->- Following are the Rancher Service Provider URLs needed for configuration:
-Metadata URL: `https://<rancher-server>/v1-saml/shibboleth/saml/metadata`
-Assertion Consumer Service (ACS) URL: `https://<rancher-server>/v1-saml/shibboleth/saml/acs`
->- Export a `metadata.xml` file from your IdP Server. For more information, see the [Shibboleth documentation.](https://wiki.shibboleth.net/confluence/display/SP3/Home)
+\>
+\>- You must have a Shibboleth IdP Server configured.
+\>- Following are the Rancher Service Provider URLs needed for configuration:
+Metadata URL: `https://\<rancher-server\>/v1-saml/shibboleth/saml/metadata`
+Assertion Consumer Service (ACS) URL: `https://\<rancher-server\>/v1-saml/shibboleth/saml/acs`
+\>- Export a `metadata.xml` file from your IdP Server. For more information, see the [Shibboleth documentation.](https://wiki.shibboleth.net/confluence/display/SP3/Home)
 
 ### Configure Shibboleth in Rancher
 
 If your organization uses Shibboleth for user authentication, you can configure Rancher to allow your users to log in using their IdP credentials.
 
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **Shibboleth**.
 1.	Complete the **Configure Shibboleth Account** form. Shibboleth IdP lets you specify what data store you want to use. You can either add a database or use an existing ldap server. For example, if you select your Active Directory (AD) server, the examples below describe how you can map AD attributes to fields within Rancher.
@@ -65,7 +65,7 @@ If your organization uses Shibboleth for user authentication, you can configure 
 
     Rancher redirects you to the IdP login page. Enter credentials that authenticate with Shibboleth IdP to validate your Rancher Shibboleth configuration.
 
-    >**Note:** You may have to disable your popup blocker to see the IdP login page.
+    \>**Note:** You may have to disable your popup blocker to see the IdP login page.
 
 **Result:** Rancher is configured to work with Shibboleth. Your users can now sign into Rancher using their Shibboleth logins.
 
@@ -88,18 +88,18 @@ If you also configure OpenLDAP as the back end to Shibboleth, it will return a S
 
 Rancher must be configured with a LDAP bind account (aka service account) to search and retrieve LDAP entries pertaining to users and groups that should have access. It is recommended to not use an administrator account or personal account for this purpose and instead create a dedicated account in OpenLDAP with read-only access to users and groups under the configured search base (see below).
 
-> **Using TLS?**
->
-> If the certificate used by the OpenLDAP server is self-signed or not from a recognized certificate authority, make sure have at hand the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to paste in this certificate during the configuration so that Rancher is able to validate the certificate chain.
+\> **Using TLS?**
+\>
+\> If the certificate used by the OpenLDAP server is self-signed or not from a recognized certificate authority, make sure have at hand the CA certificate (concatenated with any intermediate certificates) in PEM format. You will have to paste in this certificate during the configuration so that Rancher is able to validate the certificate chain.
 
 ### Configure OpenLDAP in Rancher
 
 Configure the settings for the OpenLDAP server, groups and users. For help filling out each field, refer to the [configuration reference.](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/openldap/openldap-config) Note that nested group membership is not available for Shibboleth.
 
-> Before you proceed with the configuration, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-authentication-configuration-and-principal-users).
+\> Before you proceed with the configuration, please familiarise yourself with the concepts of [External Authentication Configuration and Principal Users](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/#external-authentication-configuration-and-principal-users).
 
 1. Log into the Rancher UI using the initial local `admin` account.
-1.	In the top left corner, click **☰ > Users & Authentication**.
+1.	In the top left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation menu, click **Auth Provider**.
 1. Click **OpenLDAP**. The **Configure an OpenLDAP server** form will be displayed.
 

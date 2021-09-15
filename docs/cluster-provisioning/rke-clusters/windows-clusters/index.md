@@ -20,13 +20,13 @@ For a summary of Kubernetes features supported in Windows, see the Kubernetes do
 
 This guide covers the following topics:
 
-<!-- TOC -->
+\<!-- TOC --\>
 
 - [Changes in Rancher v2.6](#changes-in-rancher-v2-6)
 - [Requirements](#requirements-for-windows-clusters)
 - [Tutorial: How to Create a Cluster with Windows Support](#tutorial-how-to-create-a-cluster-with-windows-support)
 - [Configuration for Storage Classes in Azure](#configuration-for-storage-classes-in-azure)
-  <!-- /TOC -->
+  \<!-- /TOC --\>
 
   # Changes in Rancher v2.6
 
@@ -81,7 +81,7 @@ For **VXLAN (Overlay)** networking, the [KB4489899](https://support.microsoft.co
 
 If you are configuring DHCP options sets for an AWS virtual private cloud, note that in the `domain-name` option field, only one domain name can be specified. According to the DHCP options [documentation:](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html)
 
-> Some Linux operating systems accept multiple domain names separated by spaces. However, other Linux operating systems and Windows treat the value as a single domain, which results in unexpected behavior. If your DHCP options set is associated with a VPC that has instances with multiple operating systems, specify only one domain name.
+\> Some Linux operating systems accept multiple domain names separated by spaces. However, other Linux operating systems and Windows treat the value as a single domain, which results in unexpected behavior. If your DHCP options set is associated with a VPC that has instances with multiple operating systems, specify only one domain name.
 
 ### Architecture Requirements
 
@@ -91,7 +91,7 @@ The `worker` nodes, which is where your workloads will be deployed on, will typi
 
 We recommend the minimum three-node architecture listed in the table below, but you can always add additional Linux and Windows workers to scale up your cluster for redundancy:
 
-<a id="guide-architecture"></a>
+\<a id="guide-architecture"\>\</a\>
 
 | Node   | Operating System                                    | Kubernetes Cluster Role(s)                                                                                                                                                                                                                         | Purpose                                                                             |
 | ------ | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -120,13 +120,13 @@ When you provision a cluster with Rancher on existing nodes, you will add nodes 
 
 To set up a cluster with support for Windows nodes and containers, you will need to complete the tasks below.
 
-<!-- TOC -->
+\<!-- TOC --\>
 
 1. [Provision Hosts](#1-provision-hosts)
 1. [Create the Cluster on Existing Nodes](#2-create-the-cluster-on-existing-nodes)
 1. [Add Nodes to the Cluster](#3-add-nodes-to-the-cluster)
 1. [Optional: Configuration for Azure Files](#4-optional-configuration-for-azure-files)
-   <!-- /TOC -->
+   \<!-- /TOC --\>
 
 # 1. Provision Hosts
 
@@ -156,7 +156,7 @@ If your nodes are hosted by a **Cloud Provider** and you want automation support
 
 The instructions for creating a Windows cluster on existing nodes are very similar to the general [instructions for creating a custom cluster](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/custom-nodes/) with some Windows-specific requirements.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **Custom**.
 1. Enter a name for your cluster in the **Cluster Name** field.
@@ -166,7 +166,7 @@ The instructions for creating a Windows cluster on existing nodes are very simil
 1. Optional: After you enable Windows support, you will be able to choose the Flannel backend. There are two network options: [**Host Gateway (L2bridge)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#host-gw) and [**VXLAN (Overlay)**](https://github.com/coreos/flannel/blob/master/Documentation/backends.md#vxlan). The default option is **VXLAN (Overlay)** mode.
 1. Click **Next**.
 
-> **Important:** For <b>Host Gateway (L2bridge)</b> networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/host-gateway-requirements/#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/host-gateway-requirements/#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
+\> **Important:** For \<b\>Host Gateway (L2bridge)\</b\> networking, it's best to use the same Layer 2 network for all nodes. Otherwise, you need to configure the route rules for them. For details, refer to the [documentation on configuring cloud-hosted VM routes.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/host-gateway-requirements/#cloud-hosted-vm-routes-configuration) You will also need to [disable private IP address checks](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/host-gateway-requirements/#disabling-private-ip-address-checks) if you are using Amazon EC2, Google GCE, or Azure VM.
 
 # 3. Add Nodes to the Cluster
 
@@ -205,8 +205,8 @@ In this section, we run a command to register the Linux worker node to the clust
 
 After the initial provisioning of your cluster, your cluster only has a single Linux host. Next, we add another Linux `worker` host, which will be used to support _Rancher cluster agent_, _Metrics server_, _DNS_ and _Ingress_ for your cluster.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster that you created and click **⋮ > Edit Config**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. Go to the cluster that you created and click **⋮ \> Edit Config**.
 1. Scroll down to **Node Operating System**. Choose **Linux**.
 1. In the **Customize Node Run Command** section, go to the **Node Options** and select the **Worker** role.
 1. Copy the command displayed on screen to your clipboard.
@@ -215,13 +215,13 @@ After the initial provisioning of your cluster, your cluster only has a single L
 
 **Result:** The **Worker** role is installed on your Linux host, and the node registers with Rancher. It may take a few minutes for the node to be registered in your cluster.
 
-> **Note:** Taints on Linux Worker Nodes
->
-> For each Linux worker node added into the cluster, the following taints will be added to Linux worker node. By adding this taint to the Linux worker node, any workloads added to the Windows cluster will be automatically scheduled to the Windows worker node. If you want to schedule workloads specifically onto the Linux worker node, you will need to add tolerations to those workloads.
+\> **Note:** Taints on Linux Worker Nodes
+\>
+\> For each Linux worker node added into the cluster, the following taints will be added to Linux worker node. By adding this taint to the Linux worker node, any workloads added to the Windows cluster will be automatically scheduled to the Windows worker node. If you want to schedule workloads specifically onto the Linux worker node, you will need to add tolerations to those workloads.
 
-> | Taint Key      | Taint Value | Taint Effect |
-> | -------------- | ----------- | ------------ |
-> | `cattle.io/os` | `linux`     | `NoSchedule` |
+\> | Taint Key      | Taint Value | Taint Effect |
+\> | -------------- | ----------- | ------------ |
+\> | `cattle.io/os` | `linux`     | `NoSchedule` |
 
 ### Add a Windows Worker Node
 
@@ -229,8 +229,8 @@ In this section, we run a command to register the Windows worker node to the clu
 
 You can add Windows hosts to the cluster by editing the cluster and choosing the **Windows** option.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster that you created and click **⋮ > Edit Config**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. Go to the cluster that you created and click **⋮ \> Edit Config**.
 1. Scroll down to **Node Operating System**. Choose **Windows**. Note: You will see that the **worker** role is the only available role.
 1. Copy the command displayed on screen to your clipboard.
 1. Log in to your Windows host using your preferred tool, such as [Microsoft Remote Desktop](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). Run the command copied to your clipboard in the **Command Prompt (CMD)**.

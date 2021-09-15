@@ -4,7 +4,7 @@ metaDescription: Use this section to jump start your Rancher deployment and test
 short title: Use this section to jump start your Rancher deployment and testing. It contains instructions for a simple Rancher setup and some common use cases. 
 weight: 2
 ---
->**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](https://rancher.com/docs/rancher/v2.6/en/installation/).
+\>**Note:** The intent of these guides is to quickly launch a sandbox that you can use to evaluate Rancher. These guides are not intended for production environments. For comprehensive setup instructions, see [Installation](https://rancher.com/docs/rancher/v2.6/en/installation/).
 
 Howdy buckaroos! Use this section of the docs to jump start your deployment and testing of Rancher 2.x! It contains instructions for a simple Rancher setup and some common use cases. We plan on adding more content to this section in the future.
 

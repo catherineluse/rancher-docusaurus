@@ -16,8 +16,8 @@ If your private registry requires credentials, it cannot be used as the default 
 # Setting a Private Registry with No Credentials as the Default Registry
 
 1. Log into Rancher and configure the default administrator password.
-1. Click **☰ > Global Settings**.
-1. Go to the setting called `system-default-registry` and choose **⋮ > Edit Setting**.
+1. Click **☰ \> Global Settings**.
+1. Go to the setting called `system-default-registry` and choose **⋮ \> Edit Setting**.
 1. Change the value to your registry (e.g. `registry.yourdomain.com:port`). Do not prefix the registry with `http://` or `https://`.
 
 **Result:** Rancher will use your private registry to pull system images.
@@ -26,7 +26,7 @@ If your private registry requires credentials, it cannot be used as the default 
 
 You can follow these steps to configure a private registry when you create a cluster:
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Choose a cluster type.
 1. In the **Cluster Configuration** go to the **Registries** tab and click **Pull images for Rancher from a private registry**.

@@ -11,9 +11,9 @@ Access to clusters, projects, multi-cluster apps, and global DNS providers and e
 
 When adding a user or group to a resource, you can search for users or groups by beginning to type their name. The Rancher server will query the authentication provider to find users and groups that match what you've entered. Searching is limited to the authentication provider that you are currently logged in with. For example, if you've enabled GitHub authentication but are logged in using a [local](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/local/) user account, you will not be able to search for GitHub users or groups.
 
-All users, whether they are local users or from an authentication provider, can be viewed and managed. In the upper left corner, click **☰ > Users & Authentication**. In the left navigation bar, click **Users**.
+All users, whether they are local users or from an authentication provider, can be viewed and managed. In the upper left corner, click **☰ \> Users & Authentication**. In the left navigation bar, click **Users**.
 
-{{< saml_caveats >}}
+{{ saml_caveats }}
 
 ## User Information
 
@@ -37,29 +37,29 @@ Two settings control this behavior:
 
 To change these settings,
 
-1. In the upper left corner, click **☰ > Global Settings**.
-1. Go to the setting you want to configure and click **⋮ > Edit Setting**.
+1. In the upper left corner, click **☰ \> Global Settings**.
+1. Go to the setting you want to configure and click **⋮ \> Edit Setting**.
 
-> **Note:** Since SAML does not support user lookup, SAML-based authentication providers do not support periodically refreshing user information. User information will only be refreshed when the user logs into the Rancher UI.
+\> **Note:** Since SAML does not support user lookup, SAML-based authentication providers do not support periodically refreshing user information. User information will only be refreshed when the user logs into the Rancher UI.
 
 ### Manually Refreshing User Information
 
 If you are not sure the last time Rancher performed an automatic refresh of user information, you can perform a manual refresh of all users.
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. On the **Users** page, click on **Refresh Group Memberships**.
 
 **Results:** Rancher refreshes the user information for all users. Requesting this refresh will update which users can access Rancher as well as all the groups that each user belongs to.
 
->**Note:** Since SAML does not support user lookup, SAML-based authentication providers do not support the ability to manually refresh user information. User information will only be refreshed when the user logs into the Rancher UI.
+\>**Note:** Since SAML does not support user lookup, SAML-based authentication providers do not support the ability to manually refresh user information. User information will only be refreshed when the user logs into the Rancher UI.
 
 
 ## Session Length
 
 The default length (TTL) of each user session is adjustable. The default session length is 16 hours.
 
-1. In the upper left corner, click **☰ > Global Settings**.
-1. Go to **`auth-user-session-ttl-minutes`** and click **⋮ > Edit Setting**.
+1. In the upper left corner, click **☰ \> Global Settings**.
+1. Go to **`auth-user-session-ttl-minutes`** and click **⋮ \> Edit Setting**.
 1. Enter the amount of time in minutes a session length should last and click **Save**.
 
 **Result:** Users are automatically logged out of Rancher after the set number of minutes.

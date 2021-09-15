@@ -26,29 +26,29 @@ Rancher provides several different Helm chart repositories to choose from. We al
 | rancher-stable | `helm repo add rancher-stable https://releases.rancher.com/server-charts/stable` | Adds a repository of Helm charts for older, stable versions of Rancher. We recommend using this repo for production environments.                                                                                                                                                          |
 | rancher-alpha  | `helm repo add rancher-alpha https://releases.rancher.com/server-charts/alpha`   | Adds a repository of Helm charts for alpha versions of Rancher for previewing upcoming releases. These releases are discouraged in production environments. Upgrades _to_ or _from_ charts in the rancher-alpha repository to any other chart, regardless or repository, aren't supported. |
 
-<br/>
+
 Instructions on when to select these repos are available below in [Switching to a Different Helm Chart Repository](#switching-to-a-different-helm-chart-repository).
 
-> **Note:** All charts in the `rancher-stable` repository will correspond with any Rancher version tagged as `stable`.
+\> **Note:** All charts in the `rancher-stable` repository will correspond with any Rancher version tagged as `stable`.
 
 ### Helm Chart Versions
 
-Rancher Helm chart versions match the Rancher version (i.e `appVersion`).  Once you've added the repo you can search it to show available versions with the following command:<br/>
+Rancher Helm chart versions match the Rancher version (i.e `appVersion`).  Once you've added the repo you can search it to show available versions with the following command:
 &nbsp;&nbsp;&nbsp;&nbsp;`helm search repo --versions`
 
-If you have several repos you can specify the repo name, ie. `helm search repo rancher-stable/rancher --versions` <br/>
+If you have several repos you can specify the repo name, ie. `helm search repo rancher-stable/rancher --versions` 
 For more information, see https://helm.sh/docs/helm/helm_search_repo/
 
-To fetch a specific version of your chosen repo, define the `--version` parameter like in the following example:<br/>
+To fetch a specific version of your chosen repo, define the `--version` parameter like in the following example:
 &nbsp;&nbsp;&nbsp;&nbsp;`helm fetch rancher-stable/rancher --version=2.4.8`
 
 ### Switching to a Different Helm Chart Repository
 
 After installing Rancher, if you want to change which Helm chart repository to install Rancher from, you will need to follow these steps.
 
-> **Note:** Because the rancher-alpha repository contains only alpha charts, switching between the rancher-alpha repository and the rancher-stable or rancher-latest repository for upgrades is not supported.
+\> **Note:** Because the rancher-alpha repository contains only alpha charts, switching between the rancher-alpha repository and the rancher-stable or rancher-latest repository for upgrades is not supported.
 
-{{< release-channel >}}
+{{ release-channel }}
 
 1. List the current Helm chart repositories.
 
@@ -57,19 +57,19 @@ After installing Rancher, if you want to change which Helm chart repository to i
 
     NAME          	      URL
     stable        	      https://charts.helm.sh/stable
-    rancher-<CHART_REPO>		https://releases.rancher.com/server-charts/<CHART_REPO>
+    rancher-\<CHART_REPO\>		https://releases.rancher.com/server-charts/\<CHART_REPO\>
     ```
 
 2. Remove the existing Helm Chart repository that contains your charts to install Rancher, which will either be `rancher-stable` or `rancher-latest` depending on what you had initially added.
 
     ```plain
-    helm repo remove rancher-<CHART_REPO>
+    helm repo remove rancher-\<CHART_REPO\>
     ```
 
 3. Add the Helm chart repository that you want to start installing Rancher from.
 
     ```plain
-    helm repo add rancher-<CHART_REPO> https://releases.rancher.com/server-charts/<CHART_REPO>
+    helm repo add rancher-\<CHART_REPO\> https://releases.rancher.com/server-charts/\<CHART_REPO\>
     ```
 
 4. Continue to follow the steps to [upgrade Rancher](https://rancher.com/docs/rancher/v2.6/en/installation/install-rancher-on-k8s/upgrades) from the new Helm chart repository.
@@ -85,12 +85,12 @@ Rancher Server is distributed as a Docker image, which have tags attached to the
 | -------------------------- | ------ |
 | `rancher/rancher:latest`   | Our latest development release. These builds are validated through our CI automation framework. These releases are not recommended for production environments. |
 | `rancher/rancher:stable`   | Our newest stable release. This tag is recommended for production.                                                                                              |
-| `rancher/rancher:<v2.X.X>` | You can install specific versions of Rancher by using the tag from a previous release. See what's available at DockerHub.                                       |
+| `rancher/rancher:\<v2.X.X\>` | You can install specific versions of Rancher by using the tag from a previous release. See what's available at DockerHub.                                       |
 
-> **Notes:**
->
-> - The `master` tag or any tag with `-rc` or another suffix is meant for the Rancher testing team to validate. You should not use these tags, as these builds are not officially supported.
-> - Want to install an alpha review for preview? Install using one of the alpha tags listed on our [announcements page](https://forums.rancher.com/c/announcements) (e.g., `v2.2.0-alpha1`). Caveat: Alpha releases cannot be upgraded to or from any other release.
+\> **Notes:**
+\>
+\> - The `master` tag or any tag with `-rc` or another suffix is meant for the Rancher testing team to validate. You should not use these tags, as these builds are not officially supported.
+\> - Want to install an alpha review for preview? Install using one of the alpha tags listed on our [announcements page](https://forums.rancher.com/c/announcements) (e.g., `v2.2.0-alpha1`). Caveat: Alpha releases cannot be upgraded to or from any other release.
 
 {{% /tab %}} 
 {{% /tabs %}}

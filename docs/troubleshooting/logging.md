@@ -36,13 +36,13 @@ OK
 * Docker Install
  * Configure debug log level
 ```
-$ docker exec -ti <container_id> loglevel --set debug
+$ docker exec -ti \<container_id\> loglevel --set debug
 OK
-$ docker logs -f <container_id>
+$ docker logs -f \<container_id\>
 ```
 
  * Configure info log level
 ```
-$ docker exec -ti <container_id> loglevel --set info
+$ docker exec -ti \<container_id\> loglevel --set info
 OK
 ```

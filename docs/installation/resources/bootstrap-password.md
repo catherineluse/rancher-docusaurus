@@ -24,5 +24,5 @@ For a Docker install, you can specify the bootstrap password by passing `-e CATT
 The password will be stored in the Docker container logs. After Rancher is installed, the UI will show instructions for how to retrieve the password using the Docker container ID:
 
 ```
-docker logs  container-id  2>&1 | grep "Bootstrap Password:"
+docker logs  container-id  2\>&1 | grep "Bootstrap Password:"
 ```

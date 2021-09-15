@@ -7,8 +7,8 @@ The following steps will quickly deploy a Rancher Server on AWS with a single no
 
 ## Prerequisites
 
->**Note**
->Deploying to Amazon AWS will incur charges.
+\>**Note**
+\>Deploying to Amazon AWS will incur charges.
 
 - [Amazon AWS Account](https://aws.amazon.com/account/): An Amazon AWS Account is required to create resources for deploying Rancher and Kubernetes.
 - [Amazon AWS Access Key](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html): Use this link to follow a tutorial to create an Amazon AWS Access Key if you don't have one yet.

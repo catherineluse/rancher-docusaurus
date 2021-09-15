@@ -19,7 +19,7 @@ For information about how Fleet works, see [this page.](./architecture)
 
 # Accessing Fleet in the Rancher UI
 
-Fleet comes preinstalled in Rancher. To access it, click **☰ > Continuous Delivery**.
+Fleet comes preinstalled in Rancher. To access it, click **☰ \> Continuous Delivery**.
 
 # Windows Support
 

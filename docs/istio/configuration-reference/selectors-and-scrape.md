@@ -36,18 +36,18 @@ This option allows you to define which specific services or pods you would like 
 
 The usability tradeoff is that you have to create the service monitor or pod monitor per namespace since you cannot monitor across namespaces.
 
-> **Prerequisite:** Define a ServiceMonitor or PodMonitor for `<your namespace>`. An example ServiceMonitor is provided below. 
+\> **Prerequisite:** Define a ServiceMonitor or PodMonitor for `\<your namespace\>`. An example ServiceMonitor is provided below. 
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. In the top navigation bar, open the kubectl shell.
-1. If the ServiceMonitor or PodMonitor file is stored locally in your cluster, in `kubectl create -f <name of service/pod monitor file>.yaml`.
-1. If the ServiceMonitor or PodMonitor is not stored locally, run `cat<< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command. 
-1. Run `kubectl label namespace <your namespace> istio-injection=enabled` to enable the envoy sidecar injection.
+1. If the ServiceMonitor or PodMonitor file is stored locally in your cluster, in `kubectl create -f \<name of service/pod monitor file\>.yaml`.
+1. If the ServiceMonitor or PodMonitor is not stored locally, run `cat\<\< EOF | kubectl apply -f -`, paste the file contents into the terminal, then run `EOF` to complete the command. 
+1. Run `kubectl label namespace \<your namespace\> istio-injection=enabled` to enable the envoy sidecar injection.
 
-**Result:**  `<your namespace>` can be scraped by prometheus. 
+**Result:**  `\<your namespace\>` can be scraped by prometheus. 
 
-<figcaption>Example Service Monitor for Istio Proxies</figcaption>
+\<figcaption\>Example Service Monitor for Istio Proxies\</figcaption\>
 
 ```yaml
 apiVersion: monitoring.coreos.com/v1
@@ -93,7 +93,7 @@ The usability tradeoff is that  all of Prometheus' `additionalScrapeConfigs` are
 
 **Result:** All namespaces with the `istio-injection=enabled` label will be scraped by prometheus.
 
-<figcaption>Additional Scrape Config</figcaption>
+\<figcaption\>Additional Scrape Config\</figcaption\>
 
 ``` yaml
 - job_name: 'istio/envoy-stats'

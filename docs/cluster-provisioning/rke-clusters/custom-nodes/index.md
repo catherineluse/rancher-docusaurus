@@ -13,17 +13,17 @@ This section describes how to set up a custom cluster.
 
 # Creating a Cluster with Custom Nodes
 
->**Want to use Windows hosts as Kubernetes workers?**
->
->See [Configuring Custom Clusters for Windows](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/) before you start.
+\>**Want to use Windows hosts as Kubernetes workers?**
+\>
+\>See [Configuring Custom Clusters for Windows](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/) before you start.
 
-<!-- TOC -->
+\<!-- TOC --\>
 
 - [1. Provision a Linux Host](#1-provision-a-linux-host)
 - [2. Create the Custom Cluster](#2-create-the-custom-cluster)
 - [3. Amazon Only: Tag Resources](#3-amazon-only-tag-resources)
 
-<!-- /TOC -->
+\<!-- /TOC --\>
 
 ### 1. Provision a Linux Host
 
@@ -41,37 +41,37 @@ If you're using Amazon EC2 as your host and want to use the [dual-stack](https:/
 
 ### 2. Create the Custom Cluster
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **Custom**.
 1. Enter a **Cluster Name**.
 1. Use **Cluster Configuration** section to choose the version of Kubernetes, what network provider will be used and if you want to enable project network isolation. To see more cluster options, click on **Show advanced options**.
 
-    >**Using Windows nodes as Kubernetes workers?**
-    >
-    >- See [Enable the Windows Support Option](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
-    >- The only Network Provider available for clusters with Windows support is Flannel.
-    >
-    >**Dual-stack on Amazon EC2:** If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) when configuring RKE.
+    \>**Using Windows nodes as Kubernetes workers?**
+    \>
+    \>- See [Enable the Windows Support Option](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
+    \>- The only Network Provider available for clusters with Windows support is Flannel.
+    \>
+    \>**Dual-stack on Amazon EC2:** If you're using Amazon EC2 as your host and want to use the [dual-stack](https://kubernetes.io/docs/concepts/services-networking/dual-stack/) feature, there are additional [requirements](https://rancher.com/docs/rke//latest/en/config-options/dual-stack#requirements) when configuring RKE.
 
-6.	<a id="step-6"></a>Click **Next**.
+6.	\<a id="step-6"\>\</a\>Click **Next**.
 
 4. Use **Member Roles** to configure user authorization for the cluster. Click **Add Member** to add users that can access the cluster. Use the **Role** drop-down to set permissions for each user.
 
 7.	From **Node Role**, choose the roles that you want filled by a cluster node. You must provision at least one node for each role: `etcd`, `worker`, and `control plane`. All three roles are required for a custom cluster to finish provisioning. For more information on roles, see [this section.](https://rancher.com/docs/rancher/v2.6/en/overview/concepts/#roles-for-nodes-in-kubernetes-clusters)
 
-	>**Notes:**
-	>
-    >- Using Windows nodes as Kubernetes workers? See [this section](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
-	>- Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
+	\>**Notes:**
+	\>
+    \>- Using Windows nodes as Kubernetes workers? See [this section](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/windows-clusters/).
+	\>- Bare-Metal Server Reminder: If you plan on dedicating bare-metal servers to each role, you must provision a bare-metal server for each role (i.e. provision multiple bare-metal servers).
 
-8.	<a id="step-8"></a>**Optional**: Click **[Show advanced options](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
+8.	\<a id="step-8"\>\</a\>**Optional**: Click **[Show advanced options](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/rancher-agents/)** to specify IP address(es) to use when registering the node, override the hostname of the node, or to add [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) or [taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) to the node.
 
 9. Copy the command displayed on screen to your clipboard.
 
 10. Log in to your Linux host using your preferred shell, such as PuTTy or a remote Terminal connection. Run the command copied to your clipboard.
 
-	>**Note:** Repeat steps 7-10 if you want to dedicate specific hosts to specific node roles. Repeat the steps as many times as needed.
+	\>**Note:** Repeat steps 7-10 if you want to dedicate specific hosts to specific node roles. Repeat the steps as many times as needed.
 
 11. When you finish running the command(s) on your Linux host(s), click **Done**.
 
@@ -93,7 +93,7 @@ If you have configured your cluster to use Amazon as **Cloud Provider**, tag you
 
 [Amazon Documentation: Tagging Your Amazon EC2 Resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html)
 
->**Note:** You can use Amazon EC2 instances without configuring a cloud provider in Kubernetes. You only have to configure the cloud provider if you want to use specific Kubernetes cloud provider functionality. For more information, see [Kubernetes Cloud Providers](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/)
+\>**Note:** You can use Amazon EC2 instances without configuring a cloud provider in Kubernetes. You only have to configure the cloud provider if you want to use specific Kubernetes cloud provider functionality. For more information, see [Kubernetes Cloud Providers](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/)
 
 
 The following resources need to be tagged with a `ClusterID`:
@@ -102,15 +102,15 @@ The following resources need to be tagged with a `ClusterID`:
 - **Subnet**: The subnet used for your cluster
 - **Security Group**: The security group used for your cluster.
 
-	>**Note:** Do not tag multiple security groups. Tagging multiple groups generates an error when creating Elastic Load Balancer.
+	\>**Note:** Do not tag multiple security groups. Tagging multiple groups generates an error when creating Elastic Load Balancer.
 
 The tag that should be used is:
 
 ```
-Key=kubernetes.io/cluster/<CLUSTERID>, Value=owned
+Key=kubernetes.io/cluster/\<CLUSTERID\>, Value=owned
 ```
 
-`<CLUSTERID>` can be any string you choose. However, the same string must be used on every resource you tag. Setting the tag value to `owned` informs the cluster that all resources tagged with the `<CLUSTERID>` are owned and managed by this cluster.
+`\<CLUSTERID\>` can be any string you choose. However, the same string must be used on every resource you tag. Setting the tag value to `owned` informs the cluster that all resources tagged with the `\<CLUSTERID\>` are owned and managed by this cluster.
 
 If you share resources between clusters, you can change the tag to:
 

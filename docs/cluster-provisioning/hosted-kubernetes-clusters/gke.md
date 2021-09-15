@@ -40,12 +40,12 @@ To get the project ID of an existing project, refer to the Google cloud document
 
 # Provisioning a GKE Cluster
 
->**Note**
->Deploying to GKE will incur charges.
+\>**Note**
+\>Deploying to GKE will incur charges.
 
 ### 1. Create a Cloud Credential
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. In the left navigation bar, click **Cloud Credentials**.
 1. Click **Create**.
 1. Enter a name for your Google cloud credentials.
@@ -57,7 +57,7 @@ To get the project ID of an existing project, refer to the Google cloud document
 ### 2. Create the GKE Cluster
 Use Rancher to set up and configure your Kubernetes cluster.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Click **Google GKE**.
 1. Enter a **Cluster Name**.
@@ -89,8 +89,8 @@ For details on configuring GKE clusters in Rancher, see [this page.](https://ran
 
 The Kubernetes version of a cluster can be upgraded to any version available in the region or zone fo the GKE cluster. Upgrading the master Kubernetes version does not automatically upgrade worker nodes. Nodes can be upgraded independently.
 
->**Note**
->GKE has removed basic authentication in 1.19+. In order to upgrade a cluster to 1.19+, basic authentication must be disabled in the Google Cloud. Otherwise, an error will appear in Rancher when an upgrade to 1.19+ is attempted. You can follow the [Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication#disabling_authentication_with_a_static_password). After this, the Kubernetes version can be updated to 1.19+ via Rancher.
+\>**Note**
+\>GKE has removed basic authentication in 1.19+. In order to upgrade a cluster to 1.19+, basic authentication must be disabled in the Google Cloud. Otherwise, an error will appear in Rancher when an upgrade to 1.19+ is attempted. You can follow the [Google documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication#disabling_authentication_with_a_static_password). After this, the Kubernetes version can be updated to 1.19+ via Rancher.
 
 # Syncing
 

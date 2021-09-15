@@ -15,22 +15,22 @@ In order to dynamically provision storage in vSphere, the vSphere provider must 
 
 ### Prerequisites
 
-In order to provision vSphere volumes in a cluster created with the [Rancher Kubernetes Engine (RKE)]({{< baseurl>}}/rancher/v2.6/en/cluster-provisioning/rke-clusters/), the [vSphere cloud provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/vsphere) must be explicitly enabled in the [cluster options](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/options/).
+In order to provision vSphere volumes in a cluster created with the [Rancher Kubernetes Engine (RKE)](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/), the [vSphere cloud provider](https://rancher.com/docs/rke/latest/en/config-options/cloud-providers/vsphere) must be explicitly enabled in the [cluster options](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/options/).
 
 ### Creating a StorageClass
 
-> **Note:**
->
-> The following steps can also be performed using the `kubectl` command line tool. See [Kubernetes documentation on persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for details.
+\> **Note:**
+\>
+\> The following steps can also be performed using the `kubectl` command line tool. See [Kubernetes documentation on persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for details.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to provide vSphere storage.
-1. In the left navigation bar, click **Storage > StorageClasses**.
+1. In the left navigation bar, click **Storage \> StorageClasses**.
 1. Click **Create**.
 3. Enter a **Name** for the StorageClass.
 4. Under **Provisioner**, select **VMWare vSphere Volume**.
 ```img
-    {{< img "/img/rancher/vsphere-storage-class.png" "vsphere-storage-class">}}
+    {{ img "/img/rancher/vsphere-storage-class.png" "vsphere-storage-class"}}
 ```
 5. Optionally, specify additional properties for this storage class under **Parameters**. Refer to the [vSphere storage documentation](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/storageclass.html) for details.
 5. Click **Create**.
@@ -49,16 +49,16 @@ In order to provision vSphere volumes in a cluster created with the [Rancher Kub
 
 ### Verifying Persistence of the Volume
 
-1. In the left navigation bar, click **Workload > Pods**.
-1. Go to the workload you just created and click **⋮ > Execute Shell**.
+1. In the left navigation bar, click **Workload \> Pods**.
+1. Go to the workload you just created and click **⋮ \> Execute Shell**.
 2. Note the directory at root where the volume has been mounted to (in this case `/persistent`).
-3. Create a file in the volume by executing the command `touch /<volumeMountPoint>/data.txt`.
+3. Create a file in the volume by executing the command `touch /\<volumeMountPoint\>/data.txt`.
 4. Close the shell window.
 5. Click on the name of the workload to reveal detail information.
-7. Click **⋮ > Delete**.
+7. Click **⋮ \> Delete**.
 8. Observe that the pod is deleted. Then a new pod is scheduled to replace it so that the workload maintains its configured scale of a single stateful pod.
 9. Once the replacement pod is running, click **Execute Shell**.
-10. Inspect the contents of the directory where the volume is mounted by entering `ls -l /<volumeMountPoint>`. Note that the file you created earlier is still present.
+10. Inspect the contents of the directory where the volume is mounted by entering `ls -l /\<volumeMountPoint\>`. Note that the file you created earlier is still present.
 ```img
     ![workload-persistent-data](./assets/img/rancher/workload-persistent-data.png)
 ```

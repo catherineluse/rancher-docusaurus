@@ -36,7 +36,7 @@ Regardless of whether an NGINX Ingress or Traefik Ingress controller is used, th
 1. Select **Services** and choose **EC2**, find the section **Load Balancing** and open **Target Groups**.
 1. Click **Create target group** to create the first target group, regarding TCP port 443.
 
-> **Note:** Health checks are handled differently based on the Ingress. For details, refer to [this section.](#health-check-paths-for-nginx-ingress-and-traefik-ingresses)
+\> **Note:** Health checks are handled differently based on the Ingress. For details, refer to [this section.](#health-check-paths-for-nginx-ingress-and-traefik-ingresses)
 
 ### Target Group (TCP port 443)
 
@@ -93,19 +93,19 @@ Next, add your Linux nodes to both target groups.
 
 Select the target group named **rancher-tcp-443**, click the tab **Targets** and choose **Edit**.
 ```img
-{{< img "/img/rancher/ha/nlb/edit-targetgroup-443.png" "Edit target group 443">}}
+{{ img "/img/rancher/ha/nlb/edit-targetgroup-443.png" "Edit target group 443"}}
 ```
 Select the instances (Linux nodes) you want to add, and click **Add to registered**.
 
-<hr>
-**Screenshot Add targets to target group TCP port 443**<br/>
+\<hr\>
+**Screenshot Add targets to target group TCP port 443**
 ```img
-{{< img "/img/rancher/ha/nlb/add-targets-targetgroup-443.png" "Add targets to target group 443">}}
+{{ img "/img/rancher/ha/nlb/add-targets-targetgroup-443.png"}}
 ```
-<hr>
-**Screenshot Added targets to target group TCP port 443**<br/>
+\<hr\>
+**Screenshot Added targets to target group TCP port 443**
 ```img
-{{< img "/img/rancher/ha/nlb/added-targets-targetgroup-443.png" "Added targets to target group 443">}}
+{{ img "/img/rancher/ha/nlb/added-targets-targetgroup-443.png" "Added targets to target group 443"}}
 ```
 When the instances are added, click **Save** on the bottom right of the screen.
 
@@ -117,7 +117,7 @@ Use Amazon's Wizard to create a Network Load Balancer. As part of this process, 
 
 1.  From your web browser, navigate to the [Amazon EC2 Console](https://console.aws.amazon.com/ec2/).
 
-2.  From the navigation pane, choose **LOAD BALANCING** > **Load Balancers**.
+2.  From the navigation pane, choose **LOAD BALANCING** \> **Load Balancers**.
 
 3.  Click **Create Load Balancer**.
 

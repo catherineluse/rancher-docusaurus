@@ -104,9 +104,9 @@ The output should resemble the following:
 region = us-west1 # Your chosen region
 zone = us-west1-b # Your chosen zone
 [core]
-account = <Your email>
+account = \<Your email\>
 disable_usage_reporting = True
-project = <Your project ID>
+project = \<Your project ID\>
 
 Your active configuration is: [default]
 ```

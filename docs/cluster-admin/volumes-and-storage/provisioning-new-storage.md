@@ -43,9 +43,9 @@ To use a storage provisioner that is not on the above list, you will need to use
 
 These steps describe how to set up a storage class at the cluster level.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to dynamically provision persistent storage volumes and click **Explore**.
-1. Click **Storage > Storage Classes**.
+1. Click **Storage \> Storage Classes**.
 1. Click **Create**.
 1. Enter a name for your storage class.
 1. From the **Provisioner** drop-down, select the service that you want to use to dynamically provision storage volumes. For example, if you have a Amazon EC2 cluster and you want to use cloud storage for it, use the `Amazon EBS Disk` provisioner.
@@ -60,7 +60,7 @@ For full information about the storage class parameters, refer to the official [
 
 StatefulSets manage the deployment and scaling of Pods while maintaining a sticky identity for each Pod. In this StatefulSet, we will configure a VolumeClaimTemplate. Each Pod managed by the StatefulSet will be deployed with a PersistentVolumeClaim based on this VolumeClaimTemplate. The PersistentVolumeClaim will refer to the StorageClass that we created. Therefore, when each Pod managed by the StatefulSet is deployed, it will be bound to dynamically provisioned storage using the StorageClass defined in its PersistentVolumeClaim.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to add use the StorageClass for a workload and click **Explore**.
 1. In the left navigation bar, click **Workload**.
 1. Click **Create**.
@@ -75,10 +75,10 @@ StatefulSets manage the deployment and scaling of Pods while maintaining a stick
 
 To attach the PVC to an existing workload,
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to add use the StorageClass for a workload and click **Explore**.
 1. In the left navigation bar, click **Workload**.
-1. Go to the workload that will use storage provisioned with the StorageClass that you cared at click **⋮ > Edit Config**.
+1. Go to the workload that will use storage provisioned with the StorageClass that you cared at click **⋮ \> Edit Config**.
 1. In the **Volume Claim Templates** section, click **Add Claim Template**.
 1. Enter a persistent volume name.
 1. In the **StorageClass* field, select the StorageClass that will dynamically provision storage for pods managed by this StatefulSet.

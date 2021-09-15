@@ -7,27 +7,27 @@ The pipelines' internal Docker registry and the Minio workloads use ephemeral vo
 
 This section assumes that you understand how persistent storage works in Kubernetes. For more information, refer to the section on [how storage works.](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/volumes-and-storage/how-storage-works/)
 
->**Prerequisites (for both parts A and B):**
->
->[Persistent volumes](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/volumes-and-storage/) must be available for the cluster.
+\>**Prerequisites (for both parts A and B):**
+\>
+\>[Persistent volumes](https://rancher.com/docs/rancher/v2.6/en/cluster-admin/volumes-and-storage/) must be available for the cluster.
 
 ### A. Configuring Persistent Data for Docker Registry
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. Click **Workload**.
 
-1. Find the `docker-registry` workload and select **⋮ > Edit**.
+1. Find the `docker-registry` workload and select **⋮ \> Edit**.
 
 1. Scroll to the **Volumes** section and expand it. Make one of the following selections from the **Add Volume** menu, which is near the bottom of the section:
 
-    - **Add Volume > Add a new persistent volume (claim)**
-    - **Add Volume > Use an existing persistent volume (claim)**
+    - **Add Volume \> Add a new persistent volume (claim)**
+    - **Add Volume \> Use an existing persistent volume (claim)**
 
 1.  Complete the form that displays to choose a persistent volume for the internal Docker registry.
 {{% tabs %}}
 {{% tab "Add a new persistent volume" %}}
-<br/>
+
 1. Enter a **Name** for the volume claim.
 
 1. Select a volume claim **Source**:
@@ -42,7 +42,7 @@ This section assumes that you understand how persistent storage works in Kuberne
 {{% /tab %}}
 
 {{% tab "Use an existing persistent volume" %}}
-<br/>
+
 1. Enter a **Name** for the volume claim.
 
 1. Choose a **Persistent Volume Claim** from the dropdown.
@@ -61,21 +61,21 @@ This section assumes that you understand how persistent storage works in Kuberne
 
 ### B. Configuring Persistent Data for Minio
 
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster that you created and click **Explore**.
 1. Click **Workload**.
-1. Go to the `minio` workload and select **⋮ > Edit**.
+1. Go to the `minio` workload and select **⋮ \> Edit**.
 
 1. Scroll to the **Volumes** section and expand it. Make one of the following selections from the **Add Volume** menu, which is near the bottom of the section:
 
-    - **Add Volume > Add a new persistent volume (claim)**
-    - **Add Volume > Use an existing persistent volume (claim)**
+    - **Add Volume \> Add a new persistent volume (claim)**
+    - **Add Volume \> Use an existing persistent volume (claim)**
 
 1.  Complete the form that displays to choose a persistent volume for the internal Docker registry.
 {{% tabs %}}
 
 {{% tab "Add a new persistent volume" %}}
-<br/>
+
 1. Enter a **Name** for the volume claim.
 
 1. Select a volume claim **Source**:
@@ -89,7 +89,7 @@ This section assumes that you understand how persistent storage works in Kuberne
 
 {{% /tab %}}
 {{% tab "Use an existing persistent volume" %}}
-<br/>
+
 1. Enter a **Name** for the volume claim.
 
 1. Choose a **Persistent Volume Claim** from the drop-down.

@@ -19,8 +19,8 @@ Amazon EKS provides a managed control plane for your Kubernetes cluster. Amazon 
 - [Troubleshooting](#troubleshooting)
 # Prerequisites in Amazon Web Services
 
->**Note**
->Deploying to Amazon AWS will incur charges. For more information, refer to the [EKS pricing page](https://aws.amazon.com/eks/pricing/).
+\>**Note**
+\>Deploying to Amazon AWS will incur charges. For more information, refer to the [EKS pricing page](https://aws.amazon.com/eks/pricing/).
 
 To set up a cluster on EKS, you will need to set up an Amazon VPC (Virtual Private Cloud). You will also need to make sure that the account you will be using to create the EKS cluster has the appropriate [permissions.](#minimum-eks-permissions) For details, refer to the official guide on [Amazon EKS Prerequisites](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html#eks-prereqs).
 
@@ -38,7 +38,7 @@ Rancher needs access to your AWS account in order to provision and administer yo
 
 3. Finally, follow the steps [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) to create an access key and secret key for this user.
 
-> **Note:** It's important to regularly rotate your access and secret keys. See this [documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#rotating_access_keys_console) for more information.
+\> **Note:** It's important to regularly rotate your access and secret keys. See this [documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#rotating_access_keys_console) for more information.
 
 For more detailed information on IAM policies for EKS, refer to the official [documentation on Amazon EKS IAM Policies, Roles, and Permissions](https://docs.aws.amazon.com/eks/latest/userguide/IAM_policies.html).
 
@@ -47,7 +47,7 @@ For more detailed information on IAM policies for EKS, refer to the official [do
 
 Use Rancher to set up and configure your Kubernetes cluster.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, click **Create**.
 1. Choose **Amazon EKS**.
 1. Enter a **Cluster Name**.
@@ -75,7 +75,7 @@ For the full list of EKS cluster configuration options, see [this page.](https:/
 The figure below illustrates the high-level architecture of Rancher 2.x. The figure depicts a Rancher Server installation that manages two Kubernetes clusters: one created by RKE and another created by EKS.
 
 ```img
-<figcaption>Managing Kubernetes Clusters through Rancher's Authentication Proxy</figcaption>
+\<figcaption\>Managing Kubernetes Clusters through Rancher's Authentication Proxy\</figcaption\>
 
 ![Architecture](./assets/img/rancher/rancher-architecture-rancher-api-server.svg)
 ```

@@ -4,13 +4,13 @@ weight: 2525
 ---
 
 Rancher contains a variety of tools that aren't included in Kubernetes to assist in your DevOps operations. Rancher can integrate with external services to help your clusters run more efficiently. Tools are divided into following categories:
-<!-- TOC -->
+\<!-- TOC --\>
 
 - [Notifiers and Alerts](#notifiers-and-alerts)
 - [Logging](#logging)
 - [Monitoring](#monitoring)
 
-<!-- /TOC -->
+\<!-- /TOC --\>
 
 ## Notifiers and Alerts
 

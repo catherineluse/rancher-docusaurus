@@ -18,7 +18,7 @@ All cloud credentials are bound to the user profile of who created it. They **ca
 
 ## Creating a Cloud Credential from User Settings
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
 1. Click **Create**.
 1. Click a cloud credential type. The values of this dropdown is based on the `active` [node drivers](https://rancher.com/docs/rancher/v2.6/en/admin-settings/drivers/node-drivers/) in Rancher.
@@ -32,9 +32,9 @@ All cloud credentials are bound to the user profile of who created it. They **ca
 
 When access credentials are changed or compromised, updating a cloud credential allows you to rotate those credentials while keeping the same node template.  
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
-1. Choose the cloud credential you want to edit and click the **⋮ > Edit Config**.
+1. Choose the cloud credential you want to edit and click the **⋮ \> Edit Config**.
 1. Update the credential information and click **Save**.
 
 **Result:** The cloud credential is updated with the new access credentials. All existing node templates using this cloud credential will automatically use the updated information whenever [new nodes are added](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/node-pools/).
@@ -43,10 +43,10 @@ When access credentials are changed or compromised, updating a cloud credential 
 
 In order to delete cloud credentials, there must not be any node template associated with it. If you are unable to delete the cloud credential, [delete any node templates](https://rancher.com/docs/rancher/v2.6/en/user-settings/node-templates/#deleting-a-node-template) that are still associated to that cloud credential.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Click **Cloud Credentials**.
 1. You can either individually delete a cloud credential or bulk delete.
 
-	- To individually delete one, choose the cloud credential you want to edit and click the **⋮ > Delete**.
+	- To individually delete one, choose the cloud credential you want to edit and click the **⋮ \> Delete**.
 	- To bulk delete cloud credentials, select one or more cloud credentials from the list. Click **Delete**.
 1. Confirm that you want to delete these cloud credentials.

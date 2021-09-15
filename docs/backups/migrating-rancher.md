@@ -37,8 +37,8 @@ metadata:
   name: s3-creds
 type: Opaque
 stringData:
-  accessKey: <Enter your access key>
-  secretKey: <Enter your secret key>
+  accessKey: \<Enter your access key\>
+  secretKey: \<Enter your secret key\>
 ```
 
 This secret can be created in any namespace, with the above example it will get created in the default namespace
@@ -67,7 +67,7 @@ spec:
       endpoint: s3.us-west-2.amazonaws.com
 ```
 
-> **Important:** The field `encryptionConfigSecretName` must be set only if your backup was created with encryption enabled. Provide the name of the Secret containing the encryption config file. If you only have the encryption config file, but don't have a secret created with it in this cluster, use the following steps to create the secret:  
+\> **Important:** The field `encryptionConfigSecretName` must be set only if your backup was created with encryption enabled. Provide the name of the Secret containing the encryption config file. If you only have the encryption config file, but don't have a secret created with it in this cluster, use the following steps to create the secret:  
 1. The encryption configuration file must be named `encryption-provider-config.yaml`, and the `--from-file` flag must be used to create this secret. So save your `EncryptionConfiguration` in a file called `encryption-provider-config.yaml` and run this command:
 
 ```
@@ -93,5 +93,5 @@ Use the same version of Helm to install Rancher, that was used on the first clus
 ```
 helm install rancher rancher-latest/rancher \
   --namespace cattle-system \
-  --set hostname=<same hostname as the server URL from the first Rancher server> \
+  --set hostname=\<same hostname as the server URL from the first Rancher server\> \
 ```

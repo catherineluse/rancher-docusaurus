@@ -34,14 +34,14 @@ We don't recommend installing Rancher in a single Docker container, because if t
 
 One option for the underlying Kubernetes cluster is to use K3s Kubernetes. K3s Rancher's CNCF certified Kubernetes distribution. It is easy to install, with half the memory of Kubernetes, all in a binary less than 100 MB. One main advantage of this K3s architecture is that it allows an external datastore to hold the cluster data, allowing the K3s server nodes to be treated as ephemeral.
 ```img
-<figcaption>Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server</figcaption>
+\<figcaption\>Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server\</figcaption\>
 ![Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server](./assets/img/rancher/k3s-server-storage.svg)
 ```
 ### RKE Kubernetes Cluster Installations
 
 In an RKE installation, the cluster data is replicated on each of three etcd nodes in the cluster, providing redundancy and data duplication in case one of the nodes fails.
 ```img
-<figcaption>Architecture of an RKE Kubernetes Cluster Running the Rancher Management Server</figcaption>
+\<figcaption\>Architecture of an RKE Kubernetes Cluster Running the Rancher Management Server\</figcaption\>
 ![Architecture of an RKE Kubernetes cluster running the Rancher management server](./assets/img/rancher/rke-server-storage.svg)
 ```
 # Recommended Load Balancer Configuration for Kubernetes Installations
@@ -53,7 +53,7 @@ We recommend the following configurations for the load balancer and Ingress cont
 * The Ingress controller will redirect HTTP to HTTPS and terminate SSL/TLS on port TCP/443.
 * The Ingress controller will forward traffic to port TCP/80 on the pod in the Rancher deployment.
 ```img
-<figcaption>Rancher installed on a Kubernetes cluster with layer 4 load balancer, depicting SSL termination at Ingress controllers</figcaption>
+\<figcaption\>Rancher installed on a Kubernetes cluster with layer 4 load balancer, depicting SSL termination at Ingress controllers\</figcaption\>
 ![Rancher HA](./assets/img/rancher/ha/rancher2ha.svg)
 ```
 # Environment for Kubernetes Installations

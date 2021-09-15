@@ -17,20 +17,20 @@ For private nodes or private clusters, the environment variables need to be set 
 
 # Required Environment Variables
 
-When adding Fleet agent environment variables for the proxy, replace <PROXY_IP> with your private proxy IP.
+When adding Fleet agent environment variables for the proxy, replace \<PROXY_IP\> with your private proxy IP.
 
 | Variable Name | Value |
 |------------------|--------|
-| `HTTP_PROXY` | http://<PROXY_IP>:8888 |
-| `HTTPS_PROXY` | http://<PROXY_IP>:8888
+| `HTTP_PROXY` | http://\<PROXY_IP\>:8888 |
+| `HTTPS_PROXY` | http://\<PROXY_IP\>:8888
 | `NO_PROXY`     | 127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local |
 
 # Setting Environment Variables in the Rancher UI
 
 To add the environment variable to an existing cluster,
 
-1. Click **☰ > Cluster Management**.
-1. Go to the cluster where you want to add environment variables and click **⋮ > Edit Config**.
+1. Click **☰ \> Cluster Management**.
+1. Go to the cluster where you want to add environment variables and click **⋮ \> Edit Config**.
 1. Click **Advanced Options**.
 1. Click **Add Environment Variable**.
 1. Enter the [required environment variables](#required-environment-variables)
@@ -45,9 +45,9 @@ For private nodes and private clusters, the proxy environment variables need to 
 This example shows how the environment variables would be set up on an Ubuntu node in a K3s Kubernetes cluster:
 
 ```
-ssh -o ForwardAgent=yes ubuntu@<public_proxy_ip>
-ssh <k3s_ip>
-export proxy_private_ip=<private_proxy_ip>
+ssh -o ForwardAgent=yes ubuntu@\<public_proxy_ip\>
+ssh \<k3s_ip\>
+export proxy_private_ip=\<private_proxy_ip\>
 export HTTP_PROXY=http://${proxy_private_ip}:8888
 export HTTPS_PROXY=http://${proxy_private_ip}:8888
 export NO_PROXY=127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local

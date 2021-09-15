@@ -42,8 +42,8 @@ These `ClusterRoles` provide different levels of access to the Monitoring CRDs b
 
 | CRDs (monitoring.coreos.com) | Admin | Edit | View |
 | ------------------------------| ---------------------------| ---------------------------| ---------------------------|
-| <ul><li>`prometheuses`</li><li>`alertmanagers`</li></ul>| Get, List, Watch | Get, List, Watch | Get, List, Watch |
-| <ul><li>`servicemonitors`</li><li>`podmonitors`</li><li>`prometheusrules`</li></ul>| * | * | Get, List, Watch |
+| \<ul\>\<li\>`prometheuses`, `alertmanagers`\</li\>\</ul\>| Get, List, Watch | Get, List, Watch | Get, List, Watch |
+| \<ul\>\<li\>`servicemonitors`, `podmonitors`, `prometheusrules`\</li\>\</ul\>| * | * | Get, List, Watch |
 
 On a high level, the following permissions are assigned by default as a result.
 
@@ -84,13 +84,13 @@ Monitoring also creates additional `ClusterRoles` that are not assigned to users
 
 | Role | Purpose  |
 | ------------------------------| ---------------------------|
-| monitoring-ui-view | <a id="monitoring-ui-view"></a>_Available as of Monitoring v2 14.5.100+_ Provides read-only access to external Monitoring UIs by giving a user permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
+| monitoring-ui-view | \<a id="monitoring-ui-view"\>\</a\>_Available as of Monitoring v2 14.5.100+_ Provides read-only access to external Monitoring UIs by giving a user permission to list the Prometheus, Alertmanager, and Grafana endpoints and make GET requests to Prometheus, Grafana, and Alertmanager UIs through the Rancher proxy. |
 
 # Users with Rancher Based Permissions
 
 The relationship between the default roles deployed by Rancher (i.e. cluster-owner, cluster-member, project-owner, project-member), the default Kubernetes roles, and the roles deployed by the rancher-monitoring chart are detailed in the table below:
 
-<figcaption>Default Rancher Permissions and Corresponding Kubernetes ClusterRoles</figcaption>
+\<figcaption\>Default Rancher Permissions and Corresponding Kubernetes ClusterRoles\</figcaption\>
 
 | Rancher Role | Kubernetes Role | Monitoring ClusterRole / Role | ClusterRoleBinding or RoleBinding? |
 | --------- | --------- | --------- | --------- |
@@ -101,7 +101,7 @@ The relationship between the default roles deployed by Rancher (i.e. cluster-own
 
 In addition to these default Roles, the following additional Rancher project roles can be applied to members of your Cluster to provide additional access to Monitoring. These Rancher Roles will be tied to ClusterRoles deployed by the Monitoring chart:
 
-<figcaption>Non-default Rancher Permissions and Corresponding Kubernetes ClusterRoles</figcaption>
+\<figcaption\>Non-default Rancher Permissions and Corresponding Kubernetes ClusterRoles\</figcaption\>
 
 | Rancher Role  |  Kubernetes ClusterRole | Available In Rancher From | Available in Monitoring v2 From |
 |--------------------------|-------------------------------|-------|------|
@@ -123,13 +123,13 @@ If cluster-admins would like to provide additional admin/edit access to users ou
 |----------------------------| ------| ----------------------------|
 | `prometheuses`| Yes, this resource can scrape metrics from any targets across the entire cluster (unless the Operator itself is otherwise configured). | User will be able to define the configuration of new cluster-level Prometheus deployments that should be created in the cluster. |
 | `alertmanagers`| No | User will be able to define the configuration of new cluster-level Alertmanager deployments that should be created in the cluster. Note: if you just want to allow users to configure settings like Routes and Receivers, you should just provide access to the Alertmanager Config Secret instead. |
-| <ul><li>`servicemonitors`</li><li>`podmonitors`</li></ul>| No, not by default; this is configurable via `ignoreNamespaceSelectors` on the Prometheus CR. | User will be able to set up scrapes by Prometheus on endpoints exposed by Services / Pods within the namespace they are given this permission in. |
+| \<ul\>\<li\>`servicemonitors`, `podmonitors`\</li\>\</ul\>| No, not by default; this is configurable via `ignoreNamespaceSelectors` on the Prometheus CR. | User will be able to set up scrapes by Prometheus on endpoints exposed by Services / Pods within the namespace they are given this permission in. |
 | `prometheusrules`| Yes, PrometheusRules are cluster-scoped. | User will be able to define alert or recording rules on Prometheus based on any series collected across the entire cluster. |
 
 | k8s Resources | Namespace | Can it cause impact outside of a namespace / project? | Impact |
 |----------------------------| ------| ------| ----------------------------|
-| <ul><li>`secrets`</li><li>`configmaps`</li></ul>| `cattle-monitoring-system` | Yes, Configs and Secrets in this namespace can impact the entire monitoring / alerting pipeline. | User will be able to create or edit Secrets / ConfigMaps such as the Alertmanager Config, Prometheus Adapter Config, TLS secrets, additional Grafana datasources, etc. This can have broad impact on all cluster monitoring / alerting. |
-| <ul><li>`secrets`</li><li>`configmaps`</li></ul>| `cattle-dashboards` | Yes, Configs and Secrets in this namespace can create dashboards that make queries on all metrics collected at a cluster-level. | User will be able to create Secrets / ConfigMaps that persist new Grafana Dashboards only. |
+| \<ul\>\<li\>`secrets`, `configmaps`\</li\>\</ul\>| `cattle-monitoring-system` | Yes, Configs and Secrets in this namespace can impact the entire monitoring / alerting pipeline. | User will be able to create or edit Secrets / ConfigMaps such as the Alertmanager Config, Prometheus Adapter Config, TLS secrets, additional Grafana datasources, etc. This can have broad impact on all cluster monitoring / alerting. |
+| \<ul\>\<li\>`secrets`, `configmaps`\</li\>\</ul\>| `cattle-dashboards` | Yes, Configs and Secrets in this namespace can create dashboards that make queries on all metrics collected at a cluster-level. | User will be able to create Secrets / ConfigMaps that persist new Grafana Dashboards only. |
 
 
 
@@ -141,14 +141,14 @@ However, users can choose to log in to Grafana as an [Admin](https://grafana.com
 
 To see the Grafana UI, install `rancher-monitoring`. Then:
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the visualizations and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Grafana**.
 ```img
-<figcaption>Cluster Compute Resources Dashboard in Grafana</figcaption>
+\<figcaption\>Cluster Compute Resources Dashboard in Grafana\</figcaption\>
 ![Cluster Compute Resources Dashboard in Grafana](./assets/img/rancher/cluster-compute-resources-dashboard.png)
 
-<figcaption>Default Dashboards in Grafana</figcaption>
+\<figcaption\>Default Dashboards in Grafana\</figcaption\>
 ![Default Dashboards in Grafana](./assets/img/rancher/grafana-default-dashboard.png)
 ```

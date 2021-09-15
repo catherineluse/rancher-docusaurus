@@ -29,12 +29,12 @@ These elements are required to follow this guide:
 
 On Rancher server, we should create a custom k8s cluster v1.18.x. Be sure that cloud_provider name is set to `amazonec2`. Once cluster is created we need to get:
 
-* clusterID: `c-xxxxx` will be used on EC2 `kubernetes.io/cluster/<clusterID>` instance tag
-* clusterName: will be used on EC2 `k8s.io/cluster-autoscaler/<clusterName>` instance tag
+* clusterID: `c-xxxxx` will be used on EC2 `kubernetes.io/cluster/\<clusterID\>` instance tag
+* clusterName: will be used on EC2 `k8s.io/cluster-autoscaler/\<clusterName\>` instance tag
 * nodeCommand: will be added on EC2 instance user_data to include new nodes on cluster
 
     ```sh
-    sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:<RANCHER_VERSION> --server https://<RANCHER_URL> --token <RANCHER_TOKEN> --ca-checksum <RANCHER_CHECKSUM> <roles>
+    sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:[RANCHER_VERSION] --server https://\<RANCHER_URL\> --token \<RANCHER_TOKEN\> --ca-checksum \<RANCHER_CHECKSUM\> \<roles\>
     ```
 
 ### 2. Configure the Cloud Provider
@@ -151,13 +151,13 @@ On AWS EC2, we should create a few objects to configure our system. We've define
     * IAM role: `K8sMasterRole: [K8sMasterProfile,K8sAutoscalerProfile]`
     * Security group: `K8sMasterSg` More info at[RKE ports (custom nodes tab)](https://rancher.com/docs/rancher/v2.6/en/installation/requirements/ports/#downstream-kubernetes-cluster-nodes)
     * Tags:
-      `kubernetes.io/cluster/<clusterID>: owned`
+      `kubernetes.io/cluster/\<clusterID\>: owned`
     * User data: `K8sMasterUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs docker and add etcd+controlplane node to the k8s cluster
 
       ```sh
       #!/bin/bash -x
 
-      cat <<EOF > /etc/sysctl.d/90-kubelet.conf
+      cat \<\<EOF \> /etc/sysctl.d/90-kubelet.conf
       vm.overcommit_memory = 1
       vm.panic_on_oom = 0
       kernel.panic = 10
@@ -175,7 +175,7 @@ On AWS EC2, we should create a few objects to configure our system. We've define
       PUBLIC_IP=$(curl -H "X-aws-ec2-metadata-token: ${TOKEN}" -s http://169.254.169.254/latest/meta-data/public-ipv4)
       K8S_ROLES="--etcd --controlplane"
 
-      sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:<RANCHER_VERSION> --server https://<RANCHER_URL> --token <RANCHER_TOKEN> --ca-checksum <RANCHER_CA_CHECKSUM> --address ${PUBLIC_IP} --internal-address ${PRIVATE_IP} ${K8S_ROLES}
+      sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:[RANCHER_VERSION] --server https://\<RANCHER_URL\> --token \<RANCHER_TOKEN\> --ca-checksum \<RANCHER_CA_CHECKSUM\> --address ${PUBLIC_IP} --internal-address ${PRIVATE_IP} ${K8S_ROLES}
       ```
 
 3. Worker group: Nodes that will be part of the k8s worker plane. Worker nodes will be scaled by cluster-autoscaler using the ASG.
@@ -208,15 +208,15 @@ On AWS EC2, we should create a few objects to configure our system. We've define
   * IAM role: `K8sWorkerRole: [K8sWorkerProfile]`
   * Security group: `K8sWorkerSg` More info at [RKE ports (custom nodes tab)](https://rancher.com/docs/rancher/v2.6/en/installation/requirements/ports/#downstream-kubernetes-cluster-nodes)
   * Tags:
-    * `kubernetes.io/cluster/<clusterID>: owned`
-    * `k8s.io/cluster-autoscaler/<clusterName>: true`
+    * `kubernetes.io/cluster/\<clusterID\>: owned`
+    * `k8s.io/cluster-autoscaler/\<clusterName\>: true`
     * `k8s.io/cluster-autoscaler/enabled: true`
   * User data: `K8sWorkerUserData` Ubuntu 18.04(ami-0e11cbb34015ff725), installs docker and add worker node to the k8s cluster 
 
       ```sh
       #!/bin/bash -x
 
-      cat <<EOF > /etc/sysctl.d/90-kubelet.conf
+      cat \<\<EOF \> /etc/sysctl.d/90-kubelet.conf
       vm.overcommit_memory = 1
       vm.panic_on_oom = 0
       kernel.panic = 10
@@ -234,7 +234,7 @@ On AWS EC2, we should create a few objects to configure our system. We've define
       PUBLIC_IP=$(curl -H "X-aws-ec2-metadata-token: ${TOKEN}" -s http://169.254.169.254/latest/meta-data/public-ipv4)
       K8S_ROLES="--worker"
 
-      sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:<RANCHER_VERSION> --server https://<RANCHER_URL> --token <RANCHER_TOKEN> --ca-checksum <RANCHER_CA_CHECKCSUM> --address ${PUBLIC_IP} --internal-address ${PRIVATE_IP} ${K8S_ROLES}
+      sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run rancher/rancher-agent:[RANCHER_VERSION] --server https://\<RANCHER_URL\> --token \<RANCHER_TOKEN\> --ca-checksum \<RANCHER_CA_CHECKCSUM\> --address ${PUBLIC_IP} --internal-address ${PRIVATE_IP} ${K8S_ROLES}
       ```
 
 More info is at [RKE clusters on AWS](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/rke-clusters/cloud-providers/amazon/) and [Cluster Autoscaler on AWS.](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md)
@@ -247,7 +247,7 @@ Once we've configured AWS, let's create VMs to bootstrap our cluster:
   * IAM role: `K8sMasterRole`
   * Security group: `K8sMasterSg`
   * Tags: 
-    * `kubernetes.io/cluster/<clusterID>: owned`
+    * `kubernetes.io/cluster/\<clusterID\>: owned`
   * User data: `K8sMasterUserData`
 
 * worker: Define an ASG on EC2 with the following settings:
@@ -255,8 +255,8 @@ Once we've configured AWS, let's create VMs to bootstrap our cluster:
   * IAM role: `K8sWorkerRole`
   * Security group: `K8sWorkerSg`
   * Tags: 
-    * `kubernetes.io/cluster/<clusterID>: owned`
-    * `k8s.io/cluster-autoscaler/<clusterName>: true`
+    * `kubernetes.io/cluster/\<clusterID\>: owned`
+    * `k8s.io/cluster-autoscaler/\<clusterName\>: true`
     * `k8s.io/cluster-autoscaler/enabled: true`
   * User data: `K8sWorkerUserData`
   * Instances:
@@ -296,8 +296,8 @@ This table shows cluster-autoscaler parameters for fine tuning:
 |node-deletion-delay-timeout|"2m"|Maximum time CA waits for removing delay-deletion.cluster-autoscaler.kubernetes.io/ annotations before deleting the node|
 |scan-interval|"10s"|How often cluster is reevaluated for scale up or down|
 |max-nodes-total|0|Maximum number of nodes in all node groups. Cluster autoscaler will not grow the cluster beyond this number|
-|cores-total|"0:320000"|Minimum and maximum number of cores in cluster, in the format <min>:<max>. Cluster autoscaler will not scale the cluster beyond these numbers|
-|memory-total|"0:6400000"|Minimum and maximum number of gigabytes of memory in cluster, in the format <min>:<max>. Cluster autoscaler will not scale the cluster beyond these numbers|
+|cores-total|"0:320000"|Minimum and maximum number of cores in cluster, in the format [min]:[max]. Cluster autoscaler will not scale the cluster beyond these numbers|
+|memory-total|"0:6400000"|Minimum and maximum number of gigabytes of memory in cluster, in the format [min]:[max]. Cluster autoscaler will not scale the cluster beyond these numbers|
 cloud-provider|-|Cloud provider type| 
 |max-bulk-soft-taint-count|10|Maximum number of nodes that can be tainted/untainted PreferNoSchedule at the same time. Set to 0 to turn off such tainting|
 |max-bulk-soft-taint-time|"3s"|Maximum duration of tainting/untainting nodes as PreferNoSchedule at the same time|
@@ -307,8 +307,8 @@ cloud-provider|-|Cloud provider type|
 |ok-total-unready-count|3|Number of allowed unready nodes, irrespective of max-total-unready-percentage|
 |scale-up-from-zero|true|Should CA scale up when there 0 ready nodes|
 |max-node-provision-time|"15m"|Maximum time CA waits for node to be provisioned|
-|nodes|-|sets min,max size and other configuration data for a node group in a format accepted by cloud provider. Can be used multiple times. Format: <min>:<max>:<other...>|
-|node-group-auto-discovery|-|One or more definition(s) of node group auto-discovery. A definition is expressed `<name of discoverer>:[<key>[=<value>]]`|
+|nodes|-|sets min,max size and other configuration data for a node group in a format accepted by cloud provider. Can be used multiple times. Format: [min]:[max]:[other...]|
+|node-group-auto-discovery|-|One or more definition(s) of node group auto-discovery. A definition is expressed `\<name of discoverer\>:[\<key\>[=\<value\>]]`|
 |estimator|-|"binpacking"|Type of resource estimator to be used in scale up. Available values: ["binpacking"]|
 |expander|"random"|Type of node group expander to be used in scale up. Available values: `["random","most-pods","least-waste","price","priority"]`|
 |ignore-daemonsets-utilization|false|Should CA ignore DaemonSet pods when calculating resource utilization for scaling down|
@@ -497,7 +497,7 @@ spec:
             - --cloud-provider=aws
             - --skip-nodes-with-local-storage=false
             - --expander=least-waste
-            - --node-group-auto-discovery=asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/<clusterName>
+            - --node-group-auto-discovery=asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/\<clusterName\>
           volumeMounts:
             - name: ssl-certs
               mountPath: /etc/ssl/certs/ca-certificates.crt

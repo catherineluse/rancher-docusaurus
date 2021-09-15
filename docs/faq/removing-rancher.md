@@ -46,8 +46,8 @@ If a registered cluster is deleted from the Rancher UI, the cluster is detached 
 
 To detach the cluster,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-2. Go to the registered cluster that should be detached from Rancher and click **⋮ > Delete**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+2. Go to the registered cluster that should be detached from Rancher and click **⋮ \> Delete**.
 3. Click **Delete**.
 
 **Result:** The registered cluster is detached from Rancher and functions normally outside of Rancher.

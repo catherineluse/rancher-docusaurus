@@ -13,11 +13,11 @@ Rancher v2.6 introduced the ability to customize Rancher’s branding and naviga
 
 # Changing Brand Settings
 
-> **Prerequisite:** You will need to have at least cluster member permissions.
+\> **Prerequisite:** You will need to have at least cluster member permissions.
 
 To configure the brand settings, 
 
-1. Click **☰ > Global settings**.
+1. Click **☰ \> Global settings**.
 2. Click **Branding**.
 
 # Brand Configuration
@@ -46,7 +46,7 @@ Display a custom fixed banner in the header, footer, or both.
 
 In this section, you'll learn how to configure the links in the left navigation bar of the **Cluster Dashboard**. To get to the cluster dashboard, 
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want custom navigation links and click **Explore**.
 
 It can be useful to add a link for quick access to services installed on a cluster. For example, you could add a link to the Kiali UI for clusters with Istio installed, or you could add a link to the Grafana UI for clusters with Rancher monitoring installed.
@@ -57,9 +57,9 @@ Links can be created at the top level and multiple links can be grouped together
 
 ### Adding a Custom Navigation Link
 
-> **Prerequisite:** You will need to have at least cluster member or project member permissions.
+\> **Prerequisite:** You will need to have at least cluster member or project member permissions.
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you would like to add custom navigation links and click **Explore**.
 2. In the top navigation menu, click **🔍 (Resource Search)**.
 3. Type **Nav** and click **Nav Links**.
@@ -112,7 +112,7 @@ Label that appears in the left navigation bar
 
 ### `target`
 
-Sets the target property of the link's anchor tag (`<a>`), which (depending on browsers) determines if it opens in a new window or in an existing tab.
+Sets the target property of the link's anchor tag (`\<a\>`), which (depending on browsers) determines if it opens in a new window or in an existing tab.
 
 The default value is `_self`, which opens the link on the current tab. To open the link in a new window or tab, set the target to `_blank`.
 
@@ -120,7 +120,7 @@ For more information about the target property, see [this page.](https://www.w3s
 
 ### `toService`
 
-Has five fields that are constructed to create a URL like the following: `https://<RANCHER_SERVER_URL>/k8s/clusters/<CLUSTER>/k8s/namespace/<NAMESPACE>/service/<SCHEME>:<NAME>:<PORT>/proxy/<PATH>`
+Has five fields that are constructed to create a URL like the following: `https://\<RANCHER_SERVER_URL\>/k8s/clusters/\<CLUSTER\>/k8s/namespace/\<NAMESPACE\>/service/\<SCHEME\>:\<NAME\>:\<PORT\>/proxy/\<PATH\>`
 
 For example, a link to a monitoring service can be set up as follows:
 
@@ -151,7 +151,7 @@ metadata:
   name: grafana
 spec:
   group: "Monitoring Dashboards"
-  toURL: https://<RANCHER_SERVER_URL>/api/v1/namespaces/cattle-monitoring-system/services/http:rancher-monitoring-grafana:80/proxy/?orgId=1
+  toURL: https://\<RANCHER_SERVER_URL\>/api/v1/namespaces/cattle-monitoring-system/services/http:rancher-monitoring-grafana:80/proxy/?orgId=1
 ```
 
 Adding the above YAML results in a link to Grafana being created, as shown in the following screenshot:

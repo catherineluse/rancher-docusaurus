@@ -30,18 +30,18 @@ For information about role-based access control for Grafana, see [this section.]
 
 When `rancher-monitoring` is installed, the Prometheus Alertmanager UI is deployed, allowing you to view your alerts and the current Alertmanager configuration.
 
-> This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../how-monitoring-works/#how-alertmanager-works)
+\> This section assumes familiarity with how monitoring components work together. For more information about Alertmanager, see [this section.](../how-monitoring-works/#how-alertmanager-works)
 
 
 ### Accessing the Alertmanager UI
 
 The Alertmanager UI lets you see the most recently fired alerts.
 
-> **Prerequisite:** The `rancher-monitoring` application must be installed.
+\> **Prerequisite:** The `rancher-monitoring` application must be installed.
 
 To see the Alertmanager UI,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the Alertmanager UI, click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Alertmanager**.
@@ -50,7 +50,7 @@ To see the Alertmanager UI,
 
 For more information on configuring Alertmanager in Rancher, see [this page.](../configuration/advanced/alertmanager)
 ```img
-<figcaption>The Alertmanager UI</figcaption>
+\<figcaption\>The Alertmanager UI\</figcaption\>
 ![Alertmanager UI](./assets/img/rancher/alertmanager-ui.png)
 ```
 
@@ -65,12 +65,12 @@ By default, the [kube-state-metrics service](https://github.com/kubernetes/kube-
 
 To see the Prometheus UI, install `rancher-monitoring`. Then:
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the Prometheus UI and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Prometheus Graph**.
 ```img
-<figcaption>Prometheus Graph UI</figcaption>
+\<figcaption\>Prometheus Graph UI\</figcaption\>
 ![Prometheus Graph UI](./assets/img/rancher/prometheus-graph-ui.png)
 ```
 ### Viewing the Prometheus Targets
@@ -80,12 +80,12 @@ To see what services you are monitoring, you will need to see your targets. Targ
 To see the Prometheus Targets, install `rancher-monitoring`. Then:
 
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the Prometheus targets and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Prometheus Targets**.
 ```img
-<figcaption>Targets in the Prometheus UI</figcaption>
+\<figcaption\>Targets in the Prometheus UI\</figcaption\>
 ![Prometheus Targets UI](./assets/img/rancher/prometheus-targets-ui.png)
 ```
 ### Viewing the PrometheusRules
@@ -94,14 +94,14 @@ When you define a Rule (which is declared within a RuleGroup in a PrometheusRule
 
 To see the PrometheusRules, install `rancher-monitoring`. Then:
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the visualizations and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Prometheus Rules**.
 
 You can also see the rules in the Prometheus UI:
 ```img
-<figcaption>Rules in the Prometheus UI</figcaption>
+\<figcaption\>Rules in the Prometheus UI\</figcaption\>
 ![PrometheusRules UI](./assets/img/rancher/prometheus-rules-ui.png)
 ```
 For more information on configuring PrometheusRules in Rancher, see [this page.](../configuration/advanced/prometheusrules)

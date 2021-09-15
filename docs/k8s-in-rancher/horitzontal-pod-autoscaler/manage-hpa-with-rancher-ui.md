@@ -9,9 +9,9 @@ If you want to create HPAs that scale based on other metrics than CPU and memory
 
 ## Creating an HPA
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster you want to create an HPA in and click **Explore**.
-1. In the left navigation bar, click **Service Discovery > HorizontalPodAutoscalers**.
+1. In the left navigation bar, click **Service Discovery \> HorizontalPodAutoscalers**.
 1. Click **Create**.
 1. Select a **Namespace** for the HPA.
 1. Enter a **Name** for the HPA.
@@ -21,24 +21,24 @@ If you want to create HPAs that scale based on other metrics than CPU and memory
 
 1. Click **Create** to create the HPA.
 
-> **Result:** The HPA is deployed to the chosen namespace. You can view the HPA's status from the project's Resources > HPA view.
+\> **Result:** The HPA is deployed to the chosen namespace. You can view the HPA's status from the project's Resources \> HPA view.
 
 ## Get HPA Metrics and Status
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster that has the HPA and click **Explore**.
-1. In the left navigation bar, click **Service Discovery > HorizontalPodAutoscalers**. The **HorizontalPodAutoscalers** page shows the number of current replicas.
+1. In the left navigation bar, click **Service Discovery \> HorizontalPodAutoscalers**. The **HorizontalPodAutoscalers** page shows the number of current replicas.
 
 For more detailed metrics and status of a specific HPA, click the name of the HPA. This leads to the HPA detail page.
 
 
 ## Deleting an HPA
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster that has the HPA you want to delete and click **Explore**.
-1. In the left navigation bar, click **Service Discovery > HorizontalPodAutoscalers**.
-1. Click **Resources > HPA**.
-1. Find the HPA which you would like to delete and click **⋮ > Delete**.
+1. In the left navigation bar, click **Service Discovery \> HorizontalPodAutoscalers**.
+1. Click **Resources \> HPA**.
+1. Find the HPA which you would like to delete and click **⋮ \> Delete**.
 1. Click **Delete** to confirm.
 
-> **Result:** The HPA is deleted from the current cluster.
+\> **Result:** The HPA is deleted from the current cluster.

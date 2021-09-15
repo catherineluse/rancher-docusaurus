@@ -173,7 +173,7 @@ The scrape configuration can be viewed as part of the Prometheus custom resource
 
 The Prometheus Deployment or StatefulSet scrapes metrics, and the configuration of Prometheus is controlled by the Prometheus custom resources. The Prometheus Operator watches for Prometheus and Alertmanager resources, and when they are created, the Prometheus Operator creates a Deployment or StatefulSet for Prometheus or Alertmanager with the user-defined configuration.
 ```img
-<figcaption>How the Prometheus Operator Sets up Metrics Scraping</figcaption>
+\<figcaption\>How the Prometheus Operator Sets up Metrics Scraping\</figcaption\>
 
 ![How the Prometheus Operator sets up metrics scraping](./assets/img/rancher/set-up-scraping.svg)
 ```
@@ -219,13 +219,13 @@ The process for exporting metrics is as follows:
 4. The client scrapes the internal component.
 5. The internal component responds by pushing metrics back to the proxy.
 ```img
-<figcaption>Process for Exporting Metrics with PushProx</figcaption>
+\<figcaption\>Process for Exporting Metrics with PushProx\</figcaption\>
 
 ![Process for Exporting Metrics with PushProx](./assets/img/rancher/pushprox-process.svg)
 ```
 Metrics are scraped differently based on the Kubernetes distribution. For help with terminology, see Terminology(#terminology). For details, see the table below:
 
-<figcaption>How Metrics are Exposed to Prometheus</figcaption>
+\<figcaption\>How Metrics are Exposed to Prometheus\</figcaption\>
 
 | Kubernetes Component | RKE | RKE2 | KubeADM | K3s |
 |-----|-----|-----|-----|-----|
@@ -257,6 +257,6 @@ Rancher v2.6 introduced the ability to provision new Kubernetes clusters with [R
 
 The PushProx pod needs to run on the same nodes as the `ingress-nginx` pod.
 
-When the RKE2 cluster's Kubernetes version is <= 1.20,  the workload type of `ingress-nginx` is a Deployment. The `pushprox-ingress-nginx-client` is deployed as a Deployment, and the Rancher UI sets the Helm chart value `rke2IngressNginx.deployment.enabled=true`.
+When the RKE2 cluster's Kubernetes version is \<= 1.20,  the workload type of `ingress-nginx` is a Deployment. The `pushprox-ingress-nginx-client` is deployed as a Deployment, and the Rancher UI sets the Helm chart value `rke2IngressNginx.deployment.enabled=true`.
 
-For Kubernetes >= 1.21, the workload type of `ingress-nginx` is a DaemonSet. The `pushprox-ingress-nginx-client` is deployed as a DaemonSet, which is the default behavior.
+For Kubernetes \>= 1.21, the workload type of `ingress-nginx` is a DaemonSet. The `pushprox-ingress-nginx-client` is deployed as a DaemonSet, which is the default behavior.

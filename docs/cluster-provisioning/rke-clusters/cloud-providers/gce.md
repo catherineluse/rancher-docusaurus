@@ -7,12 +7,12 @@ In this section, you'll learn how to enable the Google Compute Engine (GCE) clou
 
 The official Kubernetes documentation for the GCE cloud provider is [here.](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#gce)
 
-> **Prerequisites:** The service account of `Identity and API` access on GCE needs the `Computer Admin` permission.
+\> **Prerequisites:** The service account of `Identity and API` access on GCE needs the `Computer Admin` permission.
 
 If you are using Calico,
 
-1. Click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the custom cluster and click **⋮ > Edit YAML.* Enter the following configuration:
+1. Click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the custom cluster and click **⋮ \> Edit YAML.* Enter the following configuration:
 
     ```
     rancher_kubernetes_engine_config:
@@ -20,11 +20,11 @@ If you are using Calico,
         name: gce
         customCloudProvider: |- 
           [Global]
-          project-id=<your project ID, optional>
-          network-name=<your network, optional if using default network>
-          subnetwork-name=<your subnetwork of the above network, optional if using default network>
-          node-instance-prefix=<your instance group name/your instance name specific prefix, required>
-          node-tags=<your network tags, must patch one or some tags, required>
+          project-id=\<your project ID, optional\>
+          network-name=\<your network, optional if using default network\>
+          subnetwork-name=\<your subnetwork of the above network, optional if using default network\>
+          node-instance-prefix=\<your instance group name/your instance name specific prefix, required\>
+          node-tags=\<your network tags, must patch one or some tags, required\>
       network:
         options: 
           calico_cloud_provider: "gce"
@@ -33,8 +33,8 @@ If you are using Calico,
 
 If you are using Canal or Flannel,
 
-1. Click **☰ > Cluster Management**.
-1. On the **Clusters** page, go to the custom cluster and click **⋮ > Edit YAML.* Enter the following configuration:
+1. Click **☰ \> Cluster Management**.
+1. On the **Clusters** page, go to the custom cluster and click **⋮ \> Edit YAML.* Enter the following configuration:
 
     ```
     rancher_kubernetes_engine_config:
@@ -42,11 +42,11 @@ If you are using Canal or Flannel,
         name: gce
         customCloudProvider: |- 
           [Global]
-          project-id=<your project ID, optional>
-          network-name=<your network, optional if using default network>
-          subnetwork-name=<your subnetwork of the above network, optional if using default network>
-          node-instance-prefix=<your instance group name/your instance name specific prefix, required>
-          node-tags=<your network tags, must patch one or some tags, required>
+          project-id=\<your project ID, optional\>
+          network-name=\<your network, optional if using default network\>
+          subnetwork-name=\<your subnetwork of the above network, optional if using default network\>
+          node-instance-prefix=\<your instance group name/your instance name specific prefix, required\>
+          node-tags=\<your network tags, must patch one or some tags, required\>
       services: 
         kube_controller: 
           extra_args:

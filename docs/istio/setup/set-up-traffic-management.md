@@ -15,9 +15,9 @@ In this example, we take the traffic to the `reviews` service and intercept it s
 After this virtual service is deployed, we will generate traffic and see from the Kiali visualization that traffic is being routed evenly between the two versions of the service.
 
 To deploy the virtual service and destination rules for the `reviews` service,
-1.  Click **☰ > Cluster Management**.
+1.  Click **☰ \> Cluster Management**.
 1. Go to the cluster where Istio is installed and click **Explore**.
-1. In the cluster where Istio is installed, click **Istio > DestinationRules** in the left navigation bar.
+1. In the cluster where Istio is installed, click **Istio \> DestinationRules** in the left navigation bar.
 1. Click **Create**.
 1. Copy and paste the DestinationRule yaml provided below.
 1. Click **Create**.

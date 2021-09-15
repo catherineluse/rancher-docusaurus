@@ -79,26 +79,26 @@ To remove Istio components from a cluster, namespace, or workload, refer to the 
 
 There is no upgrade path for Istio versions less than 1.7.x. To successfully install Istio through **Apps & Marketplace,** you will need to disable your existing Istio from the global view in the legacy Rancher UI.
 
-If you have a significant amount of additional Istio CRDs you might consider manually migrating CRDs that are supported in both versions of Istio. You can do this by running `kubectl get <resource> -n istio-system -o yaml`, save the output yaml and re-apply in the new version. 
+If you have a significant amount of additional Istio CRDs you might consider manually migrating CRDs that are supported in both versions of Istio. You can do this by running `kubectl get \<resource\> -n istio-system -o yaml`, save the output yaml and re-apply in the new version. 
 
 Another option is to manually uninstall istio resources one at a time, but leave the resources that are supported in both versions of Istio and that will not be installed by the newest version. This method is more likely to result in issues installing the new version, but could be a good option depending on your situation.
 
 # Accessing Visualizations
 
-> By default, only cluster-admins have access to Kiali. For instructions on how to allow admin, edit or views roles to access them, see [this section.](https://rancher.com/docs/rancher/v2.6/en/istio/rbac/)
+\> By default, only cluster-admins have access to Kiali. For instructions on how to allow admin, edit or views roles to access them, see [this section.](https://rancher.com/docs/rancher/v2.6/en/istio/rbac/)
 
 After Istio is set up in a cluster, Grafana, Prometheus, and Kiali are available in the Rancher UI. 
 
 To access the Grafana and Prometheus visualizations,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see the visualizations and click **Explore**.
 1. In the left navigation bar, click **Monitoring**.
 1. Click **Grafana** or any of the other dashboards.
 
 To access the Kiali visualization,
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. On the **Clusters** page, go to the cluster where you want to see Kiali and click **Explore**.
 1. In the left navigation bar, click **Istio**.
 1. Click **Kiali**. From here you can access the **Traffic Graph** tab or the **Traffic Metrics** tab to see network visualizations and metrics. 

@@ -36,7 +36,7 @@ The rancher-backup gathers resources by making calls to the kube-apiserver. Obje
 
 To avoid storing them in plaintext, you can use the same encryptionConfig file that was used for at-rest encryption, to encrypt certain resources in your backup.
 
-> **Important:** You must save the encryptionConfig file, because it won’t be saved by the rancher-backup operator.
+\> **Important:** You must save the encryptionConfig file, because it won’t be saved by the rancher-backup operator.
 The same encryptionFile needs to be used when performing a restore.
 
 The operator consumes this encryptionConfig as a Kubernetes Secret, and the Secret must be in the operator’s namespace. Rancher installs the `rancher-backup` operator in the `cattle-resources-system` namespace, so create this encryptionConfig secret in that namespace.
@@ -57,7 +57,7 @@ This will ensure that the secret contains a key named `encryption-provider-confi
 
 The `Encryption Config Secret` dropdown will filter out and list only those Secrets that have this exact key
 ```img
-{{< img "/img/rancher/backup_restore/backup/encryption.png" "">}}
+{{ img "/img/rancher/backup_restore/backup/encryption.png" ""}}
 ```
 In the example command above, the name `encryptionconfig` can be changed to anything.
 
@@ -126,8 +126,8 @@ metadata:
   name: creds
 type: Opaque
 data:
-  accessKey: <Enter your access key>
-  secretKey: <Enter your secret key>
+  accessKey: \<Enter your access key\>
+  secretKey: \<Enter your secret key\>
 ```
 
 ### IAM Permissions for EC2 Nodes to Access S3

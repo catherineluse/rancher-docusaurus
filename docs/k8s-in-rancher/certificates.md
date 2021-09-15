@@ -6,13 +6,13 @@ weight: 3060
 
 When you create an ingress within Rancher/Kubernetes, you must provide it with a secret that includes a TLS private key and certificate, which are used to encrypt and decrypt communications that come through the ingress. You can make certificates available for ingress use by adding the certificate to the ingress deployment.
 
->**Prerequisites:** You must have a TLS private key and certificate available to upload.
+\>**Prerequisites:** You must have a TLS private key and certificate available to upload.
 
 ### 1. Create a Secret
 
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster where you want to deploy your ingress and click **More Resources > Core > Secrets**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. Go to the cluster where you want to deploy your ingress and click **More Resources \> Core \> Secrets**.
 1. Click **Create**.
 1. Click **TLS Certificate**.
 1. Enter a name for the secret. Note: Your secret must have a unique name among the other certificates, registries, and secrets within your project/workspace.
@@ -22,8 +22,8 @@ When you create an ingress within Rancher/Kubernetes, you must provide it with a
 
 ### 2. Add the Secret to an Ingress
 
-1. In the upper left corner, click **☰ > Cluster Management**.
-1. Go to the cluster where you want to deploy your ingress and click **Service Discovery > Ingresses**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
+1. Go to the cluster where you want to deploy your ingress and click **Service Discovery \> Ingresses**.
 1. Click **Create**.
 1. Select the **Namespace** of the ingress.
 1. Enter a **Name** for the ingress.

@@ -56,7 +56,7 @@ In Rancher, Canal is the default CNI network provider combined with Flannel and 
 
 Kubernetes workers should open UDP port `8472` (VXLAN) and TCP port `9099` (healthcheck). For details, refer to [the port requirements for user clusters.](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements/)
 ```img
-{{< img "/img/rancher/canal-diagram.png" "Canal Diagram">}}
+{{ img "/img/rancher/canal-diagram.png" "Canal Diagram"}}
 ```
 For more information, see the [Canal GitHub Page.](https://github.com/projectcalico/canal)
 
@@ -140,7 +140,7 @@ The following table summarizes different GitHub metrics to give you an idea of e
 | Calico | https://github.com/projectcalico/calico | 1534 | 429 | 135 |
 | Weave | https://github.com/weaveworks/weave/ | 5737 | 559 | 73 |
 
-<br/>
+
 
 ### Which CNI Provider Should I Use?
 

@@ -6,7 +6,7 @@ weight: 1
 
 This page describes the software, hardware, and networking requirements for the nodes where the Rancher server will be installed. The Rancher server can be installed on a single node or a high-availability Kubernetes cluster.
 
-> It is important to note that if you install Rancher on a Kubernetes cluster, requirements are different from the [node requirements for downstream user clusters,](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements/) which will run your apps and services.
+\> It is important to note that if you install Rancher on a Kubernetes cluster, requirements are different from the [node requirements for downstream user clusters,](https://rancher.com/docs/rancher/v2.6/en/cluster-provisioning/node-requirements/) which will run your apps and services.
 
 Make sure the node(s) for the Rancher server fulfill the following requirements:
 

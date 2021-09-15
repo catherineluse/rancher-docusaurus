@@ -41,7 +41,7 @@ If the Rancher server is installed in a single Docker container, you only need o
 ### 3. Install Docker and Create User for RKE Kubernetes Cluster Nodes
 
 1. From the [AWS EC2 console,](https://console.aws.amazon.com/ec2/) click **Instances** in the left panel.
-1. Go to the instance that you want to install Docker on. Select the instance and click **Actions > Connect**.
+1. Go to the instance that you want to install Docker on. Select the instance and click **Actions \> Connect**.
 1. Connect to the instance by following the instructions on the screen that appears. Copy the Public DNS of the instance. An example command to SSH into the instance is as follows:
 ```
 sudo ssh -i [path-to-private-key] ubuntu@[public-DNS-of-instance]
@@ -56,7 +56,7 @@ sudo usermod -aG docker ubuntu
 ```
 1. Repeat these steps so that Docker is installed on each node that will eventually run the Rancher management server.
 
-> To find out whether a script is available for installing a certain Docker version, refer to this [GitHub repository,](https://github.com/rancher/install-docker) which contains all of Rancher’s Docker installation scripts.
+\> To find out whether a script is available for installing a certain Docker version, refer to this [GitHub repository,](https://github.com/rancher/install-docker) which contains all of Rancher’s Docker installation scripts.
 
 **Result:** You have set up Rancher server nodes that fulfill all the node requirements for OS, Docker, hardware and networking.
 

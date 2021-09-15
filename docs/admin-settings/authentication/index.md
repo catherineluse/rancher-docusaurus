@@ -26,7 +26,7 @@ The Rancher authentication proxy integrates with the following external authenti
 | [Google OAuth](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/google/)            | 
 | [Shibboleth](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/shibboleth)           |
 
-<br/>
+
 However, Rancher also provides [local authentication](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/local/).
 
 In most cases, you should use an external authentication service over local authentication, as external authentication allows user management from a central location. However, you may want a few local authentication users for managing Rancher under rare circumstances, such as if your external authentication provider is unavailable or undergoing maintenance.
@@ -35,7 +35,7 @@ In most cases, you should use an external authentication service over local auth
 
 Rancher relies on users and groups to determine who is allowed to log in to Rancher and which resources they can access. When authenticating with an external provider, groups are provided from the external provider based on the user. These users and groups are given specific roles to resources like clusters, projects, multi-cluster apps, and global DNS providers and entries. When you give access to a group, all users who are a member of that group in the authentication provider will be able to access the resource with the permissions that you've specified. For more information on roles and permissions, see [Role Based Access Control](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/).
 
-> **Note:** Local authentication does not support creating or managing groups.
+\> **Note:** Local authentication does not support creating or managing groups.
 
 For more information, see [Users and Groups](https://rancher.com/docs/rancher/v2.6/en/admin-settings/authentication/user-groups/)
 
@@ -51,7 +51,7 @@ After you configure Rancher to allow sign on using an external authentication se
 
 To set the Rancher access level for users in the authorization service, follow these steps:
 
-1. In the upper left corner, click **☰ > Users & Authentication**.
+1. In the upper left corner, click **☰ \> Users & Authentication**.
 1. In the left navigation bar, click **Auth Provider**.
 1. After setting up the configuration details for an auth provider, use the **Site Access** options to configure the scope of user authorization. The table above explains the access level for each option.
 1. Optional: If you choose an option other than **Allow any valid Users,** you can add users to the list of authorized users and organizations by searching for them in the text field that appears.
@@ -59,7 +59,7 @@ To set the Rancher access level for users in the authorization service, follow t
 
 **Result:** The Rancher access configuration settings are applied.
 
-{{< saml_caveats >}}
+{{ saml_caveats }}
 
 ## External Authentication Configuration and Principal Users
 

@@ -9,26 +9,26 @@ If there are specific cluster drivers that you do not want to show your users, y
 
 ### Managing Cluster Drivers
 
->**Prerequisites:** To create, edit, or delete cluster drivers, you need _one_ of the following permissions:
->
->- [Administrator Global Permissions](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions/)
->- [Custom Global Permissions](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions/#custom-global-permissions) with the [Manage Cluster Drivers](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions/) role assigned.
+\>**Prerequisites:** To create, edit, or delete cluster drivers, you need _one_ of the following permissions:
+\>
+\>- [Administrator Global Permissions](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions/)
+\>- [Custom Global Permissions](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions/#custom-global-permissions) with the [Manage Cluster Drivers](https://rancher.com/docs/rancher/v2.6/en/admin-settings/rbac/global-permissions/) role assigned.
 
 ## Activating/Deactivating Cluster Drivers
 
 By default, Rancher only activates drivers for the most popular cloud providers, Google GKE, Amazon EKS and Azure AKS. If you want to show or hide any node driver, you can change its status.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 
 2.  In the left navigation menu, click **Drivers**.
 
-3.  On the **Cluster Drivers** tab, select the driver that you wish to activate or deactivate and click **⋮ > Activate** or **⋮ > Deactivate**.
+3.  On the **Cluster Drivers** tab, select the driver that you wish to activate or deactivate and click **⋮ \> Activate** or **⋮ \> Deactivate**.
 
 ## Adding Custom Cluster Drivers
 
 If you want to use a cluster driver that Rancher doesn't support out-of-the-box, you can add the provider's driver in order to start using them to create _hosted_ kubernetes clusters.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. In the left navigation menu, click **Drivers**.
 1.  On the **Cluster Drivers** tab, click **Add Cluster Driver**.
 1.  Complete the **Add Cluster Driver** form. Then click **Create**.

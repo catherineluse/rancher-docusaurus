@@ -75,7 +75,7 @@ For information on configuring access to monitoring, see [this page.](./rbac)
 
 ### Configuring Monitoring Resources in Rancher
 
-> The configuration reference assumes familiarity with how monitoring components work together. For more information, see [How Monitoring Works.](./how-monitoring-works)
+\> The configuration reference assumes familiarity with how monitoring components work together. For more information, see [How Monitoring Works.](./how-monitoring-works)
 
 - [ServiceMonitor and PodMonitor](./configuration/servicemonitor-podmonitor)
 - [Receiver](./configuration/receiver)

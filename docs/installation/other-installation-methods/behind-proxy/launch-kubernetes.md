@@ -21,7 +21,7 @@ export NO_PROXY=127.0.0.0/8,10.0.0.0/8,cattle-system.svc,172.16.0.0/12,192.168.0
 Next configure apt to use this proxy when installing packages. If you are not using Ubuntu, you have to adapt this step accordingly:
 
 ```
-cat <<'EOF' | sudo tee /etc/apt/apt.conf.d/proxy.conf > /dev/null
+cat \<\<'EOF' | sudo tee /etc/apt/apt.conf.d/proxy.conf \> /dev/null
 Acquire::http::Proxy "http://${proxy_host}/";
 Acquire::https::Proxy "http://${proxy_host}/";
 EOF
@@ -43,7 +43,7 @@ And configure the Docker daemon to use the proxy to pull images:
 
 ```
 sudo mkdir -p /etc/systemd/system/docker.service.d
-cat <<'EOF' | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf > /dev/null
+cat \<\<'EOF' | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf \> /dev/null
 [Service]
 Environment="HTTP_PROXY=http://${proxy_host}"
 Environment="HTTPS_PROXY=http://${proxy_host}"
@@ -133,8 +133,8 @@ default backend - 404
 
 ### Save Your Files
 
-> **Important**
-> The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
+\> **Important**
+\> The files mentioned below are needed to maintain, troubleshoot and upgrade your cluster.
 
 Save a copy of the following files in a secure location:
 
@@ -142,7 +142,7 @@ Save a copy of the following files in a secure location:
 - `kube_config_rancher-cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
 - `rancher-cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains the current state of the cluster including the RKE configuration and the certificates.
 
-> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
+\> **Note:** The "rancher-cluster" parts of the two latter file names are dependent on how you name the RKE cluster configuration file.
 
 ### Issues or errors?
 

@@ -15,15 +15,15 @@ Existing volumes that were provisioned using the following cloud-config format w
 If the cloud-config has this format for datastore and resource pool path, vsphere CSI driver cannot recognize it:
 
 ```yaml
-default-datastore: </datacenter>/datastore/<default-datastore-name>
-resourcepool-path: "</datacenter>/host/<cluster-name>/Resources/<resource-pool-name>"
+default-datastore: \</datacenter\>/datastore/\<default-datastore-name\>
+resourcepool-path: "\</datacenter\>/host/\<cluster-name\>/Resources/\<resource-pool-name\>"
 ```
 
 Volumes provisioned with the in-tree provider using the following format will get migrated correctly:
 
 ```yaml
-default-datastore: <default-datastore-name>
-resourcepool-path: "<cluster-name>/Resources/<resource-pool-name>"
+default-datastore: \<default-datastore-name\>
+resourcepool-path: "\<cluster-name\>/Resources/\<resource-pool-name\>"
 ```
 
 Upstream bug: https://github.com/kubernetes-sigs/vsphere-csi-driver/issues/628
@@ -52,14 +52,14 @@ Or:
 ```
 wget https://raw.githubusercontent.com/rancher/helm3-charts/56b622f519728378abeddfe95074f1b87ab73b1e/charts/vsphere-cpi/taints.sh
 chmod +x taints.sh
-./taints.sh <path to kubeconfig if running the command outside the cluster> 
+./taints.sh \<path to kubeconfig if running the command outside the cluster\> 
 ```
 
 Once all nodes are tainted by the running the script, launch the Helm vSphere CPI chart. 
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where the vSphere CPI chart will be installed and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps & Marketplace \> Charts**.
 1. Click **vSphere CPI**..
 1. Click **Install**.
 1. Fill out the required vCenter details and click **Install**.
@@ -74,9 +74,9 @@ kubectl describe nodes | grep "ProviderID"
 
 ### 2. Install the CSI driver
 
-1. Click **☰ > Cluster Management**.
+1. Click **☰ \> Cluster Management**.
 1. Go to the cluster where the vSphere CSI chart will be installed and click **Explore**.
-1. Click **Apps & Marketplace > Charts**.
+1. Click **Apps & Marketplace \> Charts**.
 1. Click **vSphere CSI**..
 1. Click **Install**.
 1. Fill out the required vCenter details and click **Install**.
@@ -100,9 +100,9 @@ kubectl describe nodes | grep "ProviderID"
 Worker nodes must be drained during the upgrade before changing the kubelet and kube-controller-manager args. 
 
 
-1. Click **☰ > Cluster Management**.
-1. Go to the cluster where you will drain worker nodes and click **⋮ > Edit Config**.
+1. Click **☰ \> Cluster Management**.
+1. Go to the cluster where you will drain worker nodes and click **⋮ \> Edit Config**.
 1. In the **Advanced Options** section, set the field **Maximum Worker Nodes Unavailable** to 1.
-1. To drain the nodes during upgrade, select **Drain Nodes > Yes**. 
+1. To drain the nodes during upgrade, select **Drain Nodes \> Yes**. 
 1. Set **Force** and **Delete Local Data** to **true**.
 1. Click **Save** to upgrade the cluster.

@@ -4,11 +4,11 @@ weight: 3028
 ---
 When a new version of an application image is released on Docker Hub, you can upgrade any workloads running a previous version of the application to the new one.
 
-1. In the upper left corner, click **☰ > Cluster Management**.
+1. In the upper left corner, click **☰ \> Cluster Management**.
 1. Go to the cluster where you want to upgrade a workload and click **Explore**.
 1. In the left navigation bar, click **Workload**.
 
-1. Find the workload that you want to upgrade and select **⋮ > Edit Config**.
+1. Find the workload that you want to upgrade and select **⋮ \> Edit Config**.
 
 1. Update the **Container Image** and any options that you want to change.
 
