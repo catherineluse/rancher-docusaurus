@@ -27,7 +27,7 @@ Mounted secrets will be updated automatically unless they are mounted as subpath
 
     >**Tip:** You can add multiple key value pairs to the secret by copying and pasting.
     >
-    <!-- > {{< img "/img/rancher/bulk-key-values.gif" "Bulk Key Value Pair Copy/Paste">}} -->
+    > {{< img "/img/rancher/bulk-key-values.gif" "Bulk Key Value Pair Copy/Paste">}}
 
 1. Click **Save**.
 

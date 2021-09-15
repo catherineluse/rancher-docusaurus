@@ -17,7 +17,7 @@ This diagram shows how data flows through the Monitoring V2 application:
 {{% row %}}
 {{% column %}}
 
-<!-- ![How data flows through the monitoring application](./assets/img/rancher/monitoring-v2-architecture-overview.svg) -->
+![How data flows through the monitoring application](./assets/img/rancher/monitoring-v2-architecture-overview.svg)
 
 {{% /column %}}
 {{% column %}}
@@ -175,11 +175,11 @@ The Prometheus Deployment or StatefulSet scrapes metrics, and the configuration 
 
 <figcaption>How the Prometheus Operator Sets up Metrics Scraping</figcaption>
 
-<!-- ![How the Prometheus Operator sets up metrics scraping](./assets/img/rancher/set-up-scraping.svg) -->
+![How the Prometheus Operator sets up metrics scraping](./assets/img/rancher/set-up-scraping.svg)
 
 When the Prometheus Operator observes ServiceMonitors, PodMonitors and PrometheusRules being created, it knows that the scrape configuration needs to be updated in Prometheus. It updates Prometheus by first updating the configuration and rules files in the volumes of Prometheus's Deployment or StatefulSet. Then it calls the Prometheus API to sync the new configuration, resulting in the Prometheus Deployment or StatefulSet to be modified in place.
 
-<!-- ![How the Prometheus Operator Updates Scrape Configuration](./assets/img/rancher/update-scrape-config.svg) -->
+![How the Prometheus Operator Updates Scrape Configuration](./assets/img/rancher/update-scrape-config.svg)
 
 ### 5.3. How Kubernetes Component Metrics are Exposed
 
@@ -221,7 +221,7 @@ The process for exporting metrics is as follows:
 
 <figcaption>Process for Exporting Metrics with PushProx</figcaption>
 
-<!-- ![Process for Exporting Metrics with PushProx](./assets/img/rancher/pushprox-process.svg) -->
+![Process for Exporting Metrics with PushProx](./assets/img/rancher/pushprox-process.svg)
 
 Metrics are scraped differently based on the Kubernetes distribution. For help with terminology, see Terminology(#terminology). For details, see the table below:
 

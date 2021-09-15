@@ -179,7 +179,7 @@ The following diagram depicts the ports that are opened for each [cluster type](
 
 <figcaption>Port Requirements for the Rancher Management Plane</figcaption>
 
-<!-- ![Basic Port Requirements](./assets/img/rancher/port-communications.svg) -->
+![Basic Port Requirements](./assets/img/rancher/port-communications.svg)
 
 >**Tip:**
 >

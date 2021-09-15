@@ -67,7 +67,7 @@ We follow the validated Docker versions for upstream Kubernetes releases. The va
 
 SSH keys to access the nodes created by Rancher can be downloaded via the **Nodes** view. Choose the node which you want to access and click on the vertical ⋮ button at the end of the row, and choose **Download Keys** as shown in the picture below.
 
-<!-- ![Download Keys](./assets/img/rancher/downloadsshkeys.png) -->
+![Download Keys](./assets/img/rancher/downloadsshkeys.png)
 
 Unzip the downloaded zip file, and use the file `id_rsa` to connect to you host. Be sure to use the correct username (`rancher` or `docker` for RancherOS, `ubuntu` for Ubuntu, `ec2-user` for Amazon Linux)
 

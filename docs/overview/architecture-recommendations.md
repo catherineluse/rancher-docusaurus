@@ -22,7 +22,7 @@ If you have a Docker installation of Rancher, the node running the Rancher serve
 
 If Rancher is intended to manage downstream Kubernetes clusters, the Kubernetes cluster that the Rancher server runs on should also be separate from the downstream user clusters.
 
-<!-- ![Separation of Rancher Server from User Clusters](./assets/img/rancher/rancher-architecture-separation-of-rancher-server.svg) -->
+![Separation of Rancher Server from User Clusters](./assets/img/rancher/rancher-architecture-separation-of-rancher-server.svg)
 
 # Why HA is Better for Rancher in Production
 
@@ -35,14 +35,14 @@ We don't recommend installing Rancher in a single Docker container, because if t
 One option for the underlying Kubernetes cluster is to use K3s Kubernetes. K3s Rancher's CNCF certified Kubernetes distribution. It is easy to install, with half the memory of Kubernetes, all in a binary less than 100 MB. One main advantage of this K3s architecture is that it allows an external datastore to hold the cluster data, allowing the K3s server nodes to be treated as ephemeral.
 
 <figcaption>Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server</figcaption>
-<!-- ![Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server](./assets/img/rancher/k3s-server-storage.svg) -->
+![Architecture of a K3s Kubernetes Cluster Running the Rancher Management Server](./assets/img/rancher/k3s-server-storage.svg)
 
 ### RKE Kubernetes Cluster Installations
 
 In an RKE installation, the cluster data is replicated on each of three etcd nodes in the cluster, providing redundancy and data duplication in case one of the nodes fails.
 
 <figcaption>Architecture of an RKE Kubernetes Cluster Running the Rancher Management Server</figcaption>
-<!-- ![Architecture of an RKE Kubernetes cluster running the Rancher management server](./assets/img/rancher/rke-server-storage.svg) -->
+![Architecture of an RKE Kubernetes cluster running the Rancher management server](./assets/img/rancher/rke-server-storage.svg)
 
 # Recommended Load Balancer Configuration for Kubernetes Installations
 
@@ -54,7 +54,7 @@ We recommend the following configurations for the load balancer and Ingress cont
 * The Ingress controller will forward traffic to port TCP/80 on the pod in the Rancher deployment.
 
 <figcaption>Rancher installed on a Kubernetes cluster with layer 4 load balancer, depicting SSL termination at Ingress controllers</figcaption>
-<!-- ![Rancher HA](./assets/img/rancher/ha/rancher2ha.svg) -->
+![Rancher HA](./assets/img/rancher/ha/rancher2ha.svg)
 
 # Environment for Kubernetes Installations
 
@@ -84,7 +84,7 @@ Rancher uses RKE as a library when provisioning downstream Kubernetes clusters. 
 
 For downstream Kubernetes clusters, we recommend that each node in a user cluster should have a single role for stability and scalability.
 
-<!-- ![Kubernetes Roles for Nodes in Rancher Server Cluster vs. User Clusters](./assets/img/rancher/rancher-architecture-node-roles.svg) -->
+![Kubernetes Roles for Nodes in Rancher Server Cluster vs. User Clusters](./assets/img/rancher/rancher-architecture-node-roles.svg)
 
 RKE only requires at least one node with each role and does not require nodes to be restricted to one role. However, for the clusters that run your apps, we recommend separate roles for each node so that workloads on worker nodes don't interfere with the Kubernetes master or cluster data as your services scale.
 

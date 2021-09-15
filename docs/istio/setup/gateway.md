@@ -15,7 +15,7 @@ You can route traffic into the service mesh with a load balancer or use Istio's 
 
 For more information on the Istio gateway, refer to the [Istio documentation.](https://istio.io/docs/reference/config/networking/v1alpha3/gateway/) 
 
-<!-- ![In an Istio-enabled cluster, you can have two Ingresses: the default Nginx Ingress, and the default Istio controller.](./assets/img/rancher/istio-ingress.svg) -->
+![In an Istio-enabled cluster, you can have two Ingresses: the default Nginx Ingress, and the default Istio controller.](./assets/img/rancher/istio-ingress.svg)
 
 # Enable an Istio Gateway
 

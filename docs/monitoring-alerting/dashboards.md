@@ -51,7 +51,7 @@ To see the Alertmanager UI,
 For more information on configuring Alertmanager in Rancher, see [this page.](../configuration/advanced/alertmanager)
 
 <figcaption>The Alertmanager UI</figcaption>
-<!-- ![Alertmanager UI](./assets/img/rancher/alertmanager-ui.png) -->
+![Alertmanager UI](./assets/img/rancher/alertmanager-ui.png)
 
 
 ### Viewing Default Alerts
@@ -71,7 +71,7 @@ To see the Prometheus UI, install `rancher-monitoring`. Then:
 1. Click **Prometheus Graph**.
 
 <figcaption>Prometheus Graph UI</figcaption>
-<!-- ![Prometheus Graph UI](./assets/img/rancher/prometheus-graph-ui.png) -->
+![Prometheus Graph UI](./assets/img/rancher/prometheus-graph-ui.png)
 
 ### Viewing the Prometheus Targets
 
@@ -86,7 +86,7 @@ To see the Prometheus Targets, install `rancher-monitoring`. Then:
 1. Click **Prometheus Targets**.
 
 <figcaption>Targets in the Prometheus UI</figcaption>
-<!-- ![Prometheus Targets UI](./assets/img/rancher/prometheus-targets-ui.png) -->
+![Prometheus Targets UI](./assets/img/rancher/prometheus-targets-ui.png)
 
 ### Viewing the PrometheusRules
 
@@ -102,6 +102,6 @@ To see the PrometheusRules, install `rancher-monitoring`. Then:
 You can also see the rules in the Prometheus UI:
 
 <figcaption>Rules in the Prometheus UI</figcaption>
-<!-- ![PrometheusRules UI](./assets/img/rancher/prometheus-rules-ui.png) -->
+![PrometheusRules UI](./assets/img/rancher/prometheus-rules-ui.png)
 
 For more information on configuring PrometheusRules in Rancher, see [this page.](../configuration/advanced/prometheusrules)

@@ -11,8 +11,8 @@ This section includes troubleshooting tips in the following categories:
 - [Troubleshooting Controlplane Nodes]({{<baseurl>}}/rancher/v2.6/en/troubleshooting/kubernetes-components/controlplane)
 - [Troubleshooting nginx-proxy Nodes]({{<baseurl>}}/rancher/v2.6/en/troubleshooting/kubernetes-components/nginx-proxy)
 - [Troubleshooting Worker Nodes and Generic Components]({{<baseurl>}}/rancher/v2.6/en/troubleshooting/kubernetes-components/worker-and-generic)
-<!-- 
+
 # Kubernetes Component Diagram
 
 ![Cluster diagram](./assets/img/rancher/clusterdiagram.svg)<br/>
-<sup>Lines show the traffic flow between components. Colors are used purely for visual aid</sup> -->
+<sup>Lines show the traffic flow between components. Colors are used purely for visual aid</sup>

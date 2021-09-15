@@ -86,7 +86,7 @@ Optional. If not provided, the link appears standalone.
 
 Groups are displayed separately from standalone links, as shown below:
 
-<!-- ![Screenshot of group and standalone link](./assets/img/rancher/grouped-vs-standalone-links.png) -->
+![Screenshot of group and standalone link](./assets/img/rancher/grouped-vs-standalone-links.png)
 
 ### `iconSrc`
 
@@ -156,7 +156,7 @@ spec:
 
 Adding the above YAML results in a link to Grafana being created, as shown in the following screenshot:
 
-<!-- ![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-grafana-link.png) -->
+![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-grafana-link.png)
 
 ### Example of Link with `toService`
 
@@ -188,5 +188,5 @@ spec:
 
 Adding the `toService` parameters above results in a link to Grafana being created, as shown in the following screenshot:
 
-<!-- ![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-service-link.png)
- -->
+![Screenshot of Grafana Link]({{< baseurl >}}/img/rancher/example-service-link.png)
+
